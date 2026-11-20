@@ -24,13 +24,13 @@ Before you begin, make sure the following npm packages are installed in your app
 npm install @syncfusion/ej2-pptx @syncfusion/ej2-xlsx
 ```
 
-The chart engine of the JavaScript PowerPoint library is built on the `@syncfusion/ej2-xlsx` package. Charts authored with `Slide.addChart` and charts enumerated through `slide.charts` require this package to be resolvable at runtime. The library loads the chart engine itself, so no separate chart-engine initialization call is needed before creating, reading, or editing charts.
+The chart engine of the JavaScript PowerPoint library is built on the `@syncfusion/ej2-xlsx` package. Charts authored with `slide.shapes.addChart` and charts enumerated through `slide.charts` require this package to be resolvable at runtime. The library loads the chart engine itself, so no separate chart-engine initialization call is needed before creating, reading, or editing charts.
 
 For more information on package setup for each platform, refer to [Getting Started](./Getting-Started).
 
 ## Creating a chart from scratch
 
-Use [`Slide.addChart`](https://help.syncfusion.com/cr/javascript/ej.pptx.Slide.html) to insert a classic chart. When `from` is omitted, the library seeds a demo workbook (`Category` / `Value` headers and three rows: A/1, B/2, C/3) and binds the series to `A2:A4` and `B2:B4`.
+Use [`slide.shapes.addChart`](https://help.syncfusion.com/cr/javascript/ej.pptx.Slide.html) to insert a classic chart. When `from` is omitted, the library seeds a demo workbook (`Category` / `Value` headers and three rows: A/1, B/2, C/3) and binds the series to `A2:A4` and `B2:B4`.
 
 `type` is a classic catalog key such as `ColumnClustered`, `BarClustered`, `Line`, `LineMarkers`, `Pie`, `Doughnut`, `Area`, `ScatterMarkers`, or `Bubble`. Pass `bounds` in points and an optional frame `name`.
 
@@ -46,7 +46,7 @@ let pptxDoc = Presentation.create();
 // Adds a blank slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a clustered column chart. Bounds are in points.
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     name: 'Sales',
     bounds: { x: 50, y: 40, width: 480, height: 300 }
@@ -64,7 +64,7 @@ var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide to the presentation.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 // Adds a clustered column chart. Bounds are in points.
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     name: 'Sales',
     bounds: { x: 50, y: 40, width: 480, height: 300 }
@@ -95,7 +95,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 // excelBytes is a Uint8Array of an .xlsx file whose first sheet has categories in column A and values in column B.
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'Pie',
     name: 'Share',
     bounds: { x: 40, y: 40, width: 420, height: 280 },
@@ -112,7 +112,7 @@ await pptxDoc.save('Output.pptx');
 // excelBytes is a Uint8Array of an .xlsx file whose first sheet has categories in column A and values in column B.
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'Pie',
     name: 'Share',
     bounds: { x: 40, y: 40, width: 420, height: 280 },
@@ -238,13 +238,13 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
-The same edits also work on a chart created in the same session with `Slide.addChart`.
+The same edits also work on a chart created in the same session with `slide.shapes.addChart`.
 
-N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship points at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `Slide.addChart`.
+N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship points at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `slide.shapes.addChart`.
 
 ## Customizing the chart
 
-Formatting can be applied both to a chart created with `Slide.addChart` and to a chart in an existing presentation opened with `Presentation.open` and reached through `slide.charts.at(index)`. Colors are RRGGBB or `#RRGGBB` only. Nested format changes are written with the matching `commit*` method (`commitTitleArea`, `commitChartArea`, `commitPlotArea`, `commitSeriesFormat`, `commitSeriesDataLabels`, `commitLegend`, `commitPrimaryCategoryAxis`, and `commitPrimaryValueAxis`).
+Formatting can be applied both to a chart created with `slide.shapes.addChart` and to a chart in an existing presentation opened with `Presentation.open` and reached through `slide.charts.at(index)`. Colors are RRGGBB or `#RRGGBB` only. Nested format changes are written with the matching `commit*` method (`commitTitleArea`, `commitChartArea`, `commitPlotArea`, `commitSeriesFormat`, `commitSeriesDataLabels`, `commitLegend`, `commitPrimaryCategoryAxis`, and `commitPrimaryValueAxis`).
 
 See the following topics for each area:
 
@@ -260,7 +260,7 @@ Gradient fills on an existing chart source can be set with `setSourceGradientFil
 
 ## Removing the chart from a slide
 
-Remove a chart by its instance with [`Slide.removeChart`](https://help.syncfusion.com/cr/javascript/ej.pptx.Slide.html). Unshared chart parts are removed from the package.
+Remove a chart by passing its instance to `slide.shapes.remove`. Unshared chart parts are removed from the package.
 
 The following code example demonstrates how to open an existing presentation and remove a chart from its first slide.
 
@@ -274,11 +274,11 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
-let chart = slide.charts.at(0);
+// Gets the chart from the slide.
+let chart = slide.shapes[0];
 if (chart) {
-    // Removes the chart frame and unshared chart parts.
-    slide.removeChart(chart);
+    // Removes the chart from the slide.
+    slide.shapes.remove(chart);
 }
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
@@ -290,22 +290,22 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
-var chart = slide.charts.at(0);
+// Gets the chart from the slide.
+var chart = slide.shapes[0];
 if (chart) {
-    // Removes the chart frame and unshared chart parts.
-    slide.removeChart(chart);
+    // Removes the chart from the slide.
+    slide.shapes.remove(chart);
 }
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
-Charts created in the same session can also be removed by passing the handle returned by `slide.addChart` directly to `slide.removeChart`.
+Charts created in the same session can also be removed by passing the handle returned by `slide.shapes.addChart` directly to `slide.shapes.remove`.
 
 ## Supported chart types
 
-The following chart types are supported by the JavaScript PowerPoint library. Pass the catalog key as the `type` of `Slide.addChart`.
+The following chart types are supported by the JavaScript PowerPoint library. Pass the catalog key as the `type` of `slide.shapes.addChart`.
 
 | Chart type | Catalog keys |
 |---|---|
@@ -321,7 +321,7 @@ The following chart types are supported by the JavaScript PowerPoint library. Pa
 
 Deprecated aliases `Column`, `Bar`, `Scatter`, and `Bar3D` are also accepted and map to a primary classic value.
 
-N> ChartEx types (box and whisker, funnel, Pareto, sunburst, treemap, and waterfall) are not supported and are refused by `Slide.addChart`.
+N> ChartEx types (box and whisker, funnel, Pareto, sunburst, treemap, and waterfall) are not supported and are refused by `slide.shapes.addChart`.
 
 ## Online demo
 

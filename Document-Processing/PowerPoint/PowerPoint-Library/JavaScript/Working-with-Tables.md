@@ -26,11 +26,11 @@ let pptxDoc = Presentation.create();
 // Add slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = slide.addTable({
+const table = slide.shapes.addTable({
   rows: 3,
   columns: 4,
-  xfrm: { x: 0, y: 0, width: 400, height: 200 },
-  name: 'Metrics'
+  bounds: { x: 0, y: 0, width: 400, height: 200 },
+  title: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -53,11 +53,11 @@ var pptxDoc = ej.pptx.Presentation.create();
 // Add slide to the presentation.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-var table = slide.addTable({
+var table = slide.shapes.addTable({
   rows: 3,
   columns: 4,
-  xfrm: { x: 0, y: 0, width: 400, height: 200 },
-  name: 'Metrics'
+  bounds: { x: 0, y: 0, width: 400, height: 200 },
+  title: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (var rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -89,11 +89,11 @@ let pptxDoc = Presentation.create();
 // Add slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = slide.addTable({
+const table = slide.shapes.addTable({
   rows: 3,
   columns: 4,
-  xfrm: { x: 0, y: 0, width: 400, height: 200 },
-  name: 'Metrics'
+  bounds: { x: 0, y: 0, width: 400, height: 200 },
+  title: 'Metrics'
 });
 // Iterate column-wise cells and add text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
@@ -116,11 +116,11 @@ var pptxDoc = ej.pptx.Presentation.create();
 // Add slide to the presentation.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-var table = slide.addTable({
+var table = slide.shapes.addTable({
   rows: 3,
   columns: 4,
-  xfrm: { x: 0, y: 0, width: 400, height: 200 },
-  name: 'Metrics'
+  bounds: { x: 0, y: 0, width: 400, height: 200 },
+  title: 'Metrics'
 });
 // Iterate column-wise cells and add text to each.
 for (var colIndex = 0; colIndex < table.columnCount; colIndex++) {
@@ -277,23 +277,23 @@ await pptxDoc.save('Output.pptx');
 
 ## Removing the table
 
-You can remove a table from a slide by passing its instance to `removeTable`. The following code example demonstrates how to remove a table from a slide.
+You can remove a table from a slide by passing its instance to `slide.shapes.remove`. The following code example demonstrates how to remove a table from a slide.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
-import { Presentation, asTable, removeTable } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 // Loads or opens a PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the slide from the presentation.
 let slide = pptxDoc.slides[0];
-// Gets the table from the slide (first shape, bound as a table).
-let table = asTable(slide.shapes[0]);
+// Gets the table from the slide.
+let table = slide.shapes[0];
 if (table) {
     // Removes the table from the slide.
-    removeTable(slide, table);
+    slide.shapes.remove(table);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
@@ -305,11 +305,11 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the slide from the presentation.
 var slide = pptxDoc.slides[0];
-// Gets the table from the slide (first shape, bound as a table).
-var table = ej.pptx.asTable(slide.shapes[0]);
+// Gets the table from the slide.
+var table = slide.shapes[0];
 if (table) {
     // Removes the table from the slide.
-    ej.pptx.removeTable(slide, table);
+    slide.shapes.remove(table);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');

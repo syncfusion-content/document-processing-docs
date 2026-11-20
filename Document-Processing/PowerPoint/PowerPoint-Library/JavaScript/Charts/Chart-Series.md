@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart series
 
 # Chart Series in JavaScript PowerPoint
 
-A chart series maps category labels and values from the embedded workbook. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes series on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`.
+A chart series maps category labels and values from the embedded workbook. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes series on a chart — either a chart created with `slide.shapes.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`.
 
 * `chart.series` returns each series view (`title`, `categoryLabels`, `values`, and optional series format / `dataLabels`).
 * `addSeries` adds a series. `values` is required.
@@ -28,7 +28,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 520, height: 320 }
 });
@@ -53,7 +53,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 520, height: 320 }
 });

@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart data labels
 
 # Chart Data Labels in JavaScript PowerPoint
 
-Data labels display values on each point of a series. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) models data labels on the series, not as a separate chart-level bag. Use `commitSeriesDataLabels` on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`.
+Data labels display values on each point of a series. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) models data labels on the series, not as a separate chart-level bag. Use `commitSeriesDataLabels` on a chart — either a chart created with `slide.shapes.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`.
 
 * `isValue`, `isCategoryName`, `isSeriesName`, and `isPercentage` choose what the label shows.
 * `position` is an engine position such as `center` or `outsideEnd`.
@@ -25,7 +25,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 480, height: 300 }
 });
@@ -43,7 +43,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 480, height: 300 }
 });

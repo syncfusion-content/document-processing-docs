@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart title
 
 # Chart Title in JavaScript PowerPoint
 
-A chart title describes the chart. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes the title as properties on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`. There is no separate `setTitle` method.
+A chart title describes the chart. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes the title as properties on a chart — either a chart created with `slide.shapes.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`. There is no separate `setTitle` method.
 
 * `chartTitle` or `applyChartTitle` sets the plain-text title and enables the title when the text is not empty.
 * `hasTitle` or `applyHasTitle` shows or hides the title.
@@ -25,7 +25,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 40, y: 30, width: 480, height: 320 }
 });
@@ -43,7 +43,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 40, y: 30, width: 480, height: 320 }
 });

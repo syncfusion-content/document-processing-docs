@@ -23,7 +23,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'Area',
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });
@@ -37,7 +37,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'Area',
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });

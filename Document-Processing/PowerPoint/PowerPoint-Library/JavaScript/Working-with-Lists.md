@@ -33,7 +33,7 @@ The following code example illustrates how to create a numbered list.
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType, ListType, NumberedListStyle } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, ListType, NumberedListStyle, TextBody } from '@syncfusion/ej2-pptx';
 
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
@@ -41,7 +41,7 @@ let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a textbox to hold the list. Bounds are in points.
 let textBoxShape = slide.shapes.addTextBox({ bounds: { x: 65, y: 140, width: 410, height: 270 } });
-let textBody = textBoxShape.textBody;
+let textBody = textBoxShape.textBody as TextBody;
 // Adds a new paragraph with the text in the left hand side textbox.
 let paragraph = textBody.addParagraph('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 // Sets the list type as Numbered.
@@ -145,7 +145,7 @@ The following code example demonstrates how to create a simple bulleted list.
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType, ListType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, ListType, TextBody } from '@syncfusion/ej2-pptx';
 
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
@@ -153,7 +153,7 @@ let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a textbox to hold the list. Bounds are in points.
 let textBoxShape = slide.shapes.addTextBox({ bounds: { x: 65, y: 140, width: 410, height: 250 } });
-let textBody = textBoxShape.textBody;
+let textBody = textBoxShape.textBody as TextBody;
 // Adds a new paragraph with the text in the left hand side textbox.
 let paragraph = textBody.addParagraph('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 // Sets the list type as Bulleted.
@@ -258,7 +258,7 @@ await pptxDoc.save('Sample.pptx');
 ### Picture List
 
 N> - `ListType.Picture` replaces the bullet glyph with a custom image supplied through `listFormat.picture(data)`.
-N> - The image file (`Image.png` in the samples below) must exist at runtime. It is read into a `Uint8Array` and passed to `picture`. A URL is never fetched. PNG, JPEG, and GIF are supported.
+N> - `picture` accepts a base64 string of a PNG, JPEG, or GIF image. A URL is never fetched.
 N> - `listFormat.size` for a picture list is expressed as a percentage of the text size (range `25` to `400`).
 
 The following code example demonstrates how to create a simple picture list.
@@ -266,24 +266,21 @@ The following code example demonstrates how to create a simple picture list.
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType, ListType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, ListType, TextBody } from '@syncfusion/ej2-pptx';
 
-// Opens the image file used as the picture bullet.
-let pictureStream = await fetch('Image.png');
-let pictureBytes = new Uint8Array(await pictureStream.arrayBuffer());
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
 // Adds a blank slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a textbox to hold the list. Bounds are in points.
 let textBoxShape = slide.shapes.addTextBox({ bounds: { x: 65, y: 140, width: 410, height: 270 } });
-let textBody = textBoxShape.textBody;
+let textBody = textBoxShape.textBody as TextBody;
 // Adds a new paragraph with the text in the left hand side textbox.
 let paragraph = textBody.addParagraph('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 // Sets the list type as Picture.
 paragraph.listFormat.type = ListType.Picture;
-// Sets the image for the list.
-paragraph.listFormat.picture(pictureBytes);
+// Sets the image for the list. Pass a base64 string of a PNG, JPEG, or GIF image.
+paragraph.listFormat.picture('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Sets the picture size. Here, 150 means 150% of the text. Possible values can range from 25 to 400.
 paragraph.listFormat.size = 150;
 // Sets the list level as 1.
@@ -294,8 +291,8 @@ paragraph.firstLineIndent = -20;
 paragraph = textBody.addParagraph('The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.');
 // Sets the list type as Picture.
 paragraph.listFormat.type = ListType.Picture;
-// Sets the image for the list.
-paragraph.listFormat.picture(pictureBytes);
+// Sets the image for the list. Pass a base64 string of a PNG, JPEG, or GIF image.
+paragraph.listFormat.picture('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Sets the picture size. Here, 150 means 150% of the text. Possible values can range from 25 to 400.
 paragraph.listFormat.size = 150;
 // Sets the list level as 1.
@@ -303,13 +300,10 @@ paragraph.indentLevelNumber = 1;
 // Sets the hanging value.
 paragraph.firstLineIndent = -20;
 // Saves the presentation to the file system.
-await pptxDoc.save('Sample.pptx');
+await pptxDoc.save('Samplepicture.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Opens the image file used as the picture bullet.
-var pictureStream = await fetch('Image.png');
-var pictureBytes = new Uint8Array(await pictureStream.arrayBuffer());
 // Creates a PowerPoint presentation.
 var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide to the presentation.
@@ -321,8 +315,8 @@ var textBody = textBoxShape.textBody;
 var paragraph = textBody.addParagraph('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 // Sets the list type as Picture.
 paragraph.listFormat.type = ej.pptx.ListType.Picture;
-// Sets the image for the list.
-paragraph.listFormat.picture(pictureBytes);
+// Sets the image for the list. Pass a base64 string of a PNG, JPEG, or GIF image.
+paragraph.listFormat.picture('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Sets the picture size. Here, 150 means 150% of the text. Possible values can range from 25 to 400.
 paragraph.listFormat.size = 150;
 // Sets the list level as 1.
@@ -333,8 +327,8 @@ paragraph.firstLineIndent = -20;
 paragraph = textBody.addParagraph('The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets.');
 // Sets the list type as Picture.
 paragraph.listFormat.type = ej.pptx.ListType.Picture;
-// Sets the image for the list.
-paragraph.listFormat.picture(pictureBytes);
+// Sets the image for the list. Pass a base64 string of a PNG, JPEG, or GIF image.
+paragraph.listFormat.picture('/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z');
 // Sets the picture size. Here, 150 means 150% of the text. Possible values can range from 25 to 400.
 paragraph.listFormat.size = 150;
 // Sets the list level as 1.
@@ -342,7 +336,7 @@ paragraph.indentLevelNumber = 1;
 // Sets the hanging value.
 paragraph.firstLineIndent = -20;
 // Saves the presentation to the file system.
-await pptxDoc.save('Sample.pptx');
+await pptxDoc.save('Samplepicture.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -358,7 +352,7 @@ The following code example demonstrates how to create a multilevel list.
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType, ListType, NumberedListStyle } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, ListType, NumberedListStyle, TextBody } from '@syncfusion/ej2-pptx';
 
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
@@ -366,7 +360,7 @@ let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a textbox to hold the list. Bounds are in points.
 let textBoxShape = slide.shapes.addTextBox({ bounds: { x: 65, y: 140, width: 410, height: 250 } });
-let textBody = textBoxShape.textBody;
+let textBody = textBoxShape.textBody as TextBody;
 // Adds a new paragraph with the text in the left hand side textbox.
 let paragraph = textBody.addParagraph('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 // Sets the list type as Numbered.

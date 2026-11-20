@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart area
 
 # Chart Area in JavaScript PowerPoint
 
-The chart area is the frame around the whole chart (`c:chartSpace` shape properties). The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it as `chart.chartArea` — on a chart created with `Slide.addChart` or on a chart in an opened presentation reached through `slide.charts.at(index)` — with a `fill` and a `line`.
+The chart area is the frame around the whole chart (`c:chartSpace` shape properties). The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it as `chart.chartArea` — on a chart created with `slide.shapes.addChart` or on a chart in an opened presentation reached through `slide.charts.at(index)` — with a `fill` and a `line`.
 
 Write fill and line changes with `commitChartArea`. Fill `foreColor` and line `color` are RRGGBB or `#RRGGBB`. `line.weightPt` is the border weight in points. Fill `type` is an engine value such as `solid`.
 
@@ -23,7 +23,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });
@@ -37,7 +37,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'ColumnClustered',
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });

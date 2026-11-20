@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart legend
 
 # Chart Legend in JavaScript PowerPoint
 
-The legend identifies each series. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`. There is no `setLegend` method.
+The legend identifies each series. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it on a chart — either a chart created with `slide.shapes.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`. There is no `setLegend` method.
 
 * `hasLegend` or `applyHasLegend` shows or hides the legend.
 * `legend.position` is `bottom`, `top`, `left`, `right`, or `corner`.
@@ -28,7 +28,7 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
+let chart = slide.shapes.addChart({
     type: 'Pie',
     bounds: { x: 40, y: 40, width: 420, height: 300 }
 });
@@ -47,7 +47,7 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
+var chart = slide.shapes.addChart({
     type: 'Pie',
     bounds: { x: 40, y: 40, width: 420, height: 300 }
 });
