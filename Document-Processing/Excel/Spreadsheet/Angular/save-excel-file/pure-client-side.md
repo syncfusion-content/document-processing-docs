@@ -82,9 +82,14 @@ export class AppComponent {
 
 To save an Excel file as blob data, you need to set `needBlobData` to **true** and `isFullPost` to **false** in the `beforeSave` event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#savecomplete) event.
 
-{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/app.ts %} {% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "/document-processing/samples/spreadsheet/angular/client-side-save-blob-cs1" %}
 

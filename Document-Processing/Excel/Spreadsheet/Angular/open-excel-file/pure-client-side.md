@@ -54,9 +54,14 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 Use a native file input to select an Excel workbook. Pass the selected `File` to the Spreadsheet's `open` method; do not configure `openUrl` for this client-side workflow.
 
-{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/app.ts %} {% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "/document-processing/samples/spreadsheet/angular/client-side-local-cs1" %}
 
@@ -64,10 +69,15 @@ Use a native file input to select an Excel workbook. Pass the selected `File` to
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#open) method.
 
-{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/app.ts %} {% endhighlight %}
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/main.ts %}
+{% endhighlight %}
 
-{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
-
+{% endtabs %}
 {% previewsample "/document-processing/samples/spreadsheet/angular/client-side-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
@@ -78,9 +88,14 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
-{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/app.ts %} {% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "/document-processing/samples/spreadsheet/angular/client-side-blob-cs1" %}
 

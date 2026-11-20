@@ -54,14 +54,14 @@ Use a native file input to select an Excel workbook. Pass the selected `File` to
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/open-local-file-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/client-side-local-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/open-local-file-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/client-side-local-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-local-file-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-local-cs1" %}
 
 ### Opening a file from a URL
 
@@ -69,14 +69,14 @@ You can fetch the remote Excel file (.xlsx) through the URL and convert it to a 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/open-from-url-cs1/app-composition.vue %}
+{% include code-snippet/spreadsheet/vue/client-side-url-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (/src/App.vue)" %}
-{% include code-snippet/spreadsheet/vue/open-from-url-cs1/app.vue %}
+{% include code-snippet/spreadsheet/vue/client-side-url-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-url-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
