@@ -104,7 +104,8 @@ const onFileUpload = function (e) {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 
 {% endhighlight %}
@@ -167,7 +168,8 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 
 {% endhighlight %}
@@ -224,9 +226,9 @@ To know about server-side action, please refer to this [page](./web-services-ove
 
 ## Opening a document in asynchronous mode
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`openAsyncSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel) API.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading through the [`openAsyncSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel) API, which provides options to enable asynchronous loading and configure both the initial and incremental page-loading behavior.
 
-### Properties
+**Properties**
 
 - **[`enable`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#enable):** Enables or disables asynchronous document loading.
 - **[`initialPageLoadCount`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#initialpageloadcount):** Number of pages to load initially when the document is opened.
