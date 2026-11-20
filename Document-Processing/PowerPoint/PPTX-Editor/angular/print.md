@@ -163,14 +163,3 @@ import { AppComponent } from './app.component';
 import 'zone.js';
 bootstrapApplication(AppComponent).catch((err) => console.error(err));
 ```
-
-## Page setup
-
-Some print options cannot be configured from JavaScript. Use the browser's print dialog to choose the printer, copies, and related options:
-
-* [Chrome](https://support.google.com/chrome/answer/1069693)
-* [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
-
-The PPTX Editor sizes each printed page to the rendered slide. Slide size, margins, and layout come from the presentation. There is no page-setup dialog, and print does not change the loaded presentation.
-
-N> The editor renders slides as HTML, CSS, and SVG, then prints that markup. It does not use a canvas or a device-pixel-ratio setting to control print quality. Colors are printed with `print-color-adjust: exact` so backgrounds and theme colors are preserved where the browser allows it.
