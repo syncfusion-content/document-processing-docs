@@ -18,7 +18,7 @@ N> Slides are rendered as HTML, CSS, and SVG. Slide transitions and animations a
 
 ## From Beginning
 
-**From Beginning** starts the presentation at the first slide. You can also press `F5`.
+**From Beginning** starts the presentation at the first slide.
 
 The following example injects the `SlideShow` module and starts the presentation from the first slide after the presentation is created.
 
@@ -67,7 +67,7 @@ pptxeditor.appendTo('#pptx-editor');
 
 ## From Current Slide
 
-**From Current Slide** starts the presentation at the slide that is currently selected in the editor. You can also press `Shift+F5`.
+**From Current Slide** starts the presentation at the slide that is currently selected in the editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -163,14 +163,3 @@ pptxeditor.appendTo('#pptx-editor');
 {% endhighlight %}
 {% endtabs %}
 
-## Keyboard shortcuts
-
-| Action | Shortcut |
-| --- | --- |
-| From Beginning | `F5` |
-| From Current Slide | `Shift+F5` |
-| Next slide | `Space`, `Enter`, `Right`, `Down`, or `PageDown` |
-| Previous slide | `Left`, `Up`, `Backspace`, or `PageUp` |
-| Exit | `Esc` |
-
-You can also move to the next slide by clicking or tapping the slide. Moving the mouse shows the slide show controls, including Presenter View and Exit.
