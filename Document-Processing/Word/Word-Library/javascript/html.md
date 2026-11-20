@@ -20,19 +20,17 @@ The following code example shows how to convert the HTML file into a Word docume
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const response = await fetch('HTMLToWord.html');
-const bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.openSync(bytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
-// Save
-document.save('HTMLToWord.docx');
+// Saves the Word document
+document.save('Output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-const response = await fetch('HTMLToWord.html');
-const bytes = new Uint8Array(await response.arrayBuffer());
-let document = ej.docx.WordDocument.openSync(bytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
-// Save
-document.save('HTMLToWord.docx');
+// Saves the Word document
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
