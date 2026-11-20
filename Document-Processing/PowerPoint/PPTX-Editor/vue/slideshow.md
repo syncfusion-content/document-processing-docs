@@ -10,7 +10,7 @@ domainurl:
 
 # Slide Show in Vue PPTX Editor
 
-The Slide Show tab starts a full-screen presentation of the loaded slides. It includes **From Beginning**, **From Current Slide**, and **Presenter View**.
+The Slide Show tab starts a full-screen presentation of the loaded slides. It includes **From Beginning**, **From Current Slide**, and **Presenter View**. The same options are available in the **Present** dropdown.
 
 Slide Show is available only when the `SlideShow` module is injected and `enableSlideShow` is `true`. By default, `enableSlideShow` is `true`. If the module is not injected, or `enableSlideShow` is `false`, the Slide Show actions do nothing. They also do nothing when no presentation is loaded.
 
@@ -320,9 +320,13 @@ export default {
 {% endtabs %}
 
 
-## Disable Slide Show
+## Present Dropdown
 
-`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+The **Present** dropdown in the Slide Show toolbar provides the same three options: **From Beginning**, **From Current Slide**, and **Presenter View**.
+
+## Enable or Disable Slide Show
+
+The following example demonstrates how to disable the slide show. `enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
