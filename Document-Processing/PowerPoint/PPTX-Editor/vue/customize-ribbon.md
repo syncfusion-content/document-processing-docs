@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ribbon in Vue PowerPoint Editor | Syncfusion
-description: Customize the ribbon in the Vue PowerPoint Editor, including layouts, tabs, groups, items, and enabling or disabling the ribbon.
+title: Ribbon in Vue PPTX Editor | Syncfusion
+description: Customize the ribbon in the Vue PPTX Editor, including layouts, tabs, groups, items, and enabling or disabling the ribbon.
 control: Ribbon
 platform: document-processing
 documentation: ug
 domainurl:
 ---
 
-# Ribbon in Vue PowerPoint Editor
+# Ribbon in Vue PPTX Editor
 
-The Vue PowerPoint Editor provides a Ribbon interface similar to Microsoft PowerPoint. Commands are organized into tabs and groups so you can open, export, and print a presentation, inspect the current selection, start a slide show, and change the view.
+The Vue PPTX Editor provides a Ribbon interface similar to Microsoft PowerPoint. Commands are organized into tabs and groups so you can open, export, and print a presentation, inspect the current selection, start a slide show, and change the view.
 
 The ribbon is available when the `Toolbar` module is provided and `enableToolbar` is `true`. By default, `enableToolbar` is `true` and `ribbonLayout` is `Simplified`.
 
@@ -31,7 +31,7 @@ To enable the ribbon, provide the `Toolbar` module and add the dependent compone
 @import '../node_modules/@syncfusion/ej2-pptxeditor/styles/material3.css';
 ```
 
-The following code shows how to enable the ribbon in the PowerPoint Editor.
+The following code shows how to enable the ribbon in the PPTX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,7 +76,7 @@ Set `enableToolbar` to `false` to remove the ribbon. The `Toolbar` module must s
 
 ## Ribbon layouts
 
-The PowerPoint Editor provides two ribbon layouts:
+The PPTX Editor provides two ribbon layouts:
 
 * **Classic** - A traditional Office-like ribbon with group headers and a larger command layout.
 * **Simplified** - A compact ribbon. This is the default.
@@ -635,7 +635,7 @@ To keep the ribbon visible and block one tab, group, or command, use `disableRib
 ## Notes
 
 * Customization methods require the provided `Toolbar` module and `enableToolbar` set to `true`.
-* Use the exported ID constants. The PowerPoint Editor ribbon methods take IDs, not tab, group, or item indexes.
+* Use the exported ID constants. The PPTX Editor ribbon methods take IDs, not tab, group, or item indexes.
 * The optional ID passed to `addRibbonTab`, `addRibbonGroup`, and `addRibbonItem` means "insert before this ID".
 * Home font controls show the formatting of the selected slide text. They are status indicators, not editing commands.
-* The PowerPoint Editor does not provide an API to replace the File menu items or to add a backstage view.
+* The PPTX Editor does not provide an API to replace the File menu items or to add a backstage view.

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Ribbon in Angular PowerPoint Editor | Syncfusion
-description: Customize the ribbon in the Angular PowerPoint Editor, including layouts, tabs, groups, items, and enabling or disabling the ribbon.
+title: Ribbon in Angular PPTX Editor | Syncfusion
+description: Customize the ribbon in the Angular PPTX Editor, including layouts, tabs, groups, items, and enabling or disabling the ribbon.
 control: Ribbon
 platform: document-processing
 documentation: ug
 domainurl:
 ---
 
-# Ribbon in Angular PowerPoint Editor
+# Ribbon in Angular PPTX Editor
 
-The Angular PowerPoint Editor provides a Ribbon interface similar to Microsoft PowerPoint. Commands are organized into tabs and groups so you can open, export, and print a presentation, inspect the current selection, start a slide show, and change the view.
+The Angular PPTX Editor provides a Ribbon interface similar to Microsoft PowerPoint. Commands are organized into tabs and groups so you can open, export, and print a presentation, inspect the current selection, start a slide show, and change the view.
 
 The ribbon is available when the `ToolbarService` is provided and `enableToolbar` is `true`. By default, `enableToolbar` is `true` and `ribbonLayout` is `Simplified`.
 
@@ -31,7 +31,7 @@ To enable the ribbon, provide `ToolbarService` and add the dependent component s
 @import '../node_modules/@syncfusion/ej2-pptxeditor/styles/material3.css';
 ```
 
-The following code shows how to enable the ribbon in the PowerPoint Editor.
+The following code shows how to enable the ribbon in the PPTX Editor.
 
 ```typescript
 /**
@@ -61,7 +61,7 @@ Set `enableToolbar` to `false` to remove the ribbon. `ToolbarService` must stay 
 
 ## Ribbon layouts
 
-The PowerPoint Editor provides two ribbon layouts:
+The PPTX Editor provides two ribbon layouts:
 
 * **Classic** — A traditional Office-like ribbon with group headers and a larger command layout.
 * **Simplified** — A compact ribbon. This is the default.
@@ -449,7 +449,7 @@ To keep the ribbon visible and block one tab, group, or command, use `disableRib
 ## Notes
 
 * Customization methods require `ToolbarService` in `providers` and `enableToolbar` set to `true`.
-* Use the exported ID constants. The PowerPoint Editor ribbon methods take IDs, not tab, group, or item indexes.
+* Use the exported ID constants. The PPTX Editor ribbon methods take IDs, not tab, group, or item indexes.
 * The optional ID passed to `addRibbonTab`, `addRibbonGroup`, and `addRibbonItem` means "insert before this ID".
 * Home font controls show the formatting of the selected slide text. They are status indicators, not editing commands.
-* The PowerPoint Editor does not provide an API to replace the File menu items or to add a backstage view.
+* The PPTX Editor does not provide an API to replace the File menu items or to add a backstage view.
