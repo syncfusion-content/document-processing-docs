@@ -14,6 +14,126 @@ You can add, delete and modify the annotation from the PDF documents.
 Check the following video to learn how to work with annotations in PDF documents using the .NET PDF Library.
 {% youtube "https://youtu.be/0KnFyXd-KpM?si=qCVcijc5XxcbgaZ-" %}
 
+## Set primitive name entries in annotation objects
+
+Use the `PdfAnnotation.SetNameEntry(string key, string name)` method to store a native PDF name object in an annotation dictionary. This method is available in the `Syncfusion.Pdf.Interactive` namespace. It is useful when an annotation entry requires a PDF name rather than a text string, such as `/Name /Approved` for a rubber stamp annotation.
+
+A PDF name object is different from the annotation identifier exposed by the `Name` property.
+
+| API | PDF entry | Purpose |
+|---|---|---|
+| `annotation.Name = "review-stamp-1"` | `/NM (review-stamp-1)` | Sets the annotation identifier as a PDF text string. |
+| `annotation.SetNameEntry("Name", "Approved")` | `/Name /Approved` | Sets a native PDF name object, such as a stamp's name entry. |
+| `annotation.SetValues("Name", "Approved")` | `/Name (Approved)` | Writes a text string rather than a PDF name object. |
+
+### Set a name entry on a rubber stamp annotation
+
+The following example sets the stamp's name entry to `Approved`, assigns a separate annotation identifier, and draws a custom appearance. The explicit name entry is preserved during automatic appearance handling of this annotation instance.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+using (PdfDocument document = new PdfDocument())
+{
+    PdfPage page = document.Pages.Add();
+    PdfRubberStampAnnotation stamp =
+        new PdfRubberStampAnnotation(new RectangleF(40, 40, 160, 45));
+    stamp.Name = "review-stamp-1";
+    stamp.SetNameEntry("Name", "Approved");
+
+    stamp.Appearance.Normal.Graphics.DrawRectangle(
+        PdfPens.DarkGreen, new RectangleF(0, 0, 160, 45));
+    page.Annotations.Add(stamp);
+
+    document.Save("NameEntryAnnotation.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Interactive;
+
+using (PdfDocument document = new PdfDocument())
+{
+    PdfPage page = document.Pages.Add();
+    PdfRubberStampAnnotation stamp =
+        new PdfRubberStampAnnotation(new RectangleF(40, 40, 160, 45));
+    stamp.Name = "review-stamp-1";
+    stamp.SetNameEntry("Name", "Approved");
+
+    stamp.Appearance.Normal.Graphics.DrawRectangle(
+        PdfPens.DarkGreen, new RectangleF(0, 0, 160, 45));
+    page.Annotations.Add(stamp);
+
+    document.Save("NameEntryAnnotation.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Interactive
+
+Using document As New PdfDocument()
+    Dim page As PdfPage = document.Pages.Add()
+    Dim stamp As New PdfRubberStampAnnotation(New RectangleF(40, 40, 160, 45))
+    stamp.Name = "review-stamp-1"
+    stamp.SetNameEntry("Name", "Approved")
+
+    stamp.Appearance.Normal.Graphics.DrawRectangle(
+        PdfPens.DarkGreen, New RectangleF(0, 0, 160, 45))
+    page.Annotations.Add(stamp)
+
+    document.Save("NameEntryAnnotation.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The example's custom appearance is a green rectangle. Setting `/Name /Approved` stores the stamp's name token; it does not draw the word "Approved" into a custom appearance. A later typed icon assignment or a `SetValues` write to the same entry can replace the explicit name entry.
+
+### Provide logical names, not encoded PDF tokens
+
+Both arguments accept logical names. One optional leading slash is removed, so `SetNameEntry("/Name", "/Approved")` has the same effect as `SetNameEntry("Name", "Approved")`.
+
+The method UTF-8 encodes names and escapes whitespace, delimiters, literal `#` characters, and non-ASCII bytes using `#XX` notation. Underscores are also encoded as `#5F` by the library's name encoder. Pass the original text rather than pre-escaped tokens to avoid encoding a literal `#` again.
+
+| Logical name | Encoded PDF name |
+|---|---|
+| `Review Status` | `/Review#20Status` |
+| `A/B` | `/A#2FB` |
+| `A#20B` | `/A#2320B` |
+| `Café` | `/Caf#C3#A9` |
+
+Existing dictionary readers such as `TryGetValue` require the encoded key spelling and return the stored escaped token body. For example, an entry written with the logical key `Review Status` is looked up using `Review#20Status`.
+
+### Supported entries and argument validation
+
+Choose keys and values that are valid for the annotation subtype. `SetNameEntry` does not allow replacing the following library-managed entries:
+
+| Protected key | Reason |
+|---|---|
+| `NM` | The annotation identifier must be a text string. Use the annotation's `Name` property. |
+| `Type`, `Subtype`, `Rect`, `F`, `AP` | These entries are managed by the annotation API and cannot be set as arbitrary name objects. |
+
+Passing a null key or value throws `ArgumentNullException`. Empty or whitespace-only names, names containing U+0000 or unpaired Unicode surrogates, protected keys, and dictionaries containing multiple equivalent spellings of the requested key cause `ArgumentException`.
+
+The inherited `SetNameEntry` method can also update an annotation loaded from an existing document. Save the document after changing its annotation entries. Updating a name entry does not by itself regenerate a custom appearance or validate existing digital signatures.
+
 ## Adding annotations to a PDF document
 
 You can add a popup annotation to the page using the [PdfPopupAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfPopupAnnotation.html) class. The following code example demonstrates how to add a popup annotation.

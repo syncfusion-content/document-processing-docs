@@ -351,6 +351,106 @@ Each `PdfCertificateValidationEntry` exposes its `Certificate`, `Status`, `Reaso
 
 N> Standalone certificate-chain validation does not verify PDF signature integrity or establish a trusted signing time. Use PDF signature validation to validate a signed document. A caller-supplied historical `ValidationTime` is an evaluation input, not proof that the document was signed at that time.
 
+## Validate certificates offline
+
+Use `PdfCertificateValidator` with locally supplied certificates and revocation evidence to validate a certificate without online revocation requests. This is useful in disconnected environments or when your application retrieves OCSP responses and CRLs through a separate, controlled process.
+
+Offline validation still checks certificate trust, validity, and revocation. It is not the same as skipping revocation checks. Prepare the required inputs before disconnecting from the network:
+
+1. Obtain the target certificate, the intermediate certificates needed to build its path, and an independently trusted root certificate.
+2. Obtain DER-encoded OCSP responses or CRLs covering the certificates that require revocation checking. Ensure the evidence is applicable to the intended validation time.
+3. Set `TrustedCertificates`, `IntermediateCertificates`, and the available `OcspResponses` or `Crls` on `PdfCertificateValidationOptions`.
+4. Set `AllowOnlineRevocationCheck` to `false`, then call `PdfCertificateValidator.Validate`.
+5. Inspect the overall status and diagnostic information. Do not accept an indeterminate result as valid.
+
+### Validate with local revocation evidence
+
+The following example uses local certificate files and revocation data. Replace the sample files with the certificates and evidence for your chain. Each revocation collection can contain multiple byte arrays; supply additional responses where required for the chain.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using Syncfusion.Pdf.Security;
+
+using (X509Certificate2 certificate = new X509Certificate2("signer.cer"))
+using (X509Certificate2 intermediate = new X509Certificate2("intermediate.cer"))
+using (X509Certificate2 root = new X509Certificate2("trusted-root.cer"))
+{
+    PdfCertificateValidationOptions options = new PdfCertificateValidationOptions();
+    options.TrustedCertificates = new X509Certificate2Collection { root };
+    options.IntermediateCertificates = new X509Certificate2Collection { intermediate };
+    options.OcspResponses = new List<byte[]> { File.ReadAllBytes("signer_ocsp.der") };
+    options.Crls = new List<byte[]> { File.ReadAllBytes("issuer_crl.der") };
+    options.ValidationTime = DateTime.UtcNow;
+    options.AllowOnlineRevocationCheck = false;
+
+    PdfCertificateValidationResult result =
+        PdfCertificateValidator.Validate(certificate, options);
+    Console.WriteLine("Offline validation status: " + result.Status);
+    Console.WriteLine("Certificate chain valid: " +
+        (result.Status == PdfCertificateStatus.Valid));
+
+    foreach (string message in result.Log)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+Imports System
+Imports System.Collections.Generic
+Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
+Imports Syncfusion.Pdf.Security
+
+Using certificate As New X509Certificate2("signer.cer"),
+      intermediate As New X509Certificate2("intermediate.cer"),
+      root As New X509Certificate2("trusted-root.cer")
+    Dim options As New PdfCertificateValidationOptions()
+    options.TrustedCertificates = New X509Certificate2Collection From {root}
+    options.IntermediateCertificates = New X509Certificate2Collection From {intermediate}
+    options.OcspResponses = New List(Of Byte()) From {File.ReadAllBytes("signer_ocsp.der")}
+    options.Crls = New List(Of Byte()) From {File.ReadAllBytes("issuer_crl.der")}
+    options.ValidationTime = DateTime.UtcNow
+    options.AllowOnlineRevocationCheck = False
+
+    Dim result As PdfCertificateValidationResult =
+        PdfCertificateValidator.Validate(certificate, options)
+    Console.WriteLine("Offline validation status: " & result.Status.ToString())
+    Console.WriteLine("Certificate chain valid: " &
+        (result.Status = PdfCertificateStatus.Valid).ToString())
+
+    For Each message As String In result.Log
+        Console.WriteLine(message)
+    Next
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Handle unavailable or outdated evidence
+
+Inspect `result.Certificates` for each certificate's `Status`, `Reasons`, and `RevocationTime`. Use `result.Log` to diagnose missing issuers, untrusted roots, or revocation information that could not be used. For example, `RevocationStatusUnknown` indicates that revocation status could not be established; it is not evidence that a certificate has not been revoked.
+
+Refresh locally stored revocation evidence through your controlled provisioning process as required. File availability alone does not establish that an OCSP response or CRL is authentic, relevant, or valid for the evaluation time. Do not add an unverified root certificate to `TrustedCertificates` merely to make validation succeed.
+
+N> `AllowOnlineRevocationCheck = false` controls online revocation checks. It is not an application-wide network isolation setting. Supply the complete intermediate chain locally, and enforce network restrictions at the deployment boundary when a strictly air-gapped environment is required.
+
+### Combine offline validation with trusted lists or signed PDFs
+
+When using EU trusted lists offline, also set `PdfTrustedListSettings.AllowOnlineFetch` and `AutoRefresh` to `false`, and load authenticated local list files as described in the offline trusted list section above. Trusted list downloading and revocation checking have separate settings.
+
+For PDF signature validation, caller-supplied evidence uses `PdfSignatureValidationOptions.OCSPResponseData` and `CRLResponseData`, as shown in the following section. Supplying these collections alone does not disable network access. Standalone offline certificate validation does not verify a PDF's signed content or establish a trusted signing time.
+
 ## Supply caller-provided OCSP and CRL data for PDF signature validation
 
 You can provide previously obtained revocation evidence through the public `OCSPResponseData` and `CRLResponseData` properties of `PdfSignatureValidationOptions`, in the `Syncfusion.Pdf.Parsing` namespace. These responses supplement the OCSP responses and CRLs embedded in the signature and the document security store (DSS). Both properties default to null, and unusable items are ignored.
@@ -431,6 +531,167 @@ The standalone and PDF signature validation APIs use different property names fo
 | `PdfSignatureValidationOptions` | `OCSPResponseData` | `CRLResponseData` |
 
 Add multiple byte arrays when evidence is available for multiple certificates. Leaving either signature validation property unset preserves the existing behavior for that input. These properties supply validation evidence; they do not embed it into the PDF or turn off network access. Configure the applicable online validation policy separately when network requests must be restricted.
+
+## Configure signature lock options
+
+The `PdfSignatureLockOptions` class specifies which interactive form fields are locked when a signature field is signed. Use this feature to protect completed fields while allowing other fields to remain available for later steps in an approval workflow. The lock options and the `PdfSignatureLockAction` enum are available in the `Syncfusion.Pdf.Security` namespace.
+
+You can configure lock options on an unsigned `PdfSignatureField`, an unsigned `PdfLoadedSignatureField`, or a `PdfSignature` before signing. Assigning `LockOptions` does not sign the field or immediately lock the form fields. The restrictions apply when the signature field is signed.
+
+### Choose the fields to lock
+
+The `Action` property determines how the names in `Fields` are interpreted.
+
+| Action | Description |
+|---|---|
+| `All` | Locks all interactive form fields. This is the default action. Do not supply field names. |
+| `Include` | Locks only the named fields and their descendants. Supply at least one field name. |
+| `Exclude` | Locks all fields except the named fields and their descendants. Supply at least one field name. |
+
+Field names are fully qualified and compared using case-sensitive ordinal matching. For example, selecting `Applicant` also selects `Applicant.Name` and `Applicant.Address.City`, but not `Applicant2` or `applicant.Name`. Use actual field names rather than wildcard expressions.
+
+N> Excluding a field does not override other restrictions that apply to it. A field can remain locked by another signature or document policy even when it is excluded from the current signature's lock selection.
+
+### Add lock options to an unsigned signature field
+
+The following example creates a form with applicant fields, a manager comments field, and an unsigned approval signature field. When the approval field is signed, the applicant fields are selected for locking. The manager comments field is not selected by this lock policy.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Security;
+
+using (PdfDocument document = new PdfDocument())
+{
+    PdfPage page = document.Pages.Add();
+
+    PdfTextBoxField applicantName = new PdfTextBoxField(page, "Applicant.Name");
+    applicantName.Bounds = new RectangleF(50, 50, 200, 25);
+    document.Form.Fields.Add(applicantName);
+
+    PdfTextBoxField applicantDepartment =
+        new PdfTextBoxField(page, "Applicant.Department");
+    applicantDepartment.Bounds = new RectangleF(50, 90, 200, 25);
+    document.Form.Fields.Add(applicantDepartment);
+
+    PdfTextBoxField managerComments = new PdfTextBoxField(page, "Manager.Comments");
+    managerComments.Bounds = new RectangleF(50, 130, 200, 50);
+    document.Form.Fields.Add(managerComments);
+
+    PdfSignatureField approval = new PdfSignatureField(page, "ManagerApproval");
+    approval.Bounds = new RectangleF(50, 200, 200, 50);
+    approval.LockOptions = new PdfSignatureLockOptions(
+        PdfSignatureLockAction.Include,
+        new string[] { "Applicant.Name", "Applicant.Department" },
+        PdfCertificationFlags.AllowFormFill);
+    document.Form.Fields.Add(approval);
+
+    document.Save("ApprovalTemplate.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Security
+
+Using document As New PdfDocument()
+    Dim page As PdfPage = document.Pages.Add()
+
+    Dim applicantName As New PdfTextBoxField(page, "Applicant.Name")
+    applicantName.Bounds = New RectangleF(50, 50, 200, 25)
+    document.Form.Fields.Add(applicantName)
+
+    Dim applicantDepartment As New PdfTextBoxField(page, "Applicant.Department")
+    applicantDepartment.Bounds = New RectangleF(50, 90, 200, 25)
+    document.Form.Fields.Add(applicantDepartment)
+
+    Dim managerComments As New PdfTextBoxField(page, "Manager.Comments")
+    managerComments.Bounds = New RectangleF(50, 130, 200, 50)
+    document.Form.Fields.Add(managerComments)
+
+    Dim approval As New PdfSignatureField(page, "ManagerApproval")
+    approval.Bounds = New RectangleF(50, 200, 200, 50)
+    approval.LockOptions = New PdfSignatureLockOptions(
+        PdfSignatureLockAction.Include,
+        New String() {"Applicant.Name", "Applicant.Department"},
+        PdfCertificationFlags.AllowFormFill)
+    document.Form.Fields.Add(approval)
+
+    document.Save("ApprovalTemplate.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The saved `ApprovalTemplate.pdf` contains an unsigned signature field with a lock configuration. Saving this template alone does not apply the post-signing restrictions.
+
+### Lock all fields or exclude selected fields
+
+The following snippets show alternative configurations for the unsigned `approval` field in the preceding example. Choose one configuration before saving the template.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+//Lock all interactive form fields when the approval field is signed.
+approval.LockOptions = new PdfSignatureLockOptions();
+
+//Alternatively, lock all fields except Manager.Comments and its descendants.
+approval.LockOptions = new PdfSignatureLockOptions(
+    PdfSignatureLockAction.Exclude,
+    new string[] { "Manager.Comments" },
+    PdfCertificationFlags.AllowFormFill);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+'Lock all interactive form fields when the approval field is signed.
+approval.LockOptions = New PdfSignatureLockOptions()
+
+'Alternatively, lock all fields except Manager.Comments and its descendants.
+approval.LockOptions = New PdfSignatureLockOptions(
+    PdfSignatureLockAction.Exclude,
+    New String() {"Manager.Comments"},
+    PdfCertificationFlags.AllowFormFill)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Configure post-signing document permissions
+
+The optional `DocumentPermissions` property specifies a post-signing change policy in addition to the field selection.
+
+| Value | Description |
+|---|---|
+| `null` | Omits the document permission entry from the lock configuration. This is the default. |
+| `PdfCertificationFlags.ForbidChanges` | Does not permit changes after signing. |
+| `PdfCertificationFlags.AllowFormFill` | Permits form filling and signing other fields, subject to the field locks and any other restrictions. |
+| `PdfCertificationFlags.AllowComments` | Permits form filling and comments or annotation additions, subject to other restrictions. |
+
+Select only one permission level; do not combine the values. These permissions describe changes allowed after signing, not document-open passwords or encryption permissions. Setting `DocumentPermissions` does not certify the document. Omitting the permission entry alone does not establish PDF 1.7 conformance.
+
+### Update lock options and sign a document
+
+- Assigning `PdfSignatureField.LockOptions` copies the supplied configuration. To change the attached options before signing, modify the instance returned by the field's `LockOptions` property or assign a new configuration.
+- The `Fields` collection is read-only. To change the selected names, assign a new collection to `Fields` rather than adding or removing items in place. Null, empty, or whitespace-only names are not allowed.
+- For an unsigned loaded signature field, use `PdfLoadedSignatureField.LockOptions` to read, replace, or clear its configuration. Setting it to `null` removes the lock configuration before signing.
+- To configure an in-flight signature, assign `PdfSignature.LockOptions` before saving the signed document. When signing a loaded field with existing lock options, leaving the signature's `LockOptions` untouched preserves the field's configuration.
+- Explicit `PdfSignature.LockOptions` takes precedence over `PdfSignature.IsLocked`, regardless of assignment order. Setting `IsLocked` to `false` does not override explicit lock options.
+- Non-null `PdfSignature.LockOptions` cannot be combined with a certification signature (`Certificated = true`). Attempting to combine them throws `InvalidOperationException`.
+- After signing, the field's lock configuration is frozen. You can inspect it, but replacing it or changing its properties throws `InvalidOperationException`.
+
+N> Signature lock options record field and post-signing change restrictions using FieldMDP. They do not replace signature validation or prevent every PDF editor from modifying a file. Validate signatures and permitted changes when deciding whether to accept a signed document.
 
 ## Working with RC4 Encryption
 
