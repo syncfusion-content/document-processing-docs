@@ -18,8 +18,6 @@ Check the following video to learn how to work with annotations in PDF documents
 
 Use `PdfAnnotation.SetNameEntry(string key, string name)` in the `Syncfusion.Pdf.Interactive` namespace to store a native PDF name in an annotation dictionary, such as `/Name /Approved` for a rubber stamp.
 
-Note: Use `SetNameEntry` for `/Name`; `SetValues` writes a text string instead.
-
 ### Set a name entry on a rubber stamp annotation
 
 The following example sets the stamp's name to `Approved`, assigns a separate annotation identifier, and draws a custom appearance.
