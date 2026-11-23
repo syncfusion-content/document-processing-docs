@@ -30,48 +30,84 @@ For more information on package setup for each platform, refer to [Getting Start
 
 ## Creating a chart from scratch
 
-Use [`slide.shapes.addChart`](https://help.syncfusion.com/cr/javascript/ej.pptx.Slide.html) to insert a classic chart. When `from` is omitted, the library seeds a demo workbook (`Category` / `Value` headers and three rows: A/1, B/2, C/3) and binds the series to `A2:A4` and `B2:B4`.
-
-`type` is a classic catalog key such as `ColumnClustered`, `BarClustered`, `Line`, `LineMarkers`, `Pie`, `Doughnut`, `Area`, `ScatterMarkers`, or `Bubble`. Pass `bounds` in points and an optional frame `name`.
+Use [`slide.shapes.addChart`](https://help.syncfusion.com/cr/javascript/ej.pptx.Slide.html) to insert a classic chart. Pass the chart type from the `OfficeChartType` enumeration and the frame `bounds` in points. Write the category and value cells with `chart.chartData.setValue`, add each series with `chart.series.add`, and bind the series values and category labels with `chart.chartData.getRange`.
 
 The following code example demonstrates how to create a clustered column chart from scratch.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
-// Creates a PowerPoint presentation.
+// Creates a Presentation instance.
 let pptxDoc = Presentation.create();
-// Adds a blank slide to the presentation.
+// Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// Adds a clustered column chart. Bounds are in points.
+// Adds a chart with position and size (points) and the chart type.
 let chart = slide.shapes.addChart({
-    type: 'ColumnClustered',
-    name: 'Sales',
-    bounds: { x: 50, y: 40, width: 480, height: 300 }
+    type: OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-// Optional: replace the seeded category labels and values (Sheet1!A2:A4 / B2:B4).
-chart.setSeriesCategoryCells(0, ['Q1', 'Q2', 'Q3']);
-chart.setSeriesValueCells(0, [12, 18, 9]);
+chart.chartTitle = 'Sales Analysis';
+chart.chartData.setValue(1, 2, 'Jan');
+chart.chartData.setValue(1, 3, 'Feb');
+chart.chartData.setValue(1, 4, 'March');
+chart.chartData.setValue(2, 1, 2010);
+chart.chartData.setValue(2, 2, 60);
+chart.chartData.setValue(2, 3, 70);
+chart.chartData.setValue(2, 4, 80);
+chart.chartData.setValue(3, 1, 2011);
+chart.chartData.setValue(3, 2, 80);
+chart.chartData.setValue(3, 3, 70);
+chart.chartData.setValue(3, 4, 60);
+chart.chartData.setValue(4, 1, 2012);
+chart.chartData.setValue(4, 2, 60);
+chart.chartData.setValue(4, 3, 70);
+chart.chartData.setValue(4, 4, 80);
+let seriesJan = chart.series.add('Jan');
+seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
+let seriesFeb = chart.series.add('Feb');
+seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
+let seriesMarch = chart.series.add('March');
+seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
+chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Creates a PowerPoint presentation.
+// Creates a Presentation instance.
 var pptxDoc = ej.pptx.Presentation.create();
-// Adds a blank slide to the presentation.
+// Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-// Adds a clustered column chart. Bounds are in points.
+// Adds a chart with position and size (points) and the chart type.
 var chart = slide.shapes.addChart({
-    type: 'ColumnClustered',
-    name: 'Sales',
-    bounds: { x: 50, y: 40, width: 480, height: 300 }
+    type: ej.pptx.OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-// Optional: replace the seeded category labels and values (Sheet1!A2:A4 / B2:B4).
-chart.setSeriesCategoryCells(0, ['Q1', 'Q2', 'Q3']);
-chart.setSeriesValueCells(0, [12, 18, 9]);
+chart.chartTitle = 'Sales Analysis';
+chart.chartData.setValue(1, 2, 'Jan');
+chart.chartData.setValue(1, 3, 'Feb');
+chart.chartData.setValue(1, 4, 'March');
+chart.chartData.setValue(2, 1, 2010);
+chart.chartData.setValue(2, 2, 60);
+chart.chartData.setValue(2, 3, 70);
+chart.chartData.setValue(2, 4, 80);
+chart.chartData.setValue(3, 1, 2011);
+chart.chartData.setValue(3, 2, 80);
+chart.chartData.setValue(3, 3, 70);
+chart.chartData.setValue(3, 4, 60);
+chart.chartData.setValue(4, 1, 2012);
+chart.chartData.setValue(4, 2, 60);
+chart.chartData.setValue(4, 3, 70);
+chart.chartData.setValue(4, 4, 80);
+var seriesJan = chart.series.add('Jan');
+seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
+var seriesFeb = chart.series.add('Feb');
+seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
+var seriesMarch = chart.series.add('March');
+seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
+chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -90,13 +126,13 @@ The following code example demonstrates how to create a pie chart from Excel byt
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
 // excelBytes is a Uint8Array of an .xlsx file whose first sheet has categories in column A and values in column B.
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 let chart = slide.shapes.addChart({
-    type: 'Pie',
+    type: OfficeChartType.Pie,
     name: 'Share',
     bounds: { x: 40, y: 40, width: 420, height: 280 },
     from: {
@@ -113,7 +149,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 var chart = slide.shapes.addChart({
-    type: 'Pie',
+    type: ej.pptx.OfficeChartType.Pie,
     name: 'Share',
     bounds: { x: 40, y: 40, width: 420, height: 280 },
     from: {
@@ -122,6 +158,121 @@ var chart = slide.shapes.addChart({
         range: 'A2:B5'
     }
 });
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
+{% endtabs %}
+
+## Creating a custom chart
+
+A custom chart combines series of different chart types in one chart. Create the chart with `slide.shapes.addChart`, write the category and value cells with `chart.chartData.setValue`, and set `seriesType` on each series to an `OfficeChartType` value.
+
+The following code example demonstrates how to create a custom chart with a line series and an area series.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
+
+// Creates a Presentation instance.
+let pptxDoc = Presentation.create();
+// Adds a blank slide.
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+// Adds a chart with position and size (points) and the chart type.
+let chart = slide.shapes.addChart({
+    type: OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 80, width: 500, height: 350 }
+});
+chart.chartTitle = 'Sales comparison';
+chart.chartTitleArea.bold = true;
+// Sets chart data.
+chart.chartData.setValue(1, 1, 'Month');
+chart.chartData.setValue(2, 1, 'July');
+chart.chartData.setValue(3, 1, 'August');
+chart.chartData.setValue(4, 1, 'September');
+chart.chartData.setValue(5, 1, 'October');
+chart.chartData.setValue(6, 1, 'November');
+chart.chartData.setValue(7, 1, 'December');
+chart.chartData.setValue(1, 2, '2013');
+chart.chartData.setValue(2, 2, 35);
+chart.chartData.setValue(3, 2, 47);
+chart.chartData.setValue(4, 2, 30);
+chart.chartData.setValue(5, 2, 29);
+chart.chartData.setValue(6, 2, 25);
+chart.chartData.setValue(7, 2, 30);
+chart.chartData.setValue(1, 3, '2014');
+chart.chartData.setValue(2, 3, 30);
+chart.chartData.setValue(3, 3, 25);
+chart.chartData.setValue(4, 3, 29);
+chart.chartData.setValue(5, 3, 35);
+chart.chartData.setValue(6, 3, 38);
+chart.chartData.setValue(7, 3, 32);
+chart.chartData.setValue(1, 4, '2015');
+chart.chartData.setValue(2, 4, 35);
+chart.chartData.setValue(3, 4, 37);
+chart.chartData.setValue(4, 4, 30);
+chart.chartData.setValue(5, 4, 29);
+chart.chartData.setValue(6, 4, 25);
+chart.chartData.setValue(7, 4, 30);
+// Creates series.
+let serie2013 = chart.series.add('2013');
+serie2013.values = chart.chartData.getRange(2, 2, 7, 2);
+serie2013.seriesType = OfficeChartType.Line;
+let serie2014 = chart.series.add('2014');
+serie2014.values = chart.chartData.getRange(2, 3, 7, 3);
+serie2014.seriesType = OfficeChartType.Area;
+// Saves the presentation.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a Presentation instance.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a chart with position and size (points) and the chart type.
+var chart = slide.shapes.addChart({
+    type: ej.pptx.OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 80, width: 500, height: 350 }
+});
+chart.chartTitle = 'Sales comparison';
+chart.chartTitleArea.bold = true;
+// Sets chart data.
+chart.chartData.setValue(1, 1, 'Month');
+chart.chartData.setValue(2, 1, 'July');
+chart.chartData.setValue(3, 1, 'August');
+chart.chartData.setValue(4, 1, 'September');
+chart.chartData.setValue(5, 1, 'October');
+chart.chartData.setValue(6, 1, 'November');
+chart.chartData.setValue(7, 1, 'December');
+chart.chartData.setValue(1, 2, '2013');
+chart.chartData.setValue(2, 2, 35);
+chart.chartData.setValue(3, 2, 47);
+chart.chartData.setValue(4, 2, 30);
+chart.chartData.setValue(5, 2, 29);
+chart.chartData.setValue(6, 2, 25);
+chart.chartData.setValue(7, 2, 30);
+chart.chartData.setValue(1, 3, '2014');
+chart.chartData.setValue(2, 3, 30);
+chart.chartData.setValue(3, 3, 25);
+chart.chartData.setValue(4, 3, 29);
+chart.chartData.setValue(5, 3, 35);
+chart.chartData.setValue(6, 3, 38);
+chart.chartData.setValue(7, 3, 32);
+chart.chartData.setValue(1, 4, '2015');
+chart.chartData.setValue(2, 4, 35);
+chart.chartData.setValue(3, 4, 37);
+chart.chartData.setValue(4, 4, 30);
+chart.chartData.setValue(5, 4, 29);
+chart.chartData.setValue(6, 4, 25);
+chart.chartData.setValue(7, 4, 30);
+// Creates series.
+var serie2013 = chart.series.add('2013');
+serie2013.values = chart.chartData.getRange(2, 2, 7, 2);
+serie2013.seriesType = ej.pptx.OfficeChartType.Line;
+var serie2014 = chart.series.add('2014');
+serie2014.values = chart.chartData.getRange(2, 3, 7, 3);
+serie2014.seriesType = ej.pptx.OfficeChartType.Area;
+// Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
@@ -183,32 +334,31 @@ Charts in an existing presentation can be edited. Open the presentation with [`P
 * `readSeriesValueCells` reads the current sheet cell values of a series.
 * `replaceSeriesFormulas` replaces the series title, category, or value formulas.
 
-The following code example demonstrates how to open an existing presentation, edit the chart data, and save the updated file.
+The following code example demonstrates how to open an existing presentation, edit the chart data, refresh the chart, and save the updated file.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, Chart } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
-let chart = slide.charts.at(0);
-// Updates the embedded cells of the first series.
-chart.setSeriesCategoryCells(0, ['Jan', 'Feb', 'Mar']);
-chart.setSeriesValueCells(0, [10, 14, 11]);
-// Adds a second series. Formulas must match cells in the embedded sheet.
-chart.addSeries({
-    title: 'Series 2',
-    categoryLabels: 'Sheet1!$A$2:$A$4',
-    values: 'Sheet1!$C$2:$C$4'
-});
-chart.setSeriesValueCells(1, [6, 9, 8]);
-// Removes the second series again when it is no longer needed.
-// chart.removeSeries(1);
+// Gets the chart from the slide.
+let chart = slide.shapes[0] as Chart;
+// Modifies chart data - Row 1 (Category Names).
+chart.chartData.setValue(1, 2, 'Jan');
+chart.chartData.setValue(1, 3, 'Feb');
+chart.chartData.setValue(1, 4, 'March');
+// Modifies chart data - Row 2 (Series Data).
+chart.chartData.setValue(2, 1, 2010);
+chart.chartData.setValue(2, 2, 60);
+chart.chartData.setValue(2, 3, 70);
+chart.chartData.setValue(2, 4, 80);
+// Refreshes the chart after data modification.
+chart.refresh();
 // Saves the updated presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -219,20 +369,19 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
-var chart = slide.charts.at(0);
-// Updates the embedded cells of the first series.
-chart.setSeriesCategoryCells(0, ['Jan', 'Feb', 'Mar']);
-chart.setSeriesValueCells(0, [10, 14, 11]);
-// Adds a second series. Formulas must match cells in the embedded sheet.
-chart.addSeries({
-    title: 'Series 2',
-    categoryLabels: 'Sheet1!$A$2:$A$4',
-    values: 'Sheet1!$C$2:$C$4'
-});
-chart.setSeriesValueCells(1, [6, 9, 8]);
-// Removes the second series again when it is no longer needed.
-// chart.removeSeries(1);
+// Gets the chart from the slide.
+var chart = slide.shapes[0];
+// Modifies chart data - Row 1 (Category Names).
+chart.chartData.setValue(1, 2, 'Jan');
+chart.chartData.setValue(1, 3, 'Feb');
+chart.chartData.setValue(1, 4, 'March');
+// Modifies chart data - Row 2 (Series Data).
+chart.chartData.setValue(2, 1, 2010);
+chart.chartData.setValue(2, 2, 60);
+chart.chartData.setValue(2, 3, 70);
+chart.chartData.setValue(2, 4, 80);
+// Refreshes the chart after data modification.
+chart.refresh();
 // Saves the updated presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -303,9 +452,86 @@ await pptxDoc.save('Output.pptx');
 
 Charts created in the same session can also be removed by passing the handle returned by `slide.shapes.addChart` directly to `slide.shapes.remove`.
 
+## Creating a scatter chart
+
+A scatter chart plots numeric values on both axes. Add the chart with `slide.shapes.addChart`, set `chartType` to `OfficeChartType.ScatterMarkers`, write the X and Y cells with `chart.chartData.setValue`, and assign the data range with `chart.dataRange`.
+
+The following code example demonstrates how to create a scatter markers chart.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
+
+// Creates a Presentation instance.
+let pptxDoc = Presentation.create();
+// Adds a blank slide.
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+// Adds a chart.
+let chart = slide.shapes.addChart({ bounds: { x: 100, y: 10, width: 700, height: 500 } });
+// Sets the chart type.
+chart.chartType = OfficeChartType.ScatterMarkers;
+// Sets chart data.
+chart.chartData.setValue(1, 1, 'X-Axis');
+chart.chartData.setValue(1, 2, 'Y-Axis');
+chart.chartData.setValue(2, 1, 1);
+chart.chartData.setValue(3, 1, 5);
+chart.chartData.setValue(4, 1, 10);
+chart.chartData.setValue(2, 2, 10);
+chart.chartData.setValue(3, 2, 5);
+chart.chartData.setValue(4, 2, 1);
+// Assigns the data range.
+chart.dataRange = chart.chartData.getRange(1, 1, 4, 2);
+chart.isSeriesInRows = false;
+// Sets the chart title.
+chart.chartTitle = 'Scatter Markers Chart';
+// Hides the legend.
+chart.hasLegend = false;
+// Configures data labels.
+let serie = chart.series[0];
+// serie.dataPoints.defaultDataPoint.dataLabels.isValue = true;
+// serie.dataPoints.defaultDataPoint.dataLabels.isCategoryName = true;
+// Saves the presentation.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a Presentation instance.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a chart.
+var chart = slide.shapes.addChart({ bounds: { x: 100, y: 10, width: 700, height: 500 } });
+// Sets the chart type.
+chart.chartType = ej.pptx.OfficeChartType.ScatterMarkers;
+// Sets chart data.
+chart.chartData.setValue(1, 1, 'X-Axis');
+chart.chartData.setValue(1, 2, 'Y-Axis');
+chart.chartData.setValue(2, 1, 1);
+chart.chartData.setValue(3, 1, 5);
+chart.chartData.setValue(4, 1, 10);
+chart.chartData.setValue(2, 2, 10);
+chart.chartData.setValue(3, 2, 5);
+chart.chartData.setValue(4, 2, 1);
+// Assigns the data range.
+chart.dataRange = chart.chartData.getRange(1, 1, 4, 2);
+chart.isSeriesInRows = false;
+// Sets the chart title.
+chart.chartTitle = 'Scatter Markers Chart';
+// Hides the legend.
+chart.hasLegend = false;
+// Configures data labels.
+var serie = chart.series[0];
+// serie.dataPoints.defaultDataPoint.dataLabels.isValue = true;
+// serie.dataPoints.defaultDataPoint.dataLabels.isCategoryName = true;
+// Saves the presentation.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
+{% endtabs %}
+
 ## Supported chart types
 
-The following chart types are supported by the JavaScript PowerPoint library. Pass the catalog key as the `type` of `slide.shapes.addChart`.
+The following chart types are supported by the JavaScript PowerPoint library. Pass the `OfficeChartType` member as the `type` of `slide.shapes.addChart`, or assign it to `chart.chartType` or `series.seriesType`.
 
 | Chart type | Catalog keys |
 |---|---|

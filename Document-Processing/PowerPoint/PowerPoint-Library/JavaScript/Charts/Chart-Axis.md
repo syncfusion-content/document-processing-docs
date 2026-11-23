@@ -29,12 +29,12 @@ The following code example demonstrates how to format the primary axes while cre
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 let chart = slide.shapes.addChart({
-    type: 'ColumnClustered',
+    type: OfficeChartType.ColumnClustered,
     bounds: { x: 36, y: 36, width: 520, height: 320 }
 });
 chart.setSeriesValueCells(0, [12, 18, 9]);
@@ -64,7 +64,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 var chart = slide.shapes.addChart({
-    type: 'ColumnClustered',
+    type: ej.pptx.OfficeChartType.ColumnClustered,
     bounds: { x: 36, y: 36, width: 520, height: 320 }
 });
 chart.setSeriesValueCells(0, [12, 18, 9]);

@@ -24,12 +24,12 @@ The following code example demonstrates how to show and format a chart legend wh
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 let chart = slide.shapes.addChart({
-    type: 'Pie',
+    type: OfficeChartType.Pie,
     bounds: { x: 40, y: 40, width: 420, height: 300 }
 });
 chart.applyHasLegend(true);
@@ -48,7 +48,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 var chart = slide.shapes.addChart({
-    type: 'Pie',
+    type: ej.pptx.OfficeChartType.Pie,
     bounds: { x: 40, y: 40, width: 420, height: 300 }
 });
 chart.applyHasLegend(true);

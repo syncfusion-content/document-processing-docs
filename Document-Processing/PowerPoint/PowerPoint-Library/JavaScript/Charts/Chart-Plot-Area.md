@@ -19,12 +19,12 @@ The following code example demonstrates how to format the plot area on a chart c
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 let chart = slide.shapes.addChart({
-    type: 'Area',
+    type: OfficeChartType.Area,
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });
 chart.commitPlotArea({
@@ -38,7 +38,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 var chart = slide.shapes.addChart({
-    type: 'Area',
+    type: ej.pptx.OfficeChartType.Area,
     bounds: { x: 36, y: 36, width: 500, height: 320 }
 });
 chart.commitPlotArea({
