@@ -40,17 +40,12 @@ The supported file formats depend on the selected processing method:
 
 | Processing method | Supported formats |
 | --- | --- |
-| Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
-| Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
-
-## Processing methods
-
-* [Client-Side Export](./save-excel-file/pure-client-side)
-* [Server-Side Export](./save-excel-file/server-side-processing)
+| [Client-side processing](./save-excel-file/pure-client-side) | Microsoft Excel Workbook (`.xlsx`) |
+| [Server-side processing](./save-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
 
 ## Cloud storage integrations
 
-The Spreadsheet component also supports saving files to cloud storage through an application-provided service. The following cloud-storage guides use React for the client UI; adapt the client code for TypeScript.
+The Spreadsheet component also supports saving files to cloud storage through an application-provided service.
 
 * [Client-Side Export](./save-excel-file/pure-client-side)
 * [Server-Side Export](./save-excel-file/server-side-processing)

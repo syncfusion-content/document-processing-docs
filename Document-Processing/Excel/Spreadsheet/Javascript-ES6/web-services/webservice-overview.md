@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Web Services in JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn about connecting web services for open and save operations in the Syncfusion JavaScript (ES6) Spreadsheet component.
+title: Web Services in TypeScript Spreadsheet | Syncfusion
+description: Learn about connecting web services for open and save operations in the Syncfusion TypeScript Spreadsheet component.
 control: Web Services
 platform: document-processing
 documentation: ug
 ---
 
-# Web Services in JavaScript (ES6) Spreadsheet
+# Web Services in TypeScript Spreadsheet
 
-Unlock advanced Excel file processing in your web applications by connecting the [JavaScript (ES6) Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component to your own back-end web services. This overview explains the purpose, benefits, and high-level process for enabling open and save operations using ASP.NET Core and ASP.NET MVC.
+Unlock advanced Excel file processing in your web applications by connecting the [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component to your own back-end web services. This overview explains the purpose, benefits, and high-level process for enabling open and save operations using ASP.NET Core and ASP.NET MVC.
 
 ## What are Spreadsheet Open and Save Services?
 
-The JavaScript (ES6) Spreadsheet Editor component allows users to import (open) and export (save) Excel files directly from the browser. When server-side processing is selected, these operations use secure, reliable back-end web services to process files and data.
+The TypeScript Spreadsheet Editor component allows users to import (open) and export (save) Excel files directly from the browser. These operations require secure, reliable back-end web services to process files and data.
 
-Examples may use demo endpoints hosted by Syncfusion. Without configured service URLs, XLSX files are processed in the browser. For production or development, it is strongly recommended to configure your own web services for:
+By default, demo endpoints hosted by Syncfusion are used. For production or development, it is strongly recommended to configure your own web services for:
 - **Security:** Keep files and data within your infrastructure.
 - **Performance:** Reduce latency and dependency on external services.
 - **Customization:** Implement business logic for file validation, processing, or storage.

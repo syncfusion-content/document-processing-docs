@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connecting ASP.NET MVC Web Services to JavaScript Spreadsheet | Syncfusion
+title: Web Services using ASP.NET MVC in JavaScript Spreadsheet | Syncfusion
 description: Learn about configuring ASP.NET MVC web services for open and save operations in JavaScript Spreadsheet component and more details.
-control: Web Services
+control: Web Services 
 platform: document-processing
 documentation: ug
 ---
 
-# Connecting ASP.NET MVC Web Services to JavaScript Spreadsheet
+# Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
 
 This guide explains how to set up and connect local web services for open and save operations in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using **ASP.NET MVC**.
 
@@ -87,7 +87,7 @@ By default, ASP.NET MVC and web servers impose size limits on incoming HTTP requ
 
 ### Enable CORS (Cross-Origin Resource Sharing)
 
-CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the JavaScript Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET MVC web service for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the JavaScript Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET MVC web service for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environme
 
 **How to Enable CORS in ASP.NET MVC**
 
@@ -123,13 +123,10 @@ After adding the controller codes and above mentioned configurations, build and 
 Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
 
 ```js
-//Initialize Spreadsheet component.
-var spreadsheet = new ej.spreadsheet.Spreadsheet({
-    openUrl: 'https://localhost:44300/Spreadsheet/Open',
-    saveUrl: 'https://localhost:44300/Spreadsheet/Save'
-});
-//Render initialized Spreadsheet component.
-spreadsheet.appendTo('#spreadsheet');
+<SpreadsheetComponent
+    openUrl="https://localhost:44300/Spreadsheet/Open"
+    saveUrl="https://localhost:44300/Spreadsheet/Save"
+/>
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).

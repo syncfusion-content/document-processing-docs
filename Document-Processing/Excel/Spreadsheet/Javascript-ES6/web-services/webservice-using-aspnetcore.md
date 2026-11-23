@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Connecting ASP.NET Core Web Services to JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn about configuring ASP.NET Core web services for open and save operations in JavaScript (ES6) Spreadsheet.
-control: Web Services
+title: Web Services Using ASP.NET Core in TypeScript Spreadsheet | Syncfusion
+description: Learn about configuring ASP.NET Core web services for open and save operations in TypeScript Spreadsheet.
+control: Web Services 
 platform: document-processing
 documentation: ug
 ---
 
-# Connecting ASP.NET Core Web Services to JavaScript (ES6) Spreadsheet
+# Connecting Web Services for Spreadsheet Open and Save in ASP.NET Core
 
-This guide explains how to set up and connect local web services for open and save operations in the [JavaScript (ES6) Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using ASP.NET Core.
+This guide explains how to set up and connect local web services for open and save operations in the [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using ASP.NET Core.
 
 ## Create a Local ASP.NET Core Web API
 
@@ -31,23 +31,16 @@ For more details, see the [dependencies section on nuget.org](https://www.nuget.
 
 ### Add Open and Save Controllers
 
-Add the following controller to enable open and save functionality. The controller route matches the client URLs shown below:
+Add the following controller actions to enable open and save functionality:
 
 ```csharp
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Syncfusion.EJ2.Spreadsheet;
-
-[Route("api/[controller]")]
-public class SpreadsheetController : Controller
-{
 // Open action
 [HttpPost]
 [Route("Open")]
 public IActionResult Open([FromForm] IFormCollection openRequest)
 {
     OpenRequest open = new OpenRequest();
-    if (openRequest.Files != null && openRequest.Files.Count > 0) {
+    if (openRequest.Files && openRequest.Files.Count > 0) {
         open.File = openRequest.Files[0];
         return Content(Workbook.Open(open));
     }
@@ -59,11 +52,10 @@ public IActionResult Open([FromForm] IFormCollection openRequest)
 [Route("Save")]
 public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    if(saveSettings != null && saveSettings.JSONData != null) {
+    if(saveSettings && saveSettings.JSONData) {
         return Workbook.Save(saveSettings);
     }
     return BadRequest("saveSettings or JSONData was not available.");
-}
 }
 ```
 
@@ -90,7 +82,7 @@ By default, ASP.NET Core and web servers impose size limits on incoming HTTP req
 ```csharp
 // Configure FormOptions to allow large file uploads by setting multipart body and value length limits
 // This enables the server to accept large Excel files in form submissions without rejecting them
-builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
+builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = int.MaxValue;
     options.ValueLengthLimit = int.MaxValue;
@@ -106,12 +98,12 @@ builder.WebHost.ConfigureKestrel(options =>
 
 ### Enable CORS (Cross-Origin Resource Sharing)
 
-CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the JavaScript (ES6) Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET Core API for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the TypeScript Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET Core API for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
 
 Edit `Program.cs` to allow cross-origin requests:
 
 ```csharp
-// Configure CORS to allow the JavaScript (ES6) Spreadsheet component to communicate with the API from any origin
+// Configure CORS to allow the TypeScript Spreadsheet component to communicate with the API from any origin
 // This is necessary for the browser to permit cross-origin requests for file open and save operations
 var MyAllowSpecificOrigins = "AllowAllOrigins";
 builder.Services.AddCors(options =>
@@ -138,16 +130,11 @@ Build and run your Web API project. For detailed instructions, refer to:
 
 Once your local service is launched, configure the openUrl and saveUrl properties in your client application to use the local endpoints for import and export operations
 
-```ts
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-
-//Initialize Spreadsheet component
-let spreadsheet: Spreadsheet = new Spreadsheet({
-    openUrl: 'https://localhost:5173/api/spreadsheet/open',
-    saveUrl: 'https://localhost:5173/api/spreadsheet/save'
-});
-//Render initialized Spreadsheet component
-spreadsheet.appendTo('#spreadsheet');
+```js
+<SpreadsheetComponent
+    openUrl="https://localhost:5173/api/spreadsheet/open"
+    saveUrl="https://localhost:5173/api/spreadsheet/save"
+/>
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).

@@ -54,5 +54,3 @@ The supported file formats depend on the selected processing method:
 * [From Google Cloud Storage (React guide)](../React/open-excel-file/from-google-cloud-storage)
 * [From Google Drive (React guide)](../React/open-excel-file/from-google-drive)
 * [Excel Library JavaScript Overview](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview)
-
-The cloud-storage links above use React for the client UI; adapt the client code for TypeScript.
