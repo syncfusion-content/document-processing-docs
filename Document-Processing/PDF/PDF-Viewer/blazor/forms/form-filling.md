@@ -191,7 +191,7 @@ N> For a hands-on reference with working code examples, explore the sample proje
 ## See also
 
 - [Form Designer overview](./overview)
-- [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
+- [Form Designer Toolbar](../toolbar/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Modify form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)

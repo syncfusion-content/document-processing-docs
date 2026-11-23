@@ -190,7 +190,7 @@ Configure defaults with the `redactionSettings` **component prop**:
 
 ## See also
 - [Annotation Overview](../overview)
-- [Redaction Overview](../../Redaction/overview)
+- [Redaction Overview](../../redaction/overview)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../../annotation/create-modify-annotation)
 - [Customize Annotation](../../annotation/customize-annotation)

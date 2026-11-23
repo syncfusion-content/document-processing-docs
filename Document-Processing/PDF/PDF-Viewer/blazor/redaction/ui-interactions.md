@@ -25,7 +25,7 @@ Use the redaction tool on the toolbar to draw over content to be redacted. A mar
 
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see [Toolbar customization](../toolbar-customization-overview) in the See also section.
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see [Toolbar customization](../toolbar/overview) in the See also section.
 
 ## Update redaction properties
 

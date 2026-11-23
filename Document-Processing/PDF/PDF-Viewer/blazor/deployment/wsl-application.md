@@ -9,14 +9,14 @@ documentation: ug
 
 # Getting started with Blazor WSL PDF Viewer 
 
-Follow these steps to set up Windows Subsystem for Linux (WSL), install the .NET SDK, and run the [Blazor PDF Viewer (Next-Gen)](../getting-started/server-side-application) component in WSL mode.
+Follow these steps to set up Windows Subsystem for Linux (WSL), install the .NET SDK, and run the [Blazor PDF Viewer (Next-Gen)](..getting-started/web-app) component in WSL mode.
 
 ## Prerequisites
 
 * Windows 10 version 2004+ (build 19041) or Windows 11.
 * Administrator rights on Windows (required to enable WSL features).
 * A Linux distribution supported by Blazor PDF Viewer: Ubuntu 22.04 LTS or Ubuntu 24.04 LTS.
-* The Blazor PDF Viewer (Next-Gen) NuGet package installed in your project, and a valid Syncfusion license key. For setup, see [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/server-side-application) or [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application).
+* The Blazor PDF Viewer (Next-Gen) NuGet package installed in your project, and a valid Syncfusion license key. For setup, see [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/web-app) or [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application).
 
 ## Step 1: Enable Windows Subsystem for Linux and Virtual Machine Platform
 
@@ -136,6 +136,6 @@ Close the project, reopen it, and run it in WSL mode. It should run properly.
 
 ## See also
 
-* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/server-side-application)
+* [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/web-app)
 * [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application)
 * [Getting started with the Blazor PDF Viewer in Docker](./docker-deployment)
