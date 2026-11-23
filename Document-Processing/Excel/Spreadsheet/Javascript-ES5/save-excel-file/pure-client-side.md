@@ -85,27 +85,6 @@ spreadsheet.appendTo('#spreadsheet');
 spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
 ```
 
-## Saving Excel files as a Base64 string
-
-Replace the preceding `saveComplete` handler with this handler to convert the generated Blob to a Base64 data URL. Keep the `beforeSave` handler above. `FileReader` completes asynchronously, so use the string inside `onloadend`.
-
-```js
-spreadsheet.saveComplete = function (args) {
-    // Convert blob data to base64 string.
-    var reader = new FileReader();
-    reader.onloadend = function () {
-        var base64String = reader.result;
-        // Logs base64 string into the console.
-        console.log('Base64 String - ', base64String);
-    };
-    reader.readAsDataURL(args.blobData);
-};
-spreadsheet.save({
-    fileName: 'Worksheet',
-    saveType: 'Xlsx'
-}); // Specifies the file name, file type need to be saved.
-```
-
 ## Considerations
 
 1. **Format Limitation**: Client-side export currently supports XLSX format only

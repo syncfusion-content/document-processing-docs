@@ -106,16 +106,22 @@ Please find the table below for the [`open`](https://ej2.syncfusion.com/document
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
 
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/open-save-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/open-save-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
+```ts
+import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-save-cs2" %}
+let spreadsheet: Spreadsheet = new Spreadsheet({
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    created: () => {
+        fetch('https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx')
+            .then((response) => response.blob())
+            .then((fileBlob) => {
+                const file = new File([fileBlob], 'Sample.xlsx');
+                spreadsheet.open({ file: file });
+            });
+    }
+});
+spreadsheet.appendTo('#spreadsheet');
+```
 
 ## Supported Excel file formats for Open
 

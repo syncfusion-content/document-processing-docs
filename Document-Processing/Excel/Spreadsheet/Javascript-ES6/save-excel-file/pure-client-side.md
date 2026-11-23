@@ -69,24 +69,6 @@ spreadsheet.saveComplete = (args: SaveCompleteEventArgs): void => {
 spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
 ```
 
-## Saving data as a Base64 string
-
-Replace the preceding saveComplete handler with this handler to convert the generated Blob to a Base64 data URL. Keep the preceding `beforeSave` handler configured (`needBlobData = true`, `isFullPost = false`). FileReader completes asynchronously; use the result inside onloadend.
-
-```ts
-spreadsheet.saveComplete = (args: SaveCompleteEventArgs): void => {
-    // Convert blob data to base64 string.
-    let reader: FileReader = new FileReader();
-    reader.readAsDataURL(args.blobData);
-    reader.onloadend = function () {
-        const base64String = reader.result ? reader.result : "";
-        // Logs base64 string into the console.
-        console.log("Base64 String - ", base64String);
-    };
-};
-spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
-```
-
 ## Considerations
 
 1. **Format Limitation**: Client-side processing currently supports XLSX format only.

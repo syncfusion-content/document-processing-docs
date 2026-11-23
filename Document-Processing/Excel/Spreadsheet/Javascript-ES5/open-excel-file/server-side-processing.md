@@ -107,24 +107,30 @@ Use the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadshe
 
 You can access a remote Excel file by using the [`created`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#created) event. In this event, you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) this file by using the Spreadsheet component's `open` method.
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs2" %}
+```js
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
+    created: function () {
+        fetch('https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx')
+            .then(function (response) {
+                return response.blob();
+            })
+            .then(function (fileBlob) {
+                var file = new File([fileBlob], 'Sample.xlsx');
+                spreadsheet.open({ file: file });
+            });
+    }
+});
+spreadsheet.appendTo('#spreadsheet');
+```
 
 ## Supported Excel file formats for Open
 
-* `.xlsx`
-* `.xls`
-* `.csv`
-* `.xlsm`
-* `.xlsb`
+* Microsoft Excel Workbook (.xlsx)
+* Microsoft Excel 97-2003 Workbook (.xls)
+* Comma-Separated Values (.csv)
+* Excel Macro-Enabled Workbook (.xlsm)
+* Excel Binary Workbook (.xlsb)
 
 ## Import options
 

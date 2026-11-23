@@ -93,26 +93,6 @@ var file = new File([fileBlob], 'Sample.xlsx');
 spreadsheet.open({ file: file });
 ```
 
-## Opening a file from a Base64 string
-
-Pass a complete XLSX data URL (including its MIME type and Base64 prefix) to this function. The data is converted to a Blob and File entirely in the browser, without configuring `openUrl`.
-
-```js
-function openBase64(base64String) {
-    // Open the file based on saved base64 string.
-    fetch(base64String)
-        // To obtain blob data from base64 string.
-        .then(function (response) {
-            return response.blob();
-        })
-        .then(function (fileBlob) {
-            // To convert obtained blob data as a file.
-            var file = new File([fileBlob], 'Sample.xlsx');
-            spreadsheet.open({ file: file });
-        });
-}
-```
-
 ## Considerations
 
 1. **Format Limitation**: Client-side import currently supports XLSX format only

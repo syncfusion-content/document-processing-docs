@@ -126,10 +126,10 @@ The following code example shows how to save the spreadsheet file as an `xlsx`, 
 
 ## Supported Excel file formats for Save
 
-* `.xlsx`
-* `.xls`
-* `.csv`
-* `.pdf`
+* Microsoft Excel Workbook (.xlsx)
+* Microsoft Excel 97–2003 Workbook (.xls)
+* Comma-Separated Values (.csv)
+* Portable Document Format (.pdf)
 
 ## Export options
 

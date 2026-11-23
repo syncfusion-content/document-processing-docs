@@ -84,23 +84,6 @@ function openBlob(fileBlob: Blob): void {
 }
 ```
 
-### Opening a file from a Base64 string
-
-Pass a complete XLSX data URL (including its MIME type and Base64 prefix).
-
-```ts
-function openBase64(base64String: string): void {
-    fetch(base64String)
-        // To obtain blob data from base64 string.
-        .then((response) => response.blob())
-        .then((fileBlob) => {
-            // To convert obtained blob data as a file.
-            let file = new File([fileBlob], 'Sample.xlsx');
-            spreadsheet.open({ file: file });
-        });
-}
-```
-
 ## Considerations
 
 1. **Format Limitation**: Client-side processing currently supports XLSX format only.
