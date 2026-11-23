@@ -21,7 +21,7 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 ## Enable complex script for string drawing
 
-Set `complexScript` on [PdfStringFormat](https://helpej2.syncfusion.com/document-processing/api/pdf/pdfstringformat) and pass the format to `drawString`.
+Set `complexScript` on `PdfStringFormat` and pass the format to `drawString`.
 
 ```typescript
 // Create a new PDF document.
