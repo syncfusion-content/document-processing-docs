@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Globalization and Localization in Vue PPTX Editor | Syncfusion
-description: Global localization in Vue PPTX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
+title: Globalization and Localization in Angular PPTX Editor | Syncfusion
+description: Global localization in Angular PPTX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global local
 documentation: ug
 domainurl:
 ---
 
-# Globalization and Localization in Vue PPTX Editor
+# Globalization and Localization in Angular PPTX Editor
 
 ## Localization
 
-The Localization library allows you to localize the default text content of the PPTX Editor. The Vue PPTX Editor component has static text on some features (such as the ribbon, status bar, notes pane, slide show, and dialogs) that can be changed to other cultures (Arabic, German, French, and more) by defining the locale value and translation object.
+The Localization library allows you to localize the default text content of the PPTX Editor. The Angular PPTX Editor component has static text on some features (such as the ribbon, status bar, notes pane, slide show, and dialogs) that can be changed to other cultures (Arabic, German, French, and more) by defining the locale value and translation object.
 
 > Refer the [Locale](https://github.com/syncfusion/ej2-locale).
 
