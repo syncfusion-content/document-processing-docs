@@ -222,3 +222,7 @@ N> In the `EnforceProtection` method, the first parameter is the password and th
 ## Online demo
 
 Explore how to track and review changes in Word documents using the ASP.NET Core DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/trackchanges#/tailwind3).
+
+## See Also
+
+* [FAQs about Track Changes in DOCX Editor](./faq/track-changes-faqs)
