@@ -288,5 +288,5 @@ N> NOTE: Rendering of charts from Excel documents to images (and to PDF) uses Sy
 ## See also
 
 * [Excel to PDF conversion guide](../..//Excel-to-PDF/NET/excel-to-pdf-conversion) — chart-to-PDF rendering uses the same `ChartToImageConverter` internally.
-* [Worksheet to Image conversion](../..//Excel-to-Image/NET/worksheet-to-image-conversion) — full worksheet rendering as PNG and other formats.
+* [Worksheet to Image conversion](../../excel-to-image/net/worksheet-to-image-conversion) — full worksheet rendering as PNG and other formats.
 * [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview) — register your license key.
