@@ -59,8 +59,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master).
-
 ## Linearizing an existing PDF document
 
 You can load an existing PDF document, enable linearization, and save it to a new file. This is useful when you want to optimize documents that were created by another tool or by an earlier version of the Syncfusion PDF Library.

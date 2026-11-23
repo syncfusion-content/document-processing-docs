@@ -34,6 +34,7 @@ The following are the key features of this [JavaScript PDF Library](https://www.
 * Extract or redact text from PDF files.
 * Extract images from PDF documents.
 * Redact shapes to protect sensitive graphical content.
+* Create linearized PDF files ([Fast Web View](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/linearization)) for faster web loading.
 
 ## Supported environments
 
