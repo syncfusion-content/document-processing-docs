@@ -3,7 +3,7 @@ layout: post
 title: ASP.NET MVC PPTX Editor Getting Started | Syncfusion
 description: Learn how to get started with the Syncfusion ASP.NET MVC PPTX Editor control and view PowerPoint presentations in your ASP.NET MVC application.
 platform: document-processing
-control: PowerPoint Editor
+control: PPTX Editor
 documentation: ug
 ---
 

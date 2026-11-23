@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Magnification in JavaScript ES6 PPTX Editor | Syncfusion
-description: Zoom a presentation in the JavaScript ES6 PPTX Editor from the status bar and ribbon, fit the slide to the window, and enable or disable zooming.
+title: Magnification in TypeScript PPTX Editor | Syncfusion
+description: Zoom a presentation in the TypeScript PPTX Editor from the status bar and ribbon, fit the slide to the window, and enable or disable zooming.
 control: Magnification
 platform: document-processing
 documentation: ug
 domainurl:
 ---
 
-# Magnification in JavaScript ES6 PPTX Editor
+# Magnification in TypeScript PPTX Editor
 
-The JavaScript ES6 PPTX Editor provides magnification so you can enlarge or reduce the slide in the view area. You can zoom from the status bar, fit the slide to the window, and choose a zoom level from the View ribbon.
+The TypeScript PPTX Editor provides magnification so you can enlarge or reduce the slide in the view area. You can zoom from the status bar, fit the slide to the window, and choose a zoom level from the View ribbon.
 
 Zooming is available when the `Magnification` module is injected and `enableMagnification` is `true`. By default, `enableMagnification` is `true` and `zoom` is `100`. The supported range is **10%** to **400%**. Values outside that range are clamped, and an invalid value is ignored.
 
