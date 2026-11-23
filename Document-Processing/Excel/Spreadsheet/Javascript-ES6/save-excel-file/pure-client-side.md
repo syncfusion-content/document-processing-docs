@@ -53,21 +53,22 @@ Use the [save](https://ej2.syncfusion.com/documentation/api/spreadsheet#save) me
 spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
 ```
 
-## Saving Excel files as Blob data
+## Save an excel file as blob data
 
-Set `needBlobData` to true and `isFullPost` to false in [beforeSave](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforesave). Receive the generated Blob in [saveComplete](https://ej2.syncfusion.com/documentation/api/spreadsheet#savecomplete). Configure these handlers before invoking save.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set `needBlobData` property to **true** and `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/documentation/api/spreadsheet#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/documentation/api/spreadsheet#savecomplete) event. You can then post the blob data to the server endpoint for saving.
 
-```ts
-spreadsheet.beforeSave = (args: BeforeSaveEventArgs): void => {
-    args.needBlobData = true; // To trigger the saveComplete event.
-    args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
-};
-spreadsheet.saveComplete = (args: SaveCompleteEventArgs): void => {
-    // To obtain the blob data
-    console.log(args.blobData);
-};
-spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
-```
+Please find below the code to retrieve blob data from the Spreadsheet control below.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-save-blob-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-save-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/client-side-save-blob-cs1" %}
 
 ## Considerations
 

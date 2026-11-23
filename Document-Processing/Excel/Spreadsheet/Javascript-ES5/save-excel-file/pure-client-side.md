@@ -52,38 +52,22 @@ To save Excel files programmatically in the Spreadsheet, you can use the [`save`
 spreadsheet.save({ fileName: 'Sample', saveType: 'Xlsx' });
 ```
 
-## Saving Excel files as Blob data
+## Save an excel file as blob data
 
-To save an Excel file as blob data, set `needBlobData` to **true** and `isFullPost` to **false** in the [beforeSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforesave) event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#savecomplete) event.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set the `needBlobData` property to **true** and the `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#savecomplete) event. You can then post the blob data to the server endpoint for saving.
 
-```js
-var spreadsheet = new ej.spreadsheet.Spreadsheet({
+The following code retrieves blob data from the Spreadsheet control.
 
-  sheets: [{
-    name: 'Car Sales Report',
-    rows: [{ cells: [{ value: 'Example' }] }],
-    columns: [
-      { width: 180 }, { width: 130 }, { width: 130 }, { width: 180 },
-      { width: 130 }, { width: 120 }
-    ]
-  }],
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-  beforeSave: function (args) {
-    args.needBlobData = true; // To trigger the saveComplete event.
-    args.isFullPost = false; // Get the spreadsheet data as blob data in the saveComplete event.
-  },
-
-  saveComplete: function (args) {
-    // To obtain the blob data
-    console.log('Spreadsheet BlobData : ', args.blobData);
-  }
-
-});
-
-// Render initialized Spreadsheet.
-spreadsheet.appendTo('#spreadsheet');
-spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
-```
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1" %}
 
 ## Considerations
 
