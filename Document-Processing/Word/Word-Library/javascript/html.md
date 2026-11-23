@@ -1,6 +1,6 @@
 ---
 title: HTML conversion in JavaScript Word | Syncfusion
-description: Learn how to convert HTML files to Word document in JavaScript Word Library without Microsoft Word.
+description: Learn how to convert HTML files to Word documents in JavaScript using the Word Library without using Microsoft Word.
 platform: document-processing
 control: Word Library
 documentation: UG
