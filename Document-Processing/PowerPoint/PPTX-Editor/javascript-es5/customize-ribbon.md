@@ -141,7 +141,7 @@ var pptxEditor = new ej.pptxeditor.PptxEditor({
                             text: 'About',
                             iconCss: 'e-icons e-circle-info',
                             clicked: function () {
-                                pptxEditor.openAbout();
+                                alert('About');
                             }
                         }
                     ]
@@ -220,7 +220,7 @@ var pptxEditor = new ej.pptxeditor.PptxEditor({
                     text: 'About',
                     iconCss: 'e-icons e-circle-info',
                     clicked: function () {
-                        pptxEditor.openAbout();
+                        alert('About');
                     }
                 }
             ]
@@ -302,7 +302,7 @@ var pptxEditor = new ej.pptxeditor.PptxEditor({
             iconCss: 'e-icons e-circle-info',
             tooltip: 'About this editor',
             clicked: function () {
-                pptxEditor.openAbout();
+                alert('About');
             }
         };
         // Add the item at the end of the Home Clipboard group.

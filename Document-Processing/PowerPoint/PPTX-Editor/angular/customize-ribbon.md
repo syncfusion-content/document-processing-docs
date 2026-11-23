@@ -47,7 +47,7 @@ import { PptxEditorModule, ToolbarService } from '@syncfusion/ej2-angular-pptxed
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,
@@ -82,7 +82,7 @@ import { PptxEditorModule, ToolbarService } from '@syncfusion/ej2-angular-pptxed
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,
@@ -155,7 +155,7 @@ import { PptxEditorComponent, PptxEditorModule, RibbonTabId, RibbonTabInfo, Tool
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,
@@ -254,7 +254,7 @@ import { PptxEditorComponent, PptxEditorModule, RibbonGroupId, RibbonGroupInfo, 
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,
@@ -357,7 +357,7 @@ import { PptxEditorComponent, PptxEditorModule, RibbonGroupId, RibbonItemId, Rib
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,
@@ -420,7 +420,7 @@ import { PptxEditorComponent, PptxEditorModule, ToolbarService } from '@syncfusi
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService],
     standalone: true,

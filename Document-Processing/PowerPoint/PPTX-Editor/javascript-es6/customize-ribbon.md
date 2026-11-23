@@ -149,7 +149,7 @@ let pptxEditor: PptxEditor = new PptxEditor({
                             text: 'About',
                             iconCss: 'e-icons e-circle-info',
                             clicked: (): void => {
-                                pptxEditor.openAbout();
+                                alert('About');
                             }
                         }
                     ]
@@ -232,7 +232,7 @@ let pptxEditor: PptxEditor = new PptxEditor({
                     text: 'About',
                     iconCss: 'e-icons e-circle-info',
                     clicked: (): void => {
-                        pptxEditor.openAbout();
+                        alert('About');
                     }
                 }
             ]
@@ -320,7 +320,7 @@ let pptxEditor: PptxEditor = new PptxEditor({
             iconCss: 'e-icons e-circle-info',
             tooltip: 'About this editor',
             clicked: (): void => {
-                pptxEditor.openAbout();
+                alert('About');
             }
         };
         // Add the item at the end of the Home Clipboard group.

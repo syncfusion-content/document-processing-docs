@@ -43,12 +43,13 @@ The following code shows how to configure the Classic ribbon layout.
 </script>
 ```
 
-You can also switch the layout after the component is created:
+The following code shows how to configure the Simplified ribbon layout.
 
-```js
-var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
-pptxEditor.ribbonLayout = 'Simplified';
-pptxEditor.dataBind();
+```aspx-cs
+@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).RibbonLayout("Simplified").Render()
+<script>
+    ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar);
+</script>
 ```
 
 ## Tab customization
@@ -94,11 +95,11 @@ pptxEditor.enableRibbonTab(ej.pptxeditor.RibbonTabId.SlideShow);
 `addRibbonTab` inserts a tab. Pass an existing tab ID as the second argument to insert the new tab before that tab. Omit the second argument to append the tab. Call it from the `created` event so the ribbon is initialized.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar);
 
-    function onCreated() {
+    document.getElementById('pptxeditor').addEventListener('created', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         var ribbonTab = {
             header: 'Custom Tab',
@@ -125,7 +126,7 @@ pptxEditor.enableRibbonTab(ej.pptxeditor.RibbonTabId.SlideShow);
 
         // Add the tab before the View tab.
         // pptxEditor.addRibbonTab(ribbonTab, ej.pptxeditor.RibbonTabId.View);
-    }
+    });
 </script>
 ```
 
@@ -175,11 +176,11 @@ pptxEditor.enableRibbonGroup(ej.pptxeditor.RibbonGroupId.Clipboard);
 `addRibbonGroup` adds a group to a tab. Pass an existing group ID as the third argument to insert the new group before that group. Omit it to append the group.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar);
 
-    function onCreated() {
+    document.getElementById('pptxeditor').addEventListener('created', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         var ribbonGroup = {
             id: 'custom_group',
@@ -200,7 +201,7 @@ pptxEditor.enableRibbonGroup(ej.pptxeditor.RibbonGroupId.Clipboard);
 
         // Add the group before the Font group.
         // pptxEditor.addRibbonGroup(ej.pptxeditor.RibbonTabId.Home, ribbonGroup, ej.pptxeditor.RibbonGroupId.Font);
-    }
+    });
 </script>
 ```
 
@@ -260,11 +261,11 @@ Disabling a ribbon item does not change the matching editor property. `disableRi
 `addRibbonItem` adds a button to a group. Pass an existing item ID as the third argument to insert the new item before that item. Omit it to append the item. The item is added to the group's first collection.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar);
 
-    function onCreated() {
+    document.getElementById('pptxeditor').addEventListener('created', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         var ribbonItem = {
             id: 'custom_item',
@@ -280,7 +281,7 @@ Disabling a ribbon item does not change the matching editor property. `disableRi
 
         // Add the item before Copy.
         // pptxEditor.addRibbonItem(ej.pptxeditor.RibbonGroupId.Clipboard, ribbonItem, ej.pptxeditor.RibbonItemId.Copy);
-    }
+    });
 </script>
 ```
 
