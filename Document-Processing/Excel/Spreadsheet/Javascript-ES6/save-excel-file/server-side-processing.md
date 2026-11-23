@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Server-Side Export in JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn about saving Excel files using server-side processing in the Syncfusion JavaScript (ES6) Spreadsheet component with saveUrl configuration.
+title: Server-Side Export in TypeScript Spreadsheet | Syncfusion
+description: Learn about saving Excel files using server-side processing in the Syncfusion TypeScript Spreadsheet component with saveUrl configuration.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Using server-side processing with JavaScript (ES6) Spreadsheet
+# Export Excel files using server-side processing in TypeScript Spreadsheet
 
-The JavaScript (ES6) Spreadsheet component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
+The TypeScript Spreadsheet component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
-The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to convert the JSON data into a fully formatted Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
+The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to convert the JSON data into a fully formatted Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET**. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
 
 For save processing, the Spreadsheet component serializes its content into a structured JSON workbook that includes all essential details—such as data, formulas, formatting, styles, and sheet configuration. This JSON is sent to the server where it is converted into a fully formatted Excel file using the Syncfusion XlsIO library.
 
@@ -39,7 +39,7 @@ Below is an example of a server-side `Save` endpoint using ASP.NET Core WebAPI, 
 [Route("Save")]
 public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    if(saveSettings != null && saveSettings.JSONData != null) {
+    if (saveSettings != null && !string.IsNullOrWhiteSpace(saveSettings.JSONData)) {
         return Workbook.Save(saveSettings);
     }
     return BadRequest("saveSettings or JSONData was not available.");
@@ -176,7 +176,7 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 
 **Client Side**:
 
-```js
+```ts
 
     // Convert the spreadsheet workbook to JSON data.
     spreadsheet.saveAsJson().then((json) => {
@@ -184,7 +184,7 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
         formData.append('FileName', "Sample");
         formData.append('saveType', 'Xlsx');
         // Passing the JSON data to perform the save operation.
-        formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
+        formData.append('JSONData', JSON.stringify((json as { jsonObject: { Workbook: object } }).jsonObject.Workbook));
         formData.append('PdfLayoutSettings', JSON.stringify({ FitSheetOnOnePage: false }));
         // Using fetch to invoke the save process.
         fetch('https://localhost:{Your port number}/Home/Save', {
@@ -199,40 +199,39 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 
 **Server Endpoint**:
 
+Use `System.IO` for file access. Authenticate requests and authorize writes to each workbook. Keep the `Files` directory controlled by the application (without untrusted symbolic links); this example overwrites an existing file with the same validated name. Apply request-size limits and appropriate exception handling in production without returning internal exception messages to clients.
+
 ```csharp
 
-    public string Save(SaveSettings saveSettings)
+    public IActionResult Save([FromForm] SaveSettings saveSettings)
     {
-        ExcelEngine excelEngine = new ExcelEngine();
-        IApplication application = excelEngine.Excel;
-        try
+        if (saveSettings == null || string.IsNullOrWhiteSpace(saveSettings.JSONData) ||
+            string.IsNullOrWhiteSpace(saveSettings.FileName) ||
+            !System.Text.RegularExpressions.Regex.IsMatch(saveSettings.FileName, @"\A[A-Za-z0-9_-]{1,100}\z"))
         {
-
-            // Save the workbook as stream.
-            Stream fileStream = Workbook.Save<Stream>(saveSettings);
-            // Using XLSIO, we are opening the file stream and saving the file in the server under "Files" folder.
-            // You can also save the stream file in your server location.
-            IWorkbook workbook = application.Workbooks.Open(fileStream);
-            string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
-            var file = System.IO.File.Create(basePath);
+            return BadRequest("Invalid workbook data or file name.");
+        }
+        // This endpoint writes XLSX files only. Never accept a client-supplied path.
+        saveSettings.SaveType = "Xlsx";
+        string directory = Path.Combine(_env.ContentRootPath, "Files");
+        Directory.CreateDirectory(directory);
+        string filePath = Path.Combine(directory, saveSettings.FileName + ".xlsx");
+        // Save the workbook as stream.
+        using (Stream fileStream = Workbook.Save<Stream>(saveSettings))
+        using (FileStream file = System.IO.File.Create(filePath))
+        {
             fileStream.Seek(0, SeekOrigin.Begin);
-            // To convert the stream to file options.
+            // Copy the generated workbook to the server location.
             fileStream.CopyTo(file);
-            file.Dispose();
-            fileStream.Dispose();
-            return string.Empty;
         }
-        catch (Exception ex)
-        {
-            return ex.Message;
-        }
+        return Ok();
     }
 
 ```
 
 You can find the server endpoint code to save the spreadsheet data as an Excel file in this [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_(1)-880363187). After launching the server endpoint, you need to update the URL on the client side sample as shown below.
 
-```js
+```ts
 //To save an Excel file to the server.
 fetch('https://localhost:{port number}/Home/Save')
 ```
@@ -252,7 +251,7 @@ The following code example shows how to save an Excel file using a hosted web se
 ```ts
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
-let saveInitiated: boolean;
+let saveInitiated: boolean = false;
 //Initialize Spreadsheet component
 let spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: [
@@ -262,11 +261,11 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
         if (!saveInitiated) {
             eventArgs.cancel = true; // Preventing default save action.
             saveInitiated = true; // The "beforeSave" event will trigger for "saveAsJson" action also, so we are preventing for the "saveAsJson".
-            saveAsExcel(eventArgs);
+            saveAsExcel();
         }
     }
 });
-const saveAsExcel = (eventArgs) => {
+const saveAsExcel = (): void => {
     // Convert the spreadsheet workbook to JSON data.
     spreadsheet.saveAsJson().then(Json => {
         saveInitiated = false;
@@ -280,14 +279,15 @@ const saveAsExcel = (eventArgs) => {
         fetch('https://xxxxxxxxxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/save', {
             method: 'POST', body: formData
         }).then(response => {
-            if (response.ok) {
-                return response.blob();
+            if (!response.ok) {
+                throw new Error(`Save request failed: ${response.status}`);
             }
+            return response.blob();
         }).then(data => {
             const reader = new FileReader();
             reader.onload = function () {
                 //Converts the result of the file reading operation into a base64 string.
-                const textBase64Str = reader.result.toString();
+                const textBase64Str: string = typeof reader.result === 'string' ? reader.result : '';
                 //Converts the base64 string into a Excel base64 string.
                 const excelBase64Str = atob(textBase64Str.replace('data:text/plain;base64,', ''));
                 //Converts the Excel base64 string into byte characters.
@@ -310,6 +310,9 @@ const saveAsExcel = (eventArgs) => {
             }
             reader.readAsDataURL(data);
         });
+    }).catch((error: unknown) => {
+        saveInitiated = false;
+        console.error(error);
     });
 };
 
@@ -413,7 +416,7 @@ Server side code snippets:
 
 ### Add custom headers to Save requests
 
-You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/documentation/api/spreadsheet#filemenuitemselect) event, the custom header can be added to the request during save action.
+Add an Authorization header to the client-to-server save request. The server must validate the token; use HTTPS to protect workbook data in transit and allow the header in the server CORS policy when using cross-origin requests. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/documentation/api/spreadsheet#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

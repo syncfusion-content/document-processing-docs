@@ -7,11 +7,11 @@ control: Server-Side Import
 documentation: ug
 ---
 
-# Using server-side processing with JavaScript Spreadsheet
+# Import Excel files using server-side processing in JavaScript Spreadsheet
 
 The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
-On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the JavaScript Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), a .NET library. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the JavaScript Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
 
 For open processing, the server receives the uploaded Excel file and processes it with the Syncfusion XlsIO library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
 
@@ -98,6 +98,12 @@ The following table lists the `beforeOpen` event arguments.
 > * The default value of the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property in previous code snippet.
 
 ## Open Excel files programmatically
+
+Use the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method with `openUrl` configured for server-side processing.
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| options | [OpenOptions](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openOptions) | Options specifying the file to open. |
 
 You can access a remote Excel file by using the [`created`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#created) event. In this event, you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) this file by using the Spreadsheet component's `open` method.
 
@@ -201,17 +207,26 @@ By default, the Spreadsheet control provides an option to browse files from the 
 ```csharp
     public IActionResult Open([FromBody] FileOptions options)
     {
-        OpenRequest open = new OpenRequest();
-        string filePath = _env.ContentRootPath.ToString() + "\\Files\\" + options.FileName + ".xlsx";
+        // Accept only a base name, never a client-supplied path.
+        if (options == null || string.IsNullOrWhiteSpace(options.FileName) ||
+            !System.Text.RegularExpressions.Regex.IsMatch(options.FileName, @"\A[A-Za-z0-9_-]{1,100}\z"))
+        {
+            return BadRequest("Invalid file name.");
+        }
+        string filePath = Path.Combine(_env.ContentRootPath, "Files", options.FileName + ".xlsx");
+        if (!System.IO.File.Exists(filePath))
+        {
+            return NotFound();
+        }
         // Getting the file stream from the file path.
-        FileStream fileStream = new FileStream(filePath, FileMode.Open);
-        // Converting "MemoryStream" to "IFormFile".
-        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
-        open.File = formFile;
-        // Processing the Excel file and return the workbook JSON.
-        var result = Workbook.Open(open);
-        fileStream.Close();
-        return Content(result);
+        using (FileStream fileStream = System.IO.File.OpenRead(filePath))
+        {
+            // Converting the file stream to IFormFile.
+            OpenRequest open = new OpenRequest();
+            open.File = new FormFile(fileStream, 0, fileStream.Length, "file", options.FileName + ".xlsx");
+            // Processing the Excel file and returning the workbook JSON.
+            return Content(Workbook.Open(open));
+        }
     }
 
     public class FileOptions
@@ -292,12 +307,13 @@ function openExcel(requestData) {
         },
         body: JSON.stringify(requestData)
     }).then(function (response) {
-        if (response.ok) {
-            return response.json();
+        if (!response.ok) {
+            throw new Error('Open request failed.');
         }
+        return response.json();
     }).then(function (data) {
         // Loading the JSON data into our spreadsheet.
-        if (data.Workbook && data.Workbook.sheets) {
+        if (data && data.Workbook && data.Workbook.sheets) {
             spreadsheet.openFromJson({ file: data });
         }
     }).catch(function (error) {
@@ -334,7 +350,7 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the JavaScript Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method in the spreadsheet.
+In the JavaScript Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the import button handler fetches a Base64 data URL, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method in the spreadsheet.
 
 The following code example shows how to open an Excel file from a base64 string.
 

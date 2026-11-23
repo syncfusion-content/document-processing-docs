@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with JavaScript Spreadsheet
+# Export Excel files using client-side processing in JavaScript Spreadsheet
 
-Client-side processing generates workbook files directly within the browser without sending data to a Save service. When `allowSave` property is default enabled and `saveUrl` is not configured, the Spreadsheet leverages its integrated client-side file-generation functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component processes workbook files directly in the browser without requiring a Save service. The [allowSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsave) property is enabled by default. When [saveUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Export
 
@@ -18,8 +18,8 @@ Client-side export provides several key advantages over server-side processing:
 * **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
 * **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
 * **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
-* **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
-* **Offline Capability**: Open and process local Excel files without an internet connection.
+* **Enhanced Privacy**: Keep workbook data within the browser during export instead of sending it to a file-processing service.
+* **Offline Capability**: Generate and download Excel files without an internet connection once application resources are loaded.
 
 ## How client-side export works
 
@@ -32,7 +32,7 @@ Client-side export currently supports:
 
 ## Configure client-side export
 
-Unlike server-side processing, the `saveUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+For client-side processing, do not configure `saveUrl`; no file-processing request is sent to a service. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
 ```js
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
@@ -41,7 +41,6 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 });
 spreadsheet.appendTo('#spreadsheet');
 ```
-
 
 With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
 
@@ -53,16 +52,12 @@ To save Excel files programmatically in the Spreadsheet, you can use the [`save`
 spreadsheet.save({ fileName: 'Sample', saveType: 'Xlsx' });
 ```
 
-
 ## Saving Excel files as Blob data
 
 To save an Excel file as blob data, set `needBlobData` to **true** and `isFullPost` to **false** in the [beforeSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforesave) event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#savecomplete) event.
 
 ```js
-var base64String;
-
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-
 
   sheets: [{
     name: 'Car Sales Report',
@@ -80,7 +75,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 
   saveComplete: function (args) {
     // To obtain the blob data
-    console.log('Spreadsheet BlobData : ', args.blobData)
+    console.log('Spreadsheet BlobData : ', args.blobData);
   }
 
 });
@@ -89,7 +84,6 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
 ```
-
 
 ## Saving Excel files as a Base64 string
 

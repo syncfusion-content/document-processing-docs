@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Server-Side Import in JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn about server-side import of Excel files in the Syncfusion JavaScript (ES6) Spreadsheet component using Syncfusion XlsIO library.
+title: Server-Side Import in TypeScript Spreadsheet | Syncfusion
+description: Learn about server-side import of Excel files in the Syncfusion TypeScript Spreadsheet component using Syncfusion XlsIO library.
 platform: document-processing
 control: Server-Side Import
 documentation: ug
 ---
 
-# Using server-side processing with JavaScript (ES6) Spreadsheet
+# Import Excel files using server-side processing in TypeScript Spreadsheet
 
-The [JavaScript (ES6) Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
+The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
-On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the JavaScript (ES6) Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the TypeScript Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
 
 For open processing, the server receives the uploaded Excel file and processes it with the Syncfusion XlsIO library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
 
@@ -205,20 +205,31 @@ By default, the Spreadsheet control provides an option to browse files from the 
 
 **Server Endpoint**:
 
+Use `System.IO` for file access. Keep the `Files` directory controlled by the application (without untrusted symbolic links), authenticate requests, and authorize access to each workbook. The example accepts only a simple workbook name, not a path; configure request-size limits for uploaded files in production.
+
 ```csharp
     public IActionResult Open([FromBody] FileOptions options)
     {
-        OpenRequest open = new OpenRequest();
-        string filePath = _env.ContentRootPath.ToString() + "\\Files\\" + options.FileName + ".xlsx";
+        if (options == null || string.IsNullOrWhiteSpace(options.FileName) ||
+            !System.Text.RegularExpressions.Regex.IsMatch(options.FileName, @"\A[A-Za-z0-9_-]{1,100}\z"))
+        {
+            return BadRequest("Invalid file name.");
+        }
+        // Accept a workbook name, never a client-supplied path.
+        string filePath = Path.Combine(_env.ContentRootPath, "Files", options.FileName + ".xlsx");
+        if (!System.IO.File.Exists(filePath))
+        {
+            return NotFound();
+        }
         // Getting the file stream from the file path.
-        FileStream fileStream = new FileStream(filePath, FileMode.Open);
-        // Converting "MemoryStream" to "IFormFile".
-        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
-        open.File = formFile;
-        // Processing the Excel file and return the workbook JSON.
-        var result = Workbook.Open(open);
-        fileStream.Close();
-        return Content(result);
+        using (FileStream fileStream = System.IO.File.OpenRead(filePath))
+        {
+            // Converting the stream to IFormFile.
+            IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "file", options.FileName + ".xlsx");
+            OpenRequest open = new OpenRequest { File = formFile };
+            // Processing the Excel file and returning the workbook JSON.
+            return Content(Workbook.Open(open));
+        }
     }
 
     public class FileOptions
@@ -229,7 +240,7 @@ By default, the Spreadsheet control provides an option to browse files from the 
 
 **Client Side**:
 
-```js
+```ts
 
     // Fetch call to server to load the Excel file.
     fetch('https://localhost:{Your port number}/Home/Open', {
@@ -249,7 +260,7 @@ By default, the Spreadsheet control provides an option to browse files from the 
 
 You can find the server endpoint code to fetch and process the Excel file in this [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_(1)-880363187). After launching the server endpoint, you need to update the URL on the client side sample as shown below.
 
-```js
+```ts
 // To open an Excel file from the server.
 fetch('https://localhost:{port number}/Home/Open')
 ```
@@ -276,22 +287,23 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
     openUrl: 'https://xxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/open',
     beforeOpen: (eventArgs) => {
         eventArgs.cancel = true; // To prevent the default open action.
-        if (eventArgs.file) {
+        if (eventArgs.file instanceof File) {
+            const file: File = eventArgs.file;
             const reader = new FileReader();
-            reader.readAsDataURL(eventArgs.file);
+            reader.readAsDataURL(file);
             reader.onload = () => {
                 // Removing the xlsx file content-type.
                 const base64Data: string = (reader.result as string).split(',')[1];
                 openExcel({
                     file: base64Data,
-                    extension: eventArgs.file.name.slice(eventArgs.file.name.lastIndexOf('.') + 1),
+                    extension: file.name.slice(file.name.lastIndexOf('.') + 1),
                     password: eventArgs.password || ''
                 });
             };
         }
     }
 });
-const openExcel = (requestData) => {
+const openExcel = (requestData: { file: string; extension: string; password: string }): void => {
     // Fetch call to AWS server for open processing.
     fetch('https://xxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/open', {
         method: 'POST',
@@ -301,9 +313,10 @@ const openExcel = (requestData) => {
         },
         body: JSON.stringify(requestData)
     }).then((response) => {
-        if (response.ok) {
-            return response.json();
+        if (!response.ok) {
+            throw new Error(`Open request failed: ${response.status}`);
         }
+        return response.json();
     }).then((data) => {
         // Loading the JSON data into our spreadsheet.
         if (data.Workbook && data.Workbook.sheets) {
@@ -322,10 +335,23 @@ spreadsheet.appendTo('#spreadsheet');
 ```csharp
 public IActionResult Open([FromBody] OpenOptions openOptions)
 {
+    if (openOptions == null || string.IsNullOrWhiteSpace(openOptions.File) ||
+        !System.Text.RegularExpressions.Regex.IsMatch(openOptions.Extension ?? "", @"\A(xlsx|xls|csv|xlsm|xlsb)\z"))
+    {
+        return BadRequest("Invalid file data or extension.");
+    }
     // Convert the base64 string to bytes array.
-    byte[] bytes = Convert.FromBase64String(openOptions.File);
+    byte[] bytes;
+    try
+    {
+        bytes = Convert.FromBase64String(openOptions.File);
+    }
+    catch (FormatException)
+    {
+        return BadRequest("Invalid Base64 data.");
+    }
     // Loading the bytes array to stream.
-    MemoryStream stream = new MemoryStream(bytes);
+    using MemoryStream stream = new MemoryStream(bytes);
     OpenRequest open = new OpenRequest();
     // Converting the stream into FormFile.
     open.File = new FormFile(stream, 0, bytes.Length, "Sample", "Sample." + openOptions.Extension);
@@ -345,7 +371,7 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method in the spreadsheet.
+In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the example fetches a `Base64` data URL, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method in the spreadsheet.
 
 The following code example shows how to open the spreadsheet data as base64 string.
 
@@ -437,6 +463,10 @@ The code example below demonstrates how to configure the `IgnoreStyle` and `Igno
 ```csharp
 public IActionResult Open(IFormCollection openRequest)
 {
+    if (openRequest.Files.Count == 0)
+    {
+        return BadRequest("No file uploaded.");
+    }
     OpenRequest open = new OpenRequest();
     open.File = openRequest.Files[0];
     open.ParseOptions = new WorkbookParseOptions() {
@@ -502,9 +532,9 @@ public IActionResult Open(IFormCollection openRequest)
 
 The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_7-101537213) includes the server endpoint code for handling chunk-based open processing. After launching the server endpoint, update the `openUrl` property of the spreadsheet in the client-side sample with the server URL, as shown below.
 
-```js
+```ts
     // Specifies the service URL for processing the Excel file, converting it into a format suitable for loading in the spreadsheet.
-    openUrl: 'https://localhost:{port number}/Home/Open'
+    spreadsheet.openUrl = 'https://localhost:{port number}/Home/Open';
 ```
 
 ## Customization
@@ -531,6 +561,10 @@ When you open an Excel file that contains external workbook references, you will
 ```csharp
 public IActionResult Open(IFormCollection openRequest)
     {
+        if (openRequest.Files.Count == 0)
+        {
+            return BadRequest("No file uploaded.");
+        }
         OpenRequest open = new OpenRequest();
         open.AllowExternalWorkbook = false;
         open.File = openRequest.Files[0];

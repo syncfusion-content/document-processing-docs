@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with JavaScript Spreadsheet
+# Import Excel files using client-side processing in JavaScript Spreadsheet
 
-Client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component processes workbook files directly in the browser without requiring an Open service. The [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is enabled by default. When [openUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Import
 
@@ -19,7 +19,7 @@ Client-side import provides several key advantages over server-side processing:
 * **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
 * **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
 * **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
-* **Offline Capability**: Open and process local Excel files without an internet connection.
+* **Offline Capability**: Open and process local Excel files without an internet connection once application resources are loaded.
 
 ## How client-side import works
 
@@ -27,7 +27,7 @@ For open processing, when a file is fetched, it is sent to the ej2-xlsx library.
 
 ## Configure client-side import
 
-Unlike server-side processing, the `openUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+For client-side processing, do not configure `openUrl`; no file-processing request is sent to a service. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
 ```js
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
@@ -56,7 +56,6 @@ input.onchange = function () {
 document.body.appendChild(input);
 ```
 
-
 ### Opening a file from a URL
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method.
@@ -64,7 +63,6 @@ You can fetch the remote Excel file (.xlsx) through the URL and convert it to a 
 ```js
 //Initialize Spreadsheet component.
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
-
 
     created: function () {
         fetch("https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx") // fetch the remote url
@@ -80,7 +78,6 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 ```
 
-
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
 ### Opening a file from Blob data
@@ -95,9 +92,6 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 var file = new File([fileBlob], 'Sample.xlsx');
 spreadsheet.open({ file: file });
 ```
-
-
-
 
 ## Opening a file from a Base64 string
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Client-Side Export in JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn how to export workbook files directly in the browser using the Syncfusion JavaScript (ES6) Spreadsheet without configuring a Save service.
+title: Client-Side Export in TypeScript Spreadsheet | Syncfusion
+description: Learn how to export workbook files directly in the browser using the Syncfusion TypeScript Spreadsheet without configuring a Save service.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with JavaScript (ES6) Spreadsheet
+# Export Excel files using client-side processing in TypeScript Spreadsheet
 
-Client-side processing generates workbook files directly within the browser without sending data to a Save service. When `allowSave` property is default enabled and `saveUrl` is not configured, the Spreadsheet leverages its integrated client-side file-generation functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a client-side workflow to generate workbook files directly in the browser without requiring a file-processing service. The [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowsave) property is enabled by default. When [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet#saveurl) is not configured, the Spreadsheet uses its integrated client-side functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Export
 
@@ -18,8 +18,8 @@ Client-side export provides several key advantages over server-side processing:
 * **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
 * **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
 * **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
-* **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
-* **Offline Capability**: Open and process local Excel files without an internet connection.
+* **Enhanced Privacy**: Keep workbook data within the browser during export instead of sending it to a file-processing service.
+* **Offline Capability**: Generate and download Excel files without an internet connection once the application is loaded.
 
 ## How client-side export works
 
@@ -32,7 +32,7 @@ Client-side export currently supports:
 
 ## Configure client-side export
 
-Keep file processing in the browser by omitting the service URL. Only XLSX files are supported.
+Do not configure `saveUrl` for client-side processing: no workbook data is sent to a file-processing service. Only XLSX files are supported.
 
 ```ts
 import { Spreadsheet, BeforeSaveEventArgs, SaveCompleteEventArgs } from '@syncfusion/ej2-spreadsheet';
@@ -71,7 +71,7 @@ spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
 
 ## Saving data as a Base64 string
 
-Replace the preceding saveComplete handler with this handler to convert the generated Blob to a Base64 data URL. FileReader completes asynchronously; use the result inside onloadend.
+Replace the preceding saveComplete handler with this handler to convert the generated Blob to a Base64 data URL. Keep the preceding `beforeSave` handler configured (`needBlobData = true`, `isFullPost = false`). FileReader completes asynchronously; use the result inside onloadend.
 
 ```ts
 spreadsheet.saveComplete = (args: SaveCompleteEventArgs): void => {
@@ -90,7 +90,7 @@ spreadsheet.save({ fileName: "Worksheet", saveType: "Xlsx" });
 ## Considerations
 
 1. **Format Limitation**: Client-side processing currently supports XLSX format only.
-2. **Local Processing**: Do not configure a file-processing service URL.
+2. **Local Processing**: `saveUrl` must not be configured for client-side export.
 
 ## See also
 

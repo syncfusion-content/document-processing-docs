@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Client-Side Import in JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn how to import workbook files directly in the browser using the Syncfusion JavaScript (ES6) Spreadsheet without configuring an Open service.
+title: Client-Side Import in TypeScript Spreadsheet | Syncfusion
+description: Learn how to import workbook files directly in the browser using the Syncfusion TypeScript Spreadsheet without configuring an Open service.
 platform: document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with JavaScript (ES6) Spreadsheet
+# Import Excel files using client-side processing in TypeScript Spreadsheet
 
-Client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a client-side workflow to process workbook files directly in the browser without requiring a file-processing service. The [allowOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowopen) property is enabled by default. When [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet#openurl) is not configured, the Spreadsheet uses its integrated client-side functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Import
 
@@ -19,7 +19,7 @@ Client-side import provides several key advantages over server-side processing:
 * **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
 * **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
 * **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
-* **Offline Capability**: Open and process local Excel files without an internet connection.
+* **Offline Capability**: Open and process local Excel files without an internet connection once the application is loaded.
 
 ## How client-side import works
 
@@ -27,7 +27,7 @@ For open processing, when a file is fetched, it is sent to the ej2-xlsx library.
 
 ## Configure client-side import
 
-Keep file processing in the browser by omitting the service URL. Only XLSX files are supported.
+Do not configure `openUrl` for client-side processing: no workbook data is sent to a file-processing service. Only XLSX files are supported.
 
 ```ts
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
@@ -104,7 +104,7 @@ function openBase64(base64String: string): void {
 ## Considerations
 
 1. **Format Limitation**: Client-side processing currently supports XLSX format only.
-2. **Local Processing**: Do not configure a file-processing service URL.
+2. **Local Processing**: `openUrl` must not be configured for client-side import.
 
 ## See also
 
