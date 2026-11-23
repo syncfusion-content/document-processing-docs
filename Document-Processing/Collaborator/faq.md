@@ -36,7 +36,7 @@ To support collaborative editing, it’s crucial to have a backing system that t
 - `Database`: With the same server configuration, it can handle up to 50 requests per second.
 
 
-## 3. How do I estimate the server capacity required for collaborative editing?
+## 3. How to estimate the server capacity required for collaborative editing?
 
 To calculate the average requests per second of your application, assume the DOCX Editor in your live application is actively used by 1000 users, and each user’s edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
 
@@ -51,18 +51,18 @@ The Collaborator framework supports:
 
 - **WebSocket** (ASP.NET Core, ASP.NET MVC, and Node.js)
 
-Both provide real\-time communication between clients and the Collaboration Server.
+Both provide real\-time communication between clients and the collaboration server.
 
-## 5. Which EJ2 components are currently supported by the Node.js Collaboration Server?
+## 5. Which EJ2 components are currently supported by the Node.js collaboration server?
 
-The Node.js Collaboration Server currently supports **PDF Viewer** collaborative editing.
+The Node.js collaboration server currently supports **PDF Viewer** collaborative editing.
 
-**Document Editor** and **Spreadsheet** require the ASP.NET Core or ASP.NET MVC Collaboration Server for document processing, operation transformation, and save operations.
+**Document Editor** and **Spreadsheet** require the ASP.NET Core or ASP.NET MVC collaboration server for document processing, operation transformation, and save operations.
 
 
-## 6. How do I calculate the Redis and server configuration for collaborative editing?
+## 6. How to calculate the Redis and server configuration for collaborative editing?
 
-Use the following steps to estimate the Collaboration Server instances and Redis cache required for your workload. The estimate depends on the *SaveThreshold* value configured for the Collaboration Server and on how many users edit documents at the same time.
+Use the following steps to estimate the collaboration server instances and Redis cache required for your workload. The estimate depends on the *SaveThreshold* value configured for the collaboration server and on how many users edit documents at the same time.
 
 ### Step 1: Gather the inputs
 
@@ -80,7 +80,7 @@ Peak requests per second (RPS) = U × r
 
 Server instances              = (RPS ÷ 125) × 1.2   (round up)
 
-- 125 is the measured capacity of one Collaboration Server instance with 2 vCPUs and 8 GB RAM using a distributed cache.
+- 125 is the measured capacity of one collaboration server instance with 2 vCPUs and 8 GB RAM using a distributed cache.
 - The 1.2 factor adds 20% headroom for traffic spikes and for an instance restarting during a deployment.
 - Run at least 2 instances behind a load balancer, even for small workloads, so editing continues if one instance fails.
 
@@ -111,7 +111,7 @@ Choose the smallest plan that satisfies all of the following limits. In collabor
 - Database size ≥ total Redis memory (Step 3).
 - Maximum throughput ≥ peak Redis ops/sec (Step 4).
 - Monthly network bandwidth ≥ estimated monthly bandwidth (Step 4).
-- Concurrent connections ≥ connections opened by all Collaboration Server instances, with headroom.
+- Concurrent connections ≥ connections opened by all collaboration server instances, with headroom.
 
 ### Example 1: Small team
 
@@ -139,10 +139,10 @@ Inputs: 1,000 concurrent users, 250 active documents (about 4 users per document
 
 ### Additional tips
 
-- *Raising the save threshold increases memory*: Up to twice the SaveThreshold operations are kept per document, so a threshold of 200 needs about twice the memory of a threshold of 100. Lowering it below 100 saves memory but increases how often the document is saved, which adds load on the Collaboration Server.
-- *Connections come from the server, not the browser*: Redis connections are opened by the Collaboration Server instances. Estimate the total as server instances × connections per instance, and keep it well below the plan limit.
+- *Raising the save threshold increases memory*: Up to twice the SaveThreshold operations are kept per document, so a threshold of 200 needs about twice the memory of a threshold of 100. Lowering it below 100 saves memory but increases how often the document is saved, which adds load on the collaboration server.
+- *Connections come from the server, not the browser*: Redis connections are opened by the collaboration server instances. Estimate the total as server instances × connections per instance, and keep it well below the plan limit.
 - *Validate with a load test*: Simulate your expected users and monitor ops/sec, used_memory, connected_clients, and network usage in the Redis console. Replace the assumed values (k, buffer factor, and 0.3) with your measured values, and recalculate.
-- *Scale horizontally*: Add Collaboration Server instances as RPS grows. Because all editing operations are stored in Redis, any instance can serve any user.
+- *Scale horizontally*: Add collaboration server instances as RPS grows. Because all editing operations are stored in Redis, any instance can serve any user.
 - *Keep Redis and the servers in the same region* to reduce latency between edits and conflict resolution.
 
 **NOTE:** The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking.
