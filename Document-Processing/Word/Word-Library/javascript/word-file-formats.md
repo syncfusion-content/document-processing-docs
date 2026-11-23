@@ -117,4 +117,4 @@ document.save("Sample.dotm");
 ## See Also
 
 * [Supported File Formats in JavaScript Word Library](https://help.syncfusion.com/document-processing/word/word-library/javascript/Support-File-Formats)
-* [Document Conversions in JavaScript Word](https://help.syncfusion.com/document-processing/word/word-library/javascript/conversion)
+* Document Conversions in JavaScript Word
