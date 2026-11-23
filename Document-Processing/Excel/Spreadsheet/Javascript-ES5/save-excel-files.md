@@ -3,13 +3,13 @@ layout: post
 title: Save Excel Files in JavaScript Spreadsheet | Syncfusion
 description: Learn about saving Excel files in the Syncfusion JavaScript Spreadsheet component, including exporting and workbook management.
 platform: document-processing
-control: Save
+control: Spreadsheet
 documentation: ug
 ---
 
 # Save Excel Files in JavaScript Spreadsheet
 
-The JavaScript Spreadsheet component allows users to save Excel files through either server-side or client-side approaches. The approach used is determined by whether `saveUrl` is configured.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component allows users to save Excel files through either server-side or client-side approaches. The approach used is determined by whether `saveUrl` is configured.
 
 When `saveUrl` is configured, the Spreadsheet sends workbook data to a server endpoint for processing (server-side processing). When `saveUrl` is not configured, the Spreadsheet generates files directly in the browser (client-side processing).
 
@@ -41,9 +41,20 @@ The supported file formats depend on the selected processing method:
 | Processing method | Supported formats |
 | --- | --- |
 | Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
-| Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Portable Document Format (`.pdf`) |
+| Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
 
 ## Processing methods
 
 * [Client-Side Export](./save-excel-file/pure-client-side)
 * [Server-Side Export](./save-excel-file/server-side-processing)
+
+## Cloud storage integrations
+
+The Spreadsheet component also supports saving files to cloud storage through an application-provided service. The following cloud-storage guides use React for the client UI; adapt the client code for JavaScript.
+
+* [Client-Side Export](./save-excel-file/pure-client-side)
+* [Server-Side Export](./save-excel-file/server-side-processing)
+* [Save to AWS S3 (React guide)](../React/save-excel-file/to-aws-s3-bucket)
+* [Save to Azure Blob Storage (React guide)](../React/save-excel-file/to-azure-blob-storage)
+* [Save to Google Cloud Storage (React guide)](../React/save-excel-file/to-google-cloud-storage)
+* [Save to Google Drive (React guide)](../React/save-excel-file/to-google-drive)
