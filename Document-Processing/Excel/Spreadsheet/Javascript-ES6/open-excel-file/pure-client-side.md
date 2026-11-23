@@ -42,47 +42,52 @@ spreadsheet.appendTo('#spreadsheet');
 
 ## Supported file sources
 
-### Opening a file from the local system
+### Open an excel file from the local system
 
 Select **File > Open**, or pass a locally selected File to the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method.
 
-```html
-<input id="fileInput" type="file" accept=".xlsx" />
-```
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-local-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-local-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/client-side-local-cs1" %}
 
-```ts
-(document.getElementById('fileInput') as HTMLInputElement).onchange = (event: Event): void => {
-    const files = (event.target as HTMLInputElement).files;
-    if (files && files.length) {
-        spreadsheet.open({ file: files[0] });
-    }
-};
-```
-
-### Opening a file from a URL
+### Open an excel file from a URL
 
 Fetch an XLSX file, convert its response to a Blob, and then create a File object. Cross-origin URLs must allow CORS requests.
 
-```ts
-fetch('https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx') // fetch the remote url
-    .then((response) => response.blob()) // convert the excel file to blob
-    .then((fileBlob) => {
-        let file = new File([fileBlob], 'Sample.xlsx'); //convert the blob into file
-        spreadsheet.open({ file: file }); // open the file into Spreadsheet
-    });
-```
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-url-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-url-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/client-side-url-cs1" %}
 
-### Opening a file from Blob data
+### Open an excel file from blob data
 
-Pass an application-provided XLSX Blob to this function.
+By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/documentation/api/spreadsheet#open) method in the Spreadsheet control to load that `File` object.
 
-```ts
-function openBlob(fileBlob: Blob): void {
-    // To convert obtained blob data as a file.
-    let file = new File([fileBlob], 'Sample.xlsx');
-    spreadsheet.open({ file: file });
-}
-```
+Please find the code to fetch the blob data and load it into the Spreadsheet control below.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-blob-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es6/client-side-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/client-side-blob-cs1" %}
 
 ## Considerations
 

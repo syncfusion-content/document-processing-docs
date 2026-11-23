@@ -41,57 +41,54 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 ## Supported file sources
 
-### Opening a file from the local system
+### Open an excel file from the local system
 
 Select **File > Open**, or pass a locally selected File to the Spreadsheet's [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method. The input below selects a file without uploading it.
 
-```js
-// Select a local XLSX file without uploading it.
-var input = document.createElement('input');
-input.type = 'file';
-input.accept = '.xlsx';
-input.onchange = function () {
-    if (input.files.length) spreadsheet.open({ file: input.files[0] });
-};
-document.body.appendChild(input);
-```
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-local-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-local-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-### Opening a file from a URL
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/client-side-local-cs1" %}
+
+### Open an excel file from a URL
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method.
 
-```js
-//Initialize Spreadsheet component.
-var spreadsheet = new ej.spreadsheet.Spreadsheet({
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-url-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-url-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
 
-    created: function () {
-        fetch("https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx") // fetch the remote url
-            .then(function (response) {
-                response.blob().then(function (fileBlob) { // convert the excel file to blob
-                    var file = new File([fileBlob], "Sample.xlsx"); //convert the blob into file
-                    spreadsheet.open({ file: file }); // open the file into Spreadsheet
-                });
-            });
-    }
-});
-//Render initialized Spreadsheet component.
-spreadsheet.appendTo('#spreadsheet');
-```
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/client-side-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
-### Opening a file from Blob data
+### Open an excel file from blob data
 
-By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a File object. Then, you can use the open method in the Spreadsheet component to load that File object.
+By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method in the Spreadsheet control to load that `File` object.
 
-Please find the code to fetch the blob data and load it into the Spreadsheet component below.
+Please find the code to fetch the blob data and load it into the Spreadsheet control below.
 
-```js
-// fileBlob is Blob data supplied by the application.
-// To convert obtained blob data as a file.
-var file = new File([fileBlob], 'Sample.xlsx');
-spreadsheet.open({ file: file });
-```
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-blob-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/client-side-blob-cs1" %}
 
 ## Considerations
 
