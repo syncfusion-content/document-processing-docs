@@ -115,8 +115,6 @@ N> Successful loading does not mean a certificate is trusted. Inspect `PdfTruste
 
 Set `AllowOnlineFetch` and `AutoRefresh` to `false`, then call `provider.Load(directoryPath)` with local LOTL and national list XML files. These files are still authenticated; provision and update them through a trusted process.
 
-The following example loads local trusted lists from the `TrustedLists` directory and evaluates `signer.cer`. Replace these paths with your inputs. The directory must contain the LOTL and the required national trusted list XML files.
-
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -234,7 +232,7 @@ End If
 
 {% endtabs %}
 
-N> List downloads and revocation checks have separate settings. This example disables both online list fetching and online revocation requests; it does not skip revocation checking. Missing revocation information does not prove a certificate is unrevoked. Inspect path statuses and logs before accepting the result.
+N> List downloads and revocation checks have separate settings. This example disables both online list fetching and online revocation requests; it does not skip revocation checking. Missing revocation information does not prove that a certificate has not been revoked. Inspect path statuses and logs before accepting the result.
 
 
 ### Use trusted lists during PDF signature validation
@@ -536,8 +534,6 @@ End Using
 ## Create offline LTV using document security store data
 
 Use `PdfDocumentSecureStore` to extract existing revocation records and pass them to `CreateLongTermValidity` through `PdfLongTermValidityOptions`. Set `OfflineOnly` to `true` to suppress online revocation discovery.
-
-The following example extracts OCSP responses and CRLs from `existing_ltv.pdf` and supplies them when updating its first signature's LTV information. The first form field must be a signed signature field. Replace the public certificate files with the signer certificate and the remaining certificates in its chain.
 
 {% tabs %}
 
