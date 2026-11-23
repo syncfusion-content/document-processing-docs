@@ -112,7 +112,7 @@ Add a button to the Angular template and attach a click handler that uses the Ja
 {% highlight ts tabtitle="~/app.ts" %}
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WordDocument, Paragraph } from '@syncfusion/ej2-docx';
+import { WordDocument } from '@syncfusion/ej2-docx';
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,13 +131,12 @@ export class App {
 
   createDocument(): void {
     const document = WordDocument.create();
-    // Access the section
+
     const section = document.sections[0];
-	// Access the paragraph
     const paragraph = section.body.paragraphs[0];
-    // Add text to the paragraph
+
     paragraph.appendText('Hello World!!!');
-    // Save and download Word document
+
     document.save('Output.docx');
   }
 }
