@@ -1,7 +1,7 @@
 
 
 
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, BeforeSaveEventArgs } from '@syncfusion/ej2-spreadsheet';
 import { data } from './datasource.ts';
 
 //Initialize the SpreadSheet control
@@ -15,7 +15,6 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
             beforeSave: (args: BeforeSaveEventArgs) => {
                args.customParams = { customParams: 'you can pass custom params in server side'}; // you can pass the custom params
             }
-  }
 });
 spreadsheet.appendTo('#spreadsheet');
 

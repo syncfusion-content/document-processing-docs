@@ -1,0 +1,157 @@
+---
+layout: post
+title: Connecting ASP.NET Core Web Services to JavaScript Spreadsheet | Syncfusion
+description: Learn about configuring ASP.NET Core web services for open and save operations in JavaScript Spreadsheet.
+control: Web Services
+platform: document-processing
+documentation: ug
+---
+
+# Connecting ASP.NET Core Web Services to JavaScript Spreadsheet
+
+This guide explains how to set up and connect local web services for open and save operations in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using ASP.NET Core.
+
+## Create a Local ASP.NET Core Web API
+
+### Create a New ASP.NET Core Web API Project
+
+Follow the official Microsoft tutorial to create a controller-based Web API project:
+
+[Tutorial: Create a controller-based web API with ASP.NET Core (Microsoft Learn)](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&source=recommendations&tabs=visual-studio#create-a-web-api-project)
+
+### Install Required Dependencies
+
+For spreadsheet open and save operations, install the following NuGet packages:
+
+| Platform      | Assembly                                 | NuGet Package |
+|---------------|------------------------------------------|---------------|
+| ASP.NET Core  | Syncfusion.EJ2.Spreadsheet.AspNet.Core <br> Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.Spreadsheet.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) <br>[Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
+
+For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
+
+### Add Open and Save Controllers
+
+Add the following controller to enable open and save functionality. The controller route matches the client URLs shown below:
+
+```csharp
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.EJ2.Spreadsheet;
+
+[Route("api/[controller]")]
+public class SpreadsheetController : Controller
+{
+// Open action
+[HttpPost]
+[Route("Open")]
+public IActionResult Open([FromForm] IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files != null && openRequest.Files.Count > 0) {
+        open.File = openRequest.Files[0];
+        return Content(Workbook.Open(open));
+    }
+    return BadRequest("No file uploaded.");
+}
+
+// Save action
+[HttpPost]
+[Route("Save")]
+public IActionResult Save([FromForm] SaveSettings saveSettings)
+{
+    if (saveSettings != null && !string.IsNullOrEmpty(saveSettings.JSONData)) {
+        return Workbook.Save(saveSettings);
+    }
+    return BadRequest("saveSettings or JSONData was not available.");
+}
+}
+```
+
+### Configure File Size Limits
+
+By default, ASP.NET Core and web servers impose size limits on incoming HTTP requests to prevent abuse and protect server resources. When uploading large Excel files, these requests can exceed the default limits, causing upload failures. To support large Excel files, you need to configure file size limits in your server settings to allow receiving large payloads over HTTP requests.
+
+**web.config**
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.webServer>
+        <security>
+            <requestFiltering>
+                <requestLimits maxAllowedContentLength="2147483647"></requestLimits>
+            </requestFiltering>
+        </security>
+        <directoryBrowse enabled="true" />
+    </system.webServer>
+</configuration>
+```
+
+**Program.cs**
+```csharp
+// Configure FormOptions to allow large file uploads by setting multipart body and value length limits
+// This enables the server to accept large Excel files in form submissions without rejecting them
+builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = int.MaxValue;
+    options.ValueLengthLimit = int.MaxValue;
+});
+
+// Configure Kestrel web server to allow large request bodies for handling large Excel file uploads
+// This removes the default size restriction at the server level, enabling it to process large files
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = int.MaxValue;
+});
+```
+
+### Enable CORS (Cross-Origin Resource Sharing)
+
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the JavaScript Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET Core API for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
+
+Edit `Program.cs` to allow cross-origin requests:
+
+```csharp
+// Configure CORS to allow the JavaScript Spreadsheet component to communicate with the API from any origin
+// This is necessary for the browser to permit cross-origin requests for file open and save operations
+var MyAllowSpecificOrigins = "AllowAllOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(MyAllowSpecificOrigins, builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+var app = builder.Build();
+app.UseCors(MyAllowSpecificOrigins);
+```
+
+### Run the Web API Project
+
+Build and run your Web API project. For detailed instructions, refer to:
+
+[Run the ASP.NET Core Web API project](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&source=recommendations&tabs=visual-studio#run-the-project)
+
+### Configuring the Client-Side URLs
+
+Once your local service is launched, configure the openUrl and saveUrl properties in your client application to use the local endpoints for import and export operations
+
+```js
+//Initialize Spreadsheet component.
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    openUrl: 'https://localhost:5173/api/spreadsheet/Open',
+    saveUrl: 'https://localhost:5173/api/spreadsheet/Save'
+});
+//Render initialized Spreadsheet component.
+spreadsheet.appendTo('#spreadsheet');
+```
+
+For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
+
+## See Also
+
+* [Docker Image Overview](../docker-deployment)
+* [Open Excel Files](../open-excel-files)
+* [Save Excel Files](../save-excel-files)

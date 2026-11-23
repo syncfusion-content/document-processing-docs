@@ -1,0 +1,539 @@
+---
+layout: post
+title: Server-Side Import in JavaScript Spreadsheet | Syncfusion
+description: Learn about server-side import of Excel files in the Syncfusion JavaScript Spreadsheet component using Syncfusion XlsIO library.
+platform: document-processing
+control: Server-Side Import
+documentation: ug
+---
+
+# Using server-side processing with JavaScript Spreadsheet
+
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
+
+On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the JavaScript Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
+
+For open processing, the server receives the uploaded Excel file and processes it with the Syncfusion XlsIO library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
+
+In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion's own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
+
+**Hosted Syncfusion Service URLs**
+```
+openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
+saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
+```
+
+For your own development and production, you must set up your own web service for open/save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization's security requirements.
+
+**Server Configuration**
+
+Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, which is the same approach used for building the hosted Syncfusion URLs. This endpoint receives the uploaded Excel file, processes it with the Syncfusion Spreadsheet library, and returns the workbook JSON to the client:
+
+```csharp
+// Open action
+[HttpPost]
+[Route("Open")]
+public IActionResult Open([FromForm] IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files != null && openRequest.Files.Count > 0) {
+        open.File = openRequest.Files[0];
+        return Content(Workbook.Open(open));
+    }
+    return BadRequest("No file uploaded.");
+}
+```
+
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](../web-services/webservice-overview) section of this documentation.
+
+**Install Required Dependencies**
+
+For spreadsheet open and save operations, install the following NuGet packages based on your server platform:
+
+| Platform      | Assembly                                 | NuGet Package |
+|---------------|------------------------------------------|---------------|
+| ASP.NET Core  | Syncfusion.EJ2.Spreadsheet.AspNet.Core <br> Syncfusion.EJ2.AspNet.Core <br/> Syncfusion.XlsIORenderer.Net.Core | [Syncfusion.EJ2.Spreadsheet.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) <br>[Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core) <br/> [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) |
+| ASP.NET MVC5  | Syncfusion.XlsIO.AspNet.Mvc5<br/>Syncfusion.ExcelToPdfConverter.AspNet.Mvc5<br/>Syncfusion.Pdf.AspNet.Mvc5<br/>Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5<br/>Syncfusion.EJ2.MVC5 | [Syncfusion.XlsIO.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.XlsIO.AspNet.Mvc5)<br/>[Syncfusion.ExcelToPdfConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet.Mvc5)<br/>[Syncfusion.Pdf.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.Pdf.AspNet.Mvc5/)<br/>[Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.AspNet.Mvc5)<br/>[Syncfusion.EJ2.MVC5](https://www.nuget.org/packages/Syncfusion.EJ2.MVC5) |
+
+For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
+
+To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
+
+For a quick walkthrough on how the open functionality works, refer to the following video:
+{% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
+
+## UI options to Open Excel files
+
+The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) to `true` and assign the service URL to the [`openUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property.
+
+**User Interface**:
+
+In the user interface, you can open an Excel document by clicking the `File > Open` menu item in the Ribbon.
+
+The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforeopen) event to trigger before opening an Excel file.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs1" %}
+
+The following table lists the `beforeOpen` event arguments.
+
+ | **Parameter** | **Type** | **Description** |
+| ----- | ----- | ----- |
+| file | FileList or string or File | Provides access to the file stream. `FileList` contains the length and item index. <br/> `File` specifies the file's `lastModified` value and file name. |
+| cancel | boolean | When set to `true`, prevents the open operation. |
+| requestData | object | Provides access to the form data sent with the open request. |
+| parseOptions | [WorkbookParseOptions](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/workbookparseoptions) | Specifies parsing options that control how the Excel file is loaded. |
+| password | string | Specifies the password required to open a protected Excel file. |
+| requestType | string | Specifies the request type: `initial` for the initial request; `chunk` for a follow-up request when chunking is enabled and the server returns a chunk plan; or `thresholdLimitConfirmed` after the user confirms a threshold warning such as `maximumDataLimit` or `maximumFileSizeLimit`. |
+
+> * Use `Ctrl + O` keyboard shortcut to open Excel documents.
+> * The default value of the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property in previous code snippet.
+
+## Open Excel files programmatically
+
+You can access a remote Excel file by using the [`created`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#created) event. In this event, you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) this file by using the Spreadsheet component's `open` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs2" %}
+
+## Supported Excel file formats for Open
+
+* `.xlsx`
+* `.xls`
+* `.csv`
+* `.xlsm`
+* `.xlsb`
+
+## Import options
+
+### Open Excel files from local system
+
+When you browse your local machine to select and upload an Excel document using the file uploader, you receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/javascript/documentation/api/uploader#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method to see the appropriate output.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/import-using-uploader/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/import-using-uploader/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/import-using-uploader" %}
+
+### Open Excel files from URL
+
+You can access a remote Excel file by using the [`created`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#created) event. In this event, you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) this file by using the Spreadsheet component's `open` method.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs2" %}
+
+### Open Excel files from Blob data
+
+By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method in the Spreadsheet control to load that `File` object.
+
+Please find the code to fetch the blob data and load it into the Spreadsheet control below.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-blobdata-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-blobdata-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-from-blobdata-cs1" %}
+
+### Load Workbook as JSON
+
+The Spreadsheet component allows you to load an entire workbook using a JSON object. This JSON is typically generated by the Spreadsheet server by converting an Excel file into a Spreadsheet‑compatible workbook JSON, but it can also be created manually. When loaded, the component reads the JSON and restores all workbook details, including sheets, cells, styles, formulas, formatting, and other associated metadata.
+
+You can optionally pass deserialization options to the [openFromJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to ignore specific features when loading the JSON. For example, you can exclude styles, formulas, number formats, images, or conditional formatting. These options are optional—if you do not specify them, the method restores the full workbook details by default.
+
+See the [guide to creating the JSON structure](../how-to/create-a-object-structure).
+
+The following example demonstrates how to load a workbook JSON into the Spreadsheet component.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-json/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-json/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-from-json" %}
+
+### Load server-side Excel files into Spreadsheet
+
+By default, the Spreadsheet control provides an option to browse files from the local file system and open them within the control. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to load that `JSON data` into the Spreadsheet control.
+
+> Before running the server code, create a `Files` folder under the server's content root path and place a `Sample.xlsx` file in it. The folder must be readable by the application; on Linux/macOS deployments, ensure the appropriate read permissions are set.
+
+**Server Endpoint**:
+
+```csharp
+    public IActionResult Open([FromBody] FileOptions options)
+    {
+        OpenRequest open = new OpenRequest();
+        string filePath = _env.ContentRootPath.ToString() + "\\Files\\" + options.FileName + ".xlsx";
+        // Getting the file stream from the file path.
+        FileStream fileStream = new FileStream(filePath, FileMode.Open);
+        // Converting "MemoryStream" to "IFormFile".
+        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
+        open.File = formFile;
+        // Processing the Excel file and return the workbook JSON.
+        var result = Workbook.Open(open);
+        fileStream.Close();
+        return Content(result);
+    }
+
+    public class FileOptions
+    {
+        public string FileName { get; set; } = string.Empty;
+    }
+```
+
+**Client Side**:
+
+```js
+
+    // Fetch call to server to load the Excel file.
+    fetch('https://localhost:{Your port number}/Home/Open', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ FileName: 'Sample' }),
+    })
+    .then(function (response){ return response.json(); })
+    .then(function(data) {
+            // Load the JSON data into spreadsheet.
+            spreadsheet.openFromJson({ file: data });
+    })
+
+```
+
+You can find the server endpoint code to fetch and process the Excel file in this [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_(1)-880363187). After launching the server endpoint, you need to update the URL on the client side sample as shown below.
+
+```js
+// To open an Excel file from the server.
+fetch('https://localhost:{port number}/Home/Open')
+```
+
+### Open Excel files with AWS Lambda
+
+Before proceeding with the opening process, you should deploy the spreadsheet open/save web API service in AWS Lambda. To host the open/save web service in the AWS Lambda environment, please refer to the following KB documentation.
+
+[How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
+
+After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforeopen) event. After that, you will get the selected file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
+
+On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method to load this JSON data into the spreadsheet component.
+
+The following code example shows how to open an Excel file using a hosted web service in AWS Lambda, as mentioned above.
+
+```js
+//Initialize Spreadsheet component
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    sheets: [
+    ],
+    openUrl: 'https://xxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/open',
+    beforeOpen: function (eventArgs)  {
+        eventArgs.cancel = true; // To prevent the default open action.
+        if (eventArgs.file) {
+            var reader = new FileReader();
+            reader.readAsDataURL(eventArgs.file);
+            reader.onload = function () {
+                // Removing the xlsx file content-type.
+                var base64Data = reader.result.split(',')[1];
+                openExcel({
+                    file: base64Data,
+                    extension: eventArgs.file.name.slice(eventArgs.file.name.lastIndexOf('.') + 1),
+                    password: eventArgs.password || ''
+                });
+            };
+        }
+    }
+});
+function openExcel(requestData) {
+    // Fetch call to AWS server for open processing.
+    fetch('https://xxxxxxxxxxxxxxxxxx.amazonaws.com/Prod/api/spreadsheet/open', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain',
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        body: JSON.stringify(requestData)
+    }).then(function (response) {
+        if (response.ok) {
+            return response.json();
+        }
+    }).then(function (data) {
+        // Loading the JSON data into our spreadsheet.
+        if (data.Workbook && data.Workbook.sheets) {
+            spreadsheet.openFromJson({ file: data });
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
+};
+//Render initialized Spreadsheet component
+spreadsheet.appendTo('#spreadsheet');
+```
+
+```csharp
+public IActionResult Open([FromBody] OpenOptions openOptions)
+{
+    // Convert the base64 string to bytes array.
+    byte[] bytes = Convert.FromBase64String(openOptions.File);
+    // Loading the bytes array to stream.
+    MemoryStream stream = new MemoryStream(bytes);
+    OpenRequest open = new OpenRequest();
+    // Converting the stream into FormFile.
+    open.File = new FormFile(stream, 0, bytes.Length, "Sample", "Sample." + openOptions.Extension);
+    if (!string.IsNullOrEmpty(openOptions.Password))
+        open.Password = openOptions.Password;
+    var result = Workbook.Open(open);
+    return Content(result);
+}
+
+public class OpenOptions
+{
+    public string File { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public string Extension { get; set; } = string.Empty;
+}
+```
+
+### Open Base64-encoded Excel data
+
+In the JavaScript Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#open) method in the spreadsheet.
+
+The following code example shows how to open an Excel file from a base64 string.
+
+> The shared `base-64-string` sample below demonstrates both flows: saving spreadsheet data as a base64 string (in the `saveComplete` event) and opening a file from a saved base64 string (via the `import` button click handler).
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/base-64-string/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/base-64-string/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/base-64-string" %}
+
+### Open Excel files in read-only mode
+
+You can open an Excel file in a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#opencomplete) event. In this event, you must protect all the sheets and lock their used range cells by using the [`protectSheet`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#lockcells) methods.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs4/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs4/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs4" %}
+
+## Advanced Open Options
+
+### Configure JSON Deserialization
+
+Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet.
+
+Now, you have the option to selectively ignore some features during the opening of the JSON object by configuring deserialization options and passing them as arguments to the `openFromJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be loaded without ignoring any features.
+
+```js
+spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
+```
+
+| Options | Description |
+| ----- | ----- |
+| onlyValues |  If **true**, only the cell values will be loaded. |
+| ignoreStyle | If **true**, styles will be excluded when loading the JSON data. |
+| ignoreFormula | If **true**, formulas will be excluded when loading the JSON data. |
+| ignoreFormat | If **true**, number formats will be excluded when loading the JSON data. |
+| ignoreConditionalFormat | If **true**, conditional formatting will be excluded when loading the JSON data. |
+| ignoreValidation | If **true**, data validation rules will be excluded when loading the JSON data. |
+| ignoreFreezePane | If **true**, freeze panes will be excluded when loading the JSON data. |
+| ignoreWrap | If **true**, text wrapping settings will be excluded when loading the JSON data. |
+| ignoreChart | If **true**, charts will be excluded when loading the JSON data. |
+| ignoreImage | If **true**, images will be excluded when loading the JSON data. |
+| ignoreNote | If **true**, notes will be excluded when loading the JSON data. |
+
+The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the openFromJson method:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-json/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-from-json/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-from-json" %}
+
+### Optimize Open Performance with Parsing Options
+
+Opening large Excel files into the EJ2 Spreadsheet control can sometimes lead to slower performance and increased memory usage. This is often caused by the processing of additional elements such as styles and number formats—even when the actual data content is minimal. For example, an Excel file with only a small amount of data but a large number of styled or formatted empty cells can significantly impact load time and memory consumption.
+
+To address this, we've introduced parsing options that allow users to selectively skip non-essential features during the open process. By enabling options like `IgnoreStyle` and `IgnoreFormat`, you can reduce the amount of data processed, resulting in:
+* Faster load times
+* Lower memory usage
+* Smaller JSON responses
+
+These enhancements are especially beneficial for users working with large or complex Excel files, offering a more efficient and responsive experience.
+
+> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently.
+
+The code example below demonstrates how to configure the `IgnoreStyle` and `IgnoreFormat` parsing options on the `server-side`.
+
+**Code Snippet:**
+
+**Server-Side Configuration:**
+```csharp
+public IActionResult Open(IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    open.File = openRequest.Files[0];
+    open.ParseOptions = new WorkbookParseOptions() {
+        IgnoreStyle = true,
+        IgnoreFormat = true
+    };
+    return Content(Workbook.Open(open));
+}
+```
+
+### Open Large Excel Files with Chunk Response Processing
+
+When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
+
+You can enable this feature by setting the [`chunkSize`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openSettings#chunksize) property in the [`openSettings`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#opensettings) object. Set the [`chunkSize`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openSettings#chunksize) to a value greater than 0 (in bytes). The [`chunkSize`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/openSettings#chunksize) defines how large each chunk will be. Make sure your server supports chunked responses to use this feature effectively.
+
+In addition to `chunkSize`, the `openSettings` object exposes the following retry-related properties for reliable chunk transfer:
+
+| Property | Type | Description |
+| ----- | ----- | ----- |
+| chunkSize | number | Size (in bytes) of each chunk for the server response when opening a document. Must be greater than 0 to enable chunked transfer. |
+| retryCount | number | Number of retry attempts for a failed chunk request. Useful for handling temporary network or server disruptions. |
+| retryAfterDelay | number | Delay (in milliseconds) before retrying a failed chunk request. |
+
+> This feature reduces memory usage on both the server and client, ensuring that resources are managed efficiently during data transmission. By sending smaller parts of data, it prevents connection issues that could occur with large payloads, making the transmission process more reliable. Additionally, it allows large Excel files to be loaded smoothly into the spreadsheet, providing a seamless user experience even with extensive data.
+
+The following code example demonstrates the client-side and server-side configuration required for handling chunk-based responses when opening an Excel file.
+
+**Client Side**:
+
+```javascript
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    openSettings: {
+        // Specifies the size (in bytes) of each chunk for the server response when opening a document.
+        chunkSize: 1000000,
+        // Specifies the number of retry attempts for a failed server request when returning the opened file responses in chunks.
+        // This ensures reliable handling of temporary network or server disruptions during the chunked response process.
+        retryCount: 3,
+        // Specifies the delay (in milliseconds) before retrying a failed server request when returning the opened file responses in chunks.
+        // This ensures controlled retries in case of temporary network or server disruptions during the chunked response process.
+        retryAfterDelay: 500
+    },
+    openUrl: 'https://localhost:{port number}/Home/Open'
+});
+
+spreadsheet.appendTo('#spreadsheet');
+```
+
+**Server Endpoint**:
+
+```csharp
+public IActionResult Open(IFormCollection openRequest)
+{
+    OpenRequest open = new OpenRequest();
+    if (openRequest.Files.Count > 0)
+    {
+        open.File = openRequest.Files[0];
+    }
+    Microsoft.Extensions.Primitives.StringValues chunkPayload;
+    if (openRequest.TryGetValue("chunkPayload", out chunkPayload))
+    {
+        // The chunk payload JSON data includes information essential for processing chunked responses.
+        open.ChunkPayload = chunkPayload;
+    }
+    var result = Workbook.Open(open, 150);
+    return Content(result);
+}
+```
+
+The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_7-101537213) includes the server endpoint code for handling chunk-based open processing. After launching the server endpoint, update the `openUrl` property of the spreadsheet in the client-side sample with the server URL, as shown below.
+
+```js
+    // Specifies the service URL for processing the Excel file, converting it into a format suitable for loading in the spreadsheet.
+    openUrl: 'https://localhost:{port number}/Home/Open'
+```
+
+## Customization
+
+### Add custom headers to Open requests
+
+Add an Authorization header to the client-to-server Open request in the [`beforeOpen`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforeopen) event. The server must validate the token; use HTTPS to protect data in transit. For cross-origin requests, allow the header in the server CORS policy.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs3/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/open-save-cs3/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/open-save-cs3" %}
+
+### Handle External workbook reference confirmation
+
+When you open an excel file that contains external workbook references, you will see a confirmation dialog. This dialog allows you to either continue with the file opening or cancel the operation. This confirmation dialog will appear only if you set the `AllowExternalWorkbook` property value to **false** during the open request, as shown below. This prevents the spreadsheet from displaying inconsistent data.
+
+```csharp
+public IActionResult Open(IFormCollection openRequest)
+    {
+        OpenRequest open = new OpenRequest();
+        open.AllowExternalWorkbook = false;
+        open.File = openRequest.Files[0];
+        open.Guid = openRequest["Guid"];
+        return Content(Workbook.Open(open));
+    }
+```
+
+> This feature is only applicable when importing an Excel file and not when loading JSON data or binding cell data.
+
+![External workbook confirmation dialog](../images/external-reference-dialog-alert.png)
