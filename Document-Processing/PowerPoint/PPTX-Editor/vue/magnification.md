@@ -47,25 +47,29 @@ The following code shows how to enable magnification and zoom from the editor in
 {% highlight js tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div class="control-section">
-        <ejs-pptxeditor ref="pptxeditor" :enableMagnification="true" :zoom="100" :created="onCreated"></ejs-pptxeditor>
-    </div>
+  <div class="control-section">
+    <ejs-pptxeditor
+      ref="pptxeditor"
+      :enableMagnification="true"
+      :created="onCreated">
+    </ejs-pptxeditor>
+  </div>
 </template>
 <script setup>
-import { PptxEditorComponent, Magnification } from '@syncfusion/ej2-vue-pptxeditor';
-import { provide, ref } from 'vue';
+import { ref, provide } from 'vue';
+import {
+  PptxEditorComponent as EjsPptxeditor,
+  Magnification
+} from '@syncfusion/ej2-vue-pptxeditor';
 
 const pptxeditor = ref(null);
 provide('PptxEditor', [Magnification]);
 
 const onCreated = () => {
-    let pptxEditor = pptxeditor.value.ej2Instances;
-    // Status-bar - and + use the same 10-point step.
-    pptxEditor.zoomIn();
-    pptxEditor.zoomOut();
-
-    // Set an explicit percentage. The value is clamped to 10-400.
-    pptxEditor.setZoom(150);
+  const pptxEditor = pptxeditor.value.ej2Instances;
+  pptxEditor.zoomIn();
+  pptxEditor.zoomOut();
+  pptxEditor.setZoom(150);
 };
 </script>
 
@@ -78,7 +82,7 @@ const onCreated = () => {
 
 <template>
     <div class="control-section">
-        <ejs-pptxeditor ref="pptxeditor" :enableMagnification="true" :zoom="100" :created="onCreated"></ejs-pptxeditor>
+        <ejs-pptxeditor ref="pptxeditor" :enableMagnification="true" :created="onCreated"></ejs-pptxeditor>
     </div>
 </template>
 <script>
@@ -89,7 +93,7 @@ export default {
         'ejs-pptxeditor': PptxEditorComponent
     },
     provide: {
-        PptxEditor: [Magnification]
+        pptxeditor: [Magnification]
     },
     methods: {
         onCreated: function () {
@@ -133,14 +137,17 @@ The following code fits the slide to the window from the editor instance. `fitWi
     </div>
 </template>
 <script setup>
-import { PptxEditorComponent, Magnification } from '@syncfusion/ej2-vue-pptxeditor';
 import { provide, ref } from 'vue';
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    Magnification
+} from '@syncfusion/ej2-vue-pptxeditor';
 
 const pptxeditor = ref(null);
-provide('PptxEditor', [Magnification]);
+provide('pptxeditor', [Magnification]);
 
 const onCreated = () => {
-    let pptxEditor = pptxeditor.value.ej2Instances;
+    const pptxEditor = pptxeditor.value.ej2Instances;
     // Fit the whole slide in the view area.
     pptxEditor.fitToWindow();
 
@@ -161,26 +168,23 @@ const onCreated = () => {
         <ejs-pptxeditor ref="pptxeditor" :enableMagnification="true" :created="onCreated"></ejs-pptxeditor>
     </div>
 </template>
-<script>
-import { PptxEditorComponent, Magnification } from '@syncfusion/ej2-vue-pptxeditor';
+<script setup>
+import { ref, provide } from 'vue';
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    Magnification
+} from '@syncfusion/ej2-vue-pptxeditor';
 
-export default {
-    components: {
-        'ejs-pptxeditor': PptxEditorComponent
-    },
-    provide: {
-        PptxEditor: [Magnification]
-    },
-    methods: {
-        onCreated: function () {
-            let pptxEditor = this.$refs.pptxeditor.ej2Instances;
-            // Fit the whole slide in the view area.
-            pptxEditor.fitToWindow();
+const pptxeditor = ref(null);
+provide('pptxeditor', [Magnification]);
 
-            // Fit the slide width in the view area.
-            // pptxEditor.fitWidth();
-        }
-    }
+const onCreated = () => {
+    const pptxEditor = pptxeditor.value.ej2Instances;
+    // Fit the whole slide in the view area.
+    pptxEditor.fitToWindow();
+
+    // Fit the slide width in the view area.
+    // pptxEditor.fitWidth();
 };
 </script>
 
@@ -214,14 +218,18 @@ The same actions are available from the editor instance.
     </div>
 </template>
 <script setup>
-import { PptxEditorComponent, Toolbar, Magnification } from '@syncfusion/ej2-vue-pptxeditor';
 import { provide, ref } from 'vue';
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    Toolbar,
+    Magnification
+} from '@syncfusion/ej2-vue-pptxeditor';
 
 const pptxeditor = ref(null);
-provide('PptxEditor', [Toolbar, Magnification]);
+provide('pptxeditor', [Toolbar, Magnification]);
 
 const onCreated = () => {
-    let pptxEditor = pptxeditor.value.ej2Instances;
+    const pptxEditor = pptxeditor.value.ej2Instances;
     pptxEditor.setZoom(200);
     // Use and set the required zoom option based on your viewing preference.
     // pptxEditor.fitToWindow();
@@ -250,11 +258,11 @@ export default {
         'ejs-pptxeditor': PptxEditorComponent
     },
     provide: {
-        PptxEditor: [Toolbar, Magnification]
+        pptxeditor: [Toolbar, Magnification]
     },
     methods: {
-        onCreated: function () {
-            let pptxEditor = this.$refs.pptxeditor.ej2Instances;
+        onCreated() {
+            const pptxEditor = this.$refs.pptxeditor.ej2Instances;
             pptxEditor.setZoom(200);
             // Use and set the required zoom option based on your viewing preference.
             // pptxEditor.fitToWindow();
@@ -283,10 +291,13 @@ The `zoomChange` event is raised after the effective zoom percentage changes. `z
     </div>
 </template>
 <script setup>
-import { PptxEditorComponent, Magnification } from '@syncfusion/ej2-vue-pptxeditor';
 import { provide } from 'vue';
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    Magnification
+} from '@syncfusion/ej2-vue-pptxeditor';
 
-provide('PptxEditor', [Magnification]);
+provide('pptxeditor', [Magnification]);
 
 const onZoomChange = (args) => {
     // args.previousZoom, args.newZoom, args.zoomType
@@ -314,10 +325,10 @@ export default {
         'ejs-pptxeditor': PptxEditorComponent
     },
     provide: {
-        PptxEditor: [Magnification]
+        pptxeditor: [Magnification]
     },
     methods: {
-        onZoomChange: function (args) {
+        onZoomChange(args) {
             // args.previousZoom, args.newZoom, args.zoomType
             console.log(args.previousZoom + ' -> ' + args.newZoom);
         }
@@ -347,11 +358,15 @@ Zoom APIs and the status-bar zoom controls are active only when the `Magnificati
     </div>
 </template>
 <script setup>
-import { PptxEditorComponent, Magnification, Toolbar } from '@syncfusion/ej2-vue-pptxeditor';
 import { provide, ref } from 'vue';
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    Magnification,
+    Toolbar
+} from '@syncfusion/ej2-vue-pptxeditor';
 
 const pptxeditor = ref(null);
-provide('PptxEditor', [Magnification, Toolbar]);
+provide('pptxeditor', [Magnification, Toolbar]);
 
 const disableZoom = () => {
     pptxeditor.value.ej2Instances.enableMagnification = false;
@@ -383,13 +398,13 @@ export default {
         'ejs-pptxeditor': PptxEditorComponent
     },
     provide: {
-        PptxEditor: [Magnification, Toolbar]
+        pptxeditor: [Magnification, Toolbar]
     },
     methods: {
-        disableZoom: function () {
+        disableZoom() {
             this.$refs.pptxeditor.ej2Instances.enableMagnification = false;
         },
-        enableZoom: function () {
+        enableZoom() {
             this.$refs.pptxeditor.ej2Instances.enableMagnification = true;
         }
     }

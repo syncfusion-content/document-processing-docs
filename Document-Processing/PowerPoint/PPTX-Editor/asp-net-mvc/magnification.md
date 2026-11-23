@@ -29,19 +29,19 @@ These controls call the editor zoom APIs. You can use the same APIs from code.
 The following code shows how to enable magnification and zoom from the editor instance.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableMagnification(true).Zoom(100).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableMagnification(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Magnification);
 
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         // Status-bar - and + use the same 10-point step.
         pptxEditor.zoomIn();
         pptxEditor.zoomOut();
 
         // Set an explicit percentage. The value is clamped to 10-400.
-        pptxEditor.setZoom(150);
-    }
+        pptxEditor.setZoom(250);
+    });
 </script>
 ```
 
@@ -58,18 +58,18 @@ The following code shows how to enable magnification and zoom from the editor in
 The following code fits the slide to the window from the editor instance. `fitWidth` fits the slide width instead, keeping the aspect ratio.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableMagnification(true).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableMagnification(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Magnification);
 
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         // Fit the whole slide in the view area.
         pptxEditor.fitToWindow();
 
         // Fit the slide width in the view area.
         // pptxEditor.fitWidth();
-    }
+    });
 </script>
 ```
 
@@ -88,18 +88,18 @@ The **View** tab **Zoom** group provides:
 The same actions are available from the editor instance.
 
 ```aspx-cs
-@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).EnableMagnification(true).Created("onCreated").Render()
+@Html.EJS().PptxEditor("pptxeditor").EnableToolbar(true).EnableMagnification(true).Render()
 <script>
     ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar, ej.pptxeditor.Magnification);
 
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
         var pptxEditor = document.getElementById('pptxeditor').ej2_instances[0];
         pptxEditor.setZoom(200);
         // Use and set the required zoom option based on your viewing preference.
         // pptxEditor.fitToWindow();
         // pptxEditor.fitWidth();
         // pptxEditor.zoomTo100();
-    }
+    });
 </script>
 ```
 

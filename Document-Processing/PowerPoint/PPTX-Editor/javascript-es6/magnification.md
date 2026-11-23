@@ -54,17 +54,15 @@ PptxEditor.Inject(Magnification);
 
 let pptxEditor = new PptxEditor({
     enableMagnification: true,
-    zoom: 100,
-    created: () => {
-        // Status-bar - and + use the same 10-point step.
-        pptxEditor.zoomIn();
-        pptxEditor.zoomOut();
-
-        // Set an explicit percentage. The value is clamped to 10-400.
-        pptxEditor.setZoom(150);
-    }
+    zoom: 100
 });
 pptxEditor.appendTo('#pptx-editor');
+// Status-bar - and + use the same 10-point step.
+pptxEditor.zoomIn();
+pptxEditor.zoomOut();
+
+// Set an explicit percentage. The value is clamped to 10-400.
+pptxEditor.setZoom(150);
 ```
 
 `zoomIn` and `zoomOut` change the current zoom by 10 percentage points. `setZoom` sets an absolute percentage. `zoomTo100` sets the zoom to 100%.
@@ -89,16 +87,14 @@ import { PptxEditor, Magnification } from '@syncfusion/ej2-pptxeditor';
 PptxEditor.Inject(Magnification);
 
 let pptxEditor = new PptxEditor({
-    enableMagnification: true,
-    created: () => {
-        // Fit the whole slide in the view area.
-        pptxEditor.fitToWindow();
-
-        // Fit the slide width in the view area.
-        // pptxEditor.fitWidth();
-    }
+    enableMagnification: true
 });
 pptxEditor.appendTo('#pptx-editor');
+// Fit the whole slide in the view area.
+pptxEditor.fitToWindow();
+
+// Fit the slide width in the view area.
+// pptxEditor.fitWidth();
 ```
 
 ## Zooming via ribbon
@@ -126,16 +122,14 @@ PptxEditor.Inject(Toolbar, Magnification);
 
 let pptxEditor = new PptxEditor({
     enableToolbar: true,
-    enableMagnification: true,
-    created: () => {
-        pptxEditor.setZoom(200);
-        // Use and set the required zoom option based on your viewing preference.
-        // pptxEditor.fitToWindow();
-        // pptxEditor.fitWidth();
-        // pptxEditor.zoomTo100();
-    }
+    enableMagnification: true
 });
 pptxEditor.appendTo('#pptx-editor');
+pptxEditor.setZoom(200);
+// Use and set the required zoom option based on your viewing preference.
+// pptxEditor.fitToWindow();
+// pptxEditor.fitWidth();
+// pptxEditor.zoomTo100();
 ```
 
 The `zoomChange` event is raised after the effective zoom percentage changes. `zoomType` is `percentage` for `setZoom`, `zoomIn`, `zoomOut`, and `zoomTo100`, and `fit` for a fit layout.

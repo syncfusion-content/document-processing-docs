@@ -44,7 +44,7 @@ To enable magnification, provide the `MagnificationService` and add the dependen
 The following code shows how to enable magnification and zoom from the editor instance.
 
 ```html
-<ejs-pptxeditor #pptxeditor [enableMagnification]="true" [zoom]="100" (created)="onCreated()"></ejs-pptxeditor>
+<ejs-pptxeditor #pptxeditor [enableMagnification]="true" (created)="onCreated()"></ejs-pptxeditor>
 ```
 
 ```ts
@@ -53,7 +53,7 @@ import { MagnificationService, PptxEditorComponent, PptxEditorModule } from '@sy
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [MagnificationService],
     standalone: true,
@@ -96,7 +96,7 @@ import { MagnificationService, PptxEditorComponent, PptxEditorModule } from '@sy
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [MagnificationService],
     standalone: true,
@@ -140,7 +140,7 @@ import { MagnificationService, PptxEditorComponent, PptxEditorModule, ToolbarSer
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService, MagnificationService],
     standalone: true,
@@ -172,7 +172,7 @@ import { MagnificationService, PptxEditorModule } from '@syncfusion/ej2-angular-
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [MagnificationService],
     standalone: true,
@@ -202,7 +202,7 @@ import { MagnificationService, PptxEditorComponent, PptxEditorModule, ToolbarSer
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    templateUrl: './app.html',
     encapsulation: ViewEncapsulation.None,
     providers: [MagnificationService, ToolbarService],
     standalone: true,
