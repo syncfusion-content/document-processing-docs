@@ -48,6 +48,11 @@ import { provide } from 'vue';
 provide('PptxEditor', [Toolbar]);
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -68,6 +73,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,6 +108,11 @@ import { provide } from 'vue';
 provide('PptxEditor', [Toolbar]);
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -118,6 +133,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -219,6 +239,11 @@ const onCreated = () => {
 };
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -269,6 +294,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -359,6 +389,11 @@ const onCreated = () => {
 };
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -403,6 +438,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -500,6 +540,11 @@ const onCreated = () => {
 };
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -539,6 +584,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -590,6 +640,11 @@ const enableRibbon = () => {
 };
 </script>
 
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -624,6 +679,11 @@ export default {
     }
 };
 </script>
+
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
