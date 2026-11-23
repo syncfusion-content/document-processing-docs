@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Export Excel files using client-side processing in JavaScript Spreadsheet
+# Client-Side Excel Export in JavaScript Spreadsheet
 
 The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component processes workbook files directly in the browser without requiring a Save service. The [allowSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsave) property is enabled by default. When [saveUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 

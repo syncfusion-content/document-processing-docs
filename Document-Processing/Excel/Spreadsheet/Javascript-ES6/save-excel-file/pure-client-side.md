@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Export Excel files using client-side processing in TypeScript Spreadsheet
+# Client-Side Excel Export in TypeScript Spreadsheet
 
 The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a client-side workflow to generate workbook files directly in the browser without requiring a file-processing service. The [allowSave](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowsave) property is enabled by default. When [saveUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet#saveurl) is not configured, the Spreadsheet uses its integrated client-side functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 

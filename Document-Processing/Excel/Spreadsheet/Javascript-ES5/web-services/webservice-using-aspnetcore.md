@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Connecting Web Services for Spreadsheet Open and Save in ASP.NET Core
+# ASP.NET Core Web Services for JavaScript Spreadsheet
 
 This guide explains how to set up and connect local web services for open and save operations in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using ASP.NET Core.
 

@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Export Excel files using server-side processing in TypeScript Spreadsheet
+# Server-Side Excel Export in TypeScript Spreadsheet
 
 The TypeScript Spreadsheet component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 

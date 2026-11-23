@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Import Excel files using client-side processing in JavaScript Spreadsheet
+# Client-Side Excel Import in JavaScript Spreadsheet
 
 The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component processes workbook files directly in the browser without requiring an Open service. The [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is enabled by default. When [openUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 

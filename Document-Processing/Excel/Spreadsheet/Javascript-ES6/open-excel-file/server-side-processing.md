@@ -7,7 +7,7 @@ control: Server-Side Import
 documentation: ug
 ---
 
-# Import Excel files using server-side processing in TypeScript Spreadsheet
+# Server-Side Excel Import in TypeScript Spreadsheet
 
 The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 

@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Import Excel files using client-side processing in TypeScript Spreadsheet
+# Client-Side Excel Import in TypeScript Spreadsheet
 
 The [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component uses a client-side workflow to process workbook files directly in the browser without requiring a file-processing service. The [allowOpen](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowopen) property is enabled by default. When [openUrl](https://ej2.syncfusion.com/documentation/api/spreadsheet#openurl) is not configured, the Spreadsheet uses its integrated client-side functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
