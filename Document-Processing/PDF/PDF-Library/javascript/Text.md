@@ -590,7 +590,7 @@ This example shows how to draw complex-script text, such as Tamil, Hindi, Marath
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfStringFormat } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfStringFormat, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
 let document: PdfDocument = new PdfDocument();
@@ -598,11 +598,13 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Embed a Unicode TrueType font.
 let font: PdfTrueTypeFont = new PdfTrueTypeFont(fontData, 14);
+// Create a brush for drawing the text.
+let brush: PdfBrush = new PdfBrush({r: 0, g: 0, b: 0});
 // Create a string format and enable complex-script shaping.
 let format: PdfStringFormat = new PdfStringFormat();
 format.complexScript = true;
 // Draw Tamil text.
-page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 300, height: 100}, null, null, format);
+page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 300, height: 100}, brush, format);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
@@ -614,11 +616,13 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Embed a Unicode TrueType font.
 var font = new ej.pdf.PdfTrueTypeFont(fontData, 14);
+// Create a brush for drawing the text.
+var brush = new ej.pdf.PdfBrush({r: 0, g: 0, b: 0});
 // Create a string format and enable complex-script shaping.
 var format = new ej.pdf.PdfStringFormat();
 format.complexScript = true;
 // Draw Tamil text.
-page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 300, height: 100}, null, null, format);
+page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 300, height: 100}, brush, format);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
@@ -709,45 +713,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Enabling complex-script shaping for a text box field
-
-This example shows how to enable complex-script shaping for a single text box field of an existing PDF document using the `complexScript` property of the `PdfField` class, and then regenerate its appearance.
-
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfTextBoxField, PdfTrueTypeFont } from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document.
-let document: PdfDocument = new PdfDocument(data, password);
-// Access the text box field.
-let field: PdfTextBoxField = document.form.fieldAt(0) as PdfTextBoxField;
-// Set the text and Unicode TrueType font.
-field.text = 'മലയാളം';
-field.font = new PdfTrueTypeFont(fontData, 12);
-// Enable complex-script shaping and regenerate the field appearance.
-field.complexScript = true;
-field.setAppearance(true);
-// Save and destroy the document.
-document.save('output.pdf');
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Load an existing PDF document.
-var document = new ej.pdf.PdfDocument(data, password);
-// Access the text box field.
-var field = document.form.fieldAt(0);
-// Set the text and Unicode TrueType font.
-field.text = 'മലയാളം';
-field.font = new ej.pdf.PdfTrueTypeFont(fontData, 12);
-// Enable complex-script shaping and regenerate the field appearance.
-field.complexScript = true;
-field.setAppearance(true);
-// Save and destroy the document.
-document.save('output.pdf');
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
+> **Note:** Enable complex-script shaping for an individual text box field in an existing PDF document by setting the `complexScript` property of the `PdfField` class, and then regenerate the field’s appearance to apply the change.
 
 ### Enabling complex-script shaping for a free-text annotation
 
@@ -797,7 +763,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> Use a Unicode font that contains glyphs for the script being rendered. Without `complexScript` enabled, characters are not shaped or reordered.
+> **Note:** Use a Unicode font that contains glyphs for the script being rendered. Without `complexScript` enabled, characters are not shaped or reordered.
 
 ### Drawing text using OpenType fonts
 
@@ -838,7 +804,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> OpenType (OTF) fonts are recommended for advanced typographic requirements, such as ligatures, stylistic alternates, and extended glyph support, whereas TrueType (TTF) fonts are suitable for standard text rendering scenarios.
+> **Note:** OpenType (OTF) fonts are recommended for advanced typographic requirements, such as ligatures, stylistic alternates, and extended glyph support, whereas TrueType (TTF) fonts are suitable for standard text rendering scenarios.
 
 ## Additional Resources
 
