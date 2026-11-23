@@ -599,9 +599,11 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 ### Drawing complex-script text
 
+This example shows how to draw complex-script text, such as Tamil, in a PDF document. Set the `complexScript` property of the [`PdfStringFormat`](https://ej2.syncfusion.com/documentation/api/pdf/pdfstringformat) class to `true` and pass the format to the [`PdfGraphics.drawString()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method. Use a Unicode TrueType font that contains the required glyphs.
+
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-
 import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfStringFormat } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
@@ -618,10 +620,8 @@ page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 30
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
 // Create a new PDF document.
 var document = new ej.pdf.PdfDocument();
 // Add a page to the document.
@@ -636,15 +636,16 @@ page.graphics.drawString('வணக்கம்', font, {x: 20, y: 20, width: 30
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 ### Enabling complex-script shaping for form fields
 
+This example shows how to enable complex-script shaping for all text-capable fields of a form using the `complexScript` property of the `PdfForm` class. The sample creates text box, combo box, list box, and button fields.
+
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-
 import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfTextBoxField, PdfComboBoxField, PdfListBoxField, PdfButtonField, PdfListFieldItem } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
@@ -682,10 +683,8 @@ document.form.setDefaultAppearance(false);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
 // Create a new PDF document.
 var document = new ej.pdf.PdfDocument();
 // Add a page and enable complex-script shaping for the form.
@@ -721,15 +720,16 @@ document.form.setDefaultAppearance(false);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 ### Enabling complex-script shaping for a text box field
 
+This example shows how to enable complex-script shaping for a single text box field of an existing PDF document using the `complexScript` property of the `PdfField` class, and then regenerate its appearance.
+
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-
 import { PdfDocument, PdfTextBoxField, PdfTrueTypeFont } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document.
@@ -745,10 +745,8 @@ field.setAppearance(true);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
 // Load an existing PDF document.
 var document = new ej.pdf.PdfDocument(data, password);
 // Access the text box field.
@@ -762,15 +760,16 @@ field.setAppearance(true);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 
 ### Enabling complex-script shaping for a free-text annotation
 
+This example shows how to enable complex-script shaping for a free-text annotation using the `complexScript` property, and how to set the text direction using the `textDirection` property of the `PdfFreeTextAnnotation` class.
+
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-
 import { PdfDocument, PdfPage, PdfFreeTextAnnotation, PdfTrueTypeFont, PdfTextDirection } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document.
@@ -790,10 +789,8 @@ page.annotations.add(annotation);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
 // Load an existing PDF document.
 var document = new ej.pdf.PdfDocument(data, password);
 // Access the first page.
@@ -811,9 +808,10 @@ page.annotations.add(annotation);
 // Save and destroy the document.
 document.save('output.pdf');
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Use a Unicode font that contains glyphs for the script being rendered. Without `complexScript` enabled, characters are not shaped or reordered.
 
 ## Additional Resources
 
