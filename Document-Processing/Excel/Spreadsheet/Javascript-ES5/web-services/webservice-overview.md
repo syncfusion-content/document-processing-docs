@@ -13,9 +13,9 @@ Unlock advanced Excel file processing in your web applications by connecting the
 
 ## What are Spreadsheet Open and Save Services?
 
-The JavaScript Spreadsheet Editor component allows users to import (open) and export (save) Excel files directly from the browser. When server-side processing is configured, these operations use back-end web services. Client-side XLSX processing does not require these services.
+The JavaScript Spreadsheet Editor component allows users to import (open) and export (save) Excel files directly from the browser. These operations require secure, reliable back-end web services to process files and data.
 
-Documentation samples may use demo endpoints hosted by Syncfusion. For production or development, it is strongly recommended to configure your own web services for:
+By default, demo endpoints hosted by Syncfusion are used. For production or development, it is strongly recommended to configure your own web services for:
 - **Security:** Keep files and data within your infrastructure.
 - **Performance:** Reduce latency and dependency on external services.
 - **Customization:** Implement business logic for file validation, processing, or storage.

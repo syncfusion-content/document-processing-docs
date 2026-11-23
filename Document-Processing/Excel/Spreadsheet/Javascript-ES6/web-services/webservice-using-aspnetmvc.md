@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Connecting ASP.NET MVC Web Services to JavaScript (ES6) Spreadsheet | Syncfusion
-description: Learn about configuring ASP.NET MVC web services for open and save operations in JavaScript (ES6) Spreadsheet component and more details.
-control: Web Services
+title: Web Services using ASP.NET MVC in TypeScript Spreadsheet | Syncfusion
+description: Learn about configuring ASP.NET MVC web services for open and save operations in TypeScript Spreadsheet component and more details.
+control: Web Services 
 platform: document-processing
 documentation: ug
 ---
 
-# Connecting ASP.NET MVC Web Services to JavaScript (ES6) Spreadsheet
+# Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
 
-This guide explains how to set up and connect local web services for open and save operations in the [JavaScript (ES6) Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using **ASP.NET MVC**.
+This guide explains how to set up and connect local web services for open and save operations in the [TypeScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component using **ASP.NET MVC**.
 
 ## Create a Local ASP.NET MVC Web Service
 
@@ -87,7 +87,7 @@ By default, ASP.NET MVC and web servers impose size limits on incoming HTTP requ
 
 ### Enable CORS (Cross-Origin Resource Sharing)
 
-CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the JavaScript (ES6) Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET MVC web service for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environments.
+CORS (Cross-Origin Resource Sharing) is a security feature that allows web applications from different origins (domains, protocols, or ports) to communicate with your API. By default, browsers block cross-origin requests for security reasons. Since the TypeScript Spreadsheet component runs in the client browser and needs to communicate with your ASP.NET MVC web service for open and save operations, you must configure CORS to allow these requests. The following configuration enables cross-origin requests from any origin, which is suitable for development environme
 
 **How to Enable CORS in ASP.NET MVC**
 
@@ -95,7 +95,7 @@ CORS (Cross-Origin Resource Sharing) is a security feature that allows web appli
 2. Add the following code to the `Application_BeginRequest` method:
 
 ```csharp
-// Configure CORS to allow the JavaScript (ES6) Spreadsheet component to communicate with the API from any origin
+// Configure CORS to allow the TypeScript Spreadsheet component to communicate with the API from any origin
 // This is necessary for the browser to permit cross-origin requests for file open and save operations
 protected void Application_BeginRequest()
 {
@@ -122,16 +122,11 @@ After adding the controller codes and above mentioned configurations, build and 
 
 Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
 
-```ts
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
-
-//Initialize Spreadsheet component
-let spreadsheet: Spreadsheet = new Spreadsheet({
-    openUrl: 'https://localhost:44300/Spreadsheet/Open',
-    saveUrl: 'https://localhost:44300/Spreadsheet/Save'
-});
-//Render initialized Spreadsheet component
-spreadsheet.appendTo('#spreadsheet');
+```js
+<SpreadsheetComponent
+    openUrl="https://localhost:44300/Spreadsheet/Open"
+    saveUrl="https://localhost:44300/Spreadsheet/Save"
+/>
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
