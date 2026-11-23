@@ -1,6 +1,6 @@
 ---
 title: Security in .NET PDF Library | Syncfusion
-description: Learn how to protect PDF documents with encryption and set permissions for printing, editing, and copying using Syncfusion .NET PDF.
+description: Learn how to protect PDF documents with encryption, set permissions, and validate certificates using EU trusted lists (LOTL) in Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -15,6 +15,422 @@ Watch the following video to learn how to encrypt and decrypt PDF documents usin
 The two supported encryption algorithms are:
 1. Rivest Cipher 4 (RC4)
 2. Advanced Encryption Standard (AES)
+
+## Validate certificates using the EU List of Trusted Lists (LOTL)
+
+The `PdfTrustedListProvider` class loads and cryptographically authenticates the European Commission List of Trusted Lists (LOTL) and the national trusted lists referenced by it. You can use these lists to evaluate whether a certificate is associated with a qualified trust service under eIDAS. The trusted list APIs are available in the `Syncfusion.Pdf.Security` namespace.
+
+The LOTL points to national trusted lists; it is not a single certificate or a replacement for PDF signature integrity validation. Certificate trust, certificate revocation, and the integrity of a signed PDF must all be considered when accepting a signature.
+
+### Load trusted lists and validate a certificate
+
+To validate a signing certificate against EU trusted lists:
+
+1. Create `PdfTrustedListSettings` and configure a writable cache directory.
+2. Optionally specify the countries to load using ISO 3166-1 alpha-2 codes, such as `DE` and `FR`. An empty inclusion collection loads all available countries.
+3. Create a `PdfTrustedListProvider` and call `Load()` to load and authenticate the lists.
+4. Check the load result before validating the certificate.
+5. Call `ValidateCertificate` with the certificate and `PdfTrustedCertificateValidationOptions`, then inspect the returned status and diagnostics.
+
+The following example validates a public signing certificate stored in `signer.cer`. Replace this file with your certificate. No private key is required.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+using System;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using Syncfusion.Pdf.Security;
+
+PdfTrustedListSettings settings = new PdfTrustedListSettings();
+settings.CacheDirectory = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+    "Syncfusion", "LOTLCache");
+settings.IncludedCountries.Add("DE");
+settings.IncludedCountries.Add("FR");
+settings.AllowOnlineFetch = true;
+settings.CountryFailureAction = PdfTrustedListCountryFailureAction.FailAll;
+
+try
+{
+    PdfTrustedListProvider provider = new PdfTrustedListProvider(settings);
+    PdfTrustedListLoadResult loadResult = provider.Load();
+    Console.WriteLine("Load status: " + loadResult.Status);
+    Console.WriteLine("Source: " + loadResult.Source);
+
+    if (loadResult.Status == PdfTrustedListStatus.Success)
+    {
+        using (X509Certificate2 certificate = new X509Certificate2("signer.cer"))
+        {
+            PdfTrustedCertificateValidationOptions options =
+                new PdfTrustedCertificateValidationOptions();
+            options.ExpectedUsage = PdfTrustedCertificateUsage.Signature;
+            options.CertificateSource = PdfTrustedCertificateSource.SigningCertificate;
+            options.ValidationTime = DateTime.UtcNow;
+            options.CheckRevocation = true;
+            options.AllowOnlineRevocationCheck = true;
+
+            PdfTrustedListValidationResult result =
+                provider.ValidateCertificate(certificate, options);
+            Console.WriteLine("Certificate trust status: " + result.Status);
+            Console.WriteLine("Trust time source: " + result.TrustTimeSource);
+
+            if (result.Service != null)
+            {
+                Console.WriteLine("Provider: " + result.Service.OperatorName);
+                Console.WriteLine("Country: " + result.Service.OperatorCountry);
+                Console.WriteLine("Service: " + result.Service.ServiceName);
+                Console.WriteLine("Service type: " + result.Service.ServiceType);
+                Console.WriteLine("Service status: " + result.Service.Status);
+            }
+
+            foreach (string entry in result.Log)
+            {
+                Console.WriteLine(entry);
+            }
+        }
+    }
+    else
+    {
+        foreach (string error in loadResult.Errors)
+        {
+            Console.WriteLine(error);
+        }
+    }
+}
+catch (PdfTrustedListException exception)
+{
+    Console.WriteLine("Trusted list processing failed: " + exception.Message);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+Imports System
+Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
+Imports Syncfusion.Pdf.Security
+
+Dim settings As New PdfTrustedListSettings()
+settings.CacheDirectory = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+    "Syncfusion", "LOTLCache")
+settings.IncludedCountries.Add("DE")
+settings.IncludedCountries.Add("FR")
+settings.AllowOnlineFetch = True
+settings.CountryFailureAction = PdfTrustedListCountryFailureAction.FailAll
+
+Try
+    Dim provider As New PdfTrustedListProvider(settings)
+    Dim loadResult As PdfTrustedListLoadResult = provider.Load()
+    Console.WriteLine("Load status: " & loadResult.Status.ToString())
+    Console.WriteLine("Source: " & loadResult.Source.ToString())
+
+    If loadResult.Status = PdfTrustedListStatus.Success Then
+        Using certificate As New X509Certificate2("signer.cer")
+            Dim options As New PdfTrustedCertificateValidationOptions()
+            options.ExpectedUsage = PdfTrustedCertificateUsage.Signature
+            options.CertificateSource = PdfTrustedCertificateSource.SigningCertificate
+            options.ValidationTime = DateTime.UtcNow
+            options.CheckRevocation = True
+            options.AllowOnlineRevocationCheck = True
+
+            Dim result As PdfTrustedListValidationResult =
+                provider.ValidateCertificate(certificate, options)
+            Console.WriteLine("Certificate trust status: " & result.Status.ToString())
+            Console.WriteLine("Trust time source: " & result.TrustTimeSource.ToString())
+
+            If result.Service IsNot Nothing Then
+                Console.WriteLine("Provider: " & result.Service.OperatorName)
+                Console.WriteLine("Country: " & result.Service.OperatorCountry)
+                Console.WriteLine("Service: " & result.Service.ServiceName)
+                Console.WriteLine("Service type: " & result.Service.ServiceType.ToString())
+                Console.WriteLine("Service status: " & result.Service.Status.ToString())
+            End If
+
+            For Each entry As String In result.Log
+                Console.WriteLine(entry)
+            Next
+        End Using
+    Else
+        For Each loadError As String In loadResult.Errors
+            Console.WriteLine(loadError)
+        Next
+    End If
+Catch exception As PdfTrustedListException
+    Console.WriteLine("Trusted list processing failed: " & exception.Message)
+End Try
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> A successful load means that the requested trusted lists were loaded successfully; it does not mean that a certificate is trusted. Inspect the separate `PdfTrustedListValidationResult`, including its `Status`, `Service`, `Path`, and `Log`. A trusted certificate alone does not establish that a PDF signature is valid or that it is a qualified electronic signature.
+
+### Configure trusted list loading
+
+The following properties of `PdfTrustedListSettings` control loading and caching.
+
+| Property | Description |
+|---|---|
+| `IncludedCountries` | Loads only the specified countries. Leave empty to load all available countries. |
+| `ExcludedCountries` | Skips the specified countries. Use either inclusion or exclusion filtering, not both. |
+| `CacheDirectory` | Specifies the local directory used to cache trusted list XML files. |
+| `CacheValidity` | Specifies how long cached files remain valid before refresh is required. The public API specification defines a default of three days. |
+| `AutoRefresh` | Controls automatic refresh of expired caches. The default is `true`. |
+| `AllowOnlineFetch` | Allows network downloads of the LOTL and national trusted lists. The default is `true`. |
+| `CountryFailureAction` | Controls handling of a country list that fails verification. The default, `IgnoreAndContinue`, allows other countries to load. Use `FailAll` when all requested lists must load successfully. |
+| `RequestTimeout` | Sets the HTTP request timeout. The default is 30 seconds. |
+
+With `IgnoreAndContinue`, inspect `PdfTrustedListLoadResult.Countries` and `Errors` when the overall status is `PartialSuccess`. Do not interpret missing or failed country lists as evidence that a certificate is untrusted or trusted.
+
+By default, the provider uses the European Commission LOTL endpoint and embedded authentic LOTL signing certificates sourced from the Official Journal. `ListOfTrustedListsUrl`, `OfficialJournalUrl`, and `OfficialJournalCertificates` allow custom configuration. When overriding `OfficialJournalCertificates`, also configure `OfficialJournalUrl`. Obtain trust anchors through an independently authenticated source; do not trust an arbitrary certificate supplied with an XML file.
+
+### Load trusted lists offline
+
+For offline environments, set `AllowOnlineFetch` and `AutoRefresh` to `false`, then call `provider.Load(directoryPath)` with a directory containing the LOTL and the required national trusted list XML files. Local files are still subject to trusted list authentication. Provision and update these files through a trusted process.
+
+N> Trusted list downloads and certificate revocation checks have separate network settings. To prevent online revocation requests during certificate validation, also set `PdfTrustedCertificateValidationOptions.AllowOnlineRevocationCheck` to `false`. Disabling network access does not establish that a certificate has not been revoked; review the path statuses and diagnostic log for unavailable revocation information.
+
+### Refresh lists and discover services
+
+Call `Refresh()` to reload and authenticate lists while ignoring unexpired cache entries. For asynchronous applications, use `LoadAsync(cancellationToken)` or `RefreshAsync(cancellationToken)` and await the returned load result.
+
+Use `GetTrustedServices()` to enumerate loaded trust services, or `GetTrustedServices("DE")` to filter by country. Each `PdfTrustedServiceInfo` exposes the operator, service name, service type, status, status starting time, and digital identities. Service discovery does not replace certificate validation.
+
+### Use trusted lists during PDF signature validation
+
+Assign a loaded `PdfTrustedListProvider` to the `TrustedListProvider` property of `PdfSignatureValidationOptions` before validating PDF signatures. Inspect `PdfSignatureValidationResult.TrustedListResult` alongside the overall signature validation result. `TrustedListResult` is `null` when trusted lists were not used. Leaving `TrustedListProvider` unset preserves the existing signature validation behavior.
+
+For standalone certificate validation, use `ExpectedUsage` to select the intended usage, such as `Signature`, `Seal`, or `Timestamp`. `ValidationTime` specifies the evaluation time, and the returned `TrustTimeSource` identifies the time source used. A caller-supplied historical time is not itself proof of a trusted signing time.
+
+## Validate a certificate chain
+
+The `PdfCertificateValidator` class validates an X.509 certificate chain and its revocation status without loading a PDF document. It supports certificate path validation and revocation checking according to RFC 5280 and RFC 6960. The certificate validation APIs are available in the `Syncfusion.Pdf.Security` namespace.
+
+To validate a certificate chain:
+
+1. Load the target certificate and the certificates needed to build its chain.
+2. Create `PdfCertificateValidationOptions` and specify trusted anchors and intermediate certificates.
+3. Optionally supply OCSP responses and CRLs, and configure the evaluation time and online revocation policy.
+4. Call the static `PdfCertificateValidator.Validate` method.
+5. Inspect the overall status, individual chain entries, and diagnostic log.
+
+### Validate using caller-supplied certificates and revocation data
+
+The following example validates `signer.cer` using a trusted root, an intermediate certificate, and locally supplied revocation data. Replace the sample files with certificates and revocation responses for your chain. The `.der` files must contain binary DER data, not PEM text or Base64 strings. No private keys are required.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using Syncfusion.Pdf.Security;
+
+using (X509Certificate2 certificate = new X509Certificate2("signer.cer"))
+using (X509Certificate2 intermediate = new X509Certificate2("intermediate.cer"))
+using (X509Certificate2 root = new X509Certificate2("trusted-root.cer"))
+{
+    PdfCertificateValidationOptions options = new PdfCertificateValidationOptions();
+    options.TrustedCertificates = new X509Certificate2Collection { root };
+    options.IntermediateCertificates = new X509Certificate2Collection { intermediate };
+    options.OcspResponses = new List<byte[]>
+    {
+        File.ReadAllBytes("signer_ocsp.der")
+    };
+    options.Crls = new List<byte[]>
+    {
+        File.ReadAllBytes("issuer_crl.der")
+    };
+    options.ValidationTime = DateTime.UtcNow;
+    options.AllowOnlineRevocationCheck = false;
+
+    PdfCertificateValidationResult result =
+        PdfCertificateValidator.Validate(certificate, options);
+    Console.WriteLine("Certificate chain status: " + result.Status);
+
+    foreach (PdfCertificateValidationEntry entry in result.Certificates)
+    {
+        Console.WriteLine(entry.Certificate.Subject + ": " + entry.Status);
+        foreach (PdfCertificateStatusReason reason in entry.Reasons)
+        {
+            Console.WriteLine("Reason: " + reason);
+        }
+        if (entry.RevocationTime.HasValue)
+        {
+            Console.WriteLine("Revoked at (UTC): " + entry.RevocationTime.Value);
+        }
+    }
+
+    foreach (string message in result.Log)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+Imports System
+Imports System.Collections.Generic
+Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
+Imports Syncfusion.Pdf.Security
+
+Using certificate As New X509Certificate2("signer.cer"),
+      intermediate As New X509Certificate2("intermediate.cer"),
+      root As New X509Certificate2("trusted-root.cer")
+    Dim options As New PdfCertificateValidationOptions()
+    options.TrustedCertificates = New X509Certificate2Collection From {root}
+    options.IntermediateCertificates = New X509Certificate2Collection From {intermediate}
+    options.OcspResponses = New List(Of Byte()) From {
+        File.ReadAllBytes("signer_ocsp.der")
+    }
+    options.Crls = New List(Of Byte()) From {
+        File.ReadAllBytes("issuer_crl.der")
+    }
+    options.ValidationTime = DateTime.UtcNow
+    options.AllowOnlineRevocationCheck = False
+
+    Dim result As PdfCertificateValidationResult =
+        PdfCertificateValidator.Validate(certificate, options)
+    Console.WriteLine("Certificate chain status: " & result.Status.ToString())
+
+    For Each entry As PdfCertificateValidationEntry In result.Certificates
+        Console.WriteLine(entry.Certificate.Subject & ": " & entry.Status.ToString())
+        For Each reason As PdfCertificateStatusReason In entry.Reasons
+            Console.WriteLine("Reason: " & reason.ToString())
+        Next
+        If entry.RevocationTime.HasValue Then
+            Console.WriteLine("Revoked at (UTC): " & entry.RevocationTime.Value.ToString())
+        End If
+    Next
+
+    For Each message As String In result.Log
+        Console.WriteLine(message)
+    Next
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Only add certificates to `TrustedCertificates` when your application explicitly trusts them. Do not promote an unverified certificate from the input chain to a trust anchor. Supplying an intermediate certificate helps build a path; it does not make that certificate trusted.
+
+### Configure certificate validation
+
+| Property | Description |
+|---|---|
+| `TrustedCertificates` | Root certificates or explicitly trusted intermediate certificates. When null or empty, the platform trust store is evaluated. |
+| `IntermediateCertificates` | Additional intermediate certificates used to complete certification paths. |
+| `OcspResponses` | Caller-supplied DER-encoded OCSP responses. Accepts full `OCSPResponse` or `BasicOCSPResponse` data. |
+| `Crls` | Caller-supplied DER-encoded certificate revocation lists. |
+| `ValidationTime` | UTC time at which certificate validity and revocation are evaluated. The default is null, which uses the current time. |
+| `AllowOnlineRevocationCheck` | Permits online revocation checking using AIA OCSP and CRL distribution points. The default is `true`. Set to `false` to prevent online revocation requests. |
+
+You can supply OCSP responses, CRLs, or both, depending on the revocation evidence available for the chain. Supply evidence for all certificates that require revocation checking, not only the signer. Disabling online revocation checks does not make missing, expired, or unusable evidence acceptable. Review the result to determine whether revocation status could be established.
+
+### Interpret certificate validation results
+
+`PdfCertificateValidationResult.Status` reports the overall path status. `Certificates` contains chain entries ordered from the end-entity certificate to the trust anchor, and `Log` provides diagnostic trace messages.
+
+| Status | Meaning |
+|---|---|
+| `Valid` | The certificate or path is correctly signed, within its validity dates, trusted, and not revoked. |
+| `Revoked` | The certificate has been revoked by its issuer. |
+| `Invalid` | The certificate or path is invalid, for example because it is expired, untrusted, or has an invalid signature. |
+| `Unknown` | The status cannot be determined, for example because an intermediate certificate or revocation information is unavailable. |
+
+Each `PdfCertificateValidationEntry` exposes its `Certificate`, `Status`, `Reasons`, and nullable `RevocationTime`. Reasons such as `IssuerNotFound`, `UntrustedRoot`, `Expired`, and `RevocationStatusUnknown` help identify missing inputs or validation failures. Do not treat `Unknown` as `Valid`.
+
+N> Standalone certificate-chain validation does not verify PDF signature integrity or establish a trusted signing time. Use PDF signature validation to validate a signed document. A caller-supplied historical `ValidationTime` is an evaluation input, not proof that the document was signed at that time.
+
+## Supply caller-provided OCSP and CRL data for PDF signature validation
+
+You can provide previously obtained revocation evidence through the public `OCSPResponseData` and `CRLResponseData` properties of `PdfSignatureValidationOptions`, in the `Syncfusion.Pdf.Parsing` namespace. These responses supplement the OCSP responses and CRLs embedded in the signature and the document security store (DSS). Both properties default to null, and unusable items are ignored.
+
+Use this feature when your application retrieves revocation evidence through a separate service or needs to make locally stored responses available during validation. Supplying data does not itself establish a valid signature or guarantee that all revocation information is available.
+
+The following example validates the signature field named `Signature1` in `signed_document.pdf` using caller-supplied binary DER files. Replace the field name and file paths with those for your document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C#" %}
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+PdfSignatureValidationOptions options = new PdfSignatureValidationOptions();
+options.OCSPResponseData = new List<byte[]>
+{
+    File.ReadAllBytes("signer_ocsp.der")
+};
+options.CRLResponseData = new List<byte[]>
+{
+    File.ReadAllBytes("issuer_crl.der")
+};
+
+using (PdfLoadedDocument document = new PdfLoadedDocument("signed_document.pdf"))
+{
+    PdfLoadedSignatureField signatureField =
+        document.Form.Fields["Signature1"] as PdfLoadedSignatureField;
+    if (signatureField != null)
+    {
+        PdfSignatureValidationResult result = signatureField.ValidateSignature(options);
+        Console.WriteLine("Signature valid: " + result.IsSignatureValid);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET" %}
+
+Imports System
+Imports System.Collections.Generic
+Imports System.IO
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
+Dim options As New PdfSignatureValidationOptions()
+options.OCSPResponseData = New List(Of Byte()) From {
+    File.ReadAllBytes("signer_ocsp.der")
+}
+options.CRLResponseData = New List(Of Byte()) From {
+    File.ReadAllBytes("issuer_crl.der")
+}
+
+Using document As New PdfLoadedDocument("signed_document.pdf")
+    Dim signatureField As PdfLoadedSignatureField =
+        TryCast(document.Form.Fields("Signature1"), PdfLoadedSignatureField)
+    If signatureField IsNot Nothing Then
+        Dim result As PdfSignatureValidationResult = signatureField.ValidateSignature(options)
+        Console.WriteLine("Signature valid: " & result.IsSignatureValid.ToString())
+    End If
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The standalone and PDF signature validation APIs use different property names for caller-supplied data:
+
+| Validation API | OCSP data property | CRL data property |
+|---|---|---|
+| `PdfCertificateValidationOptions` | `OcspResponses` | `Crls` |
+| `PdfSignatureValidationOptions` | `OCSPResponseData` | `CRLResponseData` |
+
+Add multiple byte arrays when evidence is available for multiple certificates. Leaving either signature validation property unset preserves the existing behavior for that input. These properties supply validation evidence; they do not embed it into the PDF or turn off network access. Configure the applicable online validation policy separately when network requests must be restricted.
 
 ## Working with RC4 Encryption
 
