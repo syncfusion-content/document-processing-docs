@@ -69,6 +69,10 @@ const onCreated = () => {
 };
 </script>
 
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight js tabtitle="Options API (~/src/App.vue)" %}
 
@@ -100,6 +104,10 @@ export default {
     }
 };
 </script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -141,6 +149,10 @@ const onCreated = () => {
 };
 </script>
 
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight js tabtitle="Options API (~/src/App.vue)" %}
 
@@ -171,6 +183,10 @@ export default {
     }
 };
 </script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -214,6 +230,10 @@ const onCreated = () => {
 };
 </script>
 
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight js tabtitle="Options API (~/src/App.vue)" %}
 
@@ -245,6 +265,10 @@ export default {
 };
 </script>
 
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -269,6 +293,10 @@ const onZoomChange = (args) => {
     console.log(args.previousZoom + ' -> ' + args.newZoom);
 };
 </script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% highlight js tabtitle="Options API (~/src/App.vue)" %}
@@ -296,6 +324,10 @@ export default {
     }
 };
 </script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
@@ -329,6 +361,10 @@ const enableZoom = () => {
 };
 </script>
 
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
 {% endhighlight %}
 {% highlight js tabtitle="Options API (~/src/App.vue)" %}
 
@@ -359,6 +395,10 @@ export default {
     }
 };
 </script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
