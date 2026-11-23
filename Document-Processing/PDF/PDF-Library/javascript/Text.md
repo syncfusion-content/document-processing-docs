@@ -585,21 +585,7 @@ document.destroy();
 
 ## Complex script text rendering
 
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports rendering complex script text, such as Tamil, Hindi, Marathi and Malayalam, where characters must be shaped and reordered. Enable shaping with the `complexScript` property and use a Unicode TrueType font that contains the required glyphs.
-
-| Class | Property | Type | Default | Description |
-| --- | --- | --- | --- | --- |
-| `PdfStringFormat` | `complexScript` | `boolean` | `false` | Enables complex script rendering for drawn text. |
-| `PdfForm` | `complexScript` | `boolean` | `false` | Enables complex script rendering for text-capable form fields. |
-| `PdfField` | `complexScript` | `boolean` | `false` | Enables complex script rendering for the field content. |
-| `PdfFreeTextAnnotation` | `complexScript` | `boolean` | `false` | Enables complex script rendering for the annotation text. |
-| `PdfFreeTextAnnotation` | `textDirection` | `PdfTextDirection` | `PdfTextDirection.none` | Gets or sets the text direction of the annotation content. |
-
-## Code Examples
-
-### Drawing complex-script text
-
-This example shows how to draw complex-script text, such as Tamil, in a PDF document. Set the `complexScript` property of the [`PdfStringFormat`](https://ej2.syncfusion.com/documentation/api/pdf/pdfstringformat) class to `true` and pass the format to the [`PdfGraphics.drawString()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method. Use a Unicode TrueType font that contains the required glyphs.
+This example shows how to draw complex-script text, such as Tamil, Hindi, Marathi, and Malayalam, in a PDF document. Set the `complexScript` property of the [`PdfStringFormat`](https://ej2.syncfusion.com/documentation/api/pdf/pdfstringformat) class to `true` and pass the format to the [`PdfGraphics.drawString()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method. Use a Unicode TrueType font that contains the required glyphs.
 
 
 {% tabs %}
