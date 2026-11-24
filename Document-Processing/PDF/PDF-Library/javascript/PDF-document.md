@@ -210,6 +210,48 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Linearization (Fast Web View) in JavaScript PDF
+
+A linearized PDF, also known as **Fast Web View**, is a PDF file that is organized so that the first page can be rendered by a web browser or PDF viewer before the entire file is downloaded. Linearization rearranges the objects inside a PDF so that the page tree, cross-reference, and other critical structures are written first, followed by the page content. This is especially useful for large documents served over the web, because users can begin viewing the first page while the rest of the file is still being transferred.
+
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports saving both newly created and existing PDF documents in a linearized format through the `linearization` property of the `PdfFileStructure` class.
+
+This example demonstrates how to enable PDF linearization when creating a new PDF document or updating an existing one.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document.
+let document: PdfDocument = new PdfDocument();
+// Alternatively, load an existing document.
+// let document: PdfDocument = new PdfDocument(data);
+// Enable linearization for fast web view.
+document.fileStructure.linearization = true;
+// Save the document to a file.
+document.save('linearized.pdf');
+// Close the document.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document.
+var document = new ej.pdf.PdfDocument();
+// Alternatively, load an existing document.
+// var document = new ej.pdf.PdfDocument(data);
+// Enable linearization for fast web view.
+document.fileStructure.linearization = true;
+// Save the document to a file.
+document.save('linearized.pdf');
+// Close the document.
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** When loading an existing PDF document, the `linearization` property can be used to determine whether the document is already linearized. Set `linearization` to true before calling `save()` to create or convert a document to a linearized PDF.
+
 ## Flatten annotations and form fields
 
 The [flatten](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#get-flatten-boolean) property converts all annotations and form fields in a PDF into static page content, removing interactivity while preserving the visual appearance of the annotations and form fields.
@@ -243,88 +285,6 @@ document.destroy();
 {% endtabs %}
 
 N> If the document has no annotations or form fields, setting `flatten = true` has no visible effect. The operation is not reversible: once flattened, the original interactive elements cannot be recovered.
-
-## Linearization (Fast Web View) in JavaScript PDF
-
-A [linearized PDF](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf), also known as **Fast Web View**, is a PDF file that is organized so that the first page can be rendered by a web browser or PDF viewer before the entire file is downloaded. Linearization rearranges the objects inside a PDF so that the page tree, cross-reference, and other critical structures are written first, followed by the page content. This is especially useful for large documents served over the web, because users can begin viewing the first page while the rest of the file is still being transferred.
-
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports saving both newly created and existing PDF documents in a linearized format through the [linearization](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure) property of the [PdfFileStructure](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure) class.
-
-> **Note:** By default, `linearization` is set to `false`. Set it to `true` before calling `save` to produce a linearized PDF.
-
-### Creating a linearized PDF document
-
-The following code example shows how to create a new linearized PDF document and save it to a file.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document.
-let document: PdfDocument = new PdfDocument();
-// Add a page.
-document.addPage();
-// Set linearization to true for fast web view.
-document.fileStructure.linearization = true;
-// Save the document to a file.
-document.save('linearized.pdf');
-// Close the document.
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document.
-var document = new ej.pdf.PdfDocument();
-// Add a page.
-document.addPage();
-// Set linearization to true for fast web view.
-document.fileStructure.linearization = true;
-// Save the document to a file.
-document.save('linearized.pdf');
-// Close the document.
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Linearizing an existing PDF document
-
-You can load an existing PDF document, enable linearization, and save it to a new file. This is useful when you want to optimize documents that were created by another tool or by an earlier version of the Syncfusion PDF Library.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document.
-let document: PdfDocument = new PdfDocument(data);
-// Set linearization to true for fast web view.
-document.fileStructure.linearization = true;
-// Save the document to a file.
-document.save('linearized.pdf');
-// Close the document.
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document.
-var document = new ej.pdf.PdfDocument(data);
-// Set linearization to true for fast web view.
-document.fileStructure.linearization = true;
-// Save the document to a file.
-document.save('linearized.pdf');
-// Close the document.
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-The following property of the [PdfFileStructure](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure) class controls linearization.
-
-| Property | Type | Description |
-|---|---|---|
-| [linearization](https://ej2.syncfusion.com/documentation/api/pdf/pdffilestructure) | boolean | Gets or sets a value indicating whether the document is saved using a linearized PDF structure for Fast Web View. The default value is `false`. |
 
 ## Additional Resources
 
