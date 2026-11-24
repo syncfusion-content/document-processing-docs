@@ -36,14 +36,7 @@ To support collaborative editing, it’s crucial to have a backing system that t
 - `Database`: With the same server configuration, it can handle up to 50 requests per second.
 
 
-## 3. How do I estimate the server capacity required for collaborative editing?
-
-To calculate the average requests per second of your application, assume the DOCX Editor in your live application is actively used by 1000 users, and each user’s edit can trigger 2 to 5 requests per second. The total requests per second of your application will be around 2000 to 5000. In this case, you can finalize a configuration to support around 5000 average requests per second.
-
-**NOTE:** The above metrics are based solely on the collaborative editing module. Actual throughput may decrease depending on other server\-side interactions, such as document importing, pasting formatted content, editing restrictions, and spell checking. Therefore, it is advisable to monitor your app’s traffic and choose a configuration that best suits your needs.
-
-
-## 4. What transport protocols are supported by the Collaborator framework?
+## 3. What transport protocols are supported by the Collaborator framework?
 
 The Collaborator framework supports:
 
@@ -53,14 +46,14 @@ The Collaborator framework supports:
 
 Both provide real\-time communication between clients and the Collaboration Server.
 
-## 5. Which EJ2 components are currently supported by the Node.js Collaboration Server?
+## 4. Which EJ2 components are currently supported by the Node.js Collaboration Server?
 
 The Node.js Collaboration Server currently supports **PDF Viewer** collaborative editing.
 
 **Document Editor** and **Spreadsheet** require the ASP.NET Core or ASP.NET MVC Collaboration Server for document processing, operation transformation, and save operations.
 
 
-## 6. How to calculate the Redis and server configuration for collaborative editing?
+## 5. How to calculate the Redis and server configuration for collaborative editing?
 
 Use the following steps to estimate the collaboration server instances and Redis cache required for your workload. The estimate depends on the *SaveThreshold* value configured for the collaboration server and on how many users edit documents at the same time.
 
