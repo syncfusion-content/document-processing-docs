@@ -105,6 +105,8 @@ public webMcpSettings: any = { name: 'container' };
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
 

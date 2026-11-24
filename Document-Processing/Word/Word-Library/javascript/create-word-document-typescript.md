@@ -128,7 +128,7 @@ document.getElementById('normalButton').onclick = (): void => {
     // Create a Word document
     const document = WordDocument.create();
     // Access the section
-    const section = document.section[0];
+    const section = document.sections[0];
     // Access the paragraph
     const paragraph = section.body.paragraphs[0];
     // Add text to the paragraph
@@ -142,7 +142,7 @@ document.getElementById('normalButton').onclick = (): void => {
 ## Code Explanation
 
 - `WordDocument.create()` — creates a new Word document instance.
-- `document.section[0]` — accesses the first section of the document.
+- `document.sections[0]` — accesses the first section of the document.
 - `section.body.paragraphs[0]` — accesses the first paragraph in the section body.
 - `appendText(text)` — adds text content to the paragraph.
 - `save('Output.docx')` — saves the Word document and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.

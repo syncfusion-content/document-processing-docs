@@ -60,4 +60,4 @@ If the license is not registered, the generated PDFs include a watermark and an 
 
 * [Quickstart tutorial](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 * [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-* [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+* [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
