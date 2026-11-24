@@ -5,8 +5,8 @@
   <head>
     <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js"></script>
       <title>Essential JS 2</title>
-      <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" />
-      <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" />
+      <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme/styles/document-editor/index.css" rel="stylesheet" />
+      <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme/styles/document-editor-container/index.css" rel="stylesheet" />
 
       <!-- EJ2 Document Editor dependent scripts -->
       <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
