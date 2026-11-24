@@ -78,7 +78,7 @@ The required styles for the PPTX Editor are imported in the **src/index.css** fi
 
 ## Initialize the PPTX Editor
 
-Add the PPTX Editor component to your application. Add the following code to initialize the component:
+Add the PPTX Editor component to your application. Add the following code in **src/App.tsx** to initialize the component:
 
 {% tabs %}
 {% highlight ts tabtitle="App.tsx" %}

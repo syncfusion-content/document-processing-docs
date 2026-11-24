@@ -79,6 +79,7 @@ N> Replace `{VERSION}` in the path above with the installed DOCX Editor SDK vers
 <script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
 <script src="resources/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
 <script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="resources/ej2-ribbon/dist/global/ej2-ribbon.min.js" type="text/javascript"></script>
 <script src="resources/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
 <!-- DOCX Editor script -->
 <script src="resources/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
@@ -119,6 +120,7 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-ribbon/dist/global/ej2-ribbon.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
 <!-- DOCX Editor script -->
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
@@ -163,11 +165,12 @@ Add a container element for the DOCX Editor in the `index.html` file and then in
 {% highlight js tabtitle="index.js" %}
 
 // Inject toolbar
-ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
 
 // Initialize Document Editor Container component
 var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
+    toolbarMode: 'Ribbon',
     height: '590px'
 });
 
