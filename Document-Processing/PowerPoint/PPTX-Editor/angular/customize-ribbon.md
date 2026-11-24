@@ -35,12 +35,12 @@ The following code shows how to enable the ribbon in the PPTX Editor.
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 import { PptxEditorModule, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
@@ -70,12 +70,12 @@ The following code shows how to configure the Classic ribbon layout.
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true" ribbonLayout="Classic"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewEncapsulation } from '@angular/core';
 import { PptxEditorModule, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
@@ -143,12 +143,12 @@ this.container.enableRibbonTab(RibbonTabId.SlideShow);
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true" (created)="onCreated()"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PptxEditorComponent, PptxEditorModule, RibbonTabId, RibbonTabInfo, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
@@ -242,12 +242,12 @@ this.container.enableRibbonGroup(RibbonGroupId.Clipboard);
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true" (created)="onCreated()"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PptxEditorComponent, PptxEditorModule, RibbonGroupId, RibbonGroupInfo, RibbonTabId, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
@@ -345,12 +345,12 @@ Disabling a ribbon item does not change the matching editor property. `disableRi
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true" (created)="onCreated()"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PptxEditorComponent, PptxEditorModule, RibbonGroupId, RibbonItemId, RibbonItemInfo, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
@@ -406,14 +406,14 @@ The ribbon is rendered only when `ToolbarService` is provided and `enableToolbar
 
 ```typescript
 /**
- * Add below codes in app.component.html file
+ * Add the following code in the app.html file.
  */
 <button (click)="disableRibbon()">Disable ribbon</button>
 <button (click)="enableRibbon()">Enable ribbon</button>
 <ejs-pptxeditor #pptxeditor id="pptx-editor" [enableToolbar]="true"></ejs-pptxeditor>
 
 /**
- * Add below codes in app.component.ts file
+ * Add the following code in the app.ts file.
  */
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PptxEditorComponent, PptxEditorModule, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
