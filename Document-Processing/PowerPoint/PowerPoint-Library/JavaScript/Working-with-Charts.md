@@ -18,13 +18,11 @@ N> Refer to the appropriate tabs in the code snippet section: **TypeScript** for
 
 ## Prerequisites
 
-Before you begin, make sure the following npm packages are installed in your application.
+Before you begin, make sure the following npm package is installed in your application.
 
 ```sh
-npm install @syncfusion/ej2-pptx @syncfusion/ej2-xlsx
+npm install @syncfusion/ej2-pptx
 ```
-
-The chart engine of the JavaScript PowerPoint library is built on the `@syncfusion/ej2-xlsx` package. Charts authored with `slide.shapes.addChart` and charts enumerated through `slide.charts` require this package to be resolvable at runtime. The library loads the chart engine itself, so no separate chart-engine initialization call is needed before creating, reading, or editing charts.
 
 For more information on package setup for each platform, refer to [Getting Started](./Getting-Started).
 
@@ -296,11 +294,9 @@ let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
 // Gets the first chart on the slide.
-let chart = slide.charts.at(0);
-if (chart) {
-    // Rebuilds the chart part from the current embedded workbook cells.
-    chart.refresh();
-}
+let chart = slide.shapes[0];
+// Rebuilds the chart part from the current embedded workbook cells.
+chart.refresh();
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -312,11 +308,9 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
 // Gets the first chart on the slide.
-var chart = slide.charts.at(0);
-if (chart) {
-    // Rebuilds the chart part from the current embedded workbook cells.
-    chart.refresh();
-}
+var chart = slide.shapes[0];
+// Rebuilds the chart part from the current embedded workbook cells.
+chart.refresh();
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -328,11 +322,7 @@ N> `refresh` requires an embedded package. When `chart.hasEmbeddedPackage` is `f
 
 Charts in an existing presentation can be edited. Open the presentation with [`Presentation.open`](https://help.syncfusion.com/cr/javascript/ej.pptx.Presentation.html), reach the chart through `slide.charts.at(index)`, and edit its embedded cells and series formulas on the returned `Chart` instance.
 
-* `setSeriesValueCells` and `setSeriesCategoryCells` write values along the series formulas.
-* `dataRange` and `applyDataRange` set the category/value range.
-* `addSeries` requires a `values` formula. `removeSeries` deletes a series by index.
-* `readSeriesValueCells` reads the current sheet cell values of a series.
-* `replaceSeriesFormulas` replaces the series title, category, or value formulas.
+Write the category and value cells with `chart.chartData.setValue`, then call `chart.refresh` so the chart reflects the updated cells.
 
 The following code example demonstrates how to open an existing presentation, edit the chart data, refresh the chart, and save the updated file.
 
@@ -389,7 +379,7 @@ await pptxDoc.save('Output.pptx');
 
 The same edits also work on a chart created in the same session with `slide.shapes.addChart`.
 
-N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship points at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `slide.shapes.addChart`.
+N> `chart.chartData.setValue` and `chart.refresh` update a chart that was created in the presentation. A chart that is linked only to an external workbook cannot be edited. Create the chart with `slide.shapes.addChart`, or open a presentation whose chart data is stored in the presentation.
 
 ## Customizing the chart
 
@@ -425,10 +415,8 @@ let pptxDoc = await Presentation.open(data);
 let slide = pptxDoc.slides[0];
 // Gets the chart from the slide.
 let chart = slide.shapes[0];
-if (chart) {
-    // Removes the chart from the slide.
-    slide.shapes.remove(chart);
-}
+// Removes the chart from the slide.
+slide.shapes.remove(chart);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -441,10 +429,8 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 var slide = pptxDoc.slides[0];
 // Gets the chart from the slide.
 var chart = slide.shapes[0];
-if (chart) {
-    // Removes the chart from the slide.
-    slide.shapes.remove(chart);
-}
+// Removes the chart from the slide.
+slide.shapes.remove(chart);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}

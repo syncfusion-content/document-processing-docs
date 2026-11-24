@@ -291,10 +291,8 @@ let pptxDoc = await Presentation.open(data);
 let slide = pptxDoc.slides[0];
 // Gets the table from the slide.
 let table = slide.shapes[0];
-if (table) {
-    // Removes the table from the slide.
-    slide.shapes.remove(table);
-}
+// Removes the table from the slide.
+slide.shapes.remove(table);
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
@@ -307,10 +305,8 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 var slide = pptxDoc.slides[0];
 // Gets the table from the slide.
 var table = slide.shapes[0];
-if (table) {
-    // Removes the table from the slide.
-    slide.shapes.remove(table);
-}
+// Removes the table from the slide.
+slide.shapes.remove(table);
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
