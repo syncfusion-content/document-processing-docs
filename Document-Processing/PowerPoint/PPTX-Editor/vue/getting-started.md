@@ -76,7 +76,7 @@ The required styles for the PPTX Editor are imported in the `<style>` section of
 {% highlight css tabtitle="App.vue" %}
 
 <style>
-@import "@syncfusion/ej2-tailwind-theme/styles/pptxeditor/index.css";
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 </style>
 
 {% endhighlight %}
