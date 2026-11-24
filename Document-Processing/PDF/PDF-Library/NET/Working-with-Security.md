@@ -462,7 +462,7 @@ End Using
 
 N> Add only explicitly trusted anchors to `TrustedCertificates`, never unverified input certificates. `IntermediateCertificates` helps build a path but grants no trust.
 
-## Supply caller-provided OCSP and CRL data for PDF signature validation
+## External OCSP and CRL data for PDF signature validation
 
 Set `PdfSignatureValidationOptions.OCSPResponseData` and `CRLResponseData` in `Syncfusion.Pdf.Parsing` to supply external revocation evidence. It supplements evidence in the signature and DSS. Both default to null; unusable items are ignored. Supplied data alone does not prove signature validity or complete revocation coverage.
 
@@ -630,87 +630,6 @@ End Using
 {% endtabs %}
 
 N> Extracted records must apply to the target signature's certificate chain and validation time. Reusing DSS data does not by itself establish complete LTV evidence or a valid signature. This example updates an existing signature's LTV information; it does not create a new signature.
-
-
-### Add lock options to an unsigned signature field 
-
-This example selects applicant fields for locking when the approval field is signed, leaving manager comments outside this lock policy.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-using Syncfusion.Pdf.Security;
-
-using (PdfDocument document = new PdfDocument())
-{
-    PdfPage page = document.Pages.Add();
-
-    PdfTextBoxField applicantName = new PdfTextBoxField(page, "Applicant.Name");
-    applicantName.Bounds = new RectangleF(50, 50, 200, 25);
-    document.Form.Fields.Add(applicantName);
-
-    PdfTextBoxField applicantDepartment =
-        new PdfTextBoxField(page, "Applicant.Department");
-    applicantDepartment.Bounds = new RectangleF(50, 90, 200, 25);
-    document.Form.Fields.Add(applicantDepartment);
-
-    PdfTextBoxField managerComments = new PdfTextBoxField(page, "Manager.Comments");
-    managerComments.Bounds = new RectangleF(50, 130, 200, 50);
-    document.Form.Fields.Add(managerComments);
-
-    PdfSignatureField approval = new PdfSignatureField(page, "ManagerApproval");
-    approval.Bounds = new RectangleF(50, 200, 200, 50);
-    approval.LockOptions = new PdfSignatureLockOptions(
-        PdfSignatureLockAction.Include,
-        new string[] { "Applicant.Name", "Applicant.Department" },
-        PdfCertificationFlags.AllowFormFill);
-    document.Form.Fields.Add(approval);
-
-    document.Save("ApprovalTemplate.pdf");
-}
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-Imports Syncfusion.Pdf.Security
-
-Using document As New PdfDocument()
-    Dim page As PdfPage = document.Pages.Add()
-
-    Dim applicantName As New PdfTextBoxField(page, "Applicant.Name")
-    applicantName.Bounds = New RectangleF(50, 50, 200, 25)
-    document.Form.Fields.Add(applicantName)
-
-    Dim applicantDepartment As New PdfTextBoxField(page, "Applicant.Department")
-    applicantDepartment.Bounds = New RectangleF(50, 90, 200, 25)
-    document.Form.Fields.Add(applicantDepartment)
-
-    Dim managerComments As New PdfTextBoxField(page, "Manager.Comments")
-    managerComments.Bounds = New RectangleF(50, 130, 200, 50)
-    document.Form.Fields.Add(managerComments)
-
-    Dim approval As New PdfSignatureField(page, "ManagerApproval")
-    approval.Bounds = New RectangleF(50, 200, 200, 50)
-    approval.LockOptions = New PdfSignatureLockOptions(
-        PdfSignatureLockAction.Include,
-        New String() {"Applicant.Name", "Applicant.Department"},
-        PdfCertificationFlags.AllowFormFill)
-    document.Form.Fields.Add(approval)
-
-    document.Save("ApprovalTemplate.pdf")
-End Using
-
-{% endhighlight %}
-
-{% endtabs %}
 
 
 ## Working with RC4 Encryption
