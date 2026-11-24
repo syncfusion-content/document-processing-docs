@@ -57,7 +57,7 @@ The following code example demonstrates how to replace an existing image in a sl
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, PictureShape } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file.
 // newImageBytes is a base64 string of a PNG, JPEG, or GIF image.
@@ -67,7 +67,7 @@ let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 let slide = pptxDoc.slides[0];
 // Gets the picture from the slide.
-let picture = slide.shapes[0];
+let picture = slide.shapes[4] as PictureShape;
 // Replaces the existing embedded image with the new image.
 picture.replaceImageData({ data: newImageBytes });
 // Saves the Presentation to the file system.
@@ -83,7 +83,7 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 var slide = pptxDoc.slides[0];
 // Gets the picture from the slide.
-var picture = slide.shapes[0];
+var picture = slide.shapes[4];
 // Replaces the existing embedded image with the new image.
 picture.replaceImageData({ data: newImageBytes });
 // Saves the Presentation to the file system.
@@ -98,14 +98,14 @@ You can remove an image from a slide by passing its instance to `slide.shapes.re
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, PictureShape } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file.
 // Opens an existing PowerPoint Presentation.
 let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 let slide = pptxDoc.slides[0];
 // Gets the picture from the slide.
-let picture = slide.shapes[0];
+let picture = slide.shapes[4] as PictureShape;
 // Removes the picture from the slide.
 slide.shapes.remove(picture);
 // Saves the Presentation to the file system.
@@ -120,7 +120,7 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 var slide = pptxDoc.slides[0];
 // Gets the picture from the slide.
-var picture = slide.shapes[0];
+var picture = slide.shapes[4];
 // Removes the picture from the slide.
 slide.shapes.remove(picture);
 // Saves the Presentation to the file system.
