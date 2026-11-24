@@ -191,6 +191,8 @@ The following example code illustrates how to use the `MetafileImageParsed` even
     }
 ```
 
+N> In the above example, the metafile image (WMF, EMF) is converted to a raster image in the ConvertMetafileToRasterImage() method using [Syncfusion.MetafileRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core).
+
 ## Paste with formatting
 
 This Web API converts the system clipboard data (HTML/RTF) to SFDT format which is required to paste content with formatting.

@@ -301,9 +301,10 @@ N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafil
 The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
 
 ```cshtml
-@using SkiaSharp
+@using SkiaSharp;
 @using BitMiracle.LibTiff.Classic;
-@using Syncfusion.Blazor.DocumentEditor
+@using Syncfusion.Blazor.DocumentEditor;
+@using Syncfusion.Metafile;
 
 <SfDocumentEditorContainer UseDefaultEditor="false">
     <SfDocumentEditor>
@@ -391,8 +392,16 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
         }
         return imageStream;
     }
+    private static MemoryStream ConvertMetafileToRasterImage(Stream metafileStream)
+    {
+        MetafileRenderer renderer = new MetafileRenderer();
+        byte[] imageBytes = renderer.ConvertToImageBytes(metafileStream);
+        return imageBytes != null ? new MemoryStream(imageBytes) : new MemoryStream();
+    }
 }
 ```
+
+N> In the above example, the metafile image (WMF, EMF) is converted to a raster image in the ConvertMetafileToRasterImage() method using [Syncfusion.MetafileRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.MetafileRenderer.Net.Core).
 
 ## Opening a document in asynchronous mode
 
