@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FAQs about Vue DOCX Editor | Syncfusion
-description: Frequently asked questions about licensing, Java helper JARs, and server-side Word processing in Vue DOCX Editor.
+description: Frequently asked questions about the Vue DOCX Editor, covering common usage, features, and licensing topics.
 control: DOCX Editor
 platform: document-processing
 documentation: ug
@@ -25,3 +25,5 @@ For more information, refer to [Available Syncfusion Java Packages](../../../Wor
 The DOCX Editor SDK license covers Word document processing using the Syncfusion Word Library (DocIO) when it is performed as part of the DOCX Editor workflow. This includes operations such as document import, export, conversion, protection, and other processing required to support the DOCX Editor.
 
 If Word document processing is performed independently outside the DOCX Editor workflow, an appropriate Syncfusion Document SDK license is required.
+
+For example: Using DocIO independently for document generation, mail merge, or other standalone document-processing scenarios requires a Document SDK license.
