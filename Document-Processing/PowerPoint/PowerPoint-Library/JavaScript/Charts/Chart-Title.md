@@ -10,53 +10,103 @@ keywords: javascript, powerpoint, chart title
 
 # Chart Title in JavaScript PowerPoint
 
-A chart title describes the chart. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes the title as properties on the chart created with `Slide.addChart`. There is no separate `setTitle` method.
+A chart title describes the chart. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes the title as properties on a chart created with `slide.shapes.addChart`. You can customize the chart title by:
 
-* `chartTitle` or `applyChartTitle` sets the plain-text title and enables the title when the text is not empty.
-* `hasTitle` or `applyHasTitle` shows or hides the title.
-* `chartTitleArea` holds run formatting (`bold`, `italic`, `size`, `fontName`, `color`). Call `commitTitleArea` to write nested changes. Color is RRGGBB or `#RRGGBB` only.
+* Setting the chart title text.
+* Customizing the chart title area (font, color, size, and weight).
 
-The following code example demonstrates how to add and format a chart title while creating a presentation.
+The following code example demonstrates how to set and format a chart title.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
+// Creates a Presentation instance.
 let pptxDoc = Presentation.create();
+// Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-let chart = slide.addChart({
-    type: 'ColumnClustered',
-    bounds: { x: 40, y: 30, width: 480, height: 320 }
+// Adds a chart with position and size (points) and the chart type.
+let chart = slide.shapes.addChart({
+    type: OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-chart.applyChartTitle('Quarterly sales');
-chart.applyHasTitle(true);
-chart.commitTitleArea({
-    bold: true,
-    size: 16,
-    fontName: 'Calibri',
-    color: '1F4E79'
-});
+// Sets the chart title name.
+chart.chartTitle = 'Sales Analysis';
+// Customizes the chart title area.
+chart.chartTitleArea.fontName = 'Calibri';
+chart.chartTitleArea.bold = true;
+chart.chartTitleArea.color = '5AF2EE';
+chart.chartTitleArea.size = 14;
+// Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Creates a Presentation instance.
 var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-var chart = slide.addChart({
-    type: 'ColumnClustered',
-    bounds: { x: 40, y: 30, width: 480, height: 320 }
+// Adds a chart with position and size (points) and the chart type.
+var chart = slide.shapes.addChart({
+    type: ej.pptx.OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-chart.applyChartTitle('Quarterly sales');
-chart.applyHasTitle(true);
-chart.commitTitleArea({
-    bold: true,
-    size: 16,
-    fontName: 'Calibri',
-    color: '1F4E79'
-});
+// Sets the chart title name.
+chart.chartTitle = 'Sales Analysis';
+// Customizes the chart title area.
+chart.chartTitleArea.fontName = 'Calibri';
+chart.chartTitleArea.bold = true;
+chart.chartTitleArea.color = '5AF2EE';
+chart.chartTitleArea.size = 14;
+// Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
-To clear the title text, call `applyChartTitle(undefined)`. Hide the title with `applyHasTitle(false)`.
+## Set the chart title name
+
+The following code snippet illustrates how to set the chart title name.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+// Sets the chart title name.
+chart.chartTitle = 'Sales Analysis';
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Sets the chart title name.
+chart.chartTitle = 'Sales Analysis';
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the chart title area
+
+The following code snippet illustrates how to customize the chart title area.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+// Customizes the chart title area.
+chart.chartTitleArea.fontName = 'Calibri';
+chart.chartTitleArea.bold = true;
+chart.chartTitleArea.color = '5AF2EE';
+chart.chartTitleArea.size = 14;
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Customizes the chart title area.
+chart.chartTitleArea.fontName = 'Calibri';
+chart.chartTitleArea.bold = true;
+chart.chartTitleArea.color = '5AF2EE';
+chart.chartTitleArea.size = 14;
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+
+* [Working with Charts](../Working-with-Charts)
+* [Chart Area](./Chart-Area)
+* [Chart Legend](./Chart-Legend)
+* [Chart Axis](./Chart-Axis)
