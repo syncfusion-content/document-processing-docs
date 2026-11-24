@@ -102,6 +102,8 @@ const webMcpSettings = { name: 'container' };
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
 
@@ -351,7 +353,7 @@ provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 @import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 ```
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/muli-instance).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
 
 ### Auditing and Restrictions
 
@@ -430,7 +432,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
----
 
 ### Why aren't my registered tools displayed in the extension?
 
@@ -440,7 +441,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
 
----
 
 ### Why don't registered tools execute?
 
@@ -452,7 +452,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
    
----
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
@@ -460,7 +459,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
 2. If using cross-origin tools, both sites must be HTTPS
 3. Test locally using `localhost:4200` or similar
 
----
 
 ## See Also
 

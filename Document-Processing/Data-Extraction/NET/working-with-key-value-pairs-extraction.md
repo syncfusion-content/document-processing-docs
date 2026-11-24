@@ -27,10 +27,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Extract data as Key-Value Pairs.
     string data = extractor.ExtractKeyValuePairs(stream);
-
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
@@ -104,25 +102,18 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     // Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     // Enable table detection.
     extractor.EnableTableDetection = true;
-
     // Initialize the OCR processor.
     OCRProcessor processor = new OCRProcessor();
-
     // Set OCR language.
     processor.Settings.Language = Languages.English;
-
     // Set Tesseract OCR engine version.
     processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
-
     // Assign the configured OCR processor to the Data Extractor.
     extractor.OCRProcessor = processor;
-
     // Extract data as Key-Value Pairs.
     string data = extractor.ExtractKeyValuePairs(stream);
-
     // Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
