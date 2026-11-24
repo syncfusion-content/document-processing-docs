@@ -1002,3 +1002,95 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-and-replace-image-in-a-PDF-document).
+
+## Configuring memory limits for decompressed PDF streams
+
+Compressed streams in a PDF document can expand significantly during decompression. When processing untrusted PDF documents, use the `MaxDecompressedStreamSize` property of `PdfLoadOptions` to limit the decompressed size of each individual stream. This helps protect applications against excessive memory consumption caused by decompression bombs.
+
+Set `MaxDecompressedStreamSize` in bytes before passing the options to the `PdfLoadedDocument` constructor. If a stream exceeds the configured limit during document loading or subsequent operations that decompress streams, such as text extraction, a `PdfException` is thrown. Keep both document loading and stream-processing operations inside the `try` block to handle this exception.
+
+The following example sets a 20 MB (20 × 1024 × 1024 bytes) limit per stream and disables document repair by setting `OpenAndRepair` to `false`.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Limit the decompressed size of each individual stream to 20 MB.
+PdfLoadOptions options = new PdfLoadOptions();
+options.MaxDecompressedStreamSize = 20L * 1024L * 1024L;
+options.OpenAndRepair = false;
+
+try
+{
+    using (FileStream inputPDFStream = new FileStream("suspicious.pdf", FileMode.Open, FileAccess.Read))
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, options))
+    {
+        //The limit also applies when streams are decompressed during text extraction.
+        string text = loadedDocument.Pages[0].ExtractText();
+    }
+}
+catch (PdfException ex)
+{
+    System.Console.WriteLine("Security limit triggered: " + ex.Message);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Limit the decompressed size of each individual stream to 20 MB.
+PdfLoadOptions options = new PdfLoadOptions();
+options.MaxDecompressedStreamSize = 20L * 1024L * 1024L;
+options.OpenAndRepair = false;
+
+try
+{
+    using (FileStream inputPDFStream = new FileStream("suspicious.pdf", FileMode.Open, FileAccess.Read))
+    using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument(inputPDFStream, options))
+    {
+        //The limit also applies when streams are decompressed during text extraction.
+        string text = loadedDocument.Pages[0].ExtractText();
+    }
+}
+catch (PdfException ex)
+{
+    System.Console.WriteLine("Security limit triggered: " + ex.Message);
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.IO
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
+'Limit the decompressed size of each individual stream to 20 MB.
+Dim options As New PdfLoadOptions()
+options.MaxDecompressedStreamSize = 20L * 1024L * 1024L
+options.OpenAndRepair = False
+
+Try
+    Using inputPDFStream As New FileStream("suspicious.pdf", FileMode.Open, FileAccess.Read)
+        Using loadedDocument As New PdfLoadedDocument(inputPDFStream, options)
+            'The limit also applies when streams are decompressed during text extraction.
+            Dim text As String = loadedDocument.Pages(0).ExtractText()
+        End Using
+    End Using
+Catch ex As PdfException
+    System.Console.WriteLine("Security limit triggered: " & ex.Message)
+End Try
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The limit applies to each individual decompressed stream, not to the PDF file size or the total memory used to process the document. Choose a limit that accommodates the expected stream sizes in your PDF documents.
