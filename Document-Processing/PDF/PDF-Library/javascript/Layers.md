@@ -196,7 +196,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access the collection of layers
 let layers: PdfLayerCollection = document.layers;
 // Retrieve the first layer from the collection
-let layer: PdfLayer = layers.at(0);
+let layer: PdfLayer = layers.at(0) as PdfLayer;
 // Remove the layer by instance
 layers.remove(layer);
 // Remove the layer at the specified index

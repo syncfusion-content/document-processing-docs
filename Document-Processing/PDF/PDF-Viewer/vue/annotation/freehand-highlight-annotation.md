@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Freehand Highlight Annotation in Vue PDF Viewer | Syncfusion
-description: Add Freehand Highlight annotations in the Vue PDF Viewer to highlight PDF content with freehand strokes while maintaining visibility and readability.
+description: Add, customize, and manage Freehand Highlight annotations in the Vue PDF Viewer to highlight PDF content with freehand strokes while maintaining visibility and readability.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
