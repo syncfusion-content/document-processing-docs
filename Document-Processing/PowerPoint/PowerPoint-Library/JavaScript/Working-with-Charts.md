@@ -46,7 +46,9 @@ let chart = slide.shapes.addChart({
     type: OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
+// Sets the chart title.
 chart.chartTitle = 'Sales Analysis';
+// Sets chart data.
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
@@ -62,12 +64,14 @@ chart.chartData.setValue(4, 1, 2012);
 chart.chartData.setValue(4, 2, 60);
 chart.chartData.setValue(4, 3, 70);
 chart.chartData.setValue(4, 4, 80);
+// Creates series.
 let seriesJan = chart.series.add('Jan');
 seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
 let seriesFeb = chart.series.add('Feb');
 seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
 let seriesMarch = chart.series.add('March');
 seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
+// Sets the category labels.
 chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
@@ -83,7 +87,9 @@ var chart = slide.shapes.addChart({
     type: ej.pptx.OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
+// Sets the chart title.
 chart.chartTitle = 'Sales Analysis';
+// Sets chart data.
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
@@ -99,12 +105,14 @@ chart.chartData.setValue(4, 1, 2012);
 chart.chartData.setValue(4, 2, 60);
 chart.chartData.setValue(4, 3, 70);
 chart.chartData.setValue(4, 4, 80);
+// Creates series.
 var seriesJan = chart.series.add('Jan');
 seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
 var seriesFeb = chart.series.add('Feb');
 seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
 var seriesMarch = chart.series.add('March');
 seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
+// Sets the category labels.
 chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
@@ -127,8 +135,11 @@ The following code example demonstrates how to create a pie chart from Excel byt
 import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-pptx';
 
 // excelBytes is a Uint8Array of an .xlsx file whose first sheet has categories in column A and values in column B.
+// Creates a Presentation instance.
 let pptxDoc = Presentation.create();
+// Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+// Adds a pie chart from the Excel range.
 let chart = slide.shapes.addChart({
     type: OfficeChartType.Pie,
     name: 'Share',
@@ -139,13 +150,17 @@ let chart = slide.shapes.addChart({
         range: 'A2:B5'
     }
 });
+// Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // excelBytes is a Uint8Array of an .xlsx file whose first sheet has categories in column A and values in column B.
+// Creates a Presentation instance.
 var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a pie chart from the Excel range.
 var chart = slide.shapes.addChart({
     type: ej.pptx.OfficeChartType.Pie,
     name: 'Share',
@@ -156,6 +171,7 @@ var chart = slide.shapes.addChart({
         range: 'A2:B5'
     }
 });
+// Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
@@ -180,7 +196,9 @@ let chart = slide.shapes.addChart({
     type: OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 80, width: 500, height: 350 }
 });
+// Sets the chart title.
 chart.chartTitle = 'Sales comparison';
+// Sets the chart title area bold.
 chart.chartTitleArea.bold = true;
 // Sets chart data.
 chart.chartData.setValue(1, 1, 'Month');
@@ -214,9 +232,11 @@ chart.chartData.setValue(7, 4, 30);
 // Creates series.
 let serie2013 = chart.series.add('2013');
 serie2013.values = chart.chartData.getRange(2, 2, 7, 2);
+// Sets the series type to line.
 serie2013.seriesType = OfficeChartType.Line;
 let serie2014 = chart.series.add('2014');
 serie2014.values = chart.chartData.getRange(2, 3, 7, 3);
+// Sets the series type to area.
 serie2014.seriesType = OfficeChartType.Area;
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
@@ -232,7 +252,9 @@ var chart = slide.shapes.addChart({
     type: ej.pptx.OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 80, width: 500, height: 350 }
 });
+// Sets the chart title.
 chart.chartTitle = 'Sales comparison';
+// Sets the chart title area bold.
 chart.chartTitleArea.bold = true;
 // Sets chart data.
 chart.chartData.setValue(1, 1, 'Month');
@@ -266,9 +288,11 @@ chart.chartData.setValue(7, 4, 30);
 // Creates series.
 var serie2013 = chart.series.add('2013');
 serie2013.values = chart.chartData.getRange(2, 2, 7, 2);
+// Sets the series type to line.
 serie2013.seriesType = ej.pptx.OfficeChartType.Line;
 var serie2014 = chart.series.add('2014');
 serie2014.values = chart.chartData.getRange(2, 3, 7, 3);
+// Sets the series type to area.
 serie2014.seriesType = ej.pptx.OfficeChartType.Area;
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
@@ -469,10 +493,6 @@ chart.isSeriesInRows = false;
 chart.chartTitle = 'Scatter Markers Chart';
 // Hides the legend.
 chart.hasLegend = false;
-// Configures data labels.
-let serie = chart.series[0];
-// serie.dataPoints.defaultDataPoint.dataLabels.isValue = true;
-// serie.dataPoints.defaultDataPoint.dataLabels.isCategoryName = true;
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -502,10 +522,6 @@ chart.isSeriesInRows = false;
 chart.chartTitle = 'Scatter Markers Chart';
 // Hides the legend.
 chart.hasLegend = false;
-// Configures data labels.
-var serie = chart.series[0];
-// serie.dataPoints.defaultDataPoint.dataLabels.isValue = true;
-// serie.dataPoints.defaultDataPoint.dataLabels.isCategoryName = true;
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
