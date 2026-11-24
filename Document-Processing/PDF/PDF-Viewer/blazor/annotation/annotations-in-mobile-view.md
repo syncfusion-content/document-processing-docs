@@ -159,7 +159,7 @@ To close the comments panel, tap the **Close** icon within the panel.
 
 ## See also
 
-* [Annotation Toolbar in Mobile Mode](../toolbar-customization/mobile-toolbar)
+* [Annotation Toolbar in Mobile Mode](../toolbar/mobile-toolbar)
 * [Customize Annotations](../customize-annotation)
 * [Annotation Events](../events)
 * [Import and Export Annotations](../import-export-annotation)

@@ -130,7 +130,7 @@ The [AnnotationMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 
 ### Event arguments
 
-See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMovedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
+See [AnnotationMovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationMoveEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), `PreviousBounds` (`PdfBounds`), and `Bounds` (`PdfBounds`).
 
 The following example illustrates handling the `AnnotationMoved` event.
 
@@ -158,7 +158,7 @@ The [AnnotationPropertiesChanged](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ### Event arguments
 
-See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangedEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), the changed property names, and old/new values. The class also exposes boolean change flags such as `IsColorChanged`, `IsOpacityChanged`, `IsThicknessChanged`, `IsFontFamilyChanged`, `IsFontSizeChanged`, and `IsTextChanged` that you can inspect in the handler.
+See [AnnotationPropertiesChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationPropertiesChangeEventArgs.html) for details such as `AnnotationId` (string), `PageNumber` (int), the changed property names, and old/new values. The class also exposes boolean change flags such as `IsColorChanged`, `IsOpacityChanged`, `IsThicknessChanged`, `IsFontFamilyChanged`, `IsFontSizeChanged`, and `IsTextChanged` that you can inspect in the handler.
 
 The following example illustrates handling the `AnnotationPropertiesChanged` event.
 
@@ -186,7 +186,7 @@ The [AnnotationRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ### Event arguments
 
-See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemovedEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
+See [AnnotationRemovedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationRemoveEventArgs.html) for details such as `AnnotationId` (string), `AnnotationType` (`PdfAnnotationType`), and `PageNumber` (int).
 
 The following example illustrates handling the `AnnotationRemoved` event.
 
