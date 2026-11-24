@@ -170,7 +170,6 @@ ej.pptxeditor.PptxEditor.Inject(
 
 // Initialize PPTX Editor component
 var editor = new ej.pptxeditor.PptxEditor({
-    theme: 'tailwind3',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 
