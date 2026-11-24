@@ -39,40 +39,62 @@ import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-
 
 // Creates a Presentation instance.
 let pptxDoc = Presentation.create();
+
 // Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// Adds a chart with position and size (points) and the chart type.
+
+// Adds a chart with position and size (points).
 let chart = slide.shapes.addChart({
-    type: OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
+
 // Sets the chart title.
 chart.chartTitle = 'Sales Analysis';
-// Sets chart data.
+
+// Sets chart data - Row1.
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
+
+// Sets chart data - Row2.
 chart.chartData.setValue(2, 1, 2010);
 chart.chartData.setValue(2, 2, 60);
 chart.chartData.setValue(2, 3, 70);
 chart.chartData.setValue(2, 4, 80);
+
+// Sets chart data - Row3.
 chart.chartData.setValue(3, 1, 2011);
 chart.chartData.setValue(3, 2, 80);
 chart.chartData.setValue(3, 3, 70);
 chart.chartData.setValue(3, 4, 60);
+
+// Sets chart data - Row4.
 chart.chartData.setValue(4, 1, 2012);
 chart.chartData.setValue(4, 2, 60);
 chart.chartData.setValue(4, 3, 70);
 chart.chartData.setValue(4, 4, 80);
-// Creates series.
+
+// Creates a new chart series with the name.
 let seriesJan = chart.series.add('Jan');
+// Sets the data range of the chart series.
 seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
+
+// Creates a new chart series with the name.
 let seriesFeb = chart.series.add('Feb');
+// Sets the data range of the chart series.
 seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
+
+// Creates a new chart series with the name.
 let seriesMarch = chart.series.add('March');
+// Sets the data range of the chart series.
 seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
-// Sets the category labels.
+
+// Sets the data range of the category axis.
 chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
+
+// Specifies the chart type.
+chart.chartType = OfficeChartType.ColumnClustered;
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -80,40 +102,62 @@ await pptxDoc.save('Output.pptx');
 {% highlight javascript tabtitle="JavaScript" %}
 // Creates a Presentation instance.
 var pptxDoc = ej.pptx.Presentation.create();
+
 // Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-// Adds a chart with position and size (points) and the chart type.
+
+// Adds a chart with position and size (points).
 var chart = slide.shapes.addChart({
-    type: ej.pptx.OfficeChartType.ColumnClustered,
     bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
+
 // Sets the chart title.
 chart.chartTitle = 'Sales Analysis';
-// Sets chart data.
+
+// Sets chart data - Row1.
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
+
+// Sets chart data - Row2.
 chart.chartData.setValue(2, 1, 2010);
 chart.chartData.setValue(2, 2, 60);
 chart.chartData.setValue(2, 3, 70);
 chart.chartData.setValue(2, 4, 80);
+
+// Sets chart data - Row3.
 chart.chartData.setValue(3, 1, 2011);
 chart.chartData.setValue(3, 2, 80);
 chart.chartData.setValue(3, 3, 70);
 chart.chartData.setValue(3, 4, 60);
+
+// Sets chart data - Row4.
 chart.chartData.setValue(4, 1, 2012);
 chart.chartData.setValue(4, 2, 60);
 chart.chartData.setValue(4, 3, 70);
 chart.chartData.setValue(4, 4, 80);
-// Creates series.
+
+// Creates a new chart series with the name.
 var seriesJan = chart.series.add('Jan');
+// Sets the data range of the chart series.
 seriesJan.values = chart.chartData.getRange(2, 2, 4, 2);
+
+// Creates a new chart series with the name.
 var seriesFeb = chart.series.add('Feb');
+// Sets the data range of the chart series.
 seriesFeb.values = chart.chartData.getRange(2, 3, 4, 3);
+
+// Creates a new chart series with the name.
 var seriesMarch = chart.series.add('March');
+// Sets the data range of the chart series.
 seriesMarch.values = chart.chartData.getRange(2, 4, 4, 4);
-// Sets the category labels.
+
+// Sets the data range of the category axis.
 chart.primaryCategoryAxis.categoryLabels = chart.chartData.getRange(2, 1, 4, 1);
+
+// Specifies the chart type.
+chart.chartType = ej.pptx.OfficeChartType.ColumnClustered;
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -310,17 +354,21 @@ The following code example demonstrates how to open an existing presentation and
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, Chart } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file.
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
+
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
-let chart = slide.shapes[0];
+
+// Gets the chart from the slide.
+let chart = slide.shapes[0] as Chart;
+
 // Rebuilds the chart part from the current embedded workbook cells.
 chart.refresh();
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -329,12 +377,16 @@ await pptxDoc.save('Output.pptx');
 // data is a Uint8Array or Base64 string of an existing .pptx file.
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
+
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
-// Gets the first chart on the slide.
+
+// Gets the chart from the slide.
 var chart = slide.shapes[0];
+
 // Rebuilds the chart part from the current embedded workbook cells.
 chart.refresh();
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -358,21 +410,27 @@ import { Presentation, Chart } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
+
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
+
 // Gets the chart from the slide.
 let chart = slide.shapes[0] as Chart;
+
 // Modifies chart data - Row 1 (Category Names).
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
+
 // Modifies chart data - Row 2 (Series Data).
 chart.chartData.setValue(2, 1, 2010);
 chart.chartData.setValue(2, 2, 60);
 chart.chartData.setValue(2, 3, 70);
 chart.chartData.setValue(2, 4, 80);
+
 // Refreshes the chart after data modification.
 chart.refresh();
+
 // Saves the updated presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -381,21 +439,27 @@ await pptxDoc.save('Output.pptx');
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
+
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
+
 // Gets the chart from the slide.
 var chart = slide.shapes[0];
+
 // Modifies chart data - Row 1 (Category Names).
 chart.chartData.setValue(1, 2, 'Jan');
 chart.chartData.setValue(1, 3, 'Feb');
 chart.chartData.setValue(1, 4, 'March');
+
 // Modifies chart data - Row 2 (Series Data).
 chart.chartData.setValue(2, 1, 2010);
 chart.chartData.setValue(2, 2, 60);
 chart.chartData.setValue(2, 3, 70);
 chart.chartData.setValue(2, 4, 80);
+
 // Refreshes the chart after data modification.
 chart.refresh();
+
 // Saves the updated presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -426,17 +490,21 @@ The following code example demonstrates how to open an existing presentation and
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, Chart } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file.
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
+
 // Gets the first slide.
 let slide = pptxDoc.slides[0];
+
 // Gets the chart from the slide.
-let chart = slide.shapes[0];
+let chart = slide.shapes[0] as Chart;
+
 // Removes the chart from the slide.
 slide.shapes.remove(chart);
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 
@@ -445,12 +513,16 @@ await pptxDoc.save('Output.pptx');
 // data is a Uint8Array or Base64 string of an existing .pptx file.
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
+
 // Gets the first slide.
 var slide = pptxDoc.slides[0];
+
 // Gets the chart from the slide.
 var chart = slide.shapes[0];
+
 // Removes the chart from the slide.
 slide.shapes.remove(chart);
+
 // Saves the presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
