@@ -159,7 +159,7 @@ WPF Spreadsheet control can be added to an application either through the design
     {% endhighlight %}
     {% endtabs %}
 
-2.Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/visual-studio-extensions/extensions) and restart Visual Studio.)
+2.Open the Visual Studio **Toolbox**. Navigate to the Syncfusion<sup>®</sup> Controls tab and find the `SfSpreadsheet` and `SfSpreadsheetRibbon` toolbox items. (If the Syncfusion tab is missing, install the controls using the [Syncfusion<sup>®</sup> WinForms/WPF installer](https://help.syncfusion.com/wpf/visual-studio-integration/overview) and restart Visual Studio.)
 
     ![WPF Spreadsheet Getting-Started](Getting-Started_images/wpf-spreadsheet-getting-started.jpeg)
 
@@ -309,4 +309,4 @@ For the full WPF Spreadsheet Editor component overview, features, pricing, and d
 ## See Also
 - [Workbook Operations](Workbook-Operations)
 - [Data Management](Data-Management)
-- [Shapes](Shapes)
+- [Shapes](shapes)

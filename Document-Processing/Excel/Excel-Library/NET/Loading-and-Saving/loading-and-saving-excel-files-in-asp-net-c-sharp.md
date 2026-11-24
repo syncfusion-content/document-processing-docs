@@ -30,7 +30,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 
 ## Opening an existing workbook
 
-You can open an existing workbook by using the overloads of the [Open](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_) methods of the [IWorkbooks](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbooks.html) interface.
+You can open an existing workbook by using the overloads of the [Open](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.IWorkbooks.html#Syncfusion_XlsIO_IWorkbooks_Open_System_String_) methods of the [IWorkbooks](https://help.syncfusion.com/cr/aspnet/Syncfusion.XlsIO.IWorkbook.html) interface.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Windows-specific]" %}
