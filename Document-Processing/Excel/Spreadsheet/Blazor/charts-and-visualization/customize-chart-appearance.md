@@ -87,9 +87,9 @@ To switch between chart types after creation:
 
 ## Update Chart Programmatically
 
-The `UpdateChartAsync()` method asynchronously updates the properties of an existing chart identified by `ChartOptions.Id`. This allows you to modify an existing chart without recreating it.
+The [UpdateChartAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_UpdateChartAsync_Syncfusion_Blazor_Spreadsheet_ChartOptions_) method asynchronously updates the properties of an existing chart identified by `ChartOptions.Id`. This allows you to modify an existing chart without recreating it.
 
-Only the properties provided in the `ChartOptions` object are applied. Any property that is not specified, or is set to `null`, retains its current value.
+Only the properties provided in the [ChartOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ChartOptions.html) object are applied. Any property that is not specified, or is set to `null`, retains its current value.
 
 ### Chart update options
 

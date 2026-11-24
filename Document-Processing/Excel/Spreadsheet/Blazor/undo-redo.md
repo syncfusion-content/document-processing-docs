@@ -121,13 +121,64 @@ The redo action can also be performed programmatically by calling the [Redo()](h
 {% endhighlight %}
 {% endtabs %}
 
+## Programmatically Check Undo/Redo Availability
+
+The [CanUndo()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CanUndo) and [CanRedo()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CanRedo) methods provide a programmatic way to determine whether Undo or Redo operations are currently available in the Spreadsheet. These methods return a boolean value indicating the availability of the corresponding operation.
+
+* `CanUndo()` returns `true` when there are actions available in the undo history; otherwise, it returns `false`.
+* `CanRedo()` returns `true` when there are actions available in the redo history; otherwise, it returns `false`.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="CheckUndoState" Content="Check Undo State"></SfButton>
+<SfButton OnClick="CheckRedoState" Content="Check Redo State"></SfButton>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    private bool canUndo;
+    private bool canRedo;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void CheckUndoState()
+    {
+        // Returns true if an undo operation is available.
+        canUndo = SpreadsheetInstance.CanUndo();
+    }
+
+    public void CheckRedoState()
+    {
+        // Returns true if a redo operation is available.
+        canRedo = SpreadsheetInstance.CanRedo();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Event
 
 The Blazor Spreadsheet provides the `UndoRedoStateChanged` event to detect changes in the availability of undo and redo operations.
 
 ### UndoRedoStateChanged
 
-The `UndoRedoStateChanged` event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
+The [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.UndoRedoStateChangedEventArgs.html) event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
 
 ### Event Arguments
 
@@ -139,7 +190,16 @@ The event uses the `UndoRedoStateChangedEventArgs` class, which includes the fol
 | RedoCount | `int` | Represents the number of user-visible logical actions currently available for redo. |
 | ActionDescription | `string` | Describes the user-visible action associated with the operation, such as Sort, Cut, Paste, Delete, Insert, or Format. |
 | Action | `UndoRedoAction` | Indicates whether the action was Undo, Redo, Record, or Reset. |
-| Address | `string` | Represents the worksheet name and affected range in the format `Sheet1!A1:B10`. |
+| Address | `string` | Represents the worksheet name and affected range in the format `Sheet1!A1:B10`. For structure-related changes, the Address property is null.|
+
+### UndoRedoAction Enum Values
+
+| Value | Description |
+| --- | --- |
+| `Undo` | Indicates that an operation was reverted from the undo history. |
+| `Redo` | Indicates that a previously undone operation was reapplied from the redo history. |
+| `Record` | Indicates that a new action was recorded and added to the undo history. |
+| `Reset` | Indicates that the undo and redo history was cleared or reset. |
 
 ### Code Example
 

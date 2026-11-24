@@ -35,4 +35,4 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | [RowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.RowResizingEventArgs.html) | Triggers when a row is being resized. |
 | [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html) | Triggers when a cell or range of cells is selected. |
 | [WorksheetAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.WorksheetAddingEventArgs.html) | Triggers before a new worksheet is added. |
-| [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.html) | Triggers when the undo or redo stack state changes. |
+| [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.UndoRedoStateChangedEventArgs.html) | Triggers when the undo or redo stack state changes. |
