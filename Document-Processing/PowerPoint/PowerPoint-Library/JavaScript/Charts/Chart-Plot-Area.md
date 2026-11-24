@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart Plot Area in JavaScript PowerPoint | Syncfusion
-description: Learn how to format the chart plot area in a PowerPoint slide using the Syncfusion JavaScript PowerPoint Library.
+description: Learn how to format the plot area of a PowerPoint chart using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -10,11 +10,9 @@ keywords: javascript, powerpoint, chart plot area
 
 # Chart Plot Area in JavaScript PowerPoint
 
-The plot area is the region that contains the chart series (`c:plotArea` shape properties). The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it as `chart.plotArea`, with the same fill and line bags as the chart area.
+The plot area is the region inside the chart where the series are drawn. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes it as `chart.plotArea` on a chart created with `slide.shapes.addChart`. Format the border with `line` and the background with `fill`.
 
-Write changes with `commitPlotArea`. Colors are RRGGBB or `#RRGGBB` only.
-
-The following code example demonstrates how to format the plot area on a chart created in the same presentation.
+The following code example demonstrates how to format the plot area.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
@@ -24,13 +22,19 @@ import { Presentation, SlideLayoutType, OfficeChartType } from '@syncfusion/ej2-
 let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 let chart = slide.shapes.addChart({
-    type: OfficeChartType.Area,
-    bounds: { x: 36, y: 36, width: 500, height: 320 }
+    type: OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-chart.commitPlotArea({
-    fill: { type: 'solid', foreColor: 'FFFFFF' },
-    line: { color: '7F7F7F', weightPt: 0.75 }
-});
+// Formats the plot area.
+let chartPlotArea = chart.plotArea;
+// Customizes the border.
+chartPlotArea.line.color = '5A78F2';
+chartPlotArea.line.weightPt = 3;
+// Customizes the fill.
+chartPlotArea.fill.type = 'solid';
+chartPlotArea.fill.foreColor = 'F25AA9';
+// Sets the transparency level.
+chartPlotArea.fill.transparency = 0.7;
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
@@ -38,50 +42,19 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 var chart = slide.shapes.addChart({
-    type: ej.pptx.OfficeChartType.Area,
-    bounds: { x: 36, y: 36, width: 500, height: 320 }
+    type: ej.pptx.OfficeChartType.ColumnClustered,
+    bounds: { x: 100, y: 10, width: 700, height: 500 }
 });
-chart.commitPlotArea({
-    fill: { type: 'solid', foreColor: 'FFFFFF' },
-    line: { color: '7F7F7F', weightPt: 0.75 }
-});
-await pptxDoc.save('Output.pptx');
-{% endhighlight %}
-{% endtabs %}
-
-The plot area of a chart in an existing presentation can be formatted the same way after opening the file.
-
-{% tabs %}
-{% highlight js tabtitle="TypeScript" %}
-
-import { Presentation } from '@syncfusion/ej2-pptx';
-
-// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Opens an existing PowerPoint presentation.
-let pptxDoc = await Presentation.open(data);
-// Gets the first chart on the first slide.
-let chart = pptxDoc.slides[0].charts.at(0);
-// Formats the plot area fill and border.
-chart.commitPlotArea({
-    fill: { type: 'solid', foreColor: 'F8F8F8' },
-    line: { color: 'BFBFBF', weightPt: 0.75 }
-});
-// Saves the updated presentation.
-await pptxDoc.save('Output.pptx');
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Opens an existing PowerPoint presentation.
-var pptxDoc = await ej.pptx.Presentation.open(data);
-// Gets the first chart on the first slide.
-var chart = pptxDoc.slides[0].charts.at(0);
-// Formats the plot area fill and border.
-chart.commitPlotArea({
-    fill: { type: 'solid', foreColor: 'F8F8F8' },
-    line: { color: 'BFBFBF', weightPt: 0.75 }
-});
-// Saves the updated presentation.
+// Formats the plot area.
+var chartPlotArea = chart.plotArea;
+// Customizes the border.
+chartPlotArea.line.color = '5A78F2';
+chartPlotArea.line.weightPt = 3;
+// Customizes the fill.
+chartPlotArea.fill.type = 'solid';
+chartPlotArea.fill.foreColor = 'F25AA9';
+// Sets the transparency level.
+chartPlotArea.fill.transparency = 0.7;
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

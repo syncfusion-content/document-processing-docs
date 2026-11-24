@@ -383,19 +383,15 @@ N> `chart.chartData.setValue` and `chart.refresh` update a chart that was create
 
 ## Customizing the chart
 
-Formatting can be applied both to a chart created with `slide.shapes.addChart` and to a chart in an existing presentation opened with `Presentation.open` and reached through `slide.charts.at(index)`. Colors are RRGGBB or `#RRGGBB` only. Nested format changes are written with the matching `commit*` method (`commitTitleArea`, `commitChartArea`, `commitPlotArea`, `commitSeriesFormat`, `commitSeriesDataLabels`, `commitLegend`, `commitPrimaryCategoryAxis`, and `commitPrimaryValueAxis`).
+Formatting is applied on a chart created with `slide.shapes.addChart`.
 
 See the following topics for each area:
 
 * [Chart title](./Charts/Chart-Title)
 * [Chart area](./Charts/Chart-Area)
 * [Chart plot area](./Charts/Chart-Plot-Area)
-* [Chart series](./Charts/Chart-Series)
 * [Chart legend](./Charts/Chart-Legend)
-* [Chart data labels](./Charts/Chart-Data-Labels)
 * [Chart axis](./Charts/Chart-Axis)
-
-Gradient fills on an existing chart source can be set with `setSourceGradientFill`. Theme or scheme colors are not written through the solid-color format bags.
 
 ## Removing the chart from a slide
 
