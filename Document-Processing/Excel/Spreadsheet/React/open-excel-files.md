@@ -9,7 +9,7 @@ documentation: ug
 
 # Open Excel files in React Spreadsheet
 
-The React Spreadsheet component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side approaches. The approach used is determined by whether `openUrl` is configured.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side approaches. The approach used is determined by whether `openUrl` is configured.
 
 When `openUrl` is configured, the Spreadsheet sends files to a server endpoint for processing (server-side processing). When `openUrl` is not configured, the Spreadsheet processes files directly in the browser (client-side processing).
 
@@ -42,8 +42,8 @@ The supported file formats depend on the selected processing method:
 
 | Processing method | Supported formats |
 | --- | --- |
-| Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
-| Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
+| [Client-side processing](./open-excel-file/pure-client-side) | Microsoft Excel Workbook (`.xlsx`) |
+| [Server-side processing](./open-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
 
 ## See also
 

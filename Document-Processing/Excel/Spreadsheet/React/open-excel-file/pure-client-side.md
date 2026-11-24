@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with React Spreadsheet
+# Import Excel files using client-side processing in React Spreadsheet
 
-Client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a client-side workflow to process workbook files directly in the browser without requiring server communication. When the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is enabled by default and the [openUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Import
 
@@ -102,8 +102,6 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
-
-
 
 ## Considerations
 
