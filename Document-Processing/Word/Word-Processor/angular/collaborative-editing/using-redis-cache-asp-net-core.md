@@ -733,3 +733,8 @@ After completing the client and server setup:
 4. Open the same document and make changes in one window; the changes will be synced to other users.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Client%20side%20with%20dotnet/Angular).
+
+
+## See Also
+
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)
