@@ -29,7 +29,7 @@ For open processing, when a file is fetched, it is sent to the ej2-xlsx library.
 
 Unlike server-side processing, the `openUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
-```jsx
+```javascript
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';

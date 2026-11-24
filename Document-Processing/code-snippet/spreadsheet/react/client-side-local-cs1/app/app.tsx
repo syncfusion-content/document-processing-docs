@@ -1,26 +1,35 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
+import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 function App() {
-    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    
-    const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        const file = event.target.files?.[0];
-        if (file && spreadsheetRef.current) {
-            spreadsheetRef.current.open({ file: file });
-        }
-    };
-
-    return (
-        <div>
-            <input type="file" accept=".xlsx" onChange={handleFileSelect} />
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowOpen={true} />
-        </div>
-    );
-};
+  const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+  const uploaderRef = React.useRef<UploaderComponent>(null);
+  const asyncSettings = {
+    saveUrl:
+      'https://services.syncfusion.com/react/production/api/FileUploader/Save',
+    removeUrl:
+      'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
+  };
+  const allowedExtensions: string = '.xlsx, .xls, .csv';
+  const onSuccess = (args) => {
+    if (args.operation == 'upload')
+      spreadsheetRef.current.open({ file: args.file.rawFile });
+  };
+  return (
+    <div>
+      <UploaderComponent
+        ref={uploaderRef}
+        asyncSettings={asyncSettings}
+        success={onSuccess}
+        allowedExtensions={allowedExtensions}
+      ></UploaderComponent>
+      <SpreadsheetComponent
+        ref={spreadsheetRef}
+      />
+    </div>
+  );
+}
 export default App;
 
 const root = createRoot(document.getElementById('root')!);
