@@ -304,8 +304,12 @@ This section explains how common PDF elements are converted and preserved in Mar
       <td>Links</td>
     </tr>
     <tr>
-      <td>Code blocks, Footer, Page Number, List, Block quotes, Subscript, Superscript</td>
+      <td>Code blocks, Footer, Page Number, List, Block quotes</td>
       <td>Text</td>
+    </tr>
+    <tr>
+      <td>Superscript, Subscript</td>
+      <td>Superscript and Subscript Formatting (Searchable PDF Documents Only)</td>
     </tr>
   </tbody>
 </table>

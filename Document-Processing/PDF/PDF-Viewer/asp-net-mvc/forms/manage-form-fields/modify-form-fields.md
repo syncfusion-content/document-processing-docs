@@ -418,6 +418,209 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
 
+### Button
+
+Select a Button field in Form Designer to review or change its settings. The toolbar includes the Button tool, and the page displays the button field.
+
+![Button field in Form Designer](../../../asp-net-mvc/images/ui-button.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Appearance** properties include font, colors, border, and alignment of the button caption.
+
+#### Button Actions
+
+Use the **Actions** tab to associate an action with the button field. The action is executed when the corresponding event occurs.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../asp-net-mvc/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner#updateformfield) for the button text, value, tooltip, alignment, typography, colors, borders, and actions.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:120px">
+    <button id="editButton">Edit Button</button>
+</div>
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").DocumentLoad("documentLoad").Render()
+</div>
+
+<script>
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Add a button field that navigates to page 5 when it is clicked
+        pdfviewer.formDesignerModule.addFormField('ButtonField', {
+            name: 'Submit1',
+            pageNumber: 1,
+            bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+            value: 'Submit',
+            text: 'Submit',
+            tooltip: 'Click to submit',
+            actions: {
+                mouseUp: {
+                    action: 'GoTo',
+                    destinationPageNumber: 5,
+                    destinationLocation: { x: 100, y: 100 },
+                    zoomValue: 2
+                }
+            }
+        });
+    };
+    document.getElementById('editButton').addEventListener('click', function () {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Retrieve form fields collection
+        var fields = pdfviewer.retrieveFormFields();
+        // Find the button field by name
+        var button = (fields || []).find(function (f) { return f && f.name === 'Submit1'; });
+
+        if (button) {
+            pdfviewer.formDesignerModule.updateFormField(button, {
+                value: 'Submit Button',
+                text: 'Submit Button',
+                alignment: 'Left',
+                tooltip: 'Updated Submit Button',
+                actions: {
+                    mouseUp: {
+                        action: 'GoTo',
+                        destinationPageNumber: 7,
+                        destinationLocation: { x: 100, y: 100 },
+                        zoomValue: 1
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Forms/Button%20field)
+
+### Barcode
+
+Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
+
+![Barcode field in Form Designer](../../../asp-net-mvc/images/ui-barcode.png)
+
+Use the field's **General** properties to review or edit its name, value, caption, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Options** properties include the barcode type, X dimension, error correction level, and the option to compress the data before encoding it to the barcode.
+
+#### Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+![Barcode field Symbology in Form Designer](../../../asp-net-mvc/images/barcode-ui-types.png)
+
+#### Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+![Barcode Value Format in Form Designer](../../../asp-net-mvc/images/barcode-value-types.png)
+
+N> Complete support for executing custom scripts is not available. Instead, the PDF Viewer parses the final value assigned to the barcode field in the PDF document.
+
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value from the **Value** tab of the Barcode Properties dialog.
+
+Select **Custom Value** in the **Encode** dropdown, and then enter the text to be encoded in the **Custom Value** text box.
+
+![Custom Value option in the Value tab](../../../asp-net-mvc/images/ui-barcode-value-tab.png)
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../asp-net-mvc/images/dynamic-field-binding.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
+
+#### Barcode Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+#### Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+![Barcode error correction level settings in Form Designer](../../../asp-net-mvc/images/ui-barcode-error-correction.png)
+
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for caption, symbology, value format, and error correction level.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+    <script>
+        function updateBarcodeField() {
+            var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+            var fields = Array.isArray(pdfviewer.formFieldCollections)
+                ? pdfviewer.formFieldCollections
+                : [];
+            var barcode = fields.filter(function (field) {
+                return field.type === 'Barcode';
+            })[0];
+
+            if (barcode) {
+                // Update the caption, symbology, value format and error correction level of the barcode field
+                pdfviewer.formDesignerModule.updateFormField(barcode, {
+                    caption: 'Updated Barcode Caption',
+                    symbology: 'QRCode',
+                    valueFormat: 'CustomValue',
+                    errorCorrectionLevel: 'High'
+                });
+            }
+        }
+    </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Forms/Barcode%20field)
+
 ## See also
 
 - [Form Designer overview](../overview)

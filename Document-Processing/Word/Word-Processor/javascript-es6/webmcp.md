@@ -88,6 +88,8 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
 
@@ -107,7 +109,7 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
 
-## Document Information Tools
+### Document Information Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -116,9 +118,8 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectionText | Read | Always | Retrieves the plain text content of the current selection. |
 | getSelectionSfdt | Read | Always | Retrieves the selected content as formatted SFDT. |
 
----
 
-## Search & Navigation Tools
+### Search & Navigation Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -131,9 +132,8 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectCurrentWord | Write | Always | Selects the word at the current cursor position. |
 | selectParagraph | Write | Always | Selects the current paragraph. |
 
----
 
-## Content Editing Tools
+### Content Editing Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -145,18 +145,16 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertImage | Write | Always | Inserts an image with optional sizing and alternate text. |
 | insertHyperlink | Write | Always | Inserts a hyperlink with optional display text and screen tip. |
 
----
 
-## Formatting Tools
+### Formatting Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
 | formatCharacter | Write | Always | Applies character formatting such as font, size, color, bold, italic, and highlighting. |
 | formatParagraph | Write | Always | Applies paragraph formatting such as alignment, indentation, and spacing. |
 
----
 
-## Protection & Permissions Tools
+### Protection & Permissions Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -164,9 +162,8 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | stopProtection | Write | Always | Removes document protection and restores editing access. |
 | insertEditingRegion | Write | Always | Creates an editable region for specific users in a protected document. |
 
----
 
-## Document Management Tools
+### Document Management Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -174,13 +171,12 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | configureDocumentEditorSettings | Write | Always | Configures editor appearance and behavior settings such as ruler, bookmarks, navigation pane, and fonts. |
 | print | Write | Always | Opens the print dialog for the current document. |
 
----
 
 ## Code Examples
 
 ### Basic Setup
 
-Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
+Set up a DOCX Editor with WebMCP enabled and register tools on creation.
 
 ```typescript
 import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
@@ -212,6 +208,113 @@ document.title = 'WebMCP Tool Demo - DocumentEditorContainer';
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
+### Selective Tool Registration
+
+Register only the essential tools required for the application to minimize system exposure and enhance security.
+
+```typescript
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+
+// Inject required modules
+DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+
+// Initialize DocumentEditorContainer with WebMCP enabled
+let webMcpSettings: any = {
+    name: 'container',
+    tools: ['getDocumentBookmarks', 'getSelectionText', 'find', 'findAll', 'goToPage'] // Register only the needed tools
+};
+
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+    height: '590px',
+    enableWebMcp: true,
+    webMcpSettings: webMcpSettings, // Enable WebMCP tools
+    toolbarMode: 'Ribbon'
+});
+
+// Use the following service URL only for demo purposes
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+// Append to container element
+container.appendTo('#container');
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/selective-tools-registration).
+
+### Multi-Instance Setup
+
+Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
+
+```typescript
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+
+// Inject required modules
+DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+
+// Use the following service URL only for demo purposes
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+const container1: DocumentEditorContainer = new DocumentEditorContainer({
+    height: '590px',
+    width: '50%',
+    enableWebMcp: true,
+    toolbarMode: 'Ribbon',
+    webMcpSettings: { name: 'documentEditor1' }
+});
+container1.serviceUrl = serviceUrl;
+container1.appendTo('#container1');
+
+const container2: DocumentEditorContainer = new DocumentEditorContainer({
+    height: '590px',
+    width: '50%',
+    enableWebMcp: true,
+    toolbarMode: 'Ribbon',
+    webMcpSettings: { name: 'documentEditor2' }
+});
+container2.serviceUrl = serviceUrl;
+container2.appendTo('#container2');
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
+
+### Auditing and Restrictions
+
+Demonstrates the use of the beforeWebMcpToolExecute event to log tool activity and block restricted operations.
+
+```typescript
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+
+// Inject required modules
+DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+    height: '590px',
+    enableWebMcp: true,
+    toolbarMode: 'Ribbon',
+    webMcpSettings: { name: 'container' },
+    beforeWebMcpToolExecute: (args: any) => {
+        const { toolName, toolArgs } = args;
+
+        // Audit all WebMCP tool invocations
+        console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
+
+        const commandName = toolName?.includes('_')
+            ? toolName.substring(toolName.indexOf('_') + 1)
+            : toolName;
+
+        // Restrict a specific tool
+        if (commandName === 'saveDocument') {
+            args.cancel = true;
+            args.cancellationResponse = 'The saveDocument operation has been restricted.';
+        }
+    }
+});
+
+// Use the following service URL only for demo purposes
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+// Append to container element
+container.appendTo('#container');
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
+
 
 ## Troubleshooting FAQs
 
@@ -224,7 +327,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
----
 
 ### Why aren't my registered tools displayed in the extension?
 
@@ -234,7 +336,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
 
----
 
 ### Why don't registered tools execute?
 
@@ -245,14 +346,14 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
----
+   
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
 1. WebMCP requires HTTPS in production or localhost for development
 2. If using cross-origin tools, both sites must be HTTPS
 3. Test locally using `localhost:3000` or similar
----
+
 
 ## See Also
 

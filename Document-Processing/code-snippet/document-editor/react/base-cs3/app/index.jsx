@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
-DocumentEditorContainerComponent.Inject(Toolbar);
+import { DocumentEditorContainerComponent, Toolbar, Ribbon } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 function Default() {
-    return (<DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true}/>);
+    return (<DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" enableToolbar={true} toolbarMode="Ribbon"/>);
 }
 export default Default;
 const root = createRoot(document.getElementById('sample'));

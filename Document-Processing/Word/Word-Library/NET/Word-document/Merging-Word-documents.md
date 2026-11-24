@@ -230,7 +230,30 @@ destinationDocument.Close()
 
 {% endtabs %}
 
+## Merge First Source Section into Last Section
 
+This example demonstrates how to append the content of the first source section to the last section of the destination document and clone the remaining source sections as separate sections.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open the source document
+using (WordDocument sourceDocument = new WordDocument(@"../../../Data/SourceDocument.docx"))
+{
+    //Open the destination document
+    using (WordDocument destinationDocument = new WordDocument(@"../../../Data/DestinationDocument.docx"))
+    {
+        //Import the contents; the first source section is merged into the last destination section
+        destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles, true);
+        //Save the destination document
+        destinationDocument.Save("../../../Output/CombinedDocument.docx", FormatType.Docx);
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Merge-source-first-section-to-destination-last-section).
 
 ## See Also
 
