@@ -112,7 +112,12 @@ Please find the below table for the [`save`](https://ej2.syncfusion.com/vue/docu
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" />
+  <button type="button" @click="save">Save</button>
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -123,11 +128,6 @@ const save = () => {
   spreadsheet.value.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
 };
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" />
-  <button type="button" @click="save">Save</button>
-</template>
 ```
 
 ## Supported Excel file formats for Save
