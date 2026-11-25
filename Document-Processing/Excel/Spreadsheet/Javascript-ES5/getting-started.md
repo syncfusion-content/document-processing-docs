@@ -98,18 +98,8 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
-<!-- Spreadsheet dependency styles -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/tailwind3.css"rel="stylesheet" type="text/css" />
 <!-- Spreadsheet styles -->
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.1.37/styles/spreadsheet/index.css" rel="stylesheet" type="text/css" />
 <!-- Spreadsheet dependency scripts -->
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>

@@ -31,7 +31,7 @@ const document = new PdfDocument(data);
 // Create a PdfDataExtractor instance
 const extractor = new PdfDataExtractor(document);
 // Extract images from all pages
-const imageInfoCollection: PdfEmbeddedImage[] = extractor.extractImages({
+const imageInfoCollection: PdfEmbeddedImage[] = await extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
 });
@@ -67,7 +67,7 @@ var document = new ej.pdf.PdfDocument(data);
 // Create a PdfDataExtractor instance
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Extract images from all pages
-var imageInfoCollection = extractor.extractImages({
+var imageInfoCollection = await extractor.extractImages({
   startPageIndex: 0,
   endPageIndex: document.pageCount - 1
 });
@@ -118,4 +118,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)

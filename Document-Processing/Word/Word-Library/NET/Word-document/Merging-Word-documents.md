@@ -253,6 +253,8 @@ using (WordDocument sourceDocument = new WordDocument(@"../../../Data/SourceDocu
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Merge-source-first-section-to-destination-last-section).
+
 ## See Also
 
 * [How to merge multiple Word documents in C#, VB.NET](https://support.syncfusion.com/kb/article/11499/how-to-merge-multiple-word-documents-in-c-vb-net)

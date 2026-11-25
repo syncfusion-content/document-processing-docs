@@ -5,7 +5,7 @@ import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documente
 
 
 import { Component, OnInit } from '@angular/core';
-import { ToolbarService } from '@syncfusion/ej2-angular-documenteditor';
+import { ToolbarService, RibbonService } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
 imports: [
         
@@ -16,8 +16,8 @@ imports: [
 standalone: true,
     selector: 'app-container',
     // specifies the template string for the DocumentEditorContainer component
-    template: `<ejs-documenteditorcontainer serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
-    providers: [ToolbarService]
+    template: `<ejs-documenteditorcontainer serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" height="600px" style="display:block" [enableToolbar]=true toolbarMode="Ribbon"> </ejs-documenteditorcontainer>`,
+    providers: [ToolbarService, RibbonService]
 })
 export class AppComponent implements OnInit {
 

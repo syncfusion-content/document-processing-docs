@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Data in React PDF Viewer | Syncfusion
+title: Custom Data in React PDF Viewer Annotations | Syncfusion
 description: Attach custom metadata to annotations in the React PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
@@ -174,6 +174,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
 - [Customize Annotation](../annotation/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Remove Annotation](../annotation/delete-annotation)
 - [Handwritten Signature](../annotation/signature-annotation)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)

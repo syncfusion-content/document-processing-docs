@@ -179,6 +179,23 @@ this.$refs.documenteditor.ej2Instances.editor.mergeCells()
 
 DOCX Editor preserves the position properties of the table and displays the table based on position properties. It does not support modifying the position properties. Whereas the table will be automatically moved along with text edited if it is positioned relative to the paragraph.
 
+## Get table position
+
+You can retrieve the top and right position of the table that contains the current selection by using the following sample code.
+
+```ts
+let tablePosition = this.$refs.documenteditor.ej2Instances.selection.getTablePosition();
+
+let tableTop = tablePosition.tableTopInCurrentPage;
+let tableRight = tablePosition.tableRightInCurrentPage;
+```
+
+The `tableTopInCurrentPage` property returns the top position of the table relative to the current page.
+
+The `tableRightInCurrentPage` property returns the right position of the table relative to the current page.
+
+N> For tables that span multiple pages, the returned values correspond to the portion of the table rendered on the current page. If the current selection is not inside a table, both properties return `0`.
+
 ## How to work with tables
 
 The following sample demonstrates how to delete the table row or columns, merge cells and how to bind the API with button.
@@ -275,7 +292,8 @@ onMounted(function () {
 })
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 
 {% endhighlight %}
@@ -382,7 +400,8 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 </style>
 
 {% endhighlight %}

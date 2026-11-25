@@ -210,6 +210,48 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Linearization (Fast Web View) in JavaScript PDF
+
+A linearized PDF, also known as **Fast Web View**, is a PDF file that is organized so that the first page can be rendered by a web browser or PDF viewer before the entire file is downloaded. Linearization rearranges the objects inside a PDF so that the page tree, cross-reference, and other critical structures are written first, followed by the page content. This is especially useful for large documents served over the web, because users can begin viewing the first page while the rest of the file is still being transferred.
+
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports saving both newly created and existing PDF documents in a linearized format through the `linearization` property of the `PdfFileStructure` class.
+
+This example demonstrates how to enable PDF linearization when creating a new PDF document or updating an existing one.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document.
+let document: PdfDocument = new PdfDocument();
+// Alternatively, load an existing document.
+// let document: PdfDocument = new PdfDocument(data);
+// Enable linearization for fast web view.
+document.fileStructure.linearization = true;
+// Save the document to a file.
+document.save('linearized.pdf');
+// Close the document.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document.
+var document = new ej.pdf.PdfDocument();
+// Alternatively, load an existing document.
+// var document = new ej.pdf.PdfDocument(data);
+// Enable linearization for fast web view.
+document.fileStructure.linearization = true;
+// Save the document to a file.
+document.save('linearized.pdf');
+// Close the document.
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** When loading an existing PDF document, the `linearization` property can be used to determine whether the document is already linearized. Set `linearization` to true before calling `save()` to create or convert a document to a linearized PDF.
+
 ## Flatten annotations and form fields
 
 The [flatten](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#get-flatten-boolean) property converts all annotations and form fields in a PDF into static page content, removing interactivity while preserving the visual appearance of the annotations and form fields.
@@ -249,4 +291,4 @@ N> If the document has no annotations or form fields, setting `flatten = true` h
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)

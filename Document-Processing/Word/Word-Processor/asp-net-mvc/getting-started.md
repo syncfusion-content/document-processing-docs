@@ -97,7 +97,12 @@ Add the DOCX Editor component to the `~/Views/Home/Index.cshtml` page.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Index.cshtml" %}
-@Html.EJS().DocumentEditorContainer("container").Height("590px").Render()
+@Html.EJS().DocumentEditorContainer("container").Height("590px").ToolbarMode("Ribbon").Render()
+
+<script>
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
+</script>
+
 {% endhighlight %}
 {% endtabs %}
 

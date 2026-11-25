@@ -44,6 +44,7 @@ Other annotations:
 
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
 - Free text: [Free text annotation](./annotation-types/free-text-annotation)- Link: [Link annotation](./annotation-types/link-annotation)- Ink (freehand): [Ink annotation](./annotation-types/ink-annotation)
+- Freehand Highlight: [Freehand Highlight annotation](./annotation-types/freehand-highlight-annotation)
 - Stamp: [Stamp annotation](./annotation-types/stamp-annotation)
 - Sticky notes: [Sticky notes annotation](./annotation-types/sticky-notes-annotation)
 
@@ -139,6 +140,7 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 - [Annotation Types](../annotations/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Customize Annotation](../annotations/customize-annotation)
+- [Resize and Move Annotations](../annotations/resize-move-annotations)
 - [Remove Annotation](../annotations/delete-annotation)
 - [Handwritten Signature](../annotations/signature-annotation)
 - [Export and Import Annotation](../annotations/export-import/export-annotation)
