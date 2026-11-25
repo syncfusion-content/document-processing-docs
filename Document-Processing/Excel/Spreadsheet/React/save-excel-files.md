@@ -43,6 +43,8 @@ The supported file formats depend on the selected processing method:
 | [Client-side processing](./save-excel-file/pure-client-side) | Microsoft Excel Workbook (`.xlsx`) |
 | [Server-side processing](./save-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
 
+> **Note:** XLSB export currently has partial feature support. To view the supported features and limitations when exporting to `.xlsb`, refer to [Save Excel files as XLSB](./save-excel-file/server-side-processing#save-excel-files-as-xlsb-binary-workbook).
+
 ## Cloud storage integrations
 
 The Spreadsheet component also supports saving files directly to various cloud storage providers:
