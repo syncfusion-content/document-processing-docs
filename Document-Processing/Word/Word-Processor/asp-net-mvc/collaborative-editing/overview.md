@@ -40,3 +40,4 @@ N> 2. The above metrics are based solely on the collaborative editing module. Ac
 ## See Also
 
 - [Collaborative editing using Redis cache in ASP.NET MVC](./using-redis-cache-asp-net)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)
