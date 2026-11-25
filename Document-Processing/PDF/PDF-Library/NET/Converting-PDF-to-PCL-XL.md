@@ -9,7 +9,7 @@ keywords: PDF to PCL, PCL XL, SaveAsPcl, PclSettings, printer, pxl
 
 # Convert PDF to PCL XL in .NET PDF Library
 
-Essential<sup>&reg;</sup> PDF can convert an existing PDF document to [PCL XL](https://www.hp.com/), the page-description language used by the majority of monochrome and colour laser printers. The generated PCL XL job can be sent straight to a PCL XL–aware printer, written to a `.pxl` file for later replay, or streamed into any caller-owned `System.IO.Stream`.
+Essential<sup>&reg;</sup> PDF can convert an existing PDF document to [PCL XL](https://www.hp.com/), the page-description language used by the majority of monochrome and color laser printers. The generated PCL XL job can be sent straight to a PCL XL–aware printer, written to a `.pxl` file for later replay, or streamed into any caller-owned `System.IO.Stream`.
 
 The conversion is implemented with the `SaveAsPcl` method of the [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class. Every produced job is wrapped in a PJL envelope and carries the fixed PCL XL stream header `) HP-PCL XL;2;1;Comment Syncfusion PDF`, so the output can be handed to a printer or a print spooler without any post-processing.
 
@@ -313,7 +313,7 @@ The following table lists the supported paper sizes.
 
 The `Orientation` property controls how each page is placed on the medium.
 
-* `Auto` – The `/Rotate` entry of the page is honoured, and a page that is wider than it is tall is printed in landscape.
+* `Auto` – The `/Rotate` entry of the page is honored, and a page that is wider than it is tall is printed in landscape.
 * `Portrait` – Every page is printed in portrait, and the `/Rotate` entry is ignored.
 * `Landscape` – Every page is printed in landscape, and the `/Rotate` entry is ignored.
 
