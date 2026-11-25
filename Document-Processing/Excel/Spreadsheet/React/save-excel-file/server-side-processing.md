@@ -161,12 +161,10 @@ root.render(<App />);
 The following file formats are supported when saving the Spreadsheet component:
 
 * Microsoft Excel Workbook (.xlsx)
+* Microsoft Excel Binary Workbook (.xlsb)
 * Microsoft Excel 97–2003 Workbook (.xls)
 * Comma-Separated Values (.csv)
-* Microsoft Excel Binary Workbook (.xlsb)
 * Portable Document Format (.pdf)
-
-> **Note:** XLSB export currently has partial feature support. Refer to [Save Excel files as XLSB (Binary Workbook)](#save-excel-files-as-xlsb-binary-workbook) for details on supported features and limitations.
 
 ## Export options
 
@@ -513,7 +511,7 @@ spreadsheetRef.current?.save({
 });
 ```
 
-> **Note:** XLSB export currently has partial feature support. Unsupported features are not currently preserved in the exported XLSB workbook, but they remain intact and functional within the original Spreadsheet component.
+> **Note:** XLSB export currently has partial feature support. Support for the features listed as currently unsupported is planned for future updates. Until then, these features are not preserved in the exported XLSB workbook, but they remain unchanged in the active Spreadsheet.
 
 #### Feature support for XLSB export
 
@@ -532,5 +530,3 @@ The following table lists the current feature support status for XLSB export:
 | **Illustrations** | — | Image, Chart |
 | **Protection** | — | Protect Sheet, Protect Workbook |
 | **Other** | Formulas | Filter, Hyperlink, Comment, Notes |
-
-> Features marked as not supported are not currently preserved or supported in the exported XLSB file. They are not removed from or altered in the active Spreadsheet session.
