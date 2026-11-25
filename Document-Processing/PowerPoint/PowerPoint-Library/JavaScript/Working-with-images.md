@@ -18,11 +18,12 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+// pictureBytes is a base64 string of a PNG, JPEG, or GIF image.
+let pictureBytes = '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z';
 // Creates an instance of Presentation.
 let pptxDoc = Presentation.create();
 // Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// pictureBytes is a Uint8Array of a JPEG image.
 // Adds the picture to the slide by specifying its size and position (points).
 let picture = slide.shapes.addPicture({
     data: pictureBytes,
@@ -33,11 +34,12 @@ await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// pictureBytes is a base64 string of a PNG, JPEG, or GIF image.
+var pictureBytes = '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z';
 // Creates an instance of Presentation.
 var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-// pictureBytes is a Uint8Array of a JPEG image.
 // Adds the picture to the slide by specifying its size and position (points).
 var picture = slide.shapes.addPicture({
     data: pictureBytes,
@@ -50,35 +52,40 @@ await pptxDoc.save('Output.pptx');
 
 ## Replacing Images
 
-The following code example demonstrates how to replace an existing image in a slide. The `Picture.replaceImageData` method accepts image data that represents the new image.
+The following code example demonstrates how to replace an existing image in a slide. Get the picture from the slide and pass the new image to `replaceImageData`. The new image is stored as a new media part. PNG, JPEG, and GIF are supported.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, PictureShape } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or Base64 string of an existing .pptx file.
+// newImageBytes is a base64 string of a PNG, JPEG, or GIF image.
+let newImageBytes = '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z';
 // Opens an existing PowerPoint Presentation.
 let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 let slide = pptxDoc.slides[0];
-// Retrieves the picture from the slide.
-let picture = slide.shapes[4].asPicture();
-// newBytes is a Uint8Array of the replacement JPEG image.
+// Gets the picture from the slide.
+let picture = slide.shapes[4] as PictureShape;
 // Replaces the existing embedded image with the new image.
-picture.replaceImageData({ data: newBytes });
+picture.replaceImageData({ data: newImageBytes });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or Base64 string of an existing .pptx file.
+// newImageBytes is a base64 string of a PNG, JPEG, or GIF image.
+var newImageBytes = '/9j/4AAQSkZJRgABAQEAkACQAAD/4....QB//Z';
 // Opens an existing PowerPoint Presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 var slide = pptxDoc.slides[0];
-// Retrieves the picture from the slide.
-var picture = slide.shapes[4].asPicture();
-// newBytes is a Uint8Array of the replacement JPEG image.
+// Gets the picture from the slide.
+var picture = slide.shapes[4];
 // Replaces the existing embedded image with the new image.
-picture.replaceImageData({ data: newBytes });
+picture.replaceImageData({ data: newImageBytes });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
@@ -86,26 +93,21 @@ await pptxDoc.save('Output.pptx');
 
 ## Removing Images
 
-The following code example demonstrates how to remove an existing image in a PowerPoint slide.
+You can remove an image from a slide by passing its instance to `slide.shapes.remove`. The following code example demonstrates how to remove an image from a slide.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, PictureShape } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file.
-
 // Opens an existing PowerPoint Presentation.
 let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 let slide = pptxDoc.slides[0];
-// Iterates through the shape collection and removes each picture.
-for (let shape of slide.shapes) {
-    let picture = shape.asPicture();
-    if (picture) {
-        // Removes the picture from the slide.
-        slide.shapes.removePicture(picture);
-    }
-}
+// Gets the picture from the slide.
+let picture = slide.shapes[4] as PictureShape;
+// Removes the picture from the slide.
+slide.shapes.remove(picture);
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
@@ -117,15 +119,10 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Retrieves the first slide from the Presentation.
 var slide = pptxDoc.slides[0];
-// Iterates through the shape collection and removes each picture.
-for (var i = 0; i < slide.shapes.length; i++) {
-    var shape = slide.shapes[i];
-    var picture = shape.asPicture();
-    if (picture) {
-        // Removes the picture from the slide.
-        slide.shapes.removePicture(picture);
-    }
-}
+// Gets the picture from the slide.
+var picture = slide.shapes[4];
+// Removes the picture from the slide.
+slide.shapes.remove(picture);
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
