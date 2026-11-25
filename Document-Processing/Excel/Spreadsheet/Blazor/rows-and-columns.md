@@ -199,7 +199,7 @@ You can set these properties as follows:
 
 AutoFit in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component automatically adjusts the width of columns or the height of rows to fit their content. This helps improve readability by ensuring that cell values are fully visible without manual resizing.
 
-To control this functionality, use the [AllowAutofit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html) property. When enabled, users can autofit rows and columns by double-clicking the boundaries of row and column headers. You can also apply autofit programmatically using the [AutoFitAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutoFitAsync_System_String_) method.
+To control this functionality, use the [AllowAutofit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofit) property. When enabled, users can autofit rows and columns by double-clicking the boundaries of row and column headers. You can also apply autofit programmatically using the [AutoFitAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutoFitAsync_System_String_) method.
 
 ### Enabling autofit
 
