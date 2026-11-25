@@ -89,7 +89,7 @@ For example, a Spreadsheet component may expose tools such as:
 
 - getCellData
 - editCell
-- addSheet
+- insertSheet
 
 An AI assistant can discover these tools and invoke them based on user prompts.
 
@@ -144,7 +144,7 @@ Spreadsheet.Inject(WebMcpSpreadsheet);
 
 const webMcpSettings = {
   name: 'sales',
-  tools: ['getCellData', 'editCell', 'addSheet'],
+  tools: ['getCellData', 'editCell', 'insertSheet'],
   exposeTo: ['https://www.syncfusion.com/']
 };
 </script>
@@ -185,7 +185,7 @@ Spreadsheet.Inject(WebMcpSpreadsheet);
 
 const webMcpSettings = {
   name: 'sales',
-  tools: ['getCellData', 'editCell', 'addSheet'],
+  tools: ['getCellData', 'editCell', 'insertSheet'],
   exposeTo: ['https://www.syncfusion.com/']
 };
 
