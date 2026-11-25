@@ -93,7 +93,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 | ----- | ----- | ----- |
 | url | string |  Specifies the save url.  |
 | fileName | string | Specifies the file name. |
-| saveType | SaveType | Specifies the saveType like Xlsx, Xls, Csv, Xlsb, and Pdf. |
+| saveType | SaveType | Specifies the saveType, such as Xlsx, Xlsb, Xls, Csv, and Pdf. |
 | customParams | object | Passing the custom parameters from client to server while performing save operation. |
 | isFullPost | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
 | needBlobData | boolean | You can get the blob data if set to true. |
@@ -511,7 +511,7 @@ spreadsheetRef.current?.save({
 });
 ```
 
-> **Note:** XLSB export currently has partial feature support. Support for the features listed as currently unsupported is planned for future updates. Until then, these features are not preserved in the exported XLSB workbook, but they remain unchanged in the active Spreadsheet.
+> **Note:** XLSB export currently provides partial feature support. Support for the remaining features is planned for future updates.
 
 #### Feature support for XLSB export
 
