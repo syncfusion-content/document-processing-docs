@@ -1,5 +1,5 @@
 ---
-title: PCL XL Settings and Enums in .NET PDF Library | Syncfusion
+title: PDF to PCL Settings and Enums in .NET PDF Library | Syncfusion
 description: Learn about the PclSettings properties and the enums used to configure a PCL XL export in the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
@@ -7,7 +7,7 @@ documentation: UG
 keywords: PclSettings, SaveFormat, PCL XL, PclPaperSize, PclOrientation, PclInputTray
 ---
 
-# PCL XL Settings and Enums in .NET PDF Library
+# PDF to PCL Settings and Enums in .NET PDF Library
 
 This page lists the complete set of options that control a PCL XL export in Essential<sup>&reg;</sup> PDF. Every option is exposed through the [PclSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Exporting.PclSettings.html) class, which is passed to the `SaveAsPcl` overloads of the [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class.
 
@@ -148,5 +148,5 @@ The following behaviors are intentional in the current version.
 
 ## See also
 
-* [Convert PDF to PCL XL](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/converting-pdf-to-pcl-xl)
+* [Convert PDF to PCL](https://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-pcl/net/converting-pdf-to-pcl)
 * [PDF to Image conversion](https://help.syncfusion.com/document-processing/pdf/conversions/pdf-to-image/overview)

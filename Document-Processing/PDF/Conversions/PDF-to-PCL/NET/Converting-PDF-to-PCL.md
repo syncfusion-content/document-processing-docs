@@ -1,13 +1,13 @@
 ---
-title: Convert PDF to PCL XL in .NET PDF Library | Syncfusion
-description: Learn how to convert PDF documents to PCL XL (PCL 6) print jobs using the SaveAsPcl method of the Syncfusion .NET PDF Library.
+title: Convert PDF to PCL in .NET PDF Library | Syncfusion
+description: Learn how to convert PDF documents to PCL (PCL XL / PCL 6) print jobs using the SaveAsPcl method of the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: PDF to PCL, PCL XL, SaveAsPcl, PclSettings, printer, pxl
 ---
 
-# Convert PDF to PCL XL in .NET PDF Library
+# Convert PDF to PCL in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF can convert an existing PDF document to [PCL XL](https://www.hp.com/), the page-description language used by the majority of monochrome and color laser printers. The generated PCL XL job can be sent straight to a PCL XL–aware printer, written to a `.pxl` file for later replay, or streamed into any caller-owned `System.IO.Stream`.
 
