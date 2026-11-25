@@ -108,7 +108,11 @@ Please find the table below for the [`open`](https://ej2.syncfusion.com/vue/docu
 
 The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl" :created="created" />
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -124,10 +128,6 @@ const created = () => {
     .then((blob) => spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') }));
 };
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl" :created="created" />
-</template>
 ```
 
 ## Supported Excel file formats for Open
@@ -509,7 +509,11 @@ The following code example demonstrates the client-side and server-side configur
 
 **Client Side**:
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :openSettings="openSettings" />
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -521,10 +525,6 @@ const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 // retryAfterDelay specifies the delay in milliseconds between retries.
 const openSettings = { chunkSize: 1000000, retryCount: 3, retryAfterDelay: 500 };
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :openSettings="openSettings" />
-</template>
 ```
 
 **Server Endpoint**:
@@ -550,7 +550,11 @@ public IActionResult Open(IFormCollection openRequest)
 
 The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WebApplication1_7-101537213) includes the server endpoint code for handling chunk-based open processing. After launching the server endpoint, update the `openUrl` property of the spreadsheet in the client-side sample with the server URL, as shown below.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" />
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -559,10 +563,6 @@ const spreadsheet = ref(null);
 // Specify the service URL that processes the Excel file and returns workbook JSON.
 const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" />
-</template>
 ```
 
 ## Customization
