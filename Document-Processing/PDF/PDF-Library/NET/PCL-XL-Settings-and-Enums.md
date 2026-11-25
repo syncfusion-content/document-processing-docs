@@ -81,7 +81,7 @@ The [PclOrientation](https://help.syncfusion.com/cr/document-processing/Syncfusi
 
 | Member | Value | Description |
 |:---|:---|:---|
-| `Auto` | `0` | The default. The `/Rotate` entry of the page is honoured, and a page that is wider than it is tall is printed in landscape. |
+| `Auto` | `0` | The default. The `/Rotate` entry of the page is honored, and a page that is wider than it is tall is printed in landscape. |
 | `Portrait` | `1` | Every page is printed in portrait, and the `/Rotate` entry is ignored. |
 | `Landscape` | `2` | Every page is printed in landscape, and the `/Rotate` entry is ignored. |
 
@@ -124,7 +124,7 @@ PdfException
 | [PdfPclException](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPclException.html) | The conversion of the document failed. |
 | [PdfPclNotSupportedException](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPclNotSupportedException.html) | The requested format or the option combination cannot be emitted as PCL XL. |
 
-## Behaviour guarantees
+## Behavior guarantees
 
 The following guarantees hold for every PCL XL export.
 
@@ -138,7 +138,7 @@ The following guarantees hold for every PCL XL export.
 
 ## Limitations
 
-The following behaviours are intentional in the current version.
+The following behaviors are intentional in the current version.
 
 * The PCL XL protocol class is fixed at `2;1` in the stream header. Class 3.0 operators are never emitted, and the class is not selectable.
 * The PJL envelope is always written. A bare PCL XL stream without the PJL wrapper is not produced.
