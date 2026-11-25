@@ -1,15 +1,15 @@
 ---
-title: Convert PDF to PCL XL in .NET PDF Library | Syncfusion
-description: Learn how to convert PDF documents to PCL XL (PCL 6) print jobs using the SaveAsPcl method of the Syncfusion .NET PDF Library.
+title: Convert PDF to PCL in .NET PDF Library | Syncfusion
+description: Learn how to convert PDF documents to PCL (PCL XL / PCL 6) print jobs using the SaveAsPcl method of the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: PDF to PCL, PCL XL, SaveAsPcl, PclSettings, printer, pxl
 ---
 
-# Convert PDF to PCL XL in .NET PDF Library
+# Convert PDF to PCL in .NET PDF Library
 
-Essential<sup>&reg;</sup> PDF can convert an existing PDF document to [PCL XL](https://www.hp.com/), the page-description language used by the majority of monochrome and colour laser printers. The generated PCL XL job can be sent straight to a PCL XL–aware printer, written to a `.pxl` file for later replay, or streamed into any caller-owned `System.IO.Stream`.
+Essential<sup>&reg;</sup> PDF can convert an existing PDF document to [PCL XL](https://www.hp.com/), the page-description language used by the majority of monochrome and color laser printers. The generated PCL XL job can be sent straight to a PCL XL–aware printer, written to a `.pxl` file for later replay, or streamed into any caller-owned `System.IO.Stream`.
 
 The conversion is implemented with the `SaveAsPcl` method of the [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class. Every produced job is wrapped in a PJL envelope and carries the fixed PCL XL stream header `) HP-PCL XL;2;1;Comment Syncfusion PDF`, so the output can be handed to a printer or a print spooler without any post-processing.
 
@@ -246,7 +246,7 @@ The following table lists the properties of the `PclSettings` class and their de
 |:---|:---|:---|:---|
 | `Resolution` | `PclResolutionDpiValue` | `Dpi300` | The device resolution used for the generated job. The supported values are `Dpi300`, `Dpi600`, and `Dpi1200`. |
 | `PaperSize` | `PclPaperSize` | `Auto` | The paper medium requested on the `BeginPage` operator. `Auto` derives the nearest standard medium from the PDF page box. |
-| `Orientation` | `PclOrientation` | `Auto` | The orientation of the output pages. `Auto` honours the `/Rotate` entry of each page and prints a page that is wider than it is tall in landscape. `Portrait` and `Landscape` force the orientation. |
+| `Orientation` | `PclOrientation` | `Auto` | The orientation of the output pages. `Auto` honors the `/Rotate` entry of each page and prints a page that is wider than it is tall in landscape. `Portrait` and `Landscape` force the orientation. |
 | `InputTray` | `PclInputTray` | `Auto` | The source paper tray. `Auto` omits the `MediaSource` attribute, and the remaining values request the corresponding tray. |
 | `ScalingMode` | `PclScalingMode` | `None` | Determines how the page content is fitted to the selected medium. The supported values are `None`, `Fit`, `Fill`, and `Stretch`. |
 | `JobName` | `string` | `"PDF"` | The name of the print job, written into the PJL header as `NAME="…"`. |
@@ -313,7 +313,7 @@ The following table lists the supported paper sizes.
 
 The `Orientation` property controls how each page is placed on the medium.
 
-* `Auto` – The `/Rotate` entry of the page is honoured, and a page that is wider than it is tall is printed in landscape.
+* `Auto` – The `/Rotate` entry of the page is honored, and a page that is wider than it is tall is printed in landscape.
 * `Portrait` – Every page is printed in portrait, and the `/Rotate` entry is ignored.
 * `Landscape` – Every page is printed in landscape, and the `/Rotate` entry is ignored.
 
