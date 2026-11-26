@@ -910,4 +910,4 @@ root.render(<App />);
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form fields Validation](./form-validation)
-- [Read-only support for annotations, form fields, and comments](../how-to/read-only-settings)
+- [Read only annotations, forms, and comments](../how-to/read-only-settings)

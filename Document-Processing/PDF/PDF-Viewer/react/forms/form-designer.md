@@ -163,4 +163,4 @@ For more information, see  [Deleting Form Fields](./manage-form-fields/remove-fo
 - [Custom Data](./custom-data)
 - [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)
 - [Form field events](./form-field-events)
-- [Read-only support for annotations, form fields, and comments](../how-to/read-only-settings)
+- [Read only annotations, forms, and comments](../how-to/read-only-settings)
