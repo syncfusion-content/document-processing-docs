@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Find and Replace in JavaScript PowerPoint | Syncfusion
-description: Learn how to find, replace, and highlight text in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library, including match case, whole word, and regular expressions.
+description: Learn how to find, replace, and highlight text in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug
