@@ -78,59 +78,6 @@ export default function App() {
 
 {% endraw %}
 {% endhighlight %}
-{% highlight js tabtitle="Server-Backed" %}
-{% raw %}
-
-import {
-  PdfViewerComponent,
-  Toolbar,
-  Magnification,
-  Navigation,
-  LinkAnnotation,
-  BookmarkView,
-  ThumbnailView,
-  Print,
-  TextSelection,
-  TextSearch,
-  Annotation,
-  FormFields,
-  FormDesigner,
-  Inject
-} from '@syncfusion/ej2-react-pdfviewer';
-
-export default function App() {
-  return (
-    <div>
-      <PdfViewerComponent
-        id="container"
-        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        serviceUrl="https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer"
-        readOnlySettings={{ annotations: true, formFields: true, comments: true }}
-        style={{ height: '700px' }}
-      >
-        <Inject
-          services={[
-            Toolbar,
-            Magnification,
-            Navigation,
-            Annotation,
-            LinkAnnotation,
-            BookmarkView,
-            ThumbnailView,
-            Print,
-            TextSelection,
-            TextSearch,
-            FormFields,
-            FormDesigner
-          ]}
-        />
-      </PdfViewerComponent>
-    </div>
-  );
-}
-
-{% endraw %}
-{% endhighlight %}
 {% endtabs %}
 
 ## Lock comments only
@@ -153,6 +100,5 @@ Each flag defaults to `false`, so editing stays enabled until you set that flag 
 
 ## See also
 
-- [Getting started with React Standalone PDF Viewer](../getting-started)
-- [Getting started with React Server-Backed PDF Viewer](../getting-started-with-server-backed)
+- [Getting started with React PDF Viewer](../getting-started)
 - [Lock square or rectangle annotations](./lock-annotation)
