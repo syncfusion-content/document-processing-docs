@@ -499,18 +499,6 @@ To save a workbook as XLSB from the user interface:
 1. In the Spreadsheet ribbon, select **File > Save As**.
 2. Choose **Microsoft Excel Binary Workbook (*.xlsb)** from the available formats.
 
-#### Save as XLSB programmatically
-
-To export as an XLSB file programmatically, invoke the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method and set the `saveType` to `'Xlsb'`:
-
-```javascript
-spreadsheetRef.current?.save({
-  url: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save',
-  fileName: 'Worksheet',
-  saveType: 'Xlsb',
-});
-```
-
 > **Note:** XLSB export currently provides partial feature support. Support for the remaining features is planned for future updates.
 
 #### Feature support for XLSB export
