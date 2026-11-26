@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Read-only support for annotations, form fields, and comments in React PDF Viewer | Syncfusion
-description: Use readOnlySettings in the React PDF Viewer to lock annotations, form fields, and comments for view-only use while keeping navigation, search, zoom, print, and download.
+title: Read-only annotations, forms, and comments | Syncfusion
+description: Lock annotations, form fields, and comments in the React PDF Viewer with readOnlySettings, while navigation, search, zoom, print, and download stay available.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read-only support for annotations, form fields, and comments in React PDF Viewer
+# Read-only annotations, forms, and comments
 
 Use the `readOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to lock that area. Document viewing, page navigation, search, zoom, print, and download stay available.
 

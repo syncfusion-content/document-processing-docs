@@ -318,4 +318,4 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 - [Annotation Events](annotation-event)
 - [Export and Import Annotation](export-import/export-annotation)
 - [Annotation API](annotations-api)
-- [Read-only support for annotations, form fields, and comments](../how-to/read-only-settings)
+- [Read-only annotations, forms, and comments](../how-to/read-only-settings)
