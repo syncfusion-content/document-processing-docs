@@ -12,7 +12,7 @@ keywords: Detect Document Type, Document Classification, Document Detection
 
 ## Detect Document Type from PDF or Image
 
-The Syncfusion<sup>&reg;</sup> Smart Data Extractor library enables document type detection from PDF documents and images. The DetectDocumentType API examines document content to determine its type.
+The Syncfusion<sup>&reg;</sup> Smart Data Extractor library enables document type detection from PDF documents and images. The DetectDocumentType API examines document content to determine its type and returns a `DocumentTypeResult` object. This object contains the detected document type, its confidence score, the matched keywords, and the scores of all candidate document types.
 
 This feature is useful for automated document processing workflows where you need to classify incoming documents before extracting specific data or routing them to appropriate processing pipelines.
 
@@ -31,7 +31,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Detect document type.
-    string documentType = extractor.DetectDocumentType(stream);
+    DocumentTypeResult result = extractor.DetectDocumentType(stream);
+    //Get the detected document type name.
+    string documentType = result.DocumentType;
+    //Get the confidence score (0 to 1).
+    double confidence = result.Confidence;
 }
 
 {% endhighlight %}
@@ -47,9 +51,76 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
     //Detect document type.
-    string documentType = extractor.DetectDocumentType(stream);
+    DocumentTypeResult result = extractor.DetectDocumentType(stream);
+    //Get the detected document type name.
+    string documentType = result.DocumentType;
+    //Get the confidence score (0 to 1).
+    double confidence = result.Confidence;
 }
 			
+{% endhighlight %}
+
+{% endtabs %}
+
+### Read the Detection Result
+
+The `DetectDocumentType` method returns a `DocumentTypeResult` object with the following properties:
+
+| Property | Type | Description |
+|---|---|---|
+| `DocumentType` | `string` | The name of the detected document type. Returns "Unknown" when no document type matches the content. |
+| `Confidence` | `double` | The confidence of the detected type, from 0 to 1, where 1 is the highest. Returns 0 when the type is "Unknown". |
+| `MatchedKeywords` | `IReadOnlyList<string>` | The keywords found in the document that matched the detected type. Empty when no keywords matched. |
+| `Scores` | `IReadOnlyDictionary<string, double>` | The score for every document type that was checked. The key is the type name and the value is its score. |
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.Collections.Generic;
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+DocumentTypeResult result = extractor.DetectDocumentType(stream);
+// Detected document type and its confidence
+string docType = result.DocumentType;
+double confidence = result.Confidence;
+// Keywords that matched the detected type
+foreach (string keyword in result.MatchedKeywords)
+{
+    // Use keyword for validation, logging, or other operations
+}
+// Scores of all candidate document types
+foreach (KeyValuePair<string, double> score in result.Scores)
+{
+    string typeName = score.Key;
+    double typeScore = score.Value;
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Collections.Generic;
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+DocumentTypeResult result = extractor.DetectDocumentType(stream);
+// Detected document type and its confidence
+string docType = result.DocumentType;
+double confidence = result.Confidence;
+// Keywords that matched the detected type
+foreach (string keyword in result.MatchedKeywords)
+{
+    // Use keyword for validation, logging, or other operations
+}
+// Scores of all candidate document types
+foreach (KeyValuePair<string, double> score in result.Scores)
+{
+    string typeName = score.Key;
+    double typeScore = score.Value;
+}
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -112,17 +183,9 @@ using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
 // Add a custom document type with keywords
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { 
-    "purchase order", 
-    "po #", 
-    "po number", 
-    "vendor", 
-    "amount", 
-    "total" 
-});
-
-// Detect document type - will now recognize PurchaseOrder documents
-string docType = extractor.DetectDocumentType(stream);
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "vendor", "amount", "total" });
+// Detect document type will now recognize PurchaseOrder documents
+DocumentTypeResult result = extractor.DetectDocumentType(stream);
 
 {% endhighlight %}
 
@@ -132,17 +195,9 @@ using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
 // Add a custom document type with keywords
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { 
-    "purchase order", 
-    "po #", 
-    "po number", 
-    "vendor", 
-    "amount", 
-    "total" 
-});
-
-// Detect document type - will now recognize PurchaseOrder documents
-string docType = extractor.DetectDocumentType(stream);
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "vendor", "amount", "total" });
+// Detect document type will now recognize PurchaseOrder documents
+DocumentTypeResult result = extractor.DetectDocumentType(stream);
 
 {% endhighlight %}
 
@@ -337,4 +392,4 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {% endhighlight %}
 
 {% endtabs %}
-N> The DetectDocumentType API returns the detected document type as a string, enabling intelligent document routing and automated processing in document management systems.
+N> The DetectDocumentType API returns a `DocumentTypeResult` object that contains the detected document type, its confidence score, the matched keywords, and the scores of all candidate document types, enabling intelligent document routing and automated processing in document management systems.
