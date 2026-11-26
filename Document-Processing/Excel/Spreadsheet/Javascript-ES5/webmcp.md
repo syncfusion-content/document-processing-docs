@@ -97,7 +97,7 @@ For example, a Spreadsheet control may expose tools such as:
 
 - getCellData
 - editCell
-- addSheet
+- insertSheet
 
 An AI assistant can discover these tools and invoke them based on user prompts.
 
@@ -109,7 +109,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'sales',
-        tools: ['getCellData', 'editCell', 'addSheet'],
+        tools: ['getCellData', 'editCell', 'insertSheet'],
         exposeTo: ['https://www.syncfusion.com/']
     },
     openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
@@ -138,7 +138,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'sales',
-        tools: ['getCellData', 'editCell', 'addSheet'],
+        tools: ['getCellData', 'editCell', 'insertSheet'],
         exposeTo: ['https://www.syncfusion.com/']
     },
     openUrl: 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open',
@@ -170,7 +170,7 @@ var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'sales',
-        tools: ['getCellData', 'editCell', 'addSheet'],
+        tools: ['getCellData', 'editCell', 'insertSheet'],
         exposeTo: ['https://www.syncfusion.com/']
     },
     beforeWebMcpToolExecute: function (args) {
