@@ -34,7 +34,11 @@ Client-side export currently supports:
 
 Unlike server-side processing, the `saveUrl` must be omitted for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet"  />
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -42,11 +46,6 @@ import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spre
 const spreadsheet = ref(null);
 
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet"  />
-
-</template>
 ```
 
 
@@ -56,7 +55,12 @@ With this configuration, the Spreadsheet will generate Excel files directly in t
 
 To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#save) method of the Spreadsheet component. When calling this method with client-side processing, the Spreadsheet generates the file directly in the browser and triggers browser download.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet"  />
+  <button type="button" @click="save">Save</button>
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
@@ -66,11 +70,6 @@ const save = () => {
   spreadsheet.value.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
 };
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet"  />
-  <button type="button" @click="save">Save</button>
-</template>
 ```
 
 

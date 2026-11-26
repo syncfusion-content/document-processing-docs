@@ -29,19 +29,17 @@ For open processing, when a file is fetched, it is sent to the ej2-xlsx library.
 
 Unlike server-side processing, the `openUrl` must be omitted for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
-```vue
+```html
+<template>
+  <ejs-spreadsheet ref="spreadsheet" />
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-
 </script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet"  />
-
-</template>
 ```
 
 With this configuration, the Spreadsheet will process all Excel files (.xlsx) directly in the browser without requiring server communication. For specific file-source implementations (local system, URL, or Blob data), see the sections below.
