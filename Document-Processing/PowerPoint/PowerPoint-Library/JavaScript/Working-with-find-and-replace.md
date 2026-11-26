@@ -17,7 +17,7 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 * You can replace the text by matching the case, whole word, and all occurrences or the first occurrence alone.
 * You can highlight the found text in the presentation or in a specific slide.
 
-N> Find searches slide body text only (shape text bodies and table cells) in slide order. Notes, master slides, and layout slides are not searched.
+N> Find searches slide body text (shape text bodies and table cells), notes slides, master slides, and layout slides.
 
 ## Find and replace in PowerPoint presentation
 
@@ -28,13 +28,13 @@ The following code example illustrates how to find all occurrences of a particul
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
 // Finds all the occurrences of a particular text in the PowerPoint presentation.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll('product', false, false);
+let textSelections = pptxDoc.findAll('product', false, false);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -74,15 +74,15 @@ The following code example illustrates how to find all occurrences of a particul
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
-let matchCase: boolean = true;
-let wholeWord: boolean = false;
+let matchCase = true;
+let wholeWord = false;
 // Finds all the occurrences of a particular text which matches the given casing.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll('product', matchCase, wholeWord);
+let textSelections = pptxDoc.findAll('product', matchCase, wholeWord);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -124,15 +124,15 @@ The following code example illustrates how to find all occurrences of a given wh
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
-let matchCase: boolean = false;
-let wholeWord: boolean = true;
+let matchCase = false;
+let wholeWord = true;
 // Finds all the occurrences of a given whole word.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll('product', matchCase, wholeWord);
+let textSelections = pptxDoc.findAll('product', matchCase, wholeWord);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -174,13 +174,13 @@ The following code example illustrates how to find the first occurrence of a par
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
 // Finds the first occurrence of a particular text in the PowerPoint presentation.
-let textSelection: TextFindMatch | undefined = pptxDoc.find('product', false, false);
+let textSelection = pptxDoc.find('product', false, false);
 if (textSelection !== undefined) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -219,13 +219,13 @@ The following code example illustrates how to find text that matches a regular e
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
 // Finds all the occurrences of a given pattern of text in the PowerPoint presentation using a regular expression.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll(/\{[A-Za-z]+\}/);
+let textSelections = pptxDoc.findAll(/\{[A-Za-z]+\}/);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -265,14 +265,14 @@ The following code example illustrates how to find all the occurrences of a part
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, Slide, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
-let slide: Slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Finds all the occurrences of a particular text in the specific slide.
-let textSelections: ReadonlyArray<TextFindMatch> = slide.findAll('product', false, false);
+let textSelections = slide.findAll('product', false, false);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -313,13 +313,13 @@ The following code example illustrates how to find all occurrences of a particul
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
 // Finds all the occurrences of a particular text in the PowerPoint presentation.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll('product', false, false);
+let textSelections = pptxDoc.findAll('product', false, false);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -363,13 +363,13 @@ The following code example illustrates how to find text that matches a regular e
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
 // Finds all the occurrences of a given pattern of text in the PowerPoint presentation using a regular expression.
-let textSelections: ReadonlyArray<TextFindMatch> = pptxDoc.findAll(/\{[A-Za-z]+\}/);
+let textSelections = pptxDoc.findAll(/\{[A-Za-z]+\}/);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
@@ -413,14 +413,14 @@ The following code example illustrates how to find all the occurrences of a part
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation, Slide, TextFindMatch } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation.
 // Opens an existing presentation.
 let pptxDoc = await Presentation.open(data);
-let slide: Slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Finds all the occurrences of a particular text in the specific slide.
-let textSelections: ReadonlyArray<TextFindMatch> = slide.findAll('product', false, false);
+let textSelections = slide.findAll('product', false, false);
 for (let textSelection of textSelections) {
     // Gets the found text as a single text part.
     let foundText = textSelection.getAsOneTextPart();
