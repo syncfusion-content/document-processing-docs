@@ -1226,4 +1226,4 @@ Once a Word document is digitally signed, modifying any content (text, images, s
 ## See Also
 
 * [Ink elements in .NET Word library](./Working-with-Ink)
-* [Word Document Protection in .NET Word](./Working-with-Security)
+* [Word Document Protection in .NET Word](./working-with-security)

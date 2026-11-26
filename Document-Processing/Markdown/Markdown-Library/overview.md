@@ -17,7 +17,7 @@ keywords: markdown, SDK, Automation, API, create, read, edit
 
 {% doccard text="Web API" link="/document-processing/markdown/markdown-library/net/Create-Markdown-Document-in-ASP-NET-Core-WEB-API" icon="/document-processing/word/word-library/net/images/NET.svg" %}
 
-{% doccard text="ASP.NET MVC" link="/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-ASP-NET-MVC" icon="/document-processing/word/word-library/net/images/ASP.NET MVC.svg" %}
+{% doccard text="ASP.NET MVC" link="/document-processing/markdown/markdown-library/net/create-markdown-document-in-asp-net-mvc" icon="/document-processing/word/word-library/net/images/ASP.NET MVC.svg" %}
 
 {% doccard text=".NET MAUI" link="/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-MAUI" icon="/document-processing/word/word-library/net/images/MAUI.svg" %}
 
@@ -33,13 +33,13 @@ keywords: markdown, SDK, Automation, API, create, read, edit
 
 {% doccard text="Linux" link="/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-Linux" icon="/document-processing/word/word-library/net/images/Linux.png" %}
 
-{% doccard text="Mac" link="/document-processing/markdown/markdown-library/net/Create-Markdown-document-in-Mac" icon="/document-processing/word/word-library/net/images/Mac.svg" %}
+{% doccard text="Mac" link="/document-processing/markdown/markdown-library/net/create-markdown-document-in-mac" icon="/document-processing/word/word-library/net/images/Mac.svg" %}
 
-{% doccard text="Azure" link="/document-processing/markdown/markdown-library/net/Create-Word-Document-in-Azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
+{% doccard text="Azure" link="/document-processing/markdown/markdown-library/net/create-word-document-in-azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
 
 {% doccard text="AWS" link="/document-processing/markdown/markdown-library/net/Create-Markdown-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
 
-{% doccard text="GCP" link="/document-processing/markdown/markdown-library/net/Create-Markdown-Document-in-Google-Cloud-Platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
+{% doccard text="GCP" link="/document-processing/markdown/markdown-library/net/create-markdown-document-in-google-cloud-platform" icon="/document-processing/word/word-library/net/images/Google Cloud.svg" %}
 
 {% enddoccards %}
 

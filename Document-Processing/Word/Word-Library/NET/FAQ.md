@@ -156,4 +156,4 @@ The frequently asked questions under each category in Syncfusion<sup>&reg;</sup>
 
 ## Multithreading
 
-* [Does the Word library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/multithreading-word-document-reading-faqs#does-the-word-library-support-multithreading-and-thread-safety)  
+* [Does the Word library support multithreading and thread-safety?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/multithreading-in-word-library-faqs#does-the-word-library-support-multithreading-and-thread-safety)  
