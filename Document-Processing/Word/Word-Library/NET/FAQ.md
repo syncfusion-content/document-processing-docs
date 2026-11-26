@@ -1,6 +1,6 @@
 ---
 title: FAQ Section in .NET Word | Syncfusion
-description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
+description: Learn common questions and answers about using the Syncfusion .NET Word library for document creation, editing, formatting, and automation.
 platform: document-processing
 control: DocIO
 documentation: UG
