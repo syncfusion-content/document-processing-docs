@@ -622,4 +622,4 @@ root.render(<App />);
 - [Add custom data to PDF form fields](./custom-data)  
 - [Form Validation](./form-validation)  
 - [Form fields API](./form-fields-api)
-- [Read-only annotations, forms, and comments](../how-to/read-only-settings)
+- [Read-only support for annotations, form fields, and comments](../how-to/read-only-settings)
