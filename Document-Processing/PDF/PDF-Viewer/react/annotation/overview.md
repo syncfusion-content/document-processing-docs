@@ -19,7 +19,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - Text markup: [Highlight](../annotation/annotation-types/highlight-annotation), [Underline](../annotation/annotation-types/underline-annotation), [Squiggly](../annotation/annotation-types/Squiggly-annotation), [Strikethrough](../annotation/annotation-types/strikethrough-annotation)
 - Shapes: [Line](../annotation/annotation-types/line-annotation), [Arrow](../annotation/annotation-types/arrow-annotation), [Rectangle](../annotation/annotation-types/rectangle-annotation), [Circle](../annotation/annotation-types/circle-annotation), [Polygon](../annotation/annotation-types/polygon-annotation), [Cloud](../annotation/annotation-types/cloud-annotation)
 - Text boxes: [Free Text](../annotation/annotation-types/free-text-annotation), [Callout](../annotation/annotation-types/callout-annotation)
-- Drawing: [Ink](../annotation/annotation-types/ink-annotation) (freehand)
+- Drawing: [Ink](../annotation/annotation-types/ink-annotation) (freehand), [Freehand Highlight](../annotation/annotation-types/freehand-highlight-annotation)
 - Stamps: [Standard and custom stamps](../annotation/annotation-types/stamp-annotation)
 - Notes: [Sticky Notes](../annotation/annotation-types/sticky-notes-annotation) (comments)
 - Redaction: Mark and apply [redactions](../annotation/annotation-types/redaction-annotation)
@@ -29,6 +29,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 
 - [Create annotations](../annotation/create-modify-annotation): Use the toolbar, context menu, or APIs to add highlights, notes, shapes, and more directly onto the PDF document.
 - [Edit annotations](../annotation/create-modify-annotation): Modify existing annotations by moving, resizing, or updating text and style properties like color, opacity, and thickness.
+- [Resize and move annotations](../annotation/resize-move-annotations): Change the size and position of an annotation from the UI or programmatically using the `editAnnotation` API.
 - [Customize annotations](../annotation/customize-annotation): Adjust appearance and behavior—such as fonts, fill colors, and opacity—through the UI or configuration options.
 - [Undo and redo annotations](../annotation/annotations-undo-redo): Revert or reapply annotation actions (add, edit, delete) using toolbar buttons or corresponding APIs.
 - [Import and export annotations](../annotation/export-import/export-annotation): Save and load annotations in JSON or XFDF formats to persist markups across sessions or share them with others.
@@ -41,6 +42,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
 - [Customize Annotation](../annotation/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Remove Annotation](../annotation/delete-annotation)
 - [Handwritten Signature](../annotation/signature-annotation)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)

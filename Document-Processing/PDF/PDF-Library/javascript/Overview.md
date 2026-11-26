@@ -34,6 +34,7 @@ The following are the key features of this [JavaScript PDF Library](https://www.
 * Extract or redact text from PDF files.
 * Extract images from PDF documents.
 * Redact shapes to protect sensitive graphical content.
+* Create linearized PDF files for faster web loading.
 
 ## Supported environments
 
@@ -60,4 +61,4 @@ If the license is not registered, the generated PDFs include a watermark and an 
 
 * [Quickstart tutorial](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 * [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-* [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+* [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)

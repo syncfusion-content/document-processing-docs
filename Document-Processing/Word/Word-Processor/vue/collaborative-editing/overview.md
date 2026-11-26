@@ -40,3 +40,4 @@ Using the distributed cache or database all the editing operations are queued in
 
 - [Collaborative editing using Redis cache in ASP.NET Core](../collaborative-editing/using-redis-cache-asp-net-core)
 - [Collaborative editing using Java](../collaborative-editing/using-redis-cache-java)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

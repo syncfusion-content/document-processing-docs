@@ -90,7 +90,7 @@ For example, a Spreadsheet component may expose tools such as:
 
 - getCellData
 - editCell
-- addSheet
+- insertSheet
 
 An AI assistant can discover these tools and invoke them based on user prompts.
 
@@ -125,8 +125,6 @@ Use the `webMcpSettings` property to customize how WebMCP tools are exposed to A
 | `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
 | `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
 
-{% raw %}
-
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
@@ -135,13 +133,15 @@ import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusio
 Spreadsheet.Inject(WebMcpSpreadsheet);
 
 function App() {
+    const webMcpSettings = {
+        name: 'sales',
+        tools: ['getCellData', 'editCell', 'insertSheet'],
+        exposeTo: ['https://www.syncfusion.com/']
+    };
+
     return (
         <SpreadsheetComponent enableWebMcp={true}
-            webMcpSettings={{
-                name: 'sales',
-                tools: ['getCellData', 'editCell', 'addSheet'],
-                exposeTo: ['https://www.syncfusion.com/']
-            }}
+            webMcpSettings={webMcpSettings}
             openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
         </SpreadsheetComponent>
@@ -152,8 +152,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-
-{% endraw %}
 
 > Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
 
@@ -168,8 +166,6 @@ The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This
 
 > AI-generated requests should always be validated before executing write operations. Restrict access using `exposeTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
 
-{% raw %}
-
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 
@@ -178,6 +174,12 @@ import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusio
 Spreadsheet.Inject(WebMcpSpreadsheet);
 
 function App() {
+    const webMcpSettings = {
+        name: 'sales',
+        tools: ['getCellData', 'editCell', 'insertSheet'],
+        exposeTo: ['https://www.syncfusion.com/']
+    };
+
     const beforeWebMcpToolExecute = (args) => {
         // Example business rule
         if (args.toolName.includes('editCell')) {
@@ -191,11 +193,7 @@ function App() {
 
     return (
         <SpreadsheetComponent enableWebMcp={true}
-            webMcpSettings={{
-                name: 'sales',
-                tools: ['getCellData', 'editCell', 'addSheet'],
-                exposeTo: ['https://www.syncfusion.com/']
-            }}
+            webMcpSettings={webMcpSettings}
             beforeWebMcpToolExecute={beforeWebMcpToolExecute}
             openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
@@ -207,8 +205,6 @@ export default App;
 
 {% endhighlight %}
 {% endtabs %}
-
-{% endraw %}
 
 ## Best practices
 

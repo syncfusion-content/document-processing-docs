@@ -32,8 +32,6 @@ let document: PdfDocument = new PdfDocument(data);
 {% highlight javascript tabtitle="JavaScript" %}
 
 var data = 'JVBERi0xLjcNJeLjz9MNCjEyNSAw...........TU3MTQNCiUlRU9GDQo=';
-// Load an existing PDF document from data as Base64 string
-var document = new ej.pdf.PdfDocumentPdfDocument(data);
 // Load an existing PDF document from a Base64 string
 var document = new ej.pdf.PdfDocument(data);
 
@@ -165,4 +163,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
