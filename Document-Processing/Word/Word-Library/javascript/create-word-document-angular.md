@@ -80,6 +80,18 @@ npm install @syncfusion/ej2-docx --save
 yarn add @syncfusion/ej2-docx
 ```
 
+## Add the Syncfusion License Key
+
+If your project requires a Syncfusion license, register the license key before using the Word API. Add the license registration code in your startup file, such as `main.ts`.
+
+```ts
+import { registerLicense } from '@syncfusion/ej2-base';
+
+registerLicense('YOUR_LICENSE_KEY');
+```
+
+Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
+
 ## Browser and Environment Compatibility
 
 | Environment | Supported version |
@@ -161,7 +173,9 @@ When you click **Create Word document**, the Word file is generated in the brows
 | Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the Word package | Update Angular to 20 or later and run `npm install` again |
+| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `main.ts` and is the correct key for your Syncfusion account |
 
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
+- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
