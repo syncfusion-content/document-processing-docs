@@ -1,26 +1,26 @@
 ---
 layout: post
-title: Read-only support for annotations, form fields, and comments in React PDF Viewer | Syncfusion
-description: Use readOnlySettings in the React PDF Viewer to lock annotations, form fields, and comments for view-only use while keeping navigation, search, zoom, print, and download.
+title: How to Lock Annotations, Forms, and Comments | Syncfusion
+description: Lock annotations, form fields, and comments in the React PDF Viewer for viewing, while page navigation, search, zoom, print, and download stay available.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read-only support for annotations, form fields, and comments in React PDF Viewer
+# How to Lock Annotations, Forms, and Comments
 
 Use the `readOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to lock that area. Document viewing, page navigation, search, zoom, print, and download stay available.
 
 | Property | When set to `true` |
 | --- | --- |
 | `annotations` | Locks every annotation interaction. Users cannot add, select, move, resize, edit, or delete annotations. Comments are locked as well, because comments belong to annotations. |
-| `formFields` | Keeps form fields view-only. Users cannot fill or change field values, and they cannot add, move, resize, or delete fields in the form designer. |
+| `formFields` | Keeps form fields view only. Users cannot fill or change field values, and they cannot add, move, resize, or delete fields in the form designer. |
 | `comments` | Locks comments only when `annotations` is `false`. Existing comments stay visible. Users cannot add, edit, reply to, or delete comments. Annotation drawing and editing stay available. |
 
 If `annotations` is `true`, comments stay locked even when `comments` is `false`.
 
-**Step 1:** Follow the steps in the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide to create a simple PDF Viewer sample in React.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) to create a simple PDF Viewer sample in React.
 
 **Step 2:** Set `readOnlySettings` on `PdfViewerComponent`. The sample below locks annotations, form fields, and comments together.
 
