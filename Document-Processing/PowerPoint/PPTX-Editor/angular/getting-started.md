@@ -124,7 +124,7 @@ import {
 @Component({
     selector: 'app-root',
     template: `<div class="content-wrapper">
-        <ejs-pptxeditor id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        <ejs-pptxeditor id="container" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
         </ejs-pptxeditor>
     </div>`,
     encapsulation: ViewEncapsulation.None,

@@ -4,28 +4,21 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    
-    const openFromUrl = (): void => {
-        fetch('https://cdn.syncfusion.com/downloads/spreadsheet/Sample.xlsx')
-            .then(response => response.blob())
-            .then(blob => {
-                const file = new File([blob], 'Sample.xlsx', { type: blob.type });
-                if (spreadsheetRef.current) {
-                    spreadsheetRef.current.open({ file: file });
-                }
-            })
-            .catch(error => {
-                console.error('Error loading file from URL:', error);
-            });
-    };
+    React.useEffect(() => {
+        const fetchData = async (): Promise<void> => {
+            const response: Response = await fetch('https://cdn.syncfusion.com/scripts/spreadsheet/Sample.xlsx'); // fetch the remote url
+            const fileBlob: Blob = await response.blob(); // convert the excel file to blob
+            const file: File = new File([fileBlob], 'Sample.xlsx'); //convert the blob into file
+            let spreadsheet = spreadsheetRef.current;
+            if (spreadsheet) {
+                spreadsheet.open({ file }); // open the file into Spreadsheet
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
-        <div>
-            <button onClick={openFromUrl}>Open from URL</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowOpen={true} />
-        </div>
+        <SpreadsheetComponent ref={spreadsheetRef} />
     );
 };
 export default App;

@@ -75,7 +75,7 @@ This sample demonstrates how to convert an A4-sized PDF page to A3 size using th
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfTemplate, PdfPageSettings, PdfMargins } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfTemplate, PdfPageSettings, PdfMargins, Size } from '@syncfusion/ej2-pdf';
 
 // Load the source PDF document containing an A4-sized page
 let source: PdfDocument = new PdfDocument(pdfData);
@@ -92,7 +92,7 @@ settings.margins = new PdfMargins(0);
 // Add the A3-sized page to the destination document
 let page: PdfPage = document.addPage(settings);
 // Get the client size of the destination page
-let clientSize: { width: number, height: number } = page.getClientSize();
+let clientSize: Size = page.graphics.clientSize;
 // Draw and scale the A4 page template to fit the A3 page
 page.graphics.drawTemplate(template, {
     x: 0,
@@ -123,7 +123,7 @@ settings.margins = new ej.pdf.PdfMargins(0);
 // Add the A3-sized page to the destination document
 var page = document.addPage(settings);
 // Get the client size of the destination page
-var clientSize = page.getClientSize();
+var clientSize = page.graphics.clientSize;
 // Draw and scale the A4 page template to fit the A3 page
 page.graphics.drawTemplate(template, {
     x: 0,

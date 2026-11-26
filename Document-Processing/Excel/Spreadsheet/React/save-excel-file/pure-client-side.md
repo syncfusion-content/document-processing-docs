@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Using client-side processing with React Spreadsheet
+# Export Excel files using client-side processing in React Spreadsheet
 
-Client-side processing generates workbook files directly within the browser without sending data to a Save service. When `allowSave` property is default enabled and `saveUrl` is not configured, the Spreadsheet leverages its integrated client-side file-generation functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a client-side workflow to generate workbook files directly in the browser without sending data to a Save service. When the [allowSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsave) property is enabled by default and the [saveUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) property is not configured, the Spreadsheet uses its integrated client-side file-generation functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Export
 
@@ -23,7 +23,7 @@ Client-side export provides several key advantages over server-side processing:
 
 ## How client-side export works
 
-For save processing, the Spreadsheet component maps its in-memory workbook model—including cell data, formulas, styles, formatting, merged cells, and worksheet settings—directly into the @syncfusion/ej2-xlsx workbook object model. The ej2-xlsx library then compiles and generates the fully formatted Excel (.xlsx) binary file directly in the browser without any server dependency.
+For save processing, the Spreadsheet component maps its in-memory workbook model-including cell data, formulas, styles, formatting, merged cells, and worksheet settings-directly into the @syncfusion/ej2-xlsx workbook object model. The ej2-xlsx library then compiles and generates the fully formatted Excel (.xlsx) binary file directly in the browser without any server dependency.
 
 ## Supported formats
 
@@ -34,7 +34,7 @@ Client-side export currently supports:
 
 Unlike server-side processing, the `saveUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
-```jsx
+```javascript
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';

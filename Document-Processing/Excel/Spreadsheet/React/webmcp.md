@@ -90,7 +90,7 @@ For example, a Spreadsheet component may expose tools such as:
 
 - getCellData
 - editCell
-- addSheet
+- insertSheet
 
 An AI assistant can discover these tools and invoke them based on user prompts.
 
@@ -133,13 +133,15 @@ import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusio
 Spreadsheet.Inject(WebMcpSpreadsheet);
 
 function App() {
+    const webMcpSettings = {
+        name: 'sales',
+        tools: ['getCellData', 'editCell', 'insertSheet'],
+        exposeTo: ['https://www.syncfusion.com/']
+    };
+
     return (
         <SpreadsheetComponent enableWebMcp={true}
-            webMcpSettings={{
-                name: 'sales',
-                tools: ['getCellData', 'editCell', 'addSheet'],
-                exposeTo: ['https://www.syncfusion.com/']
-            }}
+            webMcpSettings={webMcpSettings}
             openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
         </SpreadsheetComponent>
@@ -172,6 +174,12 @@ import { SpreadsheetComponent, Spreadsheet, WebMcpSpreadsheet } from '@syncfusio
 Spreadsheet.Inject(WebMcpSpreadsheet);
 
 function App() {
+    const webMcpSettings = {
+        name: 'sales',
+        tools: ['getCellData', 'editCell', 'insertSheet'],
+        exposeTo: ['https://www.syncfusion.com/']
+    };
+
     const beforeWebMcpToolExecute = (args) => {
         // Example business rule
         if (args.toolName.includes('editCell')) {
@@ -185,11 +193,7 @@ function App() {
 
     return (
         <SpreadsheetComponent enableWebMcp={true}
-            webMcpSettings={{
-                name: 'sales',
-                tools: ['getCellData', 'editCell', 'addSheet'],
-                exposeTo: ['https://www.syncfusion.com/']
-            }}
+            webMcpSettings={webMcpSettings}
             beforeWebMcpToolExecute={beforeWebMcpToolExecute}
             openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open' 
             saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'>
