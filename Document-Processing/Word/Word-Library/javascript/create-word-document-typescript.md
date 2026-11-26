@@ -92,23 +92,11 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-docx --save
 ```
 
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the following code at the top of your entry point (e.g., `index.ts`):
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a Word document using TypeScript
 
 This sample is intended for **browser-based** TypeScript applications. It is not designed for server-side rendering or Node.js-only execution.
 
-* Add a simple button to `index.html` and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
+* Add a simple button to the `index.html` file in the project root and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -123,6 +111,12 @@ This sample is intended for **browser-based** TypeScript applications. It is not
 </html>
 {% endhighlight %}
 {% endtabs %}
+
+* Create a `src` folder in the project root and create an `index.ts` file inside it. The `index.html` file loads this file through the `<script type="module">` tag.
+
+```bash
+mkdir src
+```
 
 * Include the following namespaces in the `index.ts` file.
 
@@ -151,9 +145,20 @@ document.getElementById('normalButton').onclick = (): void => {
 {% endhighlight %}
 {% endtabs %}
 
+## Project Structure
+
+After adding the `src` folder with the `index.ts` file and the `index.html` file to the project root, the final project structure is:
+
+```text
+word-typescript-app/
+├── src/
+│   └── index.ts
+├── index.html
+└── package.json
+```
+
 ## Code Explanation
 
-- `registerLicense(key)` — registers the Syncfusion license key at application startup. Required for commercial usage.
 - `WordDocument.create()` — creates a new Word document instance.
 - `document.sections[0]` — accesses the first section of the document.
 - `section.body.paragraphs[0]` — accesses the first paragraph in the section body.
@@ -185,9 +190,7 @@ N> The first run may take a few seconds while Vite optimizes dependencies. Subse
 | `ReferenceError: document is not defined` | The code ran in a Node-only context | This sample is browser-only; run it in a browser via `npm start` |
 | `Cannot GET /` | The dev server is not running | Run `npm start` and wait for the local URL |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `index.ts` and is the correct key for your Syncfusion account |
 
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

@@ -46,6 +46,16 @@ ng new my-word-app
 cd my-word-app
 ```
 
+The final project structure is:
+
+```text
+my-word-app/
+└── src/
+    └── app/
+        ├── app.html
+        └── app.ts
+```
+
 ### Option B: Use an Existing Angular Project
 
 If you already have an Angular project, open its root folder and continue with the package installation steps:
@@ -70,18 +80,6 @@ npm install @syncfusion/ej2-docx --save
 yarn add @syncfusion/ej2-docx
 ```
 
-## Add the Syncfusion License Key
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the license registration code in your startup file, such as `main.ts`.
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Browser and Environment Compatibility
 
 | Environment | Supported version |
@@ -100,27 +98,28 @@ Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more i
 
 Add a button to the Angular template and attach a click handler that uses the JavaScript Word Library to create a new Word document.
 
-* Add the following button to `app.component.html`.
+* Modify `app.html` by adding the following button.
 
 {% tabs %}
-{% highlight html tabtitle="app.component.html" %}
-<button id="normalButton">Create Word document</button>
+{% highlight html tabtitle="app.html" %}
+<button (click)="createDocument()">Create Document</button>
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following namespaces in `app.component.ts`.
+* Include the following namespaces in `app.ts`.
 
 {% tabs %}
-{% highlight ts tabtitle="~/app.component.ts" %}
+{% highlight ts tabtitle="~/app.ts" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following code in the click event of the button in `app.component.ts` to generate a Word document.
+* Include the following code in the click event of the button in `app.ts` to generate a Word document.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-document.getElementById('normalButton').onclick = (): void => {
+{% highlight ts tabtitle="app.ts" %}
+
+  createDocument(): void {
     // Create a Word document
     const document = WordDocument.create();
     // Access the section
@@ -131,7 +130,7 @@ document.getElementById('normalButton').onclick = (): void => {
     paragraph.appendText('Hello World!!!');
     // Save and download Word document
     document.save('Output.docx');
-};
+  }
 {% endhighlight %}
 {% endtabs %}
 
@@ -157,14 +156,12 @@ When you click **Create Word document**, the Word file is generated in the brows
 
 | Problem | Cause | Resolution |
 |---|---|---|
-| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.component.ts` |
+| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-docx'` | The package is not installed | Run `npm install @syncfusion/ej2-docx --save` |
 | Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the Word package | Update Angular to 20 or later and run `npm install` again |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `main.ts` and is the correct key for your Syncfusion account |
 
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

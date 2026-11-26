@@ -56,18 +56,6 @@ All Syncfusion<sup>®</sup> JS 2 packages are published in the `npmjs.com` regis
 npm install @syncfusion/ej2-docx --save
 ```
 
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the following code at the top of `App.jsx`:
-
-```javascript
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a Word Document
 
 Replace the contents of `App.jsx` with the following code. The file imports the required classes from `@syncfusion/ej2-docx` and creates a Word document.
@@ -77,11 +65,7 @@ Replace the contents of `App.jsx` with the following code. The file imports the 
 {% raw %}
 
 import React from 'react';
-import { registerLicense } from '@syncfusion/ej2-base';
-import { WordDocument } from '@syncfusion/ej2-docx';
-
-// Optional: register the Syncfusion license key (required for commercial usage)
-registerLicense('YOUR_LICENSE_KEY');
+import {WordDocument} from '@syncfusion/ej2-docx';
 
 export default function App() {
 
@@ -136,4 +120,3 @@ The generated Word document contains a single paragraph with the text **"Hello W
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

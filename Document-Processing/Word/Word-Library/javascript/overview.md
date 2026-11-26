@@ -66,11 +66,3 @@ Supported Word document scenarios include:
 * Opening existing DOCX documents
 * Modifying and saving Word documents
 * Working with documents that contain mixed content and formatting
-
-## Licensing
-
-A valid Syncfusion license is required to use the JavaScript Word Library in commercial applications. A free community license is available for individuals and small businesses; trial licenses are available for evaluation.
-
-* [Generate a license key](https://help.syncfusion.com/document-processing/licensing/overview)
-
-If the license is not registered, the generated Word documents include a watermark and an evaluation notice.
