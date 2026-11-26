@@ -157,7 +157,7 @@ app.listen(PORT, () => {
 {% endhighlight %}
 {% endtabs %}
 
-N> If you prefer ESM, add `"type": "module"` to `package.json` and replace the `require` calls with `import express from 'express'` and `import docx from '@syncfusion/ej2-docx'; const { WordDocument } = docx;`.
+N> If you prefer ESM, add `"type": "module"` to `package.json` and replace the `require` calls with `import express from 'express'` and `import { WordDocument } from '@syncfusion/ej2-docx'`.
 
 ### Code Explanation
 

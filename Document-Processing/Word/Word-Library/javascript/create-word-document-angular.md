@@ -46,16 +46,6 @@ ng new my-word-app
 cd my-word-app
 ```
 
-The final project structure is:
-
-```text
-my-word-app/
-└── src/
-    └── app/
-        ├── app.html
-        └── app.ts
-```
-
 ### Option B: Use an Existing Angular Project
 
 If you already have an Angular project, open its root folder and continue with the package installation steps:
@@ -110,28 +100,27 @@ Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more i
 
 Add a button to the Angular template and attach a click handler that uses the JavaScript Word Library to create a new Word document.
 
-* Modify `app.html` by adding the following button.
+* Add the following button to `app.component.html`.
 
 {% tabs %}
-{% highlight html tabtitle="app.html" %}
-<button (click)="createDocument()">Create Document</button>
+{% highlight html tabtitle="app.component.html" %}
+<button id="normalButton">Create Word document</button>
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following namespaces in `app.ts`.
+* Include the following namespaces in `app.component.ts`.
 
 {% tabs %}
-{% highlight ts tabtitle="~/app.ts" %}
+{% highlight ts tabtitle="~/app.component.ts" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following code in the click event of the button in `app.ts` to generate a Word document.
+* Include the following code in the click event of the button in `app.component.ts` to generate a Word document.
 
 {% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-  createDocument(): void {
+{% highlight ts tabtitle="app.component.ts" %}
+document.getElementById('normalButton').onclick = (): void => {
     // Create a Word document
     const document = WordDocument.create();
     // Access the section
@@ -142,7 +131,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
     paragraph.appendText('Hello World!!!');
     // Save and download Word document
     document.save('Output.docx');
-  }
+};
 {% endhighlight %}
 {% endtabs %}
 
@@ -168,7 +157,7 @@ When you click **Create Word document**, the Word file is generated in the brows
 
 | Problem | Cause | Resolution |
 |---|---|---|
-| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.ts` |
+| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.component.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-docx'` | The package is not installed | Run `npm install @syncfusion/ej2-docx --save` |
 | Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
