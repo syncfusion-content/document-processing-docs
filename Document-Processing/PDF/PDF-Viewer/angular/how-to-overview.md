@@ -39,6 +39,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [PageRenderInitiate and PageRenderComplete event](./how-to/pagerenderstarted-pagerendercompleted)
 * [Open and Close Bookmark pane programmatically](./how-to/open-bookmark)
 * [Locking Form Fields in a PDF document](./how-to/lock-formfield-in-a-document)
+* [How to set read only mode for annotations, form fields, and comments?](./how-to/read-only-settings)
 * [SignatureSelect and SignatureUnselect event](./how-to/signatureselect-signatureunselect)
 * [Controlling File Downloads](./how-to/download-start-event)
 * [Minimum and Maximum Zoom Properties](./how-to/min-max-zoom)

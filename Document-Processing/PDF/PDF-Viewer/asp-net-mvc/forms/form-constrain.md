@@ -289,3 +289,4 @@ You can configure default flag values so that form fields added using the [Form 
 - [Form validation](./form-validation)  
 - [Form field events](./form-field-events)
 - [Form fields API](./form-fields-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

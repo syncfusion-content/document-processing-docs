@@ -233,3 +233,4 @@ The selected form field and its associated widget annotation are permanently rem
 - [Custom Data](./custom-data)
 - [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)
 - [Form field events](./form-field-events)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

@@ -53,6 +53,7 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to import annotations from the PDF document?](./how-to/import-annotations)
 * [How to import and export annotations in PDF Viewer?](./how-to/import-export-annotation-js)
 * [How to load a PDF document in PDF Viewer?](./how-to/load-document)
+* [How to set read only mode for annotations, form fields, and comments?](./how-to/read-only-settings)
 * [How to set the minimum and maximum zoom percentage?](./how-to/min-max-zoom-js)
 * [How to open the bookmark pane when the document is loaded?](./how-to/open-bookmark-js)
 * [How to open the thumbnail pane when the document is loaded?](./how-to/open-thumbnail)

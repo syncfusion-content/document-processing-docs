@@ -201,3 +201,4 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 - [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
 - [Annotation Events](../annotation/annotation-event)
 - [Annotation API](../annotation/annotations-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

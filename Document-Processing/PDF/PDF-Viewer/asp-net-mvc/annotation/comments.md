@@ -172,3 +172,7 @@ The following example logs comments in response to a button click.
 
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)
