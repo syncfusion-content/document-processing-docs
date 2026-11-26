@@ -117,4 +117,4 @@ Create and customize interactive fields directly on the PDF page.
 
 - [Filling PDF Forms](./form-filling)
 - [Form Designer](./form-designer)
-- [Read only annotations, forms, and comments](../how-to/read-only-settings)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

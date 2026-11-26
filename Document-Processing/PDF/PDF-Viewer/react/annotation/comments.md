@@ -553,4 +553,4 @@ These review patterns are especially useful in content editing, design review, l
 - [Annotation in Mobile View](../annotation/annotations-in-mobile-view)  
 - [Annotation Events](../annotation/annotation-event)  
 - [Annotation API](../annotation/annotations-api)
-- [Read only annotations, forms, and comments](../how-to/read-only-settings)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

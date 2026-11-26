@@ -138,7 +138,7 @@ Behavior notes
 - [Customize Annotation](customize-annotation)
 - [Resize and Move Annotations](resize-move-annotations)
 - [Remove Annotation](delete-annotation)
-- [Read only annotations, forms, and comments](../how-to/read-only-settings)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)
 - [Handwritten Signature](signature-annotation)
 - [Export and Import Annotation](export-import/export-annotation)
 - [Annotation in Mobile View](annotations-in-mobile-view)
