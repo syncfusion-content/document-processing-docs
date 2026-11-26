@@ -135,7 +135,7 @@ The following document types are supported by default:
 
 | Document Type | Keywords |
 |---|---|
-| **Invoice** | invoice no, invoice, invoice number, inv no, invoice to, invoice to:, bill to, order id, order id:, invoice date, order date, order date:, date, vendor name, vendor, total amount, amount, invoice total, gross total, net total, subtotal, supplier, product id, quantity, unit price, price |
+| **Invoice** | invoice no, invoice, invoice number, invoice to, invoice to:, bill to, order id, order id:, invoice date, order date, order date:, date, vendor name, vendor, total amount, amount, invoice total, gross total, net total, subtotal, supplier, product id, quantity, unit price, price |
 | **Receipt** | receipt no, receipt, receipt id, receipt number, receipt date, store name, merchant name, amount, total, receipt total, payment method, register, transaction id, clerk |
 | **Contract** | contract no, contract, contract number, contract id, effective date, parties, contract value, agreement date, start date, end date, terms, clause, signature, signatory, vendor, vendor address |
 | **LeaseAgreement** | lease no, agreement, lease, lease number, lease id, tenant name, tenant, landlord name, landlord, lease start date, start date, lease end date, end date, lease date, rental amount, rent, property address, address |
