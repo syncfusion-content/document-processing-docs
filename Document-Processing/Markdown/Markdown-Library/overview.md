@@ -35,7 +35,7 @@ keywords: markdown, SDK, Automation, API, create, read, edit
 
 {% doccard text="Mac" link="/document-processing/markdown/markdown-library/net/create-markdown-document-in-mac" icon="/document-processing/word/word-library/net/images/Mac.svg" %}
 
-{% doccard text="Azure" link="/document-processing/markdown/markdown-library/net/create-word-document-in-azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
+{% doccard text="Azure" link="/document-processing/markdown/markdown-library/net/create-markdown-document-in-azure" icon="/document-processing/word/word-library/net/images/Azure.svg" %}
 
 {% doccard text="AWS" link="/document-processing/markdown/markdown-library/net/Create-Markdown-Document-in-AWS" icon="/document-processing/word/word-library/net/images/AWS.svg" %}
 
