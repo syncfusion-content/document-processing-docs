@@ -65,6 +65,59 @@ using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess
 {% endhighlight %}
 {% endtabs %}
 
+## Convert a range of PDF pages to Excel
+
+To convert a specific range of PDF pages from the PDF document into Excel by using the **ExtractDataAsExcel** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.XlsIO;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Set the page range for conversion (example: pages 2 to 4).
+    extractor.PageRange = new int[,] { { 2, 4 } };
+    //Extract data from the selected pages as Excel.
+    IWorkbook excel = extractor.ExtractDataAsExcel(stream);
+    //Save the extracted Excel data into an output file.
+    excel.SaveAs("Output.xlsx");
+    excel.Close();
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.IO;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.XlsIO;
+
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Set the page range for conversion (example: pages 2 to 4).
+    extractor.PageRange = new int[,] { { 2, 4 } };
+    //Extract data from the selected pages as Excel.
+    IWorkbook excel = extractor.ExtractDataAsExcel(stream);
+    //Save the extracted Excel data into an output file.
+    excel.SaveAs("Output.xlsx");
+    excel.Close();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+> **Note:** If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, *Input.jpg* or *Input.png*). The rest of the code remains 
 
 ## Supported and Unsupported PDF Elements
 
