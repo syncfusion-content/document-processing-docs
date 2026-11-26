@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data security and compliance in React DOCX Editor | Syncfusion
-description: Find frequently asked questions about data security and compliance in React DOCX Editor control.
+description: Find frequently asked questions about data security, compliance and AI usage in React DOCX Editor control.
 control: Data security and compliance 
 platform: document-processing
 documentation: ug
