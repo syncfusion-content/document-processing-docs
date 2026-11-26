@@ -392,4 +392,5 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {% endhighlight %}
 
 {% endtabs %}
+
 N> The DetectDocumentType API returns a `DocumentTypeResult` object that contains the detected document type, its confidence score, the matched keywords, and the scores of all candidate document types, enabling intelligent document routing and automated processing in document management systems.
