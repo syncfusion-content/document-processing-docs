@@ -192,7 +192,7 @@ The example adds two regions on page 0. The first region uses a custom appearanc
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfFontFamily, PdfFontStyle, PdfBrush } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document

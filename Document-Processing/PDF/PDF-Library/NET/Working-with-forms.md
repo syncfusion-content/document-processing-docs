@@ -1447,6 +1447,87 @@ loadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-signatre-field-in-existing-PDF-document).
 
 
+### Add lock options to an unsigned signature field
+
+This example selects applicant fields for locking when the approval field is signed, leaving manager comments outside this lock policy.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Security;
+
+using (PdfDocument document = new PdfDocument())
+{
+    PdfPage page = document.Pages.Add();
+
+    PdfTextBoxField applicantName = new PdfTextBoxField(page, "Applicant.Name");
+    applicantName.Bounds = new RectangleF(50, 50, 200, 25);
+    document.Form.Fields.Add(applicantName);
+
+    PdfTextBoxField applicantDepartment =
+        new PdfTextBoxField(page, "Applicant.Department");
+    applicantDepartment.Bounds = new RectangleF(50, 90, 200, 25);
+    document.Form.Fields.Add(applicantDepartment);
+
+    PdfTextBoxField managerComments = new PdfTextBoxField(page, "Manager.Comments");
+    managerComments.Bounds = new RectangleF(50, 130, 200, 50);
+    document.Form.Fields.Add(managerComments);
+
+    PdfSignatureField approval = new PdfSignatureField(page, "ManagerApproval");
+    approval.Bounds = new RectangleF(50, 200, 200, 50);
+    approval.LockOptions = new PdfSignatureLockOptions(
+        PdfSignatureLockAction.Include,
+        new string[] { "Applicant.Name", "Applicant.Department" },
+        PdfCertificationFlags.AllowFormFill);
+    document.Form.Fields.Add(approval);
+
+    document.Save("ApprovalTemplate.pdf");
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Security
+
+Using document As New PdfDocument()
+    Dim page As PdfPage = document.Pages.Add()
+
+    Dim applicantName As New PdfTextBoxField(page, "Applicant.Name")
+    applicantName.Bounds = New RectangleF(50, 50, 200, 25)
+    document.Form.Fields.Add(applicantName)
+
+    Dim applicantDepartment As New PdfTextBoxField(page, "Applicant.Department")
+    applicantDepartment.Bounds = New RectangleF(50, 90, 200, 25)
+    document.Form.Fields.Add(applicantDepartment)
+
+    Dim managerComments As New PdfTextBoxField(page, "Manager.Comments")
+    managerComments.Bounds = New RectangleF(50, 130, 200, 50)
+    document.Form.Fields.Add(managerComments)
+
+    Dim approval As New PdfSignatureField(page, "ManagerApproval")
+    approval.Bounds = New RectangleF(50, 200, 200, 50)
+    approval.LockOptions = New PdfSignatureLockOptions(
+        PdfSignatureLockAction.Include,
+        New String() {"Applicant.Name", "Applicant.Department"},
+        PdfCertificationFlags.AllowFormFill)
+    document.Form.Fields.Add(approval)
+
+    document.Save("ApprovalTemplate.pdf")
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ### Add an image to a PDF form field
 
 A PDF form field can display an image by assigning a custom image appearance to a button field. This approach is useful for creating image-based buttons, displaying logos, or showing other visual elements within an interactive PDF form.
