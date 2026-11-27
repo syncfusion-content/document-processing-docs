@@ -146,10 +146,10 @@ root.render(<App />);
 The following Excel file formats are supported for opening in the Spreadsheet component:
 
 * Microsoft Excel Workbook (.xlsx)
+* Microsoft Excel Binary Workbook(.xlsb)
 * Microsoft Excel 97-2003 Workbook (.xls)
 * Comma-Separated Values (.csv)
 * Excel Macro-Enabled Workbook (.xlsm)
-* Excel Binary Workbook (.xlsb)
 
 ## Import options
 
