@@ -25,11 +25,11 @@ Refer to the following table.
 
 | Module | Dependent modules to be injected for extending the functionality of PPTX Editor in your application | Property to enable the functionality for a PPTX Editor instance |
 |---|---|---|
-|Toolbar|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enableToolbar: true });`|
-|ThumbnailView|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.ThumbnailView)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enableThumbnail: true });`|
-|Navigation|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Navigation)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enableNavigation: true });`|
-|Magnification|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Magnification)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enableMagnification: true });`|
-|Print|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Print)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enablePrint: true });`|
-|SlideShow|`ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.SlideShow)`|`var pptxeditor = new ej.pptxeditor.PptxEditor({ enableSlideShow: true });`|
+|Toolbar|`PptxEditor.Inject(Toolbar)`|`var pptxeditor = new PptxEditor({ enableToolbar: true });`|
+|ThumbnailView|`PptxEditor.Inject(ThumbnailView)`|`var pptxeditor = new PptxEditor({ enableThumbnail: true });`|
+|Navigation|`PptxEditor.Inject(Navigation)`|`var pptxeditor = new PptxEditor({ enableNavigation: true });`|
+|Magnification|`PptxEditor.Inject(Magnification)`|`var pptxeditor = new PptxEditor({ enableMagnification: true });`|
+|Print|`PptxEditor.Inject(Print)`|`var pptxeditor = new PptxEditor({ enablePrint: true });`|
+|SlideShow|`PptxEditor.Inject(SlideShow)`|`var pptxeditor = new PptxEditor({ enableSlideShow: true });`|
 
 These modules should be injected into the PPTX Editor using the `Inject` directive.
