@@ -219,3 +219,4 @@ pdfviewer.signatureFieldSettings = {
 - [Add custom data to PDF form fields](./custom-data)  
 - [Form Validation](./form-validation)  
 - [Form fields API](./form-fields-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

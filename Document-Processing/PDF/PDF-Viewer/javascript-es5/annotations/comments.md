@@ -326,3 +326,4 @@ document.getElementById('checkComments').addEventListener('click', function () {
 - [Annotation in Mobile View](../annotations/annotations-in-mobile-view)
 - [Annotation Events](../annotations/annotation-event)
 - [Annotation API](../annotations/annotations-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

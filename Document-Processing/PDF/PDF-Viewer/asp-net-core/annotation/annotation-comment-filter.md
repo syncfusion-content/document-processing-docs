@@ -289,3 +289,4 @@ You can combine multiple filter criteria to create more specific filters:
 - [Annotation Events](../annotation/annotation-event)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)
 - [Annotation API](../annotation/annotations-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

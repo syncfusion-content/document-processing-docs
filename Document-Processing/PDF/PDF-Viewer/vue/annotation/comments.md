@@ -178,3 +178,7 @@ const documentLoad = () => {
 {% endtabs %}
 
 >The annotation will be deleted on deleting the comment using comment panel.
+
+## See also
+
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

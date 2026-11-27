@@ -279,3 +279,4 @@ You can combine multiple filter criteria to create more specific filters:
 - [Resize and Move Annotations](./resize-move-annotations)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

@@ -52,3 +52,4 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - [Annotation Events](../annotations/annotation-event)
 - [Annotation Undo Redo](../annotations/annotations-undo-redo)
 - [Annotation API](../annotations/annotations-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

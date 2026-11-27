@@ -320,3 +320,4 @@ pdfviewer.enableFormDesignerToolbar(true); // show
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)
 - [Form Validation](./form-validation)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

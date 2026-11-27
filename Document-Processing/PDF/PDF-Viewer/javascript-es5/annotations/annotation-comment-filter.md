@@ -264,3 +264,4 @@ document.getElementById('clearFilterBtn').addEventListener('click', function() {
 - [Annotation Events](../annotations/annotation-event)
 - [Export and Import Annotation](../annotations/export-import/export-annotation)
 - [Annotation API](../annotations/annotations-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)

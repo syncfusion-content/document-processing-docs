@@ -1,0 +1,103 @@
+---
+layout: post
+title: Read-Only Mode in Vue PDF Viewer | Syncfusion
+description: Set read only mode for annotations, form fields, and comments in the Vue PDF Viewer. Page navigation, search, zoom, print, and download stay available.
+control: PDF Viewer
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Read-Only Mode in Vue PDF Viewer
+
+Use the `readOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to make that area read only. Document viewing, page navigation, search, zoom, print, and download stay available.
+
+| Property | When set to `true` |
+| --- | --- |
+| `annotations` | Makes every annotation interaction read only. Users cannot add, select, move, resize, edit, or delete annotations. Comments are read only as well, because comments belong to annotations. |
+| `formFields` | Keeps form fields view only. Users cannot fill or change field values, and they cannot add, move, resize, or delete fields in the form designer. |
+| `comments` | Makes comments read only when `annotations` is `false`. Existing comments stay visible. Users cannot add, edit, reply to, or delete comments. Annotation drawing and editing stay available. |
+
+If `annotations` is `true`, comments stay read only even when `comments` is `false`.
+
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) to create a simple PDF Viewer sample in Vue.
+
+**Step 2:** Set `readOnlySettings` on `ejs-pdfviewer`. The sample below makes annotations, form fields, and comments read only together.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      :readOnlySettings="readOnlySettings"
+      style="height: 640px">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  LinkAnnotation,
+  BookmarkView,
+  ThumbnailView,
+  Print,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib',
+      readOnlySettings: { annotations: true, formFields: true, comments: true }
+    };
+  },
+  provide: {
+    PdfViewer: [
+      Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner
+    ]
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Read only comments
+
+Set `comments` to `true` and leave `annotations` as `false` when users may still add and edit annotations, but must only view existing comments.
+
+```js
+readOnlySettings: { annotations: false, formFields: false, comments: true }
+```
+
+## Read only form fields
+
+Set `formFields` to `true` when users may edit annotations and comments, but must only view form fields. Filling a field and designing fields are both restricted.
+
+```js
+readOnlySettings: { annotations: false, formFields: true, comments: false }
+```
+
+Each flag defaults to `false`, so editing stays enabled until you set that flag to `true`.
+
+## See also
+
+- [Getting started with Vue PDF Viewer](../getting-started)
