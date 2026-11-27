@@ -24,6 +24,7 @@ The following list highlights the core capabilities of the Syncfusion<sup>&reg;<
 * **Form recognition:** detects and extracts form fields (text inputs, checkboxes, radio buttons) with field types and values.  
 * **Page‑level control:** extract data from specific pages or defined page ranges.  
 * **Confidence thresholding:** filters results based on a configurable confidence score (0.0–1.0).  
+* **Document type detection:** classifies a PDF or image as an invoice, receipt, contract, or other type, with a confidence score and the matched keywords, so you can route files before extraction.  
 * **Deterministic performance:** ensures predictable, repeatable extraction across environments including Windows, Linux, Azure, and Docker.  
  
 ## JSON Output Structure and Attributes
