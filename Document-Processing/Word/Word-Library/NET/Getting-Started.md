@@ -6,7 +6,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Loading and Saving Word document in .NET Word
+# Creating and Saving Word document in .NET Word
 
 To quickly get started with the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
@@ -712,28 +712,28 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all).
 
-## Performing Mail merge
+## Performing Mail Merge
 
-Essential<sup>&reg;</sup> DocIO allows you to generate documents by filling data in a template document from a data source. The Mail merge operation automatically maps the column name in the data source and the names of the merge fields in the template Word document and fills the data.  
+Essential<sup>&reg;</sup> DocIO allows you to generate documents by filling data in a template document from a data source. The Mail Merge operation automatically maps the column name in the data source and the names of the merge fields in the template Word document and fills the data.  
 
-The following data sources are supported by Essential<sup>&reg;</sup> DocIO for performing Mail merge.
+The following data sources are supported by Essential<sup>&reg;</sup> DocIO for performing Mail Merge.
 
 * String Arrays
 * ADO.NET objects
 * Business Objects
 * Dynamic objects
 
-Also, you can perform more than one Mail merge operation over the same template to generate the document as per your requirement.
+Also, you can perform more than one Mail Merge operation over the same template to generate the document as per your requirement.
 
-Follow the given steps to perform a simple Mail merge in a Word document.
+Follow the given steps to perform a simple Mail Merge in a Word document.
 
 Let’s consider that you have a template Word document with merge fields as shown.
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.jpeg)
 
-The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail merge from various data sources. The Mail merge operation replaces the matching merge fields with the respective data.
+The [MailMerge](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html) class provides various overloads for the [Execute](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_Execute_System_String___System_String___) method to perform Mail Merge from various data sources. The Mail Merge operation replaces the matching merge fields with the respective data.
 
-The following code example shows how to perform a simple Mail merge by using a string array.
+The following code example shows how to perform a simple Mail Merge by using a string array.
 
 {% tabs %}
 
@@ -792,7 +792,7 @@ The resultant Word document looks as follows.
 
 ### Simple Mail merge with Group
 
-You can perform Mail merge with a group to append multiple records from a data source into a single document. A group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName». 
+You can perform Mail Merge with a group to append multiple records from a data source into a single document. A group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName». 
 
 * «TableStart:TableName» - denotes the start of the group
 * «TableEnd:TableName» - denotes the end of the group
@@ -803,13 +803,13 @@ For example – let’s consider that you have a template document as shown.
 
 ![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.jpeg)
 
-Here, in this template, Employees is the group name, and the exact same name should be used while performing Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees”, to denote the start and end of the Mail merge group. 
+Here, in this template, Employees is the group name, and the exact same name should be used while performing Mail Merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees”, to denote the start and end of the Mail Merge group. 
 
 To merge an image in place of a merge field, you need to add a prefix (“Image:”) to the merge field name. 
 
 For example: the merge field name should be like “<<Image:Photo>>” (<<Image:MergeFieldName>>).
 
-The following code example shows how to perform Mail merge with objects.
+The following code example shows how to perform Mail Merge with objects.
 
 {% tabs %}
 
