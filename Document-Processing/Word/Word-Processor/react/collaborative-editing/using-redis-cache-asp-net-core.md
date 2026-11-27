@@ -686,3 +686,8 @@ After completing the client and server setup:
 4. Open the same document and make changes in one window; the changes will be synced to other users.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Server%20side%20with%20distributed%20cache/ASP.NET%20Core/Using%20Redis).
+
+
+## See Also
+
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

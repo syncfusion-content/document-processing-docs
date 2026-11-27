@@ -626,6 +626,16 @@ Document Conversion:
 <td>Yes</td>
 <td>No</td>
 </tr>
+<tr>
+<td>PDF to PCL XL</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
 </tbody>
 </table>
 

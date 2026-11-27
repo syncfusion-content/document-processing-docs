@@ -254,3 +254,4 @@ export default function App() {
 - [Form Constrain](./form-constrain)
 - [Form validation](./form-validation)
 - [Form fields API](./form-fields-api)
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)
