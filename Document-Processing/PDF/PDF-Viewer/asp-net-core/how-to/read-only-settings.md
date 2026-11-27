@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Read Only mode for Annotations, Forms, and Comments | Syncfusion
+title: Read-Only Mode in ASP.NET Core PDF Viewer | Syncfusion
 description: Set read only mode for annotations, form fields, and comments in the ASP.NET Core PDF Viewer. Page navigation, search, zoom, print, and download stay available.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Read Only mode for Annotations, Forms, and Comments
+# Read-Only Mode in ASP.NET Core PDF Viewer
 
 Use the `readOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to make that area read only. Document viewing, page navigation, search, zoom, print, and download stay available.
 
@@ -29,46 +29,33 @@ If `annotations` is `true`, comments stay read only even when `comments` is `fal
 <ejs-pdfviewer id="pdfviewer"
                documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                resourceUrl="https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib"
-               readOnlySettings="ViewBag.ReadOnlySettings"
                style="height:600px;display:block">
 </ejs-pdfviewer>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.readOnlySettings = { annotations: true, formFields: true, comments: true }
+    });
+</script>
+
 {% endhighlight %}
 {% endtabs %}
-
-```csharp
-ViewBag.ReadOnlySettings = new
-{
-    annotations = true,
-    formFields = true,
-    comments = true
-};
-```
 
 ## Read only comments
 
 Set `comments` to `true` and leave `annotations` as `false` when users may still add and edit annotations, but must only view existing comments.
 
-```csharp
-ViewBag.ReadOnlySettings = new
-{
-    annotations = false,
-    formFields = false,
-    comments = true
-};
+```js
+viewer.readOnlySettings= { annotations: false, formFields: false, comments: true }
 ```
 
 ## Read only form fields
 
 Set `formFields` to `true` when users may edit annotations and comments, but must only view form fields. Filling a field and designing fields are both restricted.
 
-```csharp
-ViewBag.ReadOnlySettings = new
-{
-    annotations = false,
-    formFields = true,
-    comments = false
-};
+```js
+viewer.readOnlySettings= { annotations: false, formFields: true, comments: false }
 ```
 
 Each flag defaults to `false`, so editing stays enabled until you set that flag to `true`.

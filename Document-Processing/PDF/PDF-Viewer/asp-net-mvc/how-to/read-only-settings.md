@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Read Only mode for Annotations, Forms, and Comments | Syncfusion
+title: Read-Only Mode in ASP.NET MVC PDF Viewer | Syncfusion
 description: Set read only mode for annotations, form fields, and comments in the ASP.NET MVC PDF Viewer. Page navigation, search, zoom, print, and download stay available.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Read Only mode for Annotations, Forms, and Comments
+# Read-Only Mode in ASP.NET MVC PDF Viewer
 
-Use the `ReadOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to make that area read only. Document viewing, page navigation, search, zoom, print, and download stay available.
+Use the `readOnlySettings` property to restrict editing for annotations, form fields, and comments. Set each flag to `true` to make that area read only. Document viewing, page navigation, search, zoom, print, and download stay available.
 
 | Property | When set to `true` |
 | --- | --- |
@@ -21,12 +21,19 @@ If `annotations` is `true`, comments stay read only even when `comments` is `fal
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample in ASP.NET MVC.
 
-**Step 2:** Set `ReadOnlySettings` on `PdfViewer`. The sample below makes annotations, form fields, and comments read only together.
+**Step 2:** Set `readOnlySettings` on `PdfViewer`. The sample below makes annotations, form fields, and comments read only together.
 
 {% tabs %}
 {% highlight c# tabtitle="Standalone" %}
 
-@Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib").ReadOnlySettings(readOnly => { readOnly.Annotations(true).FormFields(true).Comments(true); }).Render()
+ @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/30.1.37/dist/ej2-pdfviewer-lib").Render()
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.readOnlySettings = { annotations: true, formFields: true, comments: true }
+    });
+</script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,16 +42,16 @@ If `annotations` is `true`, comments stay read only even when `comments` is `fal
 
 Set `comments` to `true` and leave `annotations` as `false` when users may still add and edit annotations, but must only view existing comments.
 
-```csharp
-.ReadOnlySettings(readOnly => { readOnly.Annotations(false).FormFields(false).Comments(true); })
+```js
+viewer.readOnlySettings= { annotations: false, formFields: false, comments: true }
 ```
 
 ## Read only form fields
 
 Set `formFields` to `true` when users may edit annotations and comments, but must only view form fields. Filling a field and designing fields are both restricted.
 
-```csharp
-.ReadOnlySettings(readOnly => { readOnly.Annotations(false).FormFields(true).Comments(false); })
+```js
+viewer.readOnlySettings= { annotations: false, formFields: true, comments: false }
 ```
 
 Each flag defaults to `false`, so editing stays enabled until you set that flag to `true`.
