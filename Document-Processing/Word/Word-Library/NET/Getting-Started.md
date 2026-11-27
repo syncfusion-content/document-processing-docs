@@ -6,7 +6,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Loading and Saving Word document in .NET Word
+# Creating and Saving Word document in .NET Word
 
 To quickly get started with the .NET Word (DocIO) Library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=ptbMtxIv3CY" %}
