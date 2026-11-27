@@ -132,7 +132,6 @@ import {
 PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
 let editor: PptxEditor = new PptxEditor({
-  theme: 'tailwind3',
   documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 editor.appendTo('#pptxEditor');
