@@ -187,6 +187,7 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 
 ## See also
 
+- [Read Only mode for Annotations, Forms, and Comments](../how-to/read-only-settings)
 - [Annotation Overview](../overview)
 - [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)

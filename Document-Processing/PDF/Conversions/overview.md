@@ -15,6 +15,8 @@ keywords: PDF, SDK, Automation, API, convert
 
 {% doccard text="PDF to Image" link="/document-processing/pdf/conversions/pdf-to-image/overview" icon="./HTML-To-PDF/images/pdf-to-image.svg" %}
 
+{% doccard text="PDF to PCL" link="/document-processing/pdf/conversions/pdf-to-pcl/converting-pdf-to-pcl" icon="./HTML-To-PDF/images/pdf-to-pcl.svg" %}
+
 {% doccard text="Word to PDF" link="/document-processing/word/conversions/word-to-pdf/overview" icon="./HTML-To-PDF/images/word-to-pdf.svg" %}
 
 {% doccard text="Excel to PDF" link="/document-processing/excel/conversions/excel-to-pdf/overview" icon="./HTML-To-PDF/images/excel-to-pdf.svg" %}
