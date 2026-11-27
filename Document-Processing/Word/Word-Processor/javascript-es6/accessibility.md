@@ -36,6 +36,28 @@ The accessibility compliance for the [TypeScript DOCX Editor](https://www.syncfu
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Screen Reader Support
+
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettings#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+
+### Enable Screen Reader Support
+
+```ts
+import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
+
+DocumentEditorContainer.Inject(Ribbon);
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+    enableToolbar: true,
+    toolbarMode: 'Ribbon',
+    height: '590px',
+    documentEditorSettings: { enableScreenReader: true }
+});
+
+container.appendTo('#container');
+```
+
+N> `enableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.
+
 ## Keyboard interaction
 
 DOCX Editor supports [keyboard shortcuts](./keyboard-shortcut).
