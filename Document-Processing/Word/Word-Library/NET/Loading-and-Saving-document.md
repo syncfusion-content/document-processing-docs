@@ -11,7 +11,7 @@ documentation: UG
 
 The following namespaces of Essential<sup>&reg;</sup> DocIO need to be included in your application to load and save the Word document.
 
-N> Install the DocIO NuGet package before referencing these namespaces: [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) for WinForms/WPF, or [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) for ASP.NET Core / cross-platform applications. Refer to the [installation and configuration](../installation/Installation-errors) section for complete setup steps.
+N> Install the DocIO NuGet package before referencing these namespaces: [Syncfusion.DocIO.WinForms](https://www.nuget.org/packages/Syncfusion.DocIO.WinForms/) for WinForms/WPF, or [Syncfusion.DocIO.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIO.Net.Core/) for ASP.NET Core / cross-platform applications. Refer to the [installation and configuration](https://help.syncfusion.com/document-processing/word/word-library/net/installation/offline-installer/how-to-install) section for complete setup steps.
 
 N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
