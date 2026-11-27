@@ -11,12 +11,12 @@ documentation: ug
 
 ASP.NET MVC PPTX Editor features are segregated into individual feature-wise modules to enable selective referencing. By default, the PPTX Editor displays the loaded presentation in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the PPTX Editor that can be included as required:
 
-* **Toolbar** - Shows the ribbon and title bar.
-* **ThumbnailView** - Shows the slide thumbnail panel.
-* **Navigation** - Moves between slides.
-* **Magnification** - Zooms the slide view.
+* **Toolbar** - Shows the built-in ribbon for user interaction.
+* **ThumbnailView** - Shows slide thumbnails for quick slide navigation.
+* **Navigation** - Enables navigation between presentation slides.
+* **Magnification** - Provides zoom and fit options for enhanced slide viewing.
 * **Print** - Prints the presentation.
-* **SlideShow** - Starts a slide show and Presenter View.
+* **SlideShow** - Starts Slide Show and Presenter View modes.
 
 N>In addition to injecting the required modules in your application, enable corresponding properties to extend the functionality for a PPTX Editor instance.
 
