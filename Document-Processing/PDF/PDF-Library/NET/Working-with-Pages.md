@@ -864,6 +864,8 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Rearrange-pages-in-an-existing-PDF-document/).
 
+N> ReArrange() is intended only for rearranging existing pages, not for duplicating pages or inserting additional pages into the document. If you need to duplicate pages, use a separate page-import approach.
+
 ## Changing the page numbers in a PDF document
 
 You can alter the page label for an existing PDF document using the [PdfPageLabel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLabel.html) class. The [NumberStyle](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLabel.html#Syncfusion_Pdf_PdfPageLabel_NumberStyle) property defines the numbering style (for example, upper-case Roman letters), and the [StartNumber](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageLabel.html#Syncfusion_Pdf_PdfPageLabel_StartNumber) property defines the starting value. Refer to the following code example.
