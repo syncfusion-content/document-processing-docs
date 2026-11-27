@@ -90,7 +90,8 @@ function App() {
         <PdfViewerComponent
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
-            style={{ height: '640px' }}>
+            style={{ height: '640px' }}
+        >
         </PdfViewerComponent>
     );
 }
@@ -126,7 +127,8 @@ function App() {
         <PdfViewerComponent enableWebMcp={true}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
-            style={{ height: '640px' }}>
+            style={{ height: '640px' }}
+        >
         </PdfViewerComponent>
     );
 }
@@ -163,7 +165,8 @@ function App() {
             }}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
-            style={{ height: '640px' }}>
+            style={{ height: '640px' }}
+        >
         </PdfViewerComponent>
     );
 }
@@ -215,7 +218,8 @@ function App() {
             beforeWebMcpToolExecute={beforeWebMcpToolExecute}
             documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
             resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
-            style={{ height: '640px' }}>
+            style={{ height: '640px' }}
+        >
         </PdfViewerComponent>
     );
 }

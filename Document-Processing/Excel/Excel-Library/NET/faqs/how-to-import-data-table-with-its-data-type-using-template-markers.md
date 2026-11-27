@@ -158,11 +158,11 @@ End Function
 
 ## See Also
 
-* [How to import data from DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datatable)
-* [How to import data from DataColumn?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datacolumn)
-* [How to import data from DataView?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-dataview)
-* [How to export data from worksheet to DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-from-datatable)
-* [What are Import Data Options?](https://help.syncfusion.com/file-formats/xlsio/working-with-data#import-data-options)
+* [How to import data from DataTable?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data#import-data-from-datatable)
+* [How to import data from DataColumn?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data#import-data-from-datacolumn)
+* [How to import data from DataView?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data#import-data-from-dataview)
+* [How to export data from worksheet to DataTable?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data#import-data-from-datatable)
+* [What are Import Data Options?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-data#import-data-options)
 * [How to bind from DataTable?](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#bind-from-datatable)
 * [How to bind from Nested Collection Objects with import data and group options?](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#bind-from-nested-collection-objects-with-import-data-and-group-options)
 * [How to use Template marker with conditional formatting?](https://help.syncfusion.com/file-formats/xlsio/working-with-template-markers#template-marker-with-conditional-formatting)
