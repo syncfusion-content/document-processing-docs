@@ -35,6 +35,8 @@ Cell selection is used to select a single or multiple cells. It can be performed
 
 You can quickly locate and select specific cells or ranges by entering their names or cell references in the Name box, which is located to the left of the formula bar, and also select named or unnamed cells or ranges by using the Go To (`Ctrl+G`) command.
 
+Press Ctrl + A to select the current region around the active cell. Press again to select the entire worksheet.
+
 ## Row selection
 
 Row selection is used to select a single or multiple rows.
@@ -142,10 +144,6 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% endtabs %}
 
  {% previewsample "/document-processing/code-snippet/spreadsheet/react/selection-cs3" %}
-
-## Limitations
-
-* We have a limitation while performing the Select All(`ctrl + A`). You can do this only by clicking the Select All button at the top left corner.
 
 ## Note
 

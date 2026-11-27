@@ -32,6 +32,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Ctrl + F / Shift + F5 | Opens `Find` dialog. |
 | Ctrl + H | Opens `Find and Replace` dialog. |
 | Ctrl + G | Opens `GoTo` dialog, which helps to navigate to cell. |
+| Ctrl + A | Selects the current region around the active cell. Press again to select the entire worksheet. |
 | Ctrl + Shift + L | Applies filter to the first row of the selected range or used range. |
 | Alt + F | Opens the `File` menu. |
 | Alt + H | Go to `Home` tab. |

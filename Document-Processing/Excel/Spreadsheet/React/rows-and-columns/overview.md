@@ -21,6 +21,7 @@ The React Spreadsheet component provides several features for managing rows and 
 - **[Change Text in Column Headers](./change-text-in-column-headers)**: Customize the text displayed in column headers.
 - **[Freeze Pane](./freeze-pane)**: Keep specific rows or columns visible while scrolling through the worksheet.
 - **[Size](./row-and-column-size)**: Adjust the height of rows and the width of columns to fit your data.
+- **[AutoFit Rows and Columns](./autofit-rows-and-columns)**: Automatically adjust row heights and column widths to fit cell content.
 
 
 ## Note

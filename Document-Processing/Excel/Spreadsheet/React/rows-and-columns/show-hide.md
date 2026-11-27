@@ -18,6 +18,7 @@ The rows can be hidden or shown through the following ways,
 * Using `hidden` property in row, you can hide/show the rows at initial load.
 * Using `hideRow` method, you can hide the rows by specifying the start and end row index, set the last argument `hide` as `false` to unhide the hidden rows.
 * Right-click on the row header and select the desired option from context menu
+* To hide or show multiple non-adjacent rows, hold Ctrl while selecting the required row headers, then right-click any selected header and choose Hide or Show from the context menu.
 
 ## Column
 
@@ -26,6 +27,7 @@ The columns can be hidden or shown through following ways,
 * Using `hidden` property in columns, you can hide/show the columns at initial load.
 * Using `hideColumn` method, you can hide the columns by specifying the start and end column index, set the last argument `hide` as `false` to unhide the hidden columns.
 * Right-click on the column header and select the desired option from context menu
+* To hide or show multiple non-adjacent columns, hold Ctrl while selecting the required column headers, then right-click any selected header and choose Hide or Show from the context menu.
 
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 

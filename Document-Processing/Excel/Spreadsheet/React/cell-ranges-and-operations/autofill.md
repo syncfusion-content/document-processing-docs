@@ -14,6 +14,7 @@ Autofill is used to fill the cells with data based on adjacent cells. It also fo
 You can do this by one of the following ways,
 
 * Using “AutoFillOptions” menu which is open, while drag and drop the cell using fill handle element.
+* Double-clicking the fill handle to fill the selected cells downward based on adjacent data.
 * Use the autoFill method programmatically.
 
 The available parameters in `autoFill` method are,
@@ -67,6 +68,14 @@ You can do this by one of the following ways,
 
 * Using fill handle to select the adjacent cell range and “Fill Without Formatting” option in “AutoFillOptions” menu to fill the adjacent cells.
 * Using “FillWithoutFormatting” as fill type in `autoFill` method to fill the adjacent cells.
+
+## Fill by Double-Clicking the Fill Handle
+
+Double-clicking the fill handle fills the selected cells down to the last row of adjacent data.
+
+You can do this by one of the following ways,
+
+* Double-click the fill handle at the bottom-right corner of the selected cell or range.
 
 In the following sample, you can enable/disable the fill option on the button click event by using the `showFillOptions` property in `autoFillSettings`.
 

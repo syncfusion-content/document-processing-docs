@@ -92,6 +92,16 @@ You can clear defined rules by using one of the following ways:
 * Using the `Clear Rules` option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
 * Using the [`clearConditionalFormat`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#clearconditionalformat) method to clear the defined rules.
 
+## Manage Rules
+
+Select **Manage Rules** from the Conditional Formatting menu on the **Home** tab to open the rule management pane. Use the pane to:
+
+* View existing conditional formatting rules in the pane.
+* Add a new rule by selecting **New Rule** from the Conditional Formatting menu on the **Home** tab, or by selecting the **+** icon in the rule management pane. Specify the cell or range to which you want to apply conditional formatting.
+* Edit or delete conditional formatting rules already applied to cells from this pane.
+
+Use the [`showConditionalFormattingPane`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#showconditionalformattingpane) property to control whether the pane is displayed. Set it to `true` to display the pane; otherwise, it remains hidden. The pane is hidden by default.
+
 The following code sample shows how to apply different types of conditional formatting, colors, and styles in the Spreadsheet.
 
 {% tabs %}
