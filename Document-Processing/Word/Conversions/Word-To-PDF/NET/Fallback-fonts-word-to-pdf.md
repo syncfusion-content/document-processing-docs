@@ -829,7 +829,7 @@ N> The Unicode ranges in the table are inclusive on both ends. A character belon
 
 ## See also
 
-* [Font substitution in Word to PDF conversion](Font-substituion-word-to-pdf)
+* [Font substitution in Word to PDF conversion](font-substituion-word-to-pdf)
 * [NuGet packages required for Word to PDF conversion](Nuget-packages-required-word-to-pdf)
 * [Assemblies required for Word to PDF conversion](Assemblies-required-word-to-pdf)
 * [Word to PDF conversion settings](Word-to-pdf-settings)
