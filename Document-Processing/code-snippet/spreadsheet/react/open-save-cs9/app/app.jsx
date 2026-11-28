@@ -11,7 +11,7 @@ function App() {
     removeUrl:
       'https://services.syncfusion.com/react/production/api/FileUploader/Remove',
   };
-  const allowedExtensions = '.xlsx, .xls, .csv';
+  const allowedExtensions = '.xlsx, .xlsb, .xls, .csv';
   const onSuccess = (args) => {
     if (args.operation == 'upload')
       spreadsheetRef.current.open({ file: args.file.rawFile });

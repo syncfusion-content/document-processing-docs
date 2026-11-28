@@ -43,7 +43,7 @@ The supported file formats depend on the selected processing method:
 | Processing method | Supported formats |
 | --- | --- |
 | [Client-side processing](./open-excel-file/pure-client-side) | Microsoft Excel Workbook (`.xlsx`) |
-| [Server-side processing](./open-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Excel Binary Workbook (`.xlsb`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), and Excel Macro-Enabled Workbook (`.xlsm`) |
+| [Server-side processing](./open-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Microsoft Excel Binary Workbook (`.xlsb`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), and Excel Macro-Enabled Workbook (`.xlsm`) |
 
 ## See also
 
