@@ -1126,6 +1126,92 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> 1. Essential PDF supports converting TIFF to PDF with [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package reference in ASP.NET Core.
 
+## SVG to PDF
+
+Essential<sup>&reg;</sup> PDF enables you to convert an SVG (Scalable Vector Graphics) file into a PDF document with high-quality rendering, accurate layout preservation, and full cross-platform support. The [SvgConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.SvgConverter.html) class is used to convert an SVG file into a [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html), which can then be drawn into a PDF page. Please refer to the following code example.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+//Convert the SVG to Pdf Template.
+PdfTemplate svg = converter.Convert("Input.svg");
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+//Convert the SVG to Pdf Template.
+PdfTemplate svg = converter.Convert("Input.svg");
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+//Add a new page.
+PdfPage page = document.Pages.Add();
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+//Save the document
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
+
+' Initialize SVG converter.
+Dim converter As New SvgConverter()
+' Convert the SVG to PDF template.
+Dim svg As PdfTemplate = converter.Convert("Input.svg")
+' Create a new PDF document.
+Dim document As New PdfDocument()
+' Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0
+document.PageSettings.Size = New SizeF(svg.Width, svg.Height)
+' Add a new page.
+Dim page As PdfPage = document.Pages.Add()
+' Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, New PointF(0, 0), New SizeF(svg.Width, svg.Height))
+' Save the document.
+document.Save("Output.pdf")
+' Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Remove Images
 
 The [RemoveImage](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfPageBase.html#Syncfusion_Pdf_PdfPageBase_RemoveImage_Syncfusion_Pdf_Exporting_PdfImageInfo_) method of the page collection allows you to remove an image. You can remove images from an existing document using Essential<sup>&reg;</sup> PDF.
