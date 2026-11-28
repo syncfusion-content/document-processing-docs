@@ -12,11 +12,14 @@ keywords: Detect Document Type, Document Classification, Document Detection
 
 ## Detect Document Type from PDF or Image
 
-The Syncfusion<sup>&reg;</sup> Smart Data Extractor library enables document type detection from PDF documents and images. The DetectDocumentType API examines document content to determine its type and returns a `DocumentTypeResult` object. This object contains the detected document type, its confidence score, the matched keywords, and the scores of all candidate document types.
+The Syncfusion<sup>&reg;</sup> Smart Data Extractor library supports document type detection for PDF documents and images. The `DetectDocumentType` API analyzes document content and identifies the document type. Use the basic overload to get the document type as a string, or use the overload with `includeDetectionDetails` set to `true` to retrieve additional information such as confidence score, matched keywords, and candidate document type scores.
 
 This feature is useful for automated document processing workflows where you need to classify incoming documents before extracting specific data or routing them to appropriate processing pipelines.
 
-To detect document type, use the following code snippet:
+The `DetectDocumentType` method has two forms:
+
+* `DetectDocumentType(stream)` returns the document type name as a string.
+* `DetectDocumentType(stream, true)` returns a `DocumentTypeResult` that also contains the confidence score, the matched keywords, and the score of every document type.
 
 {% tabs %} 
 
@@ -30,12 +33,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-    //Detect document type.
-    DocumentTypeResult result = extractor.DetectDocumentType(stream);
-    //Get the detected document type name.
-    string documentType = result.DocumentType;
-    //Get the confidence score (0 to 1).
-    double confidence = result.Confidence;
+    //Detect document type and get its name.
+    string documentType = extractor.DetectDocumentType(stream);
 }
 
 {% endhighlight %}
@@ -50,28 +49,23 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-    //Detect document type.
-    DocumentTypeResult result = extractor.DetectDocumentType(stream);
-    //Get the detected document type name.
-    string documentType = result.DocumentType;
-    //Get the confidence score (0 to 1).
-    double confidence = result.Confidence;
+    //Detect document type and get its name.
+    string documentType = extractor.DetectDocumentType(stream);
 }
 			
 {% endhighlight %}
 
 {% endtabs %}
 
-### Read the Detection Result
+### Get Detection Details
 
-The `DetectDocumentType` method returns a `DocumentTypeResult` object with the following properties:
-
+The `DetectDocumentType` method returns a `DocumentTypeResult` object with the following properties when `includeDetectionDetails` is set to `true`:
 | Property | Type | Description |
 |---|---|---|
 | `DocumentType` | `string` | The name of the detected document type. Returns "Unknown" when no document type matches the content. |
 | `Confidence` | `double` | The confidence of the detected type, from 0 to 1, where 1 is the highest. Returns 0 when the type is "Unknown". |
-| `MatchedKeywords` | `IReadOnlyList<string>` | The keywords found in the document that matched the detected type. Empty when no keywords matched. |
-| `Scores` | `IReadOnlyDictionary<string, double>` | The score for every document type that was checked. The key is the type name and the value is its score. |
+| `MatchedKeywords` | `IReadOnlyList<string>` | The keywords found in the document that matched the detected type. Empty when `includeDetectionDetails` is `false` or no keywords matched. |
+| `Scores` | `IReadOnlyDictionary<string, double>` | The score for every document type that was checked. The key is the type name and the value is its score. Empty when `includeDetectionDetails` is `false`. |
 
 {% tabs %}
 
@@ -80,21 +74,33 @@ The `DetectDocumentType` method returns a `DocumentTypeResult` object with the f
 using System.Collections.Generic;
 using Syncfusion.SmartDataExtractor;
 
-DataExtractor extractor = new DataExtractor();
-DocumentTypeResult result = extractor.DetectDocumentType(stream);
-// Detected document type and its confidence
-string docType = result.DocumentType;
-double confidence = result.Confidence;
-// Keywords that matched the detected type
-foreach (string keyword in result.MatchedKeywords)
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Use keyword for validation, logging, or other operations
-}
-// Scores of all candidate document types
-foreach (KeyValuePair<string, double> score in result.Scores)
-{
-    string typeName = score.Key;
-    double typeScore = score.Value;
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Detect the document type with details.
+    DocumentTypeResult result = extractor.DetectDocumentType(stream, true);
+    if (result.DocumentType == "Unknown")
+    {
+        //No document type matched. Handle the file manually.
+    }
+    else
+    {
+        string docType = result.DocumentType;
+        double confidence = result.Confidence;
+        //Keywords that matched the detected type.
+        foreach (string keyword in result.MatchedKeywords)
+        {
+            //Use the keyword for validation or logging.
+        }
+        //Scores of all checked document types.
+        foreach (KeyValuePair<string, double> score in result.Scores)
+        {
+            string typeName = score.Key;
+            double typeScore = score.Value;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -104,21 +110,33 @@ foreach (KeyValuePair<string, double> score in result.Scores)
 using System.Collections.Generic;
 using Syncfusion.SmartDataExtractor;
 
-DataExtractor extractor = new DataExtractor();
-DocumentTypeResult result = extractor.DetectDocumentType(stream);
-// Detected document type and its confidence
-string docType = result.DocumentType;
-double confidence = result.Confidence;
-// Keywords that matched the detected type
-foreach (string keyword in result.MatchedKeywords)
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
 {
-    // Use keyword for validation, logging, or other operations
-}
-// Scores of all candidate document types
-foreach (KeyValuePair<string, double> score in result.Scores)
-{
-    string typeName = score.Key;
-    double typeScore = score.Value;
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Detect the document type with details.
+    DocumentTypeResult result = extractor.DetectDocumentType(stream, true);
+    if (result.DocumentType == "Unknown")
+    {
+        //No document type matched. Handle the file manually.
+    }
+    else
+    {
+        string docType = result.DocumentType;
+        double confidence = result.Confidence;
+        //Keywords that matched the detected type.
+        foreach (string keyword in result.MatchedKeywords)
+        {
+            //Use the keyword for validation or logging.
+        }
+        //Scores of all checked document types.
+        foreach (KeyValuePair<string, double> score in result.Scores)
+        {
+            string typeName = score.Key;
+            double typeScore = score.Value;
+        }
+    }
 }
 
 {% endhighlight %}
@@ -173,43 +191,49 @@ DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
 
 ### Add Custom Document Types
 
-Add a new custom document type with specific keywords:
+Add a custom document type with its keywords. Choose keywords that are specific to the document type.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using System.IO;
 using Syncfusion.SmartDataExtractor;
 
-DataExtractor extractor = new DataExtractor();
-// Add a custom document type with keywords
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "vendor", "amount", "total" });
-// Detect document type will now recognize PurchaseOrder documents
-DocumentTypeResult result = extractor.DetectDocumentType(stream);
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Add a custom document type with keywords.
+    extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "ship to", "order quantity" });
+    //Detection now recognizes PurchaseOrder documents.
+    DocumentTypeResult result = extractor.DetectDocumentType(stream, true);
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.IO;
 using Syncfusion.SmartDataExtractor;
 
-DataExtractor extractor = new DataExtractor();
-// Add a custom document type with keywords
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "vendor", "amount", "total" });
-// Detect document type will now recognize PurchaseOrder documents
-DocumentTypeResult result = extractor.DetectDocumentType(stream);
+//Open the input PDF file as a stream.
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    //Add a custom document type with keywords.
+    extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "ship to", "order quantity" });
+    //Detection now recognizes PurchaseOrder documents.
+    DocumentTypeResult result = extractor.DetectDocumentType(stream, true);
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-**Notes:**
-
-- Custom types are added to the collection alongside built-in types
-- Keywords are case-insensitive during detection
-- Document type names cannot be empty or white space
-- The name "Unknown" is reserved and cannot be used
-- Duplicate type names cannot be added
+N> Document type names must not be empty or whitespace, must be unique, and cannot be "Unknown", which is reserved. Keywords are not case-sensitive. Keywords shared with another type, such as "total" or "vendor", can lower the confidence of the result.
 
 ### Modify Existing Keywords
 
@@ -251,7 +275,7 @@ invoice.Keywords.Remove("date");
 
 ### Remove Document Types
 
-Remove a document type from the collection:
+Remove a built-in or custom document type from the collection. The method returns `true` if the type was removed.
 
 {% tabs %}
 
@@ -277,7 +301,7 @@ bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
 
 {% endtabs %}
 
-### Check if Type Exists
+### Check Whether a Document Type Exists
 
 Verify whether a document type is in the collection:
 
@@ -323,9 +347,9 @@ using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
 // Make customizations
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { "po #", "vendor" });
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "ship to", "order quantity" });
 extractor.DocumentTypes.Remove("Receipt");
-// Reset to original state
+// Reset to the built-in types.
 extractor.DocumentTypes.Reset();
 
 {% endhighlight %}
@@ -336,9 +360,9 @@ using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
 // Make customizations
-extractor.DocumentTypes.Add("PurchaseOrder", new[] { "po #", "vendor" });
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { "purchase order", "po number", "ship to", "order quantity" });
 extractor.DocumentTypes.Remove("Receipt");
-// Reset to original state
+// Reset to the built-in types.
 extractor.DocumentTypes.Reset();
 
 {% endhighlight %}
@@ -353,6 +377,7 @@ Enumerate all document types in the collection:
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
+using System.IO;
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
@@ -373,6 +398,7 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using System.IO;
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
@@ -393,4 +419,4 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 
 {% endtabs %}
 
-N> The DetectDocumentType API returns a `DocumentTypeResult` object that contains the detected document type, its confidence score, the matched keywords, and the scores of all candidate document types, enabling intelligent document routing and automated processing in document management systems.
+N> The `DetectDocumentType` method returns the document type as a string by default. Set `includeDetectionDetails` to `true` to get the confidence, matched keywords, and scores for all candidate document types.
