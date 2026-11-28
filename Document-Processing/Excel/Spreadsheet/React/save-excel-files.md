@@ -41,7 +41,7 @@ The supported file formats depend on the selected processing method:
 | Processing method | Supported formats |
 | --- | --- |
 | [Client-side processing](./save-excel-file/pure-client-side) | Microsoft Excel Workbook (`.xlsx`) |
-| [Server-side processing](./save-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
+| [Server-side processing](./save-excel-file/server-side-processing) | Microsoft Excel Workbook (`.xlsx`), Microsoft Excel Binary Workbook (`.xlsb`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Portable Document Format (`.pdf`) |
 
 ## Cloud storage integrations
 

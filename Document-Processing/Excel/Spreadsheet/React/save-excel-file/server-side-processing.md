@@ -93,7 +93,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 | ----- | ----- | ----- |
 | url | string |  Specifies the save url.  |
 | fileName | string | Specifies the file name. |
-| saveType | SaveType | Specifies the saveType like Xlsx, Xls, Csv and Pdf. |
+| saveType | SaveType | Specifies the saveType, such as Xlsx, Xlsb, Xls, Csv, and Pdf. |
 | customParams | object | Passing the custom parameters from client to server while performing save operation. |
 | isFullPost | boolean | It sends the form data from client to server, when set to true. It fetches the data from client to server and returns the data from server to client, when set to false. |
 | needBlobData | boolean | You can get the blob data if set to true. |
@@ -161,6 +161,7 @@ root.render(<App />);
 The following file formats are supported when saving the Spreadsheet component:
 
 * Microsoft Excel Workbook (.xlsx)
+* Microsoft Excel Binary Workbook (.xlsb)
 * Microsoft Excel 97–2003 Workbook (.xls)
 * Comma-Separated Values (.csv)
 * Portable Document Format (.pdf)
@@ -487,3 +488,33 @@ The possible values are:
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs8" %}
+
+### Save Excel files as XLSB (Binary Workbook)
+
+The Spreadsheet component supports saving workbook data as a **Microsoft Excel Binary Workbook (.xlsb)** using server-side processing. XLSB export provides a compact binary format for Excel workbooks.
+
+#### Save as XLSB from the user interface
+
+To save a workbook as XLSB from the user interface:
+1. In the Spreadsheet ribbon, select **File > Save As**.
+2. Choose **Microsoft Excel Binary Workbook (*.xlsb)** from the available formats.
+
+> **Note:** XLSB export currently provides partial feature support. Support for the remaining features is planned for future updates.
+
+#### Feature support for XLSB export
+
+The following table lists the current feature support status for XLSB export:
+
+| Feature Area | Supported Features | Currently Not Supported in XLSB Export |
+|---|---|---|
+| **Worksheet** | Add Sheet, Insert Sheet, Delete Sheet, Rename Sheet, Sheet Visibility | Headers, Gridlines |
+| **Cell Range** | Wrap Text, AutoFill, Clear | Merge Cells, Data Validation |
+| **Editing** | Edit Cell, Save Cell, Cancel Editing, Formula Bar Editing | — |
+| **Formatting** | Number Formatting, Text Formatting, Cell Formatting | Conditional Formatting, Rich Text Formatting |
+| **Clipboard** | Cut, Copy, Paste | — |
+| **Sorting** | Ascending, Descending, Custom Sort | — |
+| **Rows and Columns** | Insert Row/Column, Delete Row/Column, Unhide Row/Column | Hide Row/Column |
+| **Freeze Pane** | — | Freeze Rows, Freeze Columns, Freeze Rows and Columns |
+| **Illustrations** | — | Image, Chart |
+| **Protection** | — | Protect Sheet, Protect Workbook |
+| **Other** | Formulas | Filter, Hyperlink, Comment, Notes |
