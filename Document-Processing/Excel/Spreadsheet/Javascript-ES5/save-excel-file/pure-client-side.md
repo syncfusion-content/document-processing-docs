@@ -1,0 +1,79 @@
+---
+layout: post
+title: Client-Side Export in JavaScript Spreadsheet | Syncfusion
+description: Learn how to export workbook files directly in the browser using the Syncfusion JavaScript Spreadsheet without configuring a Save service.
+platform: document-processing
+control: Spreadsheet
+documentation: ug
+---
+
+# Client-Side Excel Export in JavaScript Spreadsheet
+
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component processes workbook files directly in the browser without requiring a Save service. The [allowSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsave) property is enabled by default. When [saveUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
+
+## Advantages of Client-Side Export
+
+Client-side export provides several key advantages over server-side processing:
+
+* **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
+* **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
+* **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
+* **Enhanced Privacy**: Keep workbook data within the browser during export instead of sending it to a file-processing service.
+* **Offline Capability**: Generate and download Excel files without an internet connection once application resources are loaded.
+
+## How client-side export works
+
+For save processing, the Spreadsheet component maps its in-memory workbook model—including cell data, formulas, styles, formatting, merged cells, and worksheet settings—directly into the @syncfusion/ej2-xlsx workbook object model. The ej2-xlsx library then compiles and generates the fully formatted Excel (.xlsx) binary file directly in the browser without any server dependency.
+
+## Supported formats
+
+Client-side export currently supports:
+* Microsoft Excel Workbook (.xlsx)
+
+## Configure client-side export
+
+For client-side processing, do not configure `saveUrl`; no file-processing request is sent to a service. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+
+```js
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    allowSave: true
+    // Note: saveUrl is omitted for client-side processing.
+});
+spreadsheet.appendTo('#spreadsheet');
+```
+
+With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
+
+## Saving Excel files programmatically
+
+To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#save) method of the Spreadsheet component. When calling this method with client-side processing, the Spreadsheet generates the file directly in the browser and triggers browser download.
+
+```js
+spreadsheet.save({ fileName: 'Sample', saveType: 'Xlsx' });
+```
+
+## Save an excel file as blob data
+
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set the `needBlobData` property to **true** and the `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#savecomplete) event. You can then post the blob data to the server endpoint for saving.
+
+The following code retrieves blob data from the Spreadsheet control.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/client-side-save-blob-cs1" %}
+
+## Considerations
+
+1. **Format Limitation**: Client-side export currently supports XLSX format only
+2. **No saveUrl Required**: `saveUrl` must not be configured for client-side export
+
+## See also
+
+* [Server-Side Export](./server-side-processing)
